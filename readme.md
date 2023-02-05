@@ -18,7 +18,7 @@ function Vehicle(model, color, year, country) {
 - 1: Undefined
 - 2: ReferenceError
 - 3: null
-- **4: {model: "Honda", color: "white", year: "2010", country: "UK"}**
+- **4: {model: "Honda", color: "white", year: "2010", country: "UK"}**  <--
 
 ### Respuesta
 
@@ -38,7 +38,7 @@ console.log(foo(), typeof x, typeof y);
 
 - 1: 1, undefined and undefined
 - 2: ReferenceError: X is not defined
-- **3: 1, undefined and number**
+- **3: 1, undefined and number** <--
 - 4: 1, number and number
 
 ### Respuesta
@@ -274,7 +274,7 @@ printNumbers(1, 2, 3);
 - 1: 1, 2, 3
 - 2: 3, 2, 3
 - 3: SyntaxError: Duplicate parameter name not allowed in this context
-- **4: 1, 2, 1**
+- **4: 1, 2, 1** <--
 
 ### Respuesta
 
