@@ -52,3 +52,34 @@ x = window.y;
 ```
 
 Dado que la variable de ámbito de bloque x no está definida fuera de la función, el tipo tampoco estará definido. Mientras que la variable global y está disponible fuera de la función, el valor es 0 y el tipo es número.
+
+## 3. Funciones, sync, que resultado da
+
+```jsx
+function main() {
+  console.log("A");
+  setTimeout(function print() {
+    console.log("B");
+  }, 0);
+  console.log("C");
+}
+main();
+```
+
+- 1: A, B and C
+- 2: B, A and C
+- 3: A and C
+- **4: A, C and B**
+
+### Respuesta
+
+El orden de las declaraciones se basa en el mecanismo de bucle de eventos. El orden de las declaraciones sigue el siguiente orden,
+
+1. Al principio, la función principal se empuja a la pila.
+2. Luego, el navegador empuja la primera declaración de la función principal (es decir, A's console.log) a la pila, ejecutándose y saliendo inmediatamente.
+3. Pero la declaración setTimeout se movió a la API del navegador para aplicar el retraso para la devolución de llamada.
+4. Mientras tanto, el archivo console.log de C se agregó a la pila, se ejecutó y apareció.
+5. La devolución de llamada de setTimeout se movió de la API del navegador a la cola de mensajes.
+6. La función principal salió de la pila porque no hay declaraciones para ejecutar
+7. La devolución de llamada se movió de la cola de mensajes a la pila ya que la pila está vacía.
+8. El archivo console.log para B se agrega a la pila y se muestra en la consola.
