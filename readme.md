@@ -282,4 +282,20 @@ En el modo no estricto, las funciones regulares de JavaScript permiten duplicar 
 
 Nota: En modo estricto, los parámetros duplicados generarán un error de sintaxis.
 
+## 12. Arrow Function, que resultado da el siguiente código
 
+```jsx
+const printNumbersArrow = (first, second, first) => {
+  console.log(first, second, first);
+};
+printNumbersArrow(1, 2, 3);
+```
+
+- 1: 1, 2, 3
+- 2: 3, 2, 3
+- **3: SyntaxError: Duplicate parameter name not allowed in this context** <--
+- 4: 1, 2, 1
+
+### Respuesta
+
+A diferencia de las funciones regulares, las funciones de flecha no permiten parámetros duplicados en modo estricto o no estricto. Entonces puede ver **SyntaxError** en la consola.
