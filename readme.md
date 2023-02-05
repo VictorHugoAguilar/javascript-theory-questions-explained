@@ -130,3 +130,37 @@ console.log(y);
 ```
 
 > **Note:** En MS Edge browser retorna 1object
+
+## 6. Funciones, retorno de valores que resultado da el siguiente código
+
+```jsx
+function foo() {
+  return;
+  {
+    message: "Hello World";
+  }
+}
+console.log(foo());
+```
+
+- 1: Hello World
+- 2: Object {message: "Hello World"}
+- **3: Undefined**
+- 4: SyntaxError
+
+### Respuesta
+
+Este es un problema de punto y coma. Normalmente, los puntos y comas son opcionales en JavaScript. Por lo tanto, si falta algún punto y coma (en este caso, retorno), se inserta automáticamente de inmediato. Por lo tanto, la función devolvió como indefinida.
+
+Mientras que si la llave de apertura está junto con la palabra clave de retorno, la función se devolverá como se esperaba.
+
+```jsx
+function foo() {
+  return {
+    message: "Hello World",
+  };
+}
+console.log(foo()); // {message: "Hello World"}
+```
+
+
