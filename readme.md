@@ -299,3 +299,35 @@ printNumbersArrow(1, 2, 3);
 ### Respuesta
 
 A diferencia de las funciones regulares, las funciones de flecha no permiten parámetros duplicados en modo estricto o no estricto. Entonces puede ver **SyntaxError** en la consola.
+
+## 13. Arrow Function, que resultado da el siguiente código
+
+```jsx
+const arrowFunc = () => arguments.length;
+console.log(arrowFunc(1, 2, 3));
+```
+
+- **1: ReferenceError: arguments is not defined** <--
+- 2: 3
+- 3: undefined
+- 4: null
+
+### Respuesta
+
+Las funciones de flecha no tienen argumentos, enlaces super, this o new.target. Entonces, cualquier referencia a la variable de argumentos intenta resolverse en un enlace en un entorno léxicamente envolvente. En este caso, la variable arguments no se define fuera de la función de flecha. Por lo tanto, recibirá un error de referencia.
+
+Donde como la función normal proporciona el número de argumentos pasados a la función
+
+```jsx
+const func = function () {
+  return arguments.length;
+};
+console.log(func(1, 2, 3));
+```
+
+Pero si aún desea usar una función de flecha, el operador de descanso en los argumentos proporciona los argumentos esperados
+
+```jsx
+const arrowFunc = (...args) => args.length;
+console.log(arrowFunc(1, 2, 3));
+```
