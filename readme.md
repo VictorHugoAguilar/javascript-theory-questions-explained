@@ -182,3 +182,25 @@ console.log(myChars.length);
 
 El operador de eliminación eliminará la propiedad del objeto, pero no volverá a indexar la matriz ni cambiará su longitud. Por lo tanto, el número de elementos o la longitud de la matriz no cambiarán. Si intenta imprimir myChars, puede observar que no establece un valor **undefined**, sino que la propiedad se elimina de la matriz. Las versiones más nuevas de Chrome usan vacío en lugar de **undefined** para que la diferencia sea un poco más clara.
 
+## 8. Arrays, cual es el valor según los últimos chrome
+
+```jsx
+var array1 = new Array(3);
+console.log(array1);
+
+var array2 = [];
+array2[2] = 100;
+console.log(array2);
+
+var array3 = [, , ,];
+console.log(array3);
+```
+
+- 1: [undefined × 3], [undefined × 2, 100], [undefined × 3]
+- **2: [empty × 3], [empty × 2, 100], [empty × 3]**
+- 3: [null × 3], [null × 2, 100], [null × 3]
+- 4: [], [100], []
+
+### Respuesta
+
+Las últimas versiones de Chrome muestran una matriz dispersa (están llenas de agujeros) usando esta notación x n vacía. Mientras que las versiones anteriores tienen una notación x n **undefined**. Nota: La última versión de FF muestra n notación de ranuras vacías.
