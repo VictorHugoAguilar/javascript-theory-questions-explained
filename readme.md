@@ -96,3 +96,37 @@ console.log(0.1 + 0.2 === 0.3);
 ### Respuesta
 
 Esto se debe al problema matemático del punto flotante. Dado que los números de coma flotante están codificados en formato binario, las operaciones de suma sobre ellos conducen a errores de redondeo. Por lo tanto, la comparación de puntos flotantes no da los resultados esperados. Puede encontrar más detalles sobre la explicación aquí [0.30000000000000004.com](http://0.30000000000000004.com/)/
+
+## 5. Funciones, cual es el resultado del siguiente código con condicional sobre una función
+
+```jsx
+var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y);
+```
+
+- 1: 1function
+- 2: 1object
+- 3: ReferenceError
+- **4: 1undefined**
+
+### Respuesta
+
+Los puntos principales en los fragmentos de código anteriores son,
+
+1. Puede ver la expresión de la función en lugar de la declaración de la función dentro de la declaración if. Así que siempre devuelve verdadero.
+2. Dado que no está declarado (o asignado) en ninguna parte, f no está definido y typeof f tampoco está definido.
+
+En otras palabras, es lo mismo que
+
+```jsx
+var y = 1;
+if ("foo") {
+  y += typeof f;
+}
+console.log(y);
+```
+
+> **Note:** En MS Edge browser retorna 1object
