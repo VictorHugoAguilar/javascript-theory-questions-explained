@@ -331,3 +331,19 @@ Pero si aún desea usar una función de flecha, el operador de descanso en los a
 const arrowFunc = (...args) => args.length;
 console.log(arrowFunc(1, 2, 3));
 ```
+
+## 14. Propiedades de String, cuál es el valor del siguiente código
+
+```jsx
+console.log(String.prototype.trimLeft.name === "trimLeft");
+console.log(String.prototype.trimLeft.name === "trimStart");
+```
+
+- 1: True, False
+- **2: False, True** <--
+
+### Respuesta
+
+Para mantener la coherencia con funciones como String.prototype.padStart, el nombre del método estándar para recortar los espacios en blanco se considera trimStart. Debido a razones de compatibilidad web, el antiguo nombre del método 'trimLeft' todavía actúa como un alias para 'trimStart'. Por lo tanto, el prototipo de 'trimLeft' siempre es 'trimStart’
+
+
