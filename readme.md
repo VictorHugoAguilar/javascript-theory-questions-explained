@@ -261,3 +261,25 @@ Mientras que la segunda declaración sigue el siguiente orden,
 2. consola.log(verdadero > 1);
 3. consola.log(1 > 1); // Falso convertido a 0 durante la comparación
 4. FALSO
+
+## 11. Funciones, **non-strict mode, que resultado da el siguiente código**
+
+```jsx
+function printNumbers(first, second, first) {
+  console.log(first, second, first);
+}
+printNumbers(1, 2, 3);
+```
+
+- 1: 1, 2, 3
+- 2: 3, 2, 3
+- 3: SyntaxError: Duplicate parameter name not allowed in this context
+- **4: 1, 2, 1**
+
+### Respuesta
+
+En el modo no estricto, las funciones regulares de JavaScript permiten duplicar los parámetros con nombre. El fragmento de código anterior tiene parámetros duplicados en el primer y tercer parámetro. El valor del primer parámetro se asigna al tercer argumento que se pasa a la función. Por lo tanto, el tercer argumento anula el primer parámetro.
+
+Nota: En modo estricto, los parámetros duplicados generarán un error de sintaxis.
+
+
