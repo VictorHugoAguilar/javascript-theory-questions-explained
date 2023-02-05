@@ -69,7 +69,7 @@ main();
 - 1: A, B and C
 - 2: B, A and C
 - 3: A and C
-- **4: A, C and B**
+- **4: A, C and B** <--
 
 ### Respuesta
 
@@ -90,7 +90,7 @@ El orden de las declaraciones se basa en el mecanismo de bucle de eventos. El or
 console.log(0.1 + 0.2 === 0.3);
 ```
 
-- **1: false**
+- **1: false** <--
 - 2: true
 
 ### Respuesta
@@ -110,7 +110,7 @@ console.log(y);
 - 1: 1function
 - 2: 1object
 - 3: ReferenceError
-- **4: 1undefined**
+- **4: 1undefined** <--
 
 ### Respuesta
 
@@ -145,7 +145,7 @@ console.log(foo());
 
 - 1: Hello World
 - 2: Object {message: "Hello World"}
-- **3: Undefined**
+- **3: Undefined** <--
 - 4: SyntaxError
 
 ### Respuesta
@@ -175,7 +175,7 @@ console.log(myChars.length);
 
 - 1: [empty, 'b', 'c', 'd'], empty, 3
 - 2: [null, 'b', 'c', 'd'], empty, 3
-- **3: [empty, 'b', 'c', 'd'], undefined, 4**
+- **3: [empty, 'b', 'c', 'd'], undefined, 4** <--
 - 4: [null, 'b', 'c', 'd'], undefined, 4
 
 ### Respuesta
@@ -197,7 +197,7 @@ console.log(array3);
 ```
 
 - 1: [undefined × 3], [undefined × 2, 100], [undefined × 3]
-- **2: [empty × 3], [empty × 2, 100], [empty × 3]**
+- **2: [empty × 3], [empty × 2, 100], [empty × 3]** <--
 - 3: [null × 3], [null × 2, 100], [null × 3]
 - 4: [], [100], []
 
@@ -225,7 +225,7 @@ console.log(obj.prop2());
 console.log(obj.prop3());
 ```
 
-- **1: 0, 1, 2**
+- **1: 0, 1, 2** <--
 - 2: 0, { return 1 }, 2
 - 3: 0, { return 1 }, { return 2 }
 - 4: 0, 1, undefined
@@ -242,7 +242,7 @@ console.log(3 > 2 > 1);
 ```
 
 - 1: true, true
-- **2: true, false**
+- **2: true, false** <--
 - 3: SyntaxError, SyntaxError,
 - 4: false, false
 
