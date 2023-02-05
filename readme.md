@@ -233,3 +233,31 @@ console.log(obj.prop3());
 ### Respuesta
 
 ES6 proporciona definiciones de métodos y abreviaturas de propiedades para objetos. Entonces, tanto prop2 como prop3 se tratan como valores de funciones regulares.
+
+## 10. Operadores, cual es el resultado del siguiente código
+
+```jsx
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+```
+
+- 1: true, true
+- **2: true, false**
+- 3: SyntaxError, SyntaxError,
+- 4: false, false
+
+### Respuesta
+
+El punto importante es que si la declaración contiene los mismos operadores (por ejemplo, < o >), entonces se puede evaluar de izquierda a derecha. La primera declaración sigue el siguiente orden,
+
+1. consola.log(1 < 2 < 3);
+2. consola.log(verdadero < 3);
+3. consola.log(1 < 3); // Verdadero convertido a 1 durante la comparación
+4. Verdadero
+
+Mientras que la segunda declaración sigue el siguiente orden,
+
+1. consola.log(3 > 2 > 1);
+2. consola.log(verdadero > 1);
+3. consola.log(1 > 1); // Falso convertido a 0 durante la comparación
+4. FALSO
