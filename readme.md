@@ -83,3 +83,16 @@ El orden de las declaraciones se basa en el mecanismo de bucle de eventos. El or
 6. La función principal salió de la pila porque no hay declaraciones para ejecutar
 7. La devolución de llamada se movió de la cola de mensajes a la pila ya que la pila está vacía.
 8. El archivo console.log para B se agrega a la pila y se muestra en la consola.
+
+## 4. ¿Cuál es el resultado de la verificación de igualdad a continuación?
+
+```jsx
+console.log(0.1 + 0.2 === 0.3);
+```
+
+- **1: false**
+- 2: true
+
+### Respuesta
+
+Esto se debe al problema matemático del punto flotante. Dado que los números de coma flotante están codificados en formato binario, las operaciones de suma sobre ellos conducen a errores de redondeo. Por lo tanto, la comparación de puntos flotantes no da los resultados esperados. Puede encontrar más detalles sobre la explicación aquí [0.30000000000000004.com](http://0.30000000000000004.com/)/
