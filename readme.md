@@ -163,4 +163,22 @@ function foo() {
 console.log(foo()); // {message: "Hello World"}
 ```
 
+## 7. Arrays, cual es el resultado del siguiente código
+
+```jsx
+var myChars = ["a", "b", "c", "d"];
+delete myChars[0];
+console.log(myChars);
+console.log(myChars[0]);
+console.log(myChars.length);
+```
+
+- 1: [empty, 'b', 'c', 'd'], empty, 3
+- 2: [null, 'b', 'c', 'd'], empty, 3
+- **3: [empty, 'b', 'c', 'd'], undefined, 4**
+- 4: [null, 'b', 'c', 'd'], undefined, 4
+
+### Respuesta
+
+El operador de eliminación eliminará la propiedad del objeto, pero no volverá a indexar la matriz ni cambiará su longitud. Por lo tanto, el número de elementos o la longitud de la matriz no cambiarán. Si intenta imprimir myChars, puede observar que no establece un valor **undefined**, sino que la propiedad se elimina de la matriz. Las versiones más nuevas de Chrome usan vacío en lugar de **undefined** para que la diferencia sea un poco más clara.
 
