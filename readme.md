@@ -360,3 +360,25 @@ console.log(Math.max());
 ### Respuesta
 
 - Infinity es el comparador inicial porque casi todos los demás valores son mayores. Entonces, cuando no se proporcionan argumentos, se devolverá -Infinity. **Nota**: El número cero de argumentos es un caso válido.
+
+## 16. Array, comparaciones que resultado da el siguiente código
+
+```jsx
+console.log(10 == [10]);
+console.log(10 == [[[[[[[10]]]]]]]);
+```
+
+- **1: True, True** <--
+- 2: True, False
+- 3: False, False
+- 4: False, True
+
+### Respuesta
+
+Según el algoritmo de comparación en la especificación ECMAScript (ECMA-262), la expresión anterior se convirtió en JS como se muestra a continuación
+
+```jsx
+10 === Number([10].valueOf().toString()); // 10
+```
+
+Por lo tanto, no importa los corchetes numéricos ([]) alrededor del número, siempre se convierte en un número en la expresión.
