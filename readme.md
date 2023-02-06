@@ -346,4 +346,17 @@ console.log(String.prototype.trimLeft.name === "trimStart");
 
 Para mantener la coherencia con funciones como String.prototype.padStart, el nombre del método estándar para recortar los espacios en blanco se considera trimStart. Debido a razones de compatibilidad web, el antiguo nombre del método 'trimLeft' todavía actúa como un alias para 'trimStart'. Por lo tanto, el prototipo de 'trimLeft' siempre es 'trimStart’
 
+## 15. Math, métodos, que resultado da el siguiente código
 
+```jsx
+console.log(Math.max());
+```
+
+- 1: undefined
+- 2: Infinity
+- 3: 0
+- **4: -Infinity** <--
+
+### Respuesta
+
+Infinito es el comparador inicial porque casi todos los demás valores son mayores. Entonces, cuando no se proporcionan argumentos, se devolverá -Infinity. **Nota**: El número cero de argumentos es un caso válido.
