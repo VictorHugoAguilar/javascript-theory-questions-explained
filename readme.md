@@ -1,5 +1,11 @@
-
 # Javascript Interview Question Explained
+
+- 1: A, A
+- 2: A, B
+- 1: ReferenceError: arguments is not defined
+- 2: 3
+- 3: undefined
+- 4: null
 
 ## 1. Clases Js, hosting que resultado da
 
@@ -18,7 +24,7 @@ function Vehicle(model, color, year, country) {
 - 1: Undefined
 - 2: ReferenceError
 - 3: null
-- **4: {model: "Honda", color: "white", year: "2010", country: "UK"}**  <--
+- **4: {model: "Honda", color: "white", year: "2010", country: "UK"}**
 
 ### Respuesta
 
@@ -38,7 +44,7 @@ console.log(foo(), typeof x, typeof y);
 
 - 1: 1, undefined and undefined
 - 2: ReferenceError: X is not defined
-- **3: 1, undefined and number** <--
+- **3: 1, undefined and number**
 - 4: 1, number and number
 
 ### Respuesta
@@ -69,7 +75,7 @@ main();
 - 1: A, B and C
 - 2: B, A and C
 - 3: A and C
-- **4: A, C and B** <--
+- **4: A, C and B**
 
 ### Respuesta
 
@@ -90,7 +96,7 @@ El orden de las declaraciones se basa en el mecanismo de bucle de eventos. El or
 console.log(0.1 + 0.2 === 0.3);
 ```
 
-- **1: false** <--
+- **1: false**
 - 2: true
 
 ### Respuesta
@@ -110,7 +116,7 @@ console.log(y);
 - 1: 1function
 - 2: 1object
 - 3: ReferenceError
-- **4: 1undefined** <--
+- **4: 1undefined**
 
 ### Respuesta
 
@@ -130,6 +136,7 @@ console.log(y);
 ```
 
 > **Note:** En MS Edge browser retorna 1object
+> 
 
 ## 6. Funciones, retorno de valores que resultado da el siguiente código
 
@@ -145,12 +152,12 @@ console.log(foo());
 
 - 1: Hello World
 - 2: Object {message: "Hello World"}
-- **3: Undefined** <--
+- **3: Undefined**
 - 4: SyntaxError
 
 ### Respuesta
 
-Este es un problema de punto y coma. Normalmente, los puntos y comas son opcionales en JavaScript. Por lo tanto, si falta algún punto y coma (en este caso, retorno), se inserta automáticamente de inmediato. Por lo tanto, la función devolvió como indefinida.
+Este es un problema de punto y coma. Normalmente, los puntos y comas son opcionales en JavaScript. Por lo tanto, si falta algún punto y coma (en este caso, retorno), se inserta automáticamente de inmediato. Por lo tanto, la función devolvió como **undefined**.
 
 Mientras que si la llave de apertura está junto con la palabra clave de retorno, la función se devolverá como se esperaba.
 
@@ -175,7 +182,7 @@ console.log(myChars.length);
 
 - 1: [empty, 'b', 'c', 'd'], empty, 3
 - 2: [null, 'b', 'c', 'd'], empty, 3
-- **3: [empty, 'b', 'c', 'd'], undefined, 4** <--
+- **3: [empty, 'b', 'c', 'd'], undefined, 4**
 - 4: [null, 'b', 'c', 'd'], undefined, 4
 
 ### Respuesta
@@ -197,7 +204,7 @@ console.log(array3);
 ```
 
 - 1: [undefined × 3], [undefined × 2, 100], [undefined × 3]
-- **2: [empty × 3], [empty × 2, 100], [empty × 3]** <--
+- **2: [empty × 3], [empty × 2, 100], [empty × 3]**
 - 3: [null × 3], [null × 2, 100], [null × 3]
 - 4: [], [100], []
 
@@ -225,7 +232,7 @@ console.log(obj.prop2());
 console.log(obj.prop3());
 ```
 
-- **1: 0, 1, 2** <--
+- **1: 0, 1, 2**
 - 2: 0, { return 1 }, 2
 - 3: 0, { return 1 }, { return 2 }
 - 4: 0, 1, undefined
@@ -242,7 +249,7 @@ console.log(3 > 2 > 1);
 ```
 
 - 1: true, true
-- **2: true, false** <--
+- **2: true, false**
 - 3: SyntaxError, SyntaxError,
 - 4: false, false
 
@@ -274,7 +281,7 @@ printNumbers(1, 2, 3);
 - 1: 1, 2, 3
 - 2: 3, 2, 3
 - 3: SyntaxError: Duplicate parameter name not allowed in this context
-- **4: 1, 2, 1** <--
+- **4: 1, 2, 1**
 
 ### Respuesta
 
@@ -293,7 +300,7 @@ printNumbersArrow(1, 2, 3);
 
 - 1: 1, 2, 3
 - 2: 3, 2, 3
-- **3: SyntaxError: Duplicate parameter name not allowed in this context** <--
+- **3: SyntaxError: Duplicate parameter name not allowed in this context**
 - 4: 1, 2, 1
 
 ### Respuesta
@@ -307,7 +314,7 @@ const arrowFunc = () => arguments.length;
 console.log(arrowFunc(1, 2, 3));
 ```
 
-- **1: ReferenceError: arguments is not defined** <--
+- **1: ReferenceError: arguments is not defined**
 - 2: 3
 - 3: undefined
 - 4: null
@@ -340,7 +347,7 @@ console.log(String.prototype.trimLeft.name === "trimStart");
 ```
 
 - 1: True, False
-- **2: False, True** <--
+- **2: False, True**
 
 ### Respuesta
 
@@ -355,11 +362,11 @@ console.log(Math.max());
 - 1: undefined
 - 2: Infinity
 - 3: 0
-- **4: -Infinity** <--
+- **4: -Infinity**
 
 ### Respuesta
 
-- Infinity es el comparador inicial porque casi todos los demás valores son mayores. Entonces, cuando no se proporcionan argumentos, se devolverá -Infinity. **Nota**: El número cero de argumentos es un caso válido.
+- Infinito es el comparador inicial porque casi todos los demás valores son mayores. Entonces, cuando no se proporcionan argumentos, se devolverá -Infinity. **Nota**: El número cero de argumentos es un caso válido.
 
 ## 16. Array, comparaciones que resultado da el siguiente código
 
@@ -368,7 +375,7 @@ console.log(10 == [10]);
 console.log(10 == [[[[[[[10]]]]]]]);
 ```
 
-- **1: True, True** <--
+- **1: True, True**
 - 2: True, False
 - 3: False, False
 - 4: False, True
@@ -391,7 +398,7 @@ console.log(10 - "10");
 ```
 
 - 1: 20, 0
-- **2: 1010, 0** <--
+- **2: 1010, 0**
 - 3: 1010, 10-10
 - 4: NaN, NaN
 
@@ -410,7 +417,7 @@ if ([0]) {
 }
 ```
 
-- **1: True, I'm True** <--
+- **1: True, I'm True**
 - 2: True, I'm False
 - 3: False, I'm True
 - 4: False, I'm False
@@ -428,7 +435,7 @@ console.log([1, 2] + [3, 4]);
 - 1: [1,2,3,4]
 - 2: [1,2][3,4]
 - 3: SyntaxError
-- **4: 1,23,4** <--
+- **4: 1,23,4**
 
 ### Respuesta
 
@@ -444,7 +451,7 @@ const browser = new Set("Firefox");
 console.log(browser);
 ```
 
-- **1: {1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}** <--
+- **1: {1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}**
 - 2: {1, 2, 3, 4}, {"F", "i", "r", "e", "o", "x"}
 - 3: [1, 2, 3, 4], ["F", "i", "r", "e", "o", "x"]
 - 4: {1, 1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}
@@ -453,14 +460,14 @@ console.log(browser);
 
 Dado que el objeto Set es una colección de valores únicos, no permitirá valores duplicados en la colección. Al mismo tiempo, es una estructura de datos que distingue entre mayúsculas y minúsculas.
 
-## 21. Comparadores, NaN que resultado da el siguiente código
+## 21. Comparador sobre NaN que resultado da el siguiente código
 
 ```jsx
 console.log(NaN === NaN);
 ```
 
 - 1: True
-- **2: False** <--
+- **2: False**
 
 ### Respuesta
 
@@ -500,8 +507,8 @@ console.log(a, b);
 
 - 1: 1, [2, 3, 4, 5]
 - 2: 1, {2, 3, 4, 5}
-- **3: SyntaxError** <--
-- 4: 1, [2, 3, 4] 
+- **3: SyntaxError**
+- 4: 1, [2, 3, 4]
 
 ### Respuesta
 
@@ -521,14 +528,14 @@ async function func() {
 console.log(func());
 ```
 
-- **1: Promise {<fulfilled>: 10}** <--
+- **1: Promise {<fulfilled>: 10}**
 - 2: 10
 - 3: SyntaxError
 - 4: Promise {<rejected>: 10}
 
 ### Respuesta
 
-Las funciones asíncronas siempre devuelven una promesa. Pero incluso si el valor de retorno de una función asíncrona no es explícitamente una promesa, estará implícitamente envuelto en una promesa. La función asíncrona anterior es equivalente a la siguiente expresión,
+Las funciones asíncronas siempre devuelven una promesa. Pero incluso si el valor de retorno de una función asíncrona no es explícitamente una promesa, estará implícitamente envuelto en una promesa. La función asíncrona anterior es equivalente a la siguiente expresión.
 
 ```jsx
 function func() {
@@ -536,7 +543,7 @@ function func() {
 }
 ```
 
-## 25. Funciones async, cúal es el resultado del siguiente código
+## 25. Funciones async, cual es el resultado del siguiente código
 
 ```jsx
 async function func() {
@@ -548,7 +555,7 @@ console.log(func());
 - 1: Promise {<fulfilled>: 10}
 - 2: 10
 - 3: SyntaxError
-- **4: Promise {<resolved>: undefined}** <--
+- **4: Promise {<resolved>: undefined}**
 
 ### Respuesta
 
@@ -581,7 +588,7 @@ async function processArray(array) {
 processArray([1, 2, 3, 4]);
 ```
 
-- **1: SyntaxError** <--
+- **1: SyntaxError**
 - 2: 1, 2, 3, 4
 - 3: 4, 4, 4, 4
 - 4: 4, 3, 2, 1
@@ -614,7 +621,7 @@ process([1, 2, 3, 5]);
 - 1: 1 2 3 5 and Process completed!
 - 2: 5 5 5 5 and Process completed!
 - 3: Process completed! and 5 5 5 5
-- **4: Process completed! and 1 2 3 5** <--
+- **4: Process completed! and 1 2 3 5**
 
 ### Respuesta
 
@@ -630,7 +637,7 @@ async function processArray(array) {
   console.log("Process completed!");
 }
 ```
-                                            
+
 ## 28. Set, que resultado da el siguiente código
 
 ```jsx
@@ -639,7 +646,7 @@ set.add("+0").add("-0").add(NaN).add(undefined).add(NaN);
 console.log(set);
 ```
 
-- **1: Set(4) {"+0", "-0", NaN, undefined}** <--
+- **1: Set(4) {"+0", "-0", NaN, undefined}**
 - 2: Set(3) {"+0", NaN, undefined}
 - 3: Set(5) {"+0", "-0", NaN, undefined, NaN}
 - 4: Set(4) {"+0", NaN, undefined, NaN}
@@ -651,7 +658,7 @@ El conjunto tiene pocas excepciones de verificación de igualdad,
 - Todos los valores de NaN son iguales
 - Tanto +0 como -0 se consideran valores diferentes
 
- ## 29. Symbol, que resultado da el siguiente código
+## 29. Symbol, que resultado da el siguiente código
 
 ```jsx
 const sym1 = Symbol("one");
@@ -665,7 +672,7 @@ console.log(sym1 === sym2, sym3 === sym4);
 
 - 1: true, true
 - 2: true, false
-- **3: false, true** <--
+- **3: false, true**
 - 4: false, false
 
 ### Respuesta
@@ -675,7 +682,7 @@ El símbolo sigue las siguientes convenciones,
 1. Cada valor de símbolo devuelto por Symbol() es único, independientemente de la cadena opcional.
 2. La función Symbol.for() crea un símbolo en una lista de registro de símbolos global. Pero no necesariamente crea un nuevo símbolo en cada llamada, primero verifica si un símbolo con la clave dada ya está presente en el registro y devuelve el símbolo si lo encuentra. De lo contrario, se crea un nuevo símbolo en el registro.
 Nota: La descripción del símbolo solo es útil para fines de depuración.
-                         
+
 ## 30. Symbol, que resultado da el siguiente código
 
 ```jsx
@@ -683,7 +690,7 @@ const sym1 = new Symbol("one");
 console.log(sym1);
 ```
 
-- **1: SyntaxError** <--
+- **1: SyntaxError**
 - 2: one
 - 3: Symbol('one')
 - 4: Symbol
@@ -714,7 +721,7 @@ if (!typeof myString === "number") {
 - 1: SyntaxError
 - 2: It is not a string!, It is not a number!
 - 3: It is not a string!, It is a number!
-- **4: It is a string!, It is a number!** <--
+- **4: It is a string!, It is a number!**
 
 ### Respuesta
 
@@ -731,8 +738,8 @@ O simplemente use la operadora de desigualdad:
 ```jsx
 if (typeof myNumber !== "string")
 ```
-                         
-## 32. JSON método stringify, cual es el resultado del siguiente código
+
+## 32. JSON método stringify, cuál es el resultado del siguiente código
 
 ```jsx
 console.log(
@@ -744,7 +751,7 @@ console.log(
 ```
 
 - 1: {"myArray":['one', undefined, {}, Symbol]}, {}
-- **2: {"myArray":['one', null,null,null]}, {}** <--
+- **2: {"myArray":['one', null,null,null]}, {}**
 - 3: {"myArray":['one', null,null,null]}, "{ [Symbol.for('one')]: 'one' }, [Symbol.for('one')]"
 - 4: {"myArray":['one', undefined, function(){}, Symbol('')]}, {}
 
@@ -754,7 +761,7 @@ Los símbolos tienen las siguientes restricciones,
 
 - Los valores no definidos, Funciones y Símbolos no son valores JSON válidos. Entonces, esos valores se omiten (en un objeto) o se cambian a nulos (en una matriz). Por lo tanto, devuelve valores nulos para la matriz de valores.
 - Todas las propiedades con clave de símbolo se ignorarán por completo. Por lo tanto, devuelve un objeto vacío ({}).
-                         
+
 ## 33. Clases, que resultado da el siguiente código
 
 ```jsx
@@ -775,13 +782,13 @@ new B();
 ```
 
 - 1: A, A
-- **2: A, B** <--
+- **2: A, B**
 
 ### Respuesta
 
 Usando constructores, new.target se refiere al constructor (apunta a la definición de clase de la clase que se inicializa) que new invocó directamente. Esto también se aplica al caso si el constructor está en una clase principal y fue delegado de un constructor secundario.
 
-## 34. Rest params, cual es el resultado del siguiente código
+## 34. Rest params, cuál es el resultado del siguiente código
 
 ```jsx
 const [x, ...y, z] = [1, 2, 3, 4];
@@ -791,12 +798,12 @@ console.log(x, y, z);
 - 1: 1, [2, 3], 4
 - 2: 1, [2, 3, 4], undefined
 - 3: 1, [2], 3
-- **4: SyntaxError** <--
+- **4: SyntaxError**
 
 ### Respuesta
 
-Lanza un error de sintaxis porque el elemento resto no debe tener una coma final. Siempre debe considerar usar un operador de descanso como último elemento.
-  
+Lanza un error de sintaxis porque el elemento resto no debe tener una coma final. Siempre debe considerar usar un operador de descanso como último elemento
+
 ## 35. Object properties, que resultado devuelve el siguiente código
 
 ```jsx
@@ -806,7 +813,7 @@ console.log(x);
 console.log(y);
 ```
 
-- **1: 30, 20** <--
+- **1: 30, 20**
 - 2: 10, 20
 - 3: 10, undefined
 - 4: 30, undefined
@@ -817,8 +824,8 @@ La propiedad del objeto sigue las siguientes reglas,
 
 1. Las propiedades del objeto se pueden recuperar y asignar a una variable con un nombre diferente
 2. La propiedad asignó un valor predeterminado cuando el valor recuperado no está definido
-                    
-## 36. Destructuring, cual es el resultado del siguiente código
+
+## 36. Destructuring, cuál es el resultado del siguiente código
 
 ```jsx
 function area({ length = 10, width = 20 }) {
@@ -829,7 +836,7 @@ area();
 ```
 
 - 1: 200
-- **2: Error** <--
+- **2: Error**
 - 3: undefined
 - 4: 0
 
@@ -858,7 +865,8 @@ function area({ length = 10, width = 20 } = {}) {
 
 area();
 ```
-## 37. Arrays, cual es el resultado del siguiente código
+
+## 37. Arrays, cuál es el resultado del siguiente código
 
 ```jsx
 function add(item, items = []) {
@@ -871,13 +879,13 @@ console.log(add("Apple"));
 ```
 
 - 1: ['Orange'], ['Orange', 'Apple']
-- **2: ['Orange'], ['Apple']** <--
+- **2: ['Orange'], ['Apple']**
 
 ### Resultado
 
 Dado que el argumento predeterminado se evalúa en el momento de la llamada, se crea un nuevo objeto cada vez que se llama a la función. Entonces, en este caso, se crea la nueva matriz y se empuja un elemento a la matriz vacía predeterminada.
 
-### 38. Destructuring, cual es el resultado del siguiente código
+### 38. Destructuring, cuál es el resultado del siguiente código
 
 ```jsx
 const props = [
@@ -890,7 +898,7 @@ const [, , { name }] = props;
 console.log(name);
 ```
 
-- **1: Tom** <--
+- **1: Tom**
 - 2: Error
 - 3: undefined
 - 4: John
@@ -899,7 +907,7 @@ console.log(name);
 
 Es posible combinar la desestructuración de matrices y objetos. En este caso, se accede primero al tercer elemento de los accesorios de la matriz, seguido de la propiedad de nombre en el objeto.
 
-## 39. typeof, cual es el resultado del siguiente código
+## 39. typeof, cuál es el resultado del siguiente código
 
 ```jsx
 function checkType(num = 1) {
@@ -914,7 +922,7 @@ checkType(null);
 
 - 1: number, undefined, string, object
 - 2: undefined, undefined, string, object
-- **3: number, number, string, object** <--
+- **3: number, number, string, object**
 - 4: number, number, number, number
 
 ### Respuesta
@@ -925,7 +933,7 @@ Por lo tanto, el resultado de las llamadas a funciones clasificadas de la siguie
 
 1. Las dos primeras llamadas de función registran el tipo de número ya que el tipo de valor predeterminado es número
 2. El tipo de '' y los valores nulos son cadena y tipo de objeto respectivamente.
-                                            
+
 ## 40. Funciones, parámetros, cuál es el resultado del siguiente código
 
 ```jsx
@@ -938,7 +946,7 @@ greet("Hello", "John", "Good morning!");
 ```
 
 - 1: SyntaxError
-- **2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']** <--
+- **2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']**
 
 ### Respuesta
 
@@ -955,8 +963,8 @@ function outer(f = inner()) {
 outer();
 ```
 
-- **1: ReferenceError** <--
-- 2: Inner 
+- **1: ReferenceError**
+- 2: Inner
 
 ### Respuesta
 
@@ -975,7 +983,7 @@ myFun(1, 2);
 
 - 1: [3, 4, 5], undefined
 - 2: SyntaxError
-- **3: [3, 4, 5], []** <--
+- **3: [3, 4, 5], []**
 - 4: [3, 4, 5], [undefined]
 
 ### Respuesta
@@ -991,15 +999,15 @@ console.log(array);
 ```
 
 - 1: ['key', 'value']
-- **2: TypeError** <--
+- **2: TypeError**
 - 3: []
 - 4: ['key']
 
 ### Respuesta
 
 La sintaxis extendida solo se puede aplicar a objetos iterables. Por defecto, los Objetos no son iterables, pero se vuelven iterables cuando se usan en un Array, o con funciones de iteración como map(), reduce() y Assign(). Si aún intenta hacerlo, aún arroja TypeError: obj is not iterable.
-                                            
-## 44. Properties, cuál es el resultado del siguiente código
+
+## 44. Objeto generador, cuál es el resultado del siguiente código
 
 ```jsx
 function* myGenFunc() {
@@ -1014,13 +1022,13 @@ console.log(myGenObj.next().value);
 - 1: 1
 - 2: undefined
 - 3: SyntaxError
-- **4: TypeError** <--
+- **4: TypeError**
 
 ### Respuesta
 
 Los generadores no son de tipo construible. Pero si continúa haciéndolo, aparecerá un error que dice "Error de tipo: myGenFunc no es un constructor”
 
-## 45. Properties, cuál es el resultado del siguiente código
+## 45. Objeto generador, cuál es el resultado del siguiente código
 
 ```jsx
 function* yieldAndReturn() {
@@ -1035,7 +1043,7 @@ console.log(myGenObj.next());
 console.log(myGenObj.next());
 ```
 
-- **1: { value: 1, done: false }, { value: 2, done: true }, { value: undefined, done: true }** <--
+- **1: { value: 1, done: false }, { value: 2, done: true }, { value: undefined, done: true }**
 - 2: { value: 1, done: false }, { value: 2, done: false }, { value: undefined, done: true }
 - 3: { value: 1, done: false }, { value: 2, done: true }, { value: 3, done: true }
 - 4: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }
@@ -1043,3 +1051,30 @@ console.log(myGenObj.next());
 ### Respuesta
 
 Una declaración de retorno en una función de generador hará que el generador finalice. Si se devuelve un valor, se establecerá como la propiedad value del objeto y la propiedad done será verdadera. Cuando finaliza un generador, las siguientes llamadas next() devuelven un objeto de esta forma: {valor: indefinido, hecho: verdadero}.
+
+## 46. Objeto generador, que resultado da el siguiente código
+
+```jsx
+const myGenerator = (function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+})();
+for (const value of myGenerator) {
+  console.log(value);
+  break;
+}
+
+for (const value of myGenerator) {
+  console.log(value);
+}
+```
+
+- 1: 1,2,3 and 1,2,3
+- 2: 1,2,3 and 4,5,6
+- 3: 1 and 1
+- **4: 1**
+
+### Respuesta
+
+El generador no debe reutilizarse una vez que se cierra el iterador. es decir, al salir de un ciclo (al finalizar o al usar break & return), el generador se cierra y tratar de iterarlo nuevamente no produce más resultados. Por lo tanto, el segundo ciclo no imprime ningún valor.
