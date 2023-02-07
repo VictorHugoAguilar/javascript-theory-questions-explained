@@ -925,3 +925,78 @@ Por lo tanto, el resultado de las llamadas a funciones clasificadas de la siguie
 
 1. Las dos primeras llamadas de función registran el tipo de número ya que el tipo de valor predeterminado es número
 2. El tipo de '' y los valores nulos son cadena y tipo de objeto respectivamente.
+                                            
+## 40. Funciones, parámetros, cuál es el resultado del siguiente código
+
+```jsx
+function greet(greeting, name, message = greeting + " " + name) {
+  console.log([greeting, name, message]);
+}
+
+greet("Hello", "John");
+greet("Hello", "John", "Good morning!");
+```
+
+- 1: SyntaxError
+- **2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']**
+
+### Respuesta
+
+Dado que los parámetros definidos anteriormente están disponibles para los parámetros predeterminados posteriores, este fragmento de código no genera ningún error.
+
+## 41. Funciones, parámetros, cual es el resultado del siguiente código
+
+```jsx
+function outer(f = inner()) {
+  function inner() {
+    return "Inner";
+  }
+}
+outer();
+```
+
+- **1: ReferenceError**
+- 2: Inner
+
+### Respuesta
+
+Las funciones y variables declaradas en el cuerpo de la función no se pueden consultar desde los inicializadores de parámetros de valores predeterminados. Si aún intenta acceder, arroja un error de referencia en tiempo de ejecución (es decir, el interior no está definido).
+
+## 42. Rest params, cuál es el resultado del siguiente código
+
+```jsx
+function myFun(x, y, ...manyMoreArgs) {
+  console.log(manyMoreArgs);
+}
+
+myFun(1, 2, 3, 4, 5);
+myFun(1, 2);
+```
+
+- 1: [3, 4, 5], undefined
+- 2: SyntaxError
+- **3: [3, 4, 5], []**
+- 4: [3, 4, 5], [undefined]
+
+### Respuesta
+
+El parámetro rest se usa para contener los parámetros restantes de una función y se convierte en una matriz vacía si no se proporciona el argumento.
+
+### 43. Object, cuál es el resultado del siguiente código
+
+```jsx
+const obj = { key: "value" };
+const array = [...obj];
+console.log(array);
+```
+
+- 1: ['key', 'value']
+- **2: TypeError**
+- 3: []
+- 4: ['key']
+
+### Respuesta
+
+La sintaxis extendida solo se puede aplicar a objetos iterables. Por defecto, los Objetos no son iterables, pero se vuelven iterables cuando se usan en un Array, o con funciones de iteración como map(), reduce() y Assign(). Si aún intenta hacerlo, aún arroja TypeError: obj is not iterable.
+                                            
+
