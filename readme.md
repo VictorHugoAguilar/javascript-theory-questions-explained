@@ -410,7 +410,7 @@ if ([0]) {
 }
 ```
 
-- 1: True, I'm True
+- **1: True, I'm True** <--
 - 2: True, I'm False
 - 3: False, I'm True
 - 4: False, I'm False
