@@ -675,3 +675,61 @@ El símbolo sigue las siguientes convenciones,
 1. Cada valor de símbolo devuelto por Symbol() es único, independientemente de la cadena opcional.
 2. La función Symbol.for() crea un símbolo en una lista de registro de símbolos global. Pero no necesariamente crea un nuevo símbolo en cada llamada, primero verifica si un símbolo con la clave dada ya está presente en el registro y devuelve el símbolo si lo encuentra. De lo contrario, se crea un nuevo símbolo en el registro.
 Nota: La descripción del símbolo solo es útil para fines de depuración.
+                         
+## 30. Symbol, que resultado da el siguiente código
+
+```jsx
+const sym1 = new Symbol("one");
+console.log(sym1);
+```
+
+- **1: SyntaxError**
+- 2: one
+- 3: Symbol('one')
+- 4: Symbol
+
+### Respuesta
+
+El símbolo es solo una función estándar y no un constructor de objetos (a diferencia de otras primitivas new Boolean, new String y new Number). Entonces, si intenta llamarlo con el nuevo operador, dará como resultado un TypeError
+
+## 31. Typeof, que da el siguiente resultado
+
+```jsx
+let myNumber = 100;
+let myString = "100";
+
+if (!typeof myNumber === "string") {
+  console.log("It is not a string!");
+} else {
+  console.log("It is a string!");
+}
+
+if (!typeof myString === "number") {
+  console.log("It is not a number!");
+} else {
+  console.log("It is a number!");
+}
+```
+
+- 1: SyntaxError
+- 2: It is not a string!, It is not a number!
+- 3: It is not a string!, It is a number!
+- **4: It is a string!, It is a number!**
+
+### Respuesta
+
+El valor de retorno de typeof myNumber o typeof myString es siempre un valor verdadero (ya sea "número" o "cadena"). El ! El operador opera en typeof myNumber o typeof myString, convirtiéndolos en valores booleanos. Dado que el valor de !typeof myNumber y !typeof myString es falso, la condición if falla y el control pasa al bloque else.
+
+Para hacer el ! Operador opera en la expresión de igualdad, uno necesita agregar paréntesis:
+
+```jsx
+if (!(typeof myNumber === "string"))
+```
+
+O simplemente use la operadora de desigualdad:
+
+```jsx
+if (typeof myNumber !== "string")
+```
+
+                         
