@@ -399,3 +399,22 @@ console.log(10 - "10");
 
 El operador de concatenación (+) es aplicable tanto para tipos de números como de cadenas. Entonces, si algún operando es de tipo cadena, ambos operandos se concatenan como cadenas. Mientras que el operador restar (-) intenta convertir los operandos como tipo de número.
 
+## 18. Comparaciones, cual es el resultado del siguiente código
+
+```jsx
+console.log([0] == false);
+if ([0]) {
+  console.log("I'm True");
+} else {
+  console.log("I'm False");
+}
+```
+
+- 1: True, I'm True
+- 2: True, I'm False
+- 3: False, I'm True
+- 4: False, I'm False
+
+### Respuesta
+
+En los operadores de comparación, la expresión [0] se convierte en Number([0].valueOf().toString()) que se resuelve en falso. Mientras que [0] simplemente se convierte en un valor real sin ninguna conversión porque no hay un operador de comparación.
