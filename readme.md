@@ -650,3 +650,28 @@ El conjunto tiene pocas excepciones de verificación de igualdad,
 
 - Todos los valores de NaN son iguales
 - Tanto +0 como -0 se consideran valores diferentes
+
+ ## 29. Symbol, que resultado da el siguiente código
+
+```jsx
+const sym1 = Symbol("one");
+const sym2 = Symbol("one");
+
+const sym3 = Symbol.for("two");
+const sym4 = Symbol.for("two");
+
+console.log(sym1 === sym2, sym3 === sym4);
+```
+
+- 1: true, true
+- 2: true, false
+- **3: false, true** <--
+- 4: false, false
+
+### Respuesta
+
+El símbolo sigue las siguientes convenciones,
+
+1. Cada valor de símbolo devuelto por Symbol() es único, independientemente de la cadena opcional.
+2. La función Symbol.for() crea un símbolo en una lista de registro de símbolos global. Pero no necesariamente crea un nuevo símbolo en cada llamada, primero verifica si un símbolo con la clave dada ya está presente en el registro y devuelve el símbolo si lo encuentra. De lo contrario, se crea un nuevo símbolo en el registro.
+Nota: La descripción del símbolo solo es útil para fines de depuración.
