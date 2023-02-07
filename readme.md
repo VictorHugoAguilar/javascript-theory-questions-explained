@@ -536,7 +536,7 @@ function func() {
 }
 ```
 
-## 25. Funciones async, cual es el resultado del siguiente código
+## 25. Funciones async, cúal es el resultado del siguiente código
 
 ```jsx
 async function func() {
