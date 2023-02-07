@@ -466,3 +466,27 @@ console.log(NaN === NaN);
 
 JavaScript sigue los estándares de especificación IEEE 754. Según esta especificación, los NaN nunca son iguales para los números de punto flotante.
 
+## 22. NaN, que resultado da el siguiente código
+
+```jsx
+let numbers = [1, 2, 3, 4, NaN];
+console.log(numbers.indexOf(NaN));
+```
+
+- 1: 4
+- 2: NaN
+- 3: SyntaxError
+- **4: -1**
+
+### Respuesta
+
+indexOf usa el operador de igualdad estricta (===) internamente y NaN === NaN se evalúa como falso. Dado que indexOf no podrá encontrar NaN dentro de una matriz, siempre devuelve -1. 
+
+Pero puede usar el método Array.prototype.findIndex para averiguar el índice de NaN en una matriz o puede usar Array.prototype.includes para verificar si NaN está presente en una matriz o no.
+
+```jsx
+let numbers = [1, 2, 3, 4, NaN];
+console.log(numbers.findIndex(Number.isNaN)); // 4
+
+console.log(numbers.includes(NaN)); // true
+```
