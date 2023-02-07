@@ -858,3 +858,70 @@ function area({ length = 10, width = 20 } = {}) {
 
 area();
 ```
+## 37. Arrays, cual es el resultado del siguiente código
+
+```jsx
+function add(item, items = []) {
+  items.push(item);
+  return items;
+}
+
+console.log(add("Orange"));
+console.log(add("Apple"));
+```
+
+- 1: ['Orange'], ['Orange', 'Apple']
+- **2: ['Orange'], ['Apple']** <--
+
+### Resultado
+
+Dado que el argumento predeterminado se evalúa en el momento de la llamada, se crea un nuevo objeto cada vez que se llama a la función. Entonces, en este caso, se crea la nueva matriz y se empuja un elemento a la matriz vacía predeterminada.
+
+### 38. Destructuring, cual es el resultado del siguiente código
+
+```jsx
+const props = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Jack" },
+  { id: 3, name: "Tom" },
+];
+
+const [, , { name }] = props;
+console.log(name);
+```
+
+- **1: Tom** <--
+- 2: Error
+- 3: undefined
+- 4: John
+
+### Respuesta
+
+Es posible combinar la desestructuración de matrices y objetos. En este caso, se accede primero al tercer elemento de los accesorios de la matriz, seguido de la propiedad de nombre en el objeto.
+
+## 39. typeof, cual es el resultado del siguiente código
+
+```jsx
+function checkType(num = 1) {
+  console.log(typeof num);
+}
+
+checkType();
+checkType(undefined);
+checkType("");
+checkType(null);
+```
+
+- 1: number, undefined, string, object
+- 2: undefined, undefined, string, object
+- **3: number, number, string, object** <--
+- 4: number, number, number, number
+
+### Respuesta
+
+Si el argumento de la función se establece implícitamente (sin pasar el argumento) o explícitamente como indefinido, el valor del argumento es el parámetro predeterminado. Mientras que para otros valores falsos ('' o nulos), el valor del argumento se pasa como parámetro.
+
+Por lo tanto, el resultado de las llamadas a funciones clasificadas de la siguiente manera,
+
+1. Las dos primeras llamadas de función registran el tipo de número ya que el tipo de valor predeterminado es número
+2. El tipo de '' y los valores nulos son cadena y tipo de objeto respectivamente.
