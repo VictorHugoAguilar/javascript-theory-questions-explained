@@ -559,3 +559,74 @@ function func() {
   return Promise.resolve(10).then(() => undefined);
 }
 ```
+
+## 26. Promesas, que resultado da el siguiente código
+
+```jsx
+function delay() {
+  return new Promise(resolve => setTimeout(resolve, 2000));
+}
+
+async function delayedLog(item) {
+  await delay();
+  console.log(item);
+}
+
+async function processArray(array) {
+  array.forEach(item => {
+    await delayedLog(item);
+  })
+}
+
+processArray([1, 2, 3, 4]);
+```
+
+- **1: SyntaxError** <--
+- 2: 1, 2, 3, 4
+- 3: 4, 4, 4, 4
+- 4: 4, 3, 2, 1
+
+### Respuesta
+
+Aunque "processArray" es una función asíncrona, la función anónima que usamos para forEach es síncrona. Si usa esperar dentro de una función síncrona, arroja un error de sintaxis.
+
+## 27. Promesas, que resultado da el siguiente código
+
+```jsx
+function delay() {
+  return new Promise((resolve) => setTimeout(resolve, 2000));
+}
+
+async function delayedLog(item) {
+  await delay();
+  console.log(item);
+}
+
+async function process(array) {
+  array.forEach(async (item) => {
+    await delayedLog(item);
+  });
+  console.log("Process completed!");
+}
+process([1, 2, 3, 5]);
+```
+
+- 1: 1 2 3 5 and Process completed!
+- 2: 5 5 5 5 and Process completed!
+- 3: Process completed! and 5 5 5 5
+- **4: Process completed! and 1 2 3 5** <--
+
+### Respuesta
+
+El método forEach no esperará hasta que todos los elementos estén terminados, sino que simplemente ejecuta las tareas y continúa. Por lo tanto, la última declaración se muestra primero seguida de una secuencia de resoluciones de promesa.
+
+Pero controlas la secuencia de la matriz usando for..of loop,
+
+```jsx
+async function processArray(array) {
+  for (const item of array) {
+    await delayedLog(item);
+  }
+  console.log("Process completed!");
+}
+```
