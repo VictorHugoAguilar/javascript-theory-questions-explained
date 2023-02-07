@@ -382,3 +382,20 @@ Según el algoritmo de comparación en la especificación ECMAScript (ECMA-262),
 ```
 
 Por lo tanto, no importa los corchetes numéricos ([]) alrededor del número, siempre se convierte en un número en la expresión.
+
+## 17. Comparaciones, que resultado da el siguiente código
+
+```jsx
+console.log(10 + "10");
+console.log(10 - "10");
+```
+
+- 1: 20, 0
+- **2: 1010, 0**
+- 3: 1010, 10-10
+- 4: NaN, NaN
+
+### Respuesta
+
+El operador de concatenación (+) es aplicable tanto para tipos de números como de cadenas. Entonces, si algún operando es de tipo cadena, ambos operandos se concatenan como cadenas. Mientras que el operador restar (-) intenta convertir los operandos como tipo de número.
+
