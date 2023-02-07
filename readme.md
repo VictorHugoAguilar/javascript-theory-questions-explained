@@ -797,3 +797,64 @@ console.log(x, y, z);
 
 Lanza un error de sintaxis porque el elemento resto no debe tener una coma final. Siempre debe considerar usar un operador de descanso como último elemento.
   
+## 35. Object properties, que resultado devuelve el siguiente código
+
+```jsx
+const { a: x = 10, b: y = 20 } = { a: 30 };
+
+console.log(x);
+console.log(y);
+```
+
+- **1: 30, 20** <--
+- 2: 10, 20
+- 3: 10, undefined
+- 4: 30, undefined
+
+### Respuesta
+
+La propiedad del objeto sigue las siguientes reglas,
+
+1. Las propiedades del objeto se pueden recuperar y asignar a una variable con un nombre diferente
+2. La propiedad asignó un valor predeterminado cuando el valor recuperado no está definido
+                    
+## 36. Destructuring, cual es el resultado del siguiente código
+
+```jsx
+function area({ length = 10, width = 20 }) {
+  console.log(length * width);
+}
+
+area();
+```
+
+- 1: 200
+- **2: Error** <--
+- 3: undefined
+- 4: 0
+
+### Respuesta
+
+Si omite la asignación del lado derecho para el objeto de desestructuración, la función buscará al menos un argumento para proporcionar cuando se invoque. De lo contrario, recibirá un error Error: no se puede leer la propiedad 'longitud' de undefined como se mencionó anteriormente.
+
+Puede evitar el error con cualquiera de los siguientes cambios,
+
+1. Pase al menos un objeto vacío:
+
+```jsx
+function area({ length = 10, width = 20 }) {
+  console.log(length * width);
+}
+
+area({});
+```
+
+1. Asignar objeto vacío predeterminado:
+
+```jsx
+function area({ length = 10, width = 20 } = {}) {
+  console.log(length * width);
+}
+
+area();
+```
