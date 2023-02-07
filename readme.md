@@ -683,7 +683,7 @@ const sym1 = new Symbol("one");
 console.log(sym1);
 ```
 
-- **1: SyntaxError**
+- **1: SyntaxError** <--
 - 2: one
 - 3: Symbol('one')
 - 4: Symbol
@@ -714,7 +714,7 @@ if (!typeof myString === "number") {
 - 1: SyntaxError
 - 2: It is not a string!, It is not a number!
 - 3: It is not a string!, It is a number!
-- **4: It is a string!, It is a number!**
+- **4: It is a string!, It is a number!** <--
 
 ### Respuesta
 
@@ -731,5 +731,69 @@ O simplemente use la operadora de desigualdad:
 ```jsx
 if (typeof myNumber !== "string")
 ```
-
                          
+## 32. JSON método stringify, cual es el resultado del siguiente código
+
+```jsx
+console.log(
+  JSON.stringify({ myArray: ["one", undefined, function () {}, Symbol("")] })
+);
+console.log(
+  JSON.stringify({ [Symbol.for("one")]: "one" }, [Symbol.for("one")])
+);
+```
+
+- 1: {"myArray":['one', undefined, {}, Symbol]}, {}
+- **2: {"myArray":['one', null,null,null]}, {}** <--
+- 3: {"myArray":['one', null,null,null]}, "{ [Symbol.for('one')]: 'one' }, [Symbol.for('one')]"
+- 4: {"myArray":['one', undefined, function(){}, Symbol('')]}, {}
+
+### Respuesta
+
+Los símbolos tienen las siguientes restricciones,
+
+- Los valores no definidos, Funciones y Símbolos no son valores JSON válidos. Entonces, esos valores se omiten (en un objeto) o se cambian a nulos (en una matriz). Por lo tanto, devuelve valores nulos para la matriz de valores.
+- Todas las propiedades con clave de símbolo se ignorarán por completo. Por lo tanto, devuelve un objeto vacío ({}).
+                         
+## 33. Clases, que resultado da el siguiente código
+
+```jsx
+class A {
+  constructor() {
+    console.log(new.target.name);
+  }
+}
+
+class B extends A {
+  constructor() {
+    super();
+  }
+}
+
+new A();
+new B();
+```
+
+- 1: A, A
+- **2: A, B** <--
+
+### Respuesta
+
+Usando constructores, new.target se refiere al constructor (apunta a la definición de clase de la clase que se inicializa) que new invocó directamente. Esto también se aplica al caso si el constructor está en una clase principal y fue delegado de un constructor secundario.
+
+## 34. Rest params, cual es el resultado del siguiente código
+
+```jsx
+const [x, ...y, z] = [1, 2, 3, 4];
+console.log(x, y, z);
+```
+
+- 1: 1, [2, 3], 4
+- 2: 1, [2, 3, 4], undefined
+- 3: 1, [2], 3
+- **4: SyntaxError** <--
+
+### Respuesta
+
+Lanza un error de sintaxis porque el elemento resto no debe tener una coma final. Siempre debe considerar usar un operador de descanso como último elemento.
+  
