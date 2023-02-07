@@ -630,3 +630,23 @@ async function processArray(array) {
   console.log("Process completed!");
 }
 ```
+                                            
+## 28. Set, que resultado da el siguiente código
+
+```jsx
+var set = new Set();
+set.add("+0").add("-0").add(NaN).add(undefined).add(NaN);
+console.log(set);
+```
+
+- **1: Set(4) {"+0", "-0", NaN, undefined}** <--
+- 2: Set(3) {"+0", NaN, undefined}
+- 3: Set(5) {"+0", "-0", NaN, undefined, NaN}
+- 4: Set(4) {"+0", NaN, undefined, NaN}
+
+### Respuesta
+
+El conjunto tiene pocas excepciones de verificación de igualdad,
+
+- Todos los valores de NaN son iguales
+- Tanto +0 como -0 se consideran valores diferentes
