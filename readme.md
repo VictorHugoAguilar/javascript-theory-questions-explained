@@ -418,3 +418,51 @@ if ([0]) {
 ### Respuesta
 
 En los operadores de comparación, la expresión [0] se convierte en Number([0].valueOf().toString()) que se resuelve en falso. Mientras que [0] simplemente se convierte en un valor real sin ninguna conversión porque no hay un operador de comparación.
+
+## 19. Arrays, que resultado da el siguiente código
+
+```jsx
+console.log([1, 2] + [3, 4]);
+```
+
+- 1: [1,2,3,4]
+- 2: [1,2][3,4]
+- 3: SyntaxError
+- **4: 1,23,4** <--
+
+### Respuesta
+
+El operador + no está destinado ni definido para matrices. Entonces convierte matrices en cadenas y las concatena.
+
+## 20. Set, que resultado da el siguiente código
+
+```jsx
+const numbers = new Set([1, 1, 2, 3, 4]);
+console.log(numbers);
+
+const browser = new Set("Firefox");
+console.log(browser);
+```
+
+- **1: {1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}** <--
+- 2: {1, 2, 3, 4}, {"F", "i", "r", "e", "o", "x"}
+- 3: [1, 2, 3, 4], ["F", "i", "r", "e", "o", "x"]
+- 4: {1, 1, 2, 3, 4}, {"F", "i", "r", "e", "f", "o", "x"}
+
+### Respuesta
+
+Dado que el objeto Set es una colección de valores únicos, no permitirá valores duplicados en la colección. Al mismo tiempo, es una estructura de datos que distingue entre mayúsculas y minúsculas.
+
+## 21. Comparadores, NaN que resultado da el siguiente código
+
+```jsx
+console.log(NaN === NaN);
+```
+
+- 1: True
+- **2: False** <--
+
+### Respuesta
+
+JavaScript sigue los estándares de especificación IEEE 754. Según esta especificación, los NaN nunca son iguales para los números de punto flotante.
+
