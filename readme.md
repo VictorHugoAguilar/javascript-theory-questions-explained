@@ -938,7 +938,7 @@ greet("Hello", "John", "Good morning!");
 ```
 
 - 1: SyntaxError
-- **2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']**
+- **2: ['Hello', 'John', 'Hello John'], ['Hello', 'John', 'Good morning!']** <--
 
 ### Respuesta
 
@@ -955,8 +955,8 @@ function outer(f = inner()) {
 outer();
 ```
 
-- **1: ReferenceError**
-- 2: Inner
+- **1: ReferenceError** <--
+- 2: Inner 
 
 ### Respuesta
 
@@ -975,7 +975,7 @@ myFun(1, 2);
 
 - 1: [3, 4, 5], undefined
 - 2: SyntaxError
-- **3: [3, 4, 5], []**
+- **3: [3, 4, 5], []** <--
 - 4: [3, 4, 5], [undefined]
 
 ### Respuesta
@@ -991,7 +991,7 @@ console.log(array);
 ```
 
 - 1: ['key', 'value']
-- **2: TypeError**
+- **2: TypeError** <--
 - 3: []
 - 4: ['key']
 
@@ -999,4 +999,47 @@ console.log(array);
 
 La sintaxis extendida solo se puede aplicar a objetos iterables. Por defecto, los Objetos no son iterables, pero se vuelven iterables cuando se usan en un Array, o con funciones de iteración como map(), reduce() y Assign(). Si aún intenta hacerlo, aún arroja TypeError: obj is not iterable.
                                             
+## 44. Properties, cuál es el resultado del siguiente código
 
+```jsx
+function* myGenFunc() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+var myGenObj = new myGenFunc();
+console.log(myGenObj.next().value);
+```
+
+- 1: 1
+- 2: undefined
+- 3: SyntaxError
+- **4: TypeError** <--
+
+### Respuesta
+
+Los generadores no son de tipo construible. Pero si continúa haciéndolo, aparecerá un error que dice "Error de tipo: myGenFunc no es un constructor”
+
+## 45. Properties, cuál es el resultado del siguiente código
+
+```jsx
+function* yieldAndReturn() {
+  yield 1;
+  return 2;
+  yield 3;
+}
+
+var myGenObj = yieldAndReturn();
+console.log(myGenObj.next());
+console.log(myGenObj.next());
+console.log(myGenObj.next());
+```
+
+- **1: { value: 1, done: false }, { value: 2, done: true }, { value: undefined, done: true }** <--
+- 2: { value: 1, done: false }, { value: 2, done: false }, { value: undefined, done: true }
+- 3: { value: 1, done: false }, { value: 2, done: true }, { value: 3, done: true }
+- 4: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }
+
+### Respuesta
+
+Una declaración de retorno en una función de generador hará que el generador finalice. Si se devuelve un valor, se establecerá como la propiedad value del objeto y la propiedad done será verdadera. Cuando finaliza un generador, las siguientes llamadas next() devuelven un objeto de esta forma: {valor: indefinido, hecho: verdadero}.
