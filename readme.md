@@ -490,3 +490,72 @@ console.log(numbers.findIndex(Number.isNaN)); // 4
 
 console.log(numbers.includes(NaN)); // true
 ```
+
+## 23. Rest params operator, que resultado da el siguiente código
+
+```jsx
+let [a, ...b,] = [1, 2, 3, 4, 5];
+console.log(a, b);
+```
+
+- 1: 1, [2, 3, 4, 5]
+- 2: 1, {2, 3, 4, 5}
+- **3: SyntaxError** <--
+- 4: 1, [2, 3, 4] 
+
+### Respuesta
+
+Cuando se usan rest params, no se permiten las comas finales y generarán un SyntaxError. Si elimina la coma final, muestra la primera respuesta
+
+```jsx
+let [a, ...b] = [1, 2, 3, 4, 5];
+console.log(a, b); // 1, [2, 3, 4, 5]
+```
+
+## 24. Funciones async, que resultado da el siguiente código
+
+```jsx
+async function func() {
+  return 10;
+}
+console.log(func());
+```
+
+- **1: Promise {<fulfilled>: 10}** <--
+- 2: 10
+- 3: SyntaxError
+- 4: Promise {<rejected>: 10}
+
+### Respuesta
+
+Las funciones asíncronas siempre devuelven una promesa. Pero incluso si el valor de retorno de una función asíncrona no es explícitamente una promesa, estará implícitamente envuelto en una promesa. La función asíncrona anterior es equivalente a la siguiente expresión,
+
+```jsx
+function func() {
+  return Promise.resolve(10);
+}
+```
+
+## 25. Funciones async, cual es el resultado del siguiente código
+
+```jsx
+async function func() {
+  await 10;
+}
+console.log(func());
+```
+
+- 1: Promise {<fulfilled>: 10}
+- 2: 10
+- 3: SyntaxError
+- **4: Promise {<resolved>: undefined}** <--
+
+### Respuesta
+
+La expresión de espera devuelve el valor 10 con resolución de promesa y el código después de cada expresión de espera se puede tratar como existente en una devolución de llamada .then. En este caso, no hay expresión de retorno al final de la función. Por lo tanto, el valor de retorno predeterminado de undefined se devuelve como la resolución de la promesa. La función asíncrona anterior es equivalente a la siguiente expresión.
+
+```jsx
+function func() {
+  return Promise.resolve(10).then(() => undefined);
+}
+```
