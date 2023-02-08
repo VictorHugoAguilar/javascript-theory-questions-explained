@@ -1,5 +1,9 @@
 # Javascript Interview Question Explained
 
+- 1: `First line`, then print `a, b, c` in a new line, and finally print `Third line` as next line
+- 2: `First line`, then print `a, b, c` in a first line, and print `Third line` as next line
+- 3: Missing semi-colon error
+- 4: Cannot read properties of undefined
 - 1: A, A
 - 2: A, B
 - 1: ReferenceError: arguments is not defined
@@ -1078,3 +1082,400 @@ for (const value of myGenerator) {
 ### Respuesta
 
 El generador no debe reutilizarse una vez que se cierra el iterador. es decir, al salir de un ciclo (al finalizar o al usar break & return), el generador se cierra y tratar de iterarlo nuevamente no produce más resultados. Por lo tanto, el segundo ciclo no imprime ningún valor.
+
+## 47. Number, que resultado da el siguiente código
+
+```jsx
+const num = 0o38;
+console.log(num);
+```
+
+- **1: SyntaxError**
+- 2: 38
+
+### Respuesta
+
+Si usa un número no válido (fuera del rango 0-7) en el literal octal, JavaScript generará un SyntaxError. En ES5, trata el literal octal como un número decimal.
+
+## 48. Clases, cuál es el resultado del siguiente código
+
+```jsx
+const squareObj = new Square(10);
+console.log(squareObj.area);
+
+class Square {
+  constructor(length) {
+    this.length = length;
+  }
+
+  get area() {
+    return this.length * this.length;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}
+```
+
+- 1: 100
+- **2: ReferenceError**
+
+### Respuesta
+
+A diferencia de las declaraciones de funciones, las declaraciones de clases no se elevan. es decir, primero debe declarar su clase y luego acceder a ella, de lo contrario arrojará un error de referencia "Error de referencia no detectado: el cuadrado no está definido".
+
+Nota: Las expresiones de clase también se aplican a las mismas restricciones de elevación de las declaraciones de clase.
+
+## 49. Clases, cuál es el resultado del siguiente código
+
+```jsx
+function Person() {}
+
+Person.prototype.walk = function () {
+  return this;
+};
+
+Person.run = function () {
+  return this;
+};
+
+let user = new Person();
+let walk = user.walk;
+console.log(walk());
+
+let run = Person.run;
+console.log(run());
+```
+
+- 1: undefined, undefined
+- 2: Person, Person
+- 3: SyntaxError
+- **4: Window, Window**
+
+### Respuesta
+
+Cuando se llama a un método regular o prototipo sin un valor para this, los métodos devuelven un valor inicial this si el valor no está indefinido. De lo contrario, se devolverá el objeto de ventana global. En nuestro caso, el valor inicial de this no está definido, por lo que ambos métodos devuelven objetos de ventana.
+
+## 50. Clases, que resultado devuelve el siguiente código
+
+```jsx
+class Vehicle {
+  constructor(name) {
+    this.name = name;
+  }
+
+  start() {
+    console.log(`${this.name} vehicle started`);
+  }
+}
+
+class Car extends Vehicle {
+  start() {
+    console.log(`${this.name} car started`);
+    super.start();
+  }
+}
+
+const car = new Car("BMW");
+console.log(car.start());
+```
+
+- 1: SyntaxError
+- 2: BMW vehicle started, BMW car started
+- **3: BMW car started, BMW vehicle started**
+- 4: BMW car started, BMW car started
+
+### Respuesta
+
+La palabra clave super se utiliza para llamar a métodos de una superclase. A diferencia de otros lenguajes, la súper invocación no necesita ser una primera declaración. es decir, las declaraciones se ejecutarán en el mismo orden de código.
+
+## 51. Objetos, cual es el resultado del siguiente código
+
+```jsx
+const USER = { age: 30 };
+USER.age = 25;
+console.log(USER.age);
+```
+
+- 1: 30
+- **2: 25**
+- 3: Uncaught TypeError
+- 4: SyntaxError
+
+### Respuesta
+
+Aunque usamos variables constantes, su contenido es un objeto y el contenido del objeto (por ejemplo, las propiedades) se puede modificar. Por lo tanto, el cambio va a ser válido en este caso.
+
+## 52. Equals, que resultado da el siguiente código
+
+```jsx
+console.log("🙂" === "🙂");
+```
+
+- 1: false
+- **2: true**
+
+### Respuesta
+
+Los emojis son Unicode y el Unicode para el símbolo de sonrisa es "U+1F642". La comparación Unicode de los mismos emojis es equivalente a la comparación de cadenas. Por lo tanto, la salida siempre es verdadera.
+
+## 53. typeof, que resultado da el siguiente código
+
+```jsx
+console.log(typeof typeof typeof true);
+```
+
+- **1: string**
+- 2: boolean
+- 3: NaN
+- 4: number
+
+### Respuesta
+
+El operador typeof en cualquier primitiva devuelve un valor de cadena. Entonces, incluso si aplica la cadena de operadores typeof en el valor de retorno, siempre es una cadena.
+
+## 54. Number, condicionales, que valor es el que resuelve el siguiente código
+
+```jsx
+let zero = new Number(0);
+
+if (zero) {
+  console.log("If");
+} else {
+  console.log("Else");
+}
+```
+
+- **1: If**
+- 2: Else
+- 3: NaN
+- 4: SyntaxError
+
+### Respuesta
+
+- El tipo de operador en Número nuevo siempre devuelve objeto. es decir, tipo de nuevo Número (0) --> objeto.
+- Los objetos siempre son veraces en el bloque if
+
+Por lo tanto, el bloque de código anterior siempre va a la sección if.
+
+## 55. String, cuál es el resultado del siguiente código
+
+```jsx
+let msg = "Good morning!!";
+
+msg.name = "John";
+
+console.log(msg.name);
+```
+
+- 1: ""
+- 2: Error
+- 3: John
+- **4: Undefined**
+
+### Respuesta
+
+Devuelve undefined para el modo no estricto y devuelve Error para el modo estricto. En modo no estricto, el objeto contenedor se creará y obtendrá la propiedad mencionada. Pero el objeto desapareció después de acceder a la propiedad en la siguiente línea.
+
+## 56. Function, cuál es el resultado del siguiente código
+
+```jsx
+let count = 10;
+
+(function innerFunc() {
+  if (count === 10) {
+    let count = 11;
+    console.log(count);
+  }
+  console.log(count);
+})();
+```
+
+- **1: 11, 10**
+- 2: 11, 11
+- 3: 10, 11
+- 4: 10, 10
+- 5: 11, undefined
+
+### Respuesta
+
+11 y 10 se registra en la consola.
+
+El innerFunc es un cierre que captura la variable de recuento del ámbito externo. es decir, 10. Pero el condicional tiene otra variable local de conteo que sobre-escribe la variable de conteo externo. Entonces, el primer archivo console.log muestra el valor 11. Mientras que el segundo archivo console.log registra 10 al capturar la variable de conteo desde el exterior.
+
+## 57. Cuál es el resultado del siguiente código
+
+```jsx
+console.log(true && 'hi');
+console.log(true && 'hi' && 1);
+console.log(true && '' && 0);
+```
+
+### Respuesta
+
+- 1: hi
+- 2: 1
+- 3: ''
+
+**Motivo**: el operador devuelve el valor del primer operando falso encontrado al evaluar de izquierda a derecha, o el valor del último operando si son todos verdaderos.
+
+**Nota**: Por debajo de estos valores se consideran valores falsos
+
+- 1: 0
+- 2: ''
+- 3: null
+- 4: undefined
+- 5: NAN
+
+## 58. Arrays, que da el siguiente código
+
+```jsx
+let arr = [1, 2, 3];
+let str = "1,2,3";
+
+console.log(arr == str);
+```
+
+- 1: false
+- 2: Error
+- **3: true**
+
+### Respuesta
+
+Las matrices tienen su propia implementación del método toString que devuelve una lista de elementos separados por comas. Entonces, el fragmento de código anterior devuelve verdadero. Para evitar la conversión del tipo de matriz, debemos usar === para comparar.
+
+## 59. Arrow function, cuál es el resultado del siguiente código
+
+```jsx
+getMessage();
+
+var getMessage = () => {
+  console.log("Good morning");
+};
+```
+
+- 1: Good morning
+- **2: getMessage is not a function**
+- 3: getMessage is not defined
+- 4: Undefined
+
+### Respuesta
+
+Hoisting moverá las variables y funciones para que sean la parte superior del alcance. Aunque getMessage es una función de flecha, la función anterior se considerará como una variable debido a su declaración o asignación de variable. Entonces, las variables tendrán un valor indefinido en la fase de memoria y arrojarán un error 'getMessage no es una función' en la fase de ejecución del código.
+
+Si cambiamos var por let o const, nos daría error pero por getMessage is not defined
+
+```jsx
+getMessage(); // ReferenceError: getMessage is not defined
+
+const getMessage = () => {
+  console.log("Good morning");
+};
+```
+
+Para que funciones hay que declararla antes
+
+```jsx
+const getMessage = () => {
+  console.log("Good morning");
+};
+
+getMessage(); // 'Good morning'
+```
+
+## 60. Promesas, cuál es el resultado
+
+```jsx
+let quickPromise = Promise.resolve();
+
+quickPromise.then(() => console.log("promise finished"));
+
+console.log("program finished");
+```
+
+- 1: program finished
+- 2: Cannot predict the order
+- **3: program finished, promise finished**
+- 4: promise finished, program finished
+
+### Respuesta
+
+Aunque una promesa se resuelve inmediatamente, no se ejecutará inmediatamente porque sus controladores .then/catch/finally o devoluciones de llamada (también conocidas como tareas) se colocan en la cola. Cada vez que el motor de JavaScript se libera del programa actual, extrae una tarea de la cola y la ejecuta. Esta es la razón por la cual la última declaración se imprime primero antes del registro del controlador de promesa.
+
+Nota: Llamamos a la cola anterior como "MicroTask Queue"
+
+## 61. forEach, cual es el resultado del siguiente código
+
+```jsx
+console.log('First line')
+['a', 'b', 'c'].forEach((element) => console.log(element))
+console.log('Third line')
+```
+
+- 1: `First line`, then print `a, b, c` in a new line, and finally print `Third line` as next line
+- 2: `First line`, then print `a, b, c` in a first line, and print `Third line` as next line
+- 3: Missing semi-colon error
+- **4: Cannot read properties of undefined**
+
+### Respuesta
+
+Cuando JavaScript encuentra un salto de línea sin punto y coma, el analizador de JavaScript agregará automáticamente un punto y coma basado en un conjunto de reglas llamadas Inserción automática de punto y coma que determina si el salto de línea es el final de la declaración o no para insertar punto y coma. Pero no asume un punto y coma antes de los corchetes [...]. Entonces, las dos primeras líneas se consideran como una declaración única como se muestra a continuación.
+
+```jsx
+console.log('First line')['a', 'b', 'c'].forEach((element) => console.log(element))
+```
+
+Por lo tanto, no habrá propiedades de lectura de error indefinido al aplicar el corchete cuadrado de la matriz en la función de registro.
+
+## 62. var, que resultado da
+
+```jsx
+var of = ['of'];
+for(var of of of) {
+  console.log(of);
+}
+```
+
+- **1: of**
+- 2: SyntaxError: Unexpected token of
+- 3: SyntaxError: Identifier 'of' has already been declared
+- 4: ReferenceError: of is not defined
+
+### Respuesta
+
+En JavaScript, of no se considera una palabra clave reservada. Por lo tanto, se acepta la declaración de la variable con of e imprime el valor de la matriz de using for..of loop.
+
+Pero si usa una palabra clave reservada como en, habrá un error de sintaxis que dice SyntaxError: token inesperado,
+
+```jsx
+var in = ['in'];
+for(var in in in) {
+  console.log(in[in]);
+}
+```
+
+## 63. Sort, cuál es el resultado
+
+```jsx
+const numbers = [11, 25, 31, 23, 33, 18, 200];
+numbers.sort();
+console.log(numbers);
+```
+
+- 1: [11, 18, 23, 25, 31, 33, 200]
+- **2: [11, 18, 200, 23, 25, 31, 33]**
+- 3: [11, 25, 31, 23, 33, 18, 200]
+- 4: Cannot sort numbers
+
+### Respuesta
+
+De forma predeterminada, el método de ordenación ordena los elementos alfabéticamente. Esto se debe a que los elementos se convirtieron en cadenas y las cadenas se compararon en orden de unidades de código UTF-16. Por lo tanto, verá que los números anteriores no están ordenados como se esperaba. Para ordenar numéricamente, solo proporcione una función de comparación que maneje las clasificaciones numéricas.
+
+```jsx
+const numbers = [11, 25, 31, 23, 33, 18, 200];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // [ 11, 18, 23, 25, 31, 33, 200 ]
+```
+
+Nota: el método Sort() cambia la matriz original.
