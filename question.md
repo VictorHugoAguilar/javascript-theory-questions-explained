@@ -1468,3 +1468,375 @@ console.log(numbers); // [ 11, 18, 23, 25, 31, 33, 200 ]
 ```
 
 Nota: el método Sort() cambia la matriz original.
+
+## 64. setTimeout, Promise, cuál es el resultado
+
+```jsx
+setTimeout(() => {console.log('1')}, 0);
+Promise.resolve('hello').then(() => console.log('2'));
+console.log('3');
+```
+
+- 1: 1, 2, 3
+- 2: 1, 3, 2
+- 3: 3, 1, 2
+- **4: 3, 2, 1**
+
+### Respuesta
+
+Cuando el motor de JavaScript analiza el código anterior, las dos primeras declaraciones son asincrónicas, que se ejecutarán más tarde, y la tercera declaración es sincrónica, que se moverá a la pila de llamadas, se ejecutará e imprimirá el número 3 en la consola. A continuación, Promise es nativo en ES6 y se moverá a la cola de trabajos, que tiene una prioridad más alta que la cola de devolución de llamadas en el orden de ejecución. Por último, dado que setTimeout es parte de WebAPI, la función de devolución de llamada se movió a la cola de devolución de llamada y se ejecutó. Por lo tanto, verá el número 2 impreso primero seguido del 1.
+
+## 65. function, que resultado da el siguiente código
+
+```jsx
+console.log(name);
+console.log(message());
+var name = 'John';
+(function message() {
+   console.log('Hello John: Welcome');
+});
+```
+
+- 1: John, Hello John: Welcome
+- 2: undefined, Hello John, Welcome
+- 3: Reference error: name is not defined, Reference error: message is not defined
+- **4: undefined, Reference error: message is not defined**
+
+### Respuesta
+
+IIFE (Expresión de función invocada inmediatamente) es como cualquier otra expresión de función que no se izará. Por lo tanto, habrá un error de referencia para la llamada de mensaje. El comportamiento sería el mismo con la siguiente expresión de función de mensaje1,
+
+```jsx
+console.log(name);
+console.log(message());
+var name = 'John';
+var message = function () {
+   console.log('Hello John: Welcome');
+};
+```
+
+## 66. function, cuál es el resultado del siguiente código
+
+```jsx
+message()
+
+function message() {
+  console.log("Hello");
+}
+function message() {
+  console.log("Bye");
+}
+```
+
+- 1: Reference error: message is not defined
+- 2: Hello
+- **3: Bye**
+- 4: Compile time error
+
+### Respuesta
+
+As part of hoisting, initially JavaScript Engine or compiler will store first function in heap memory but later rewrite or replaces with redefined function content.
+
+## 67. function, cuál es el resultado del siguiente código
+
+```jsx
+var currentCity = "NewYork";
+
+var changeCurrentCity = function() {
+  console.log('Current City:', currentCity);
+  var currentCity = "Singapore";
+  console.log('Current City:', currentCity);
+}
+
+changeCurrentCity();
+```
+
+- 1: NewYork, Singapore
+- 2: NewYork, NewYork
+- **3: undefined, Singapore**
+- 4: Singapore, Singapore
+
+### Respuesta
+
+Debido a la característica de hositing, las variables declaradas con var tendrán un valor indefinido en la fase de creación, por lo que la variable exterior currentCity obtendrá el mismo valor indefinido. Pero después de unas pocas líneas de código, el motor de JavaScript encontró una nueva llamada de función (cambiarCurrentCity()) para actualizar la ciudad actual con la nueva declaración de var. 
+
+Dado que cada llamada de función creará un nuevo contexto de ejecución, la misma variable tendrá un valor indefinido antes de la declaración y un nuevo valor (Singapur) después de la declaración. Por lo tanto, el valor indefinido se imprime primero seguido del nuevo valor Singapur en la fase de ejecución.
+
+## 68. function, que valor devuelve el siguiente código
+
+```jsx
+function second() {
+	var message;
+  console.log(message);
+}
+
+function first() {
+	var message="first";
+  second();
+  console.log(message);
+}
+
+var message = "default";
+first();
+console.log(message);
+```
+
+- **1: undefined, first, default**
+- 2: default, default, default
+- 3: first, first, default
+- 4: undefined, undefined, undefined
+
+### Respuesta
+
+Cada contexto (global o funcional) tiene su propio entorno variable y la pila de llamadas de variables en un orden LIFO. Por lo tanto, puede ver el valor de la variable del mensaje de las funciones segunda y primera en un orden seguido del valor de la variable del mensaje de contexto global al final.
+
+## 69. function, que resultado da el siguiente código
+
+```jsx
+var expressionOne = function functionOne() {
+  console.log("functionOne");
+}
+functionOne();
+```
+
+- **1: functionOne is not defined**
+- 2: functionOne
+- 3: console.log("functionOne")
+- 4: undefined
+
+### Respuestas
+
+La llamada a la función functionOne no formará parte de la cadena de alcance y tiene su propio contexto de ejecución con el entorno variable adjunto. es decir, no se accederá desde el contexto global. Por lo tanto, habrá un error al invocar la función ya que functionOne no está definida.
+
+## 70. Objects, cuál es el resultado del siguiente código
+
+```jsx
+const user = {
+  name: 'John',
+  eat() {
+    console.log(this);
+    var eatFruit = function() {
+      console.log(this);
+    }
+    eatFruit()
+  }
+}
+user.eat();
+```
+
+- 1: {name: "John", eat: f}, {name: "John", eat: f}
+- 2: Window {...}, Window {...}
+- 3: {name: "John", eat: f}, undefined
+- **4: {name: "John", eat: f}, Window {...}**
+
+### Respuesta
+
+this palabra clave tiene un alcance dinámico pero no un alcance léxico. En otras palabras, no importa dónde se haya escrito esto, sino cómo se ha invocado realmente importa. En el fragmento de código anterior, el objeto de usuario invoca la función de comer, por lo que esta palabra clave se refiere al objeto de usuario, pero la función de comer ha invocado a eatFruit y tendrá un objeto de ventana predeterminado.
+
+La caída del hoyo anterior se fija de tres maneras,
+
+1. En ES6, la función de flecha hará que esta palabra clave tenga un alcance léxico. Dado que el objeto que rodea a this objeto es un objeto de usuario, la función eatFruit contendrá un objeto de usuario para this objeto.
+
+```jsx
+const user = {
+  name: 'John',
+  eat() {
+    console.log(this);
+    var eatFruit = () => {
+      console.log(this);
+    }
+    eatFruit()
+  }
+}
+user.eat();
+```
+
+Las siguientes dos soluciones se han utilizado antes de que se introdujera ES6.
+
+1. Es posible crear una referencia de this en una variable separada y usar esa nueva variable en lugar de this palabra clave dentro de la función eatFruit. Esta es una práctica común en jQuery y AngularJS antes de la introducción de ES6.
+
+```jsx
+const user = {
+  name: 'John',
+  eat() {
+    console.log(this);
+    var self = this;
+    var eatFruit = () => {
+      console.log(self);
+    }
+    eatFruit()
+  }
+}
+user.eat();
+```
+
+1. La función eatFruit puede vincularse explícitamente con this palabra clave donde se refiere al objeto window.
+
+```jsx
+const user = {
+  name: 'John',
+  eat() {
+    console.log(this);
+    var eatFruit = function() {
+      console.log(this);
+    }
+    return eatFruit.bind(this)
+  }
+}
+user.eat()();
+```
+
+## 71. Strings, que resultado da el siguiente código
+
+```jsx
+let message = 'Hello World!';
+message[0] = 'J'
+console.log(message)
+
+let name = 'John';
+name = name + ' Smith';
+console.log(name);
+```
+
+- 1: Jello World!, John Smith
+- 2: Jello World!, John
+- **3: Hello World!, John Smith**
+- 4: Hello World!, John
+
+### Respuesta
+
+En JavaScript, las primitivas son inmutables, es decir, no hay forma de cambiar un valor primitivo una vez que se crea. Entonces, cuando intenta actualizar el primer carácter de la cadena, no hay cambios en el valor de la cadena e imprime el mismo valor inicial ¡Hola mundo!. Mientras que en el último ejemplo, el valor concatenado se reasigna a la misma variable, lo que dará como resultado la creación de un nuevo bloque de memoria con la referencia que apunta al valor de John Smith y el valor del bloque de memoria anterior (John) se recolectará como basura.
+
+## 72. Objects, que da el siguiente código
+
+```jsx
+let user1 = { 
+      name : 'Jacob',
+      age : 28
+    };
+    
+let user2 = {    
+      name : 'Jacob',
+      age : 28
+    };
+    
+console.log(user1 === user2);
+```
+
+- 1: True
+- **2: False**
+- 3: Compile time error
+
+### Respuesta
+
+En JavaScript, las variables como objetos, matrices y funciones pasan por referencia. Cuando intenta comparar dos objetos con el mismo contenido, comparará la dirección de memoria o la referencia de esas variables. Estas variables siempre crean bloques de memoria separados, por lo que la comparación siempre devolverá un valor falso.
+
+## 73. setTimeout, cuál es el resultado del siguiente código
+
+```jsx
+function greeting() {
+  setTimeout(function() {
+    console.log(message);
+  }, 5000);
+  const message = "Hello, Good morning";
+}
+greeting();
+```
+
+- 1: Undefined
+- 2: Reference error:
+- **3: Hello, Good morning**
+- 4: null
+
+### Respuesta
+
+El mensaje variable todavía se trata como un cierre (ya que se ha utilizado en la función interna) aunque se haya declarado después de la función setTimeout. La función con la función setTimeout se enviará a WebAPI y la declaración de la variable se ejecutará en 5 segundos con el valor asignado. Por lo tanto, se mostrará el texto declarado para la variable.
+
+## 74. Number, comparaciones, que da el siguiente código
+
+```jsx
+const a = new Number(10);
+const b = 10;
+console.log(a === b);
+```
+
+- **1: False**
+- 2: True
+
+### Respuestas
+
+Aunque ambas variables a y b se refieren a un valor numérico, la primera declaración se basa en la función constructora y el tipo de la variable será de tipo objeto. Mientras que la segunda declaración es una asignación primitiva con un número y el tipo es tipo de número. Por lo tanto, el operador de igualdad === generará un valor falso.
+
+## 75. Function, que tipo de función es la siguiente
+
+```jsx
+function add(a, b) {
+  console.log("The input arguments are: ", a, b);
+  return a + b;
+}
+```
+
+- 1: Pure function
+- **2: Impure function**
+
+### Respuesta
+
+Aunque la función anterior devuelve el mismo resultado para los mismos argumentos (entrada) que se pasan en la función, la instrucción console.log() hace que una función tenga efectos secundarios porque afecta el estado de un código externo. es decir, el estado del objeto de la consola y depende de él para realizar el trabajo. Por lo tanto, la función anterior se considera una función impura.
+
+## 76. Promesas, cuál es el resultado del siguiente código
+
+```jsx
+const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 4000));
+const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 4000));
+
+Promise.all([promiseOne, promiseTwo]).then(data => console.log(data));
+```
+
+- 1: [{status: "fullfilled", value: undefined}, {status: "rejected", reason: undefined}]
+- **2: [{status: "fullfilled", value: undefined}, Uncaught(in promise)]**
+- 3: Uncaught (in promise)
+- 4: [Uncaught(in promise), Uncaught(in promise)]
+
+### Respuesta
+
+Las promesas anteriores se liquidaron al mismo tiempo, pero una de ellas se resolvió y la otra se rechazó. Cuando usa el método .all en estas promesas, el resultado se acortará al arrojar un error debido al rechazo en la segunda promesa. Pero si usa el método .allSettled, el resultado de ambas promesas se devolverá independientemente del estado de la promesa resuelta o rechazada sin arrojar ningún error.
+
+```jsx
+Promise.allSettled([promiseOne, promiseTwo]).then(data => console.log(data));
+```
+
+## 77. setTimeout, cual es el resultado del siguiente código
+
+```jsx
+try {
+  setTimeout(() => {
+    console.log('try block');
+    throw new Error(`An exception is thrown`)
+  }, 1000);
+} catch(err) {
+  console.log('Error: ', err);
+}
+```
+
+- 1: try block, Error: An exception is thrown
+- 2: Error: An exception is thrown
+- **3: try block, Uncaught Error: Exception is thrown**
+- 4: Uncaught Error: Exception is thrown
+
+### Respuesta
+
+Si coloca los métodos setTimeout y setInterval dentro de la cláusula try y se lanza una excepción, la cláusula catch no detectará ninguno de ellos. Esto se debe a que la declaración try...catch funciona de forma síncrona, y la función del código anterior se ejecuta de forma asíncrona después de un cierto período de tiempo. Por lo tanto, verá una excepción de tiempo de ejecución sin detectar el error. Para resolver este problema, debe colocar el bloque try...catch dentro de la función como se muestra a continuación:
+
+```jsx
+setTimeout(() => {
+   try {
+      console.log('try block');
+      throw new Error(`An exception is thrown`)
+   } catch(err) {
+      console.log('Error: ', err);
+   }
+  
+  }, 1000);
+```
+
+Puede usar la función .catch() en las promesas para evitar estos problemas con el código asíncrono.
