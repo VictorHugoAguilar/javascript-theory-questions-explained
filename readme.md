@@ -1,16 +1,5 @@
 # Javascript Interview Question Explained
 
-- 1: `First line`, then print `a, b, c` in a new line, and finally print `Third line` as next line
-- 2: `First line`, then print `a, b, c` in a first line, and print `Third line` as next line
-- 3: Missing semi-colon error
-- 4: Cannot read properties of undefined
-- 1: A, A
-- 2: A, B
-- 1: ReferenceError: arguments is not defined
-- 2: 3
-- 3: undefined
-- 4: null
-
 ## 1. Clases Js, hosting que resultado da
 
 ```tsx
