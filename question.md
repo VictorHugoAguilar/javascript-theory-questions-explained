@@ -2,7 +2,7 @@
 
 ---
 
-## A. Boolean, cuál es el resultado del código
+## A. Boolean, ¿cuál es el resultado del código?
 
 ```jsx
 console.log(2 + true)
@@ -17,7 +17,7 @@ console.log(2 + true)
 
 En Js el valor boolean es implícitamente cambiado a un número, True equivale a 1, false a 0, por lo tanto 2 + true = 3
 
-## B. Bucles, que diferencia hay entre foreach() y map()
+## B. Bucles, ¿Qué diferencia hay entre foreach() y map()?
 
 ```jsx
 const array = [1, 2, 3];
@@ -43,7 +43,7 @@ console.log(squaredArray);
 
 Ambos métodos recorren un Array y ejecutan una función por cada elemento, la diferencia es que map() crea un Array nuevo, y el foreach() no devuelve un array nuevo.
 
-## C. Equals object, cuál es el resultado
+## C. Equals object, ¿Cuál es el resultado?
 
 ```jsx
 var a = {};
@@ -62,7 +62,7 @@ Aunque los dos aparentemente son iguales, apuntan a referencias diferentes, por 
 
 Cuando compara dos objetos con ===, verifica si se refieren al mismo objeto en la memoria, no si tienen las mismas propiedades o valores.
 
-## D. Sumas y restas, cuál es el valor que devuelve
+## D. Sumas y restas, ¿Cuál es el valor que devuelve?
 
 ```jsx
 console.log(2 + '2');
@@ -77,7 +77,7 @@ console.log(2 - '2');
 El operador + es para números y concatenación de strings, por lo que simplemente lo junta.
 El operador – es solmanete para los números, por lo que ambos argumentos se convierten a numéricos y hace la resta directamente.
 
-## E. Funciones que resultado da
+## E. Funciones ¿Qué resultado da?
 
 ```jsx
 let x = function() {
@@ -99,7 +99,7 @@ console.log(x());
 
 La función x devuelve indefinido debido al salto de línea después de la declaración de devolución. La declaración de retorno hace que la función salga y devuelva el valor que le sigue. En este caso, el salto de línea separa la declaración de retorno de su valor de retorno, por lo que devuelve undefined. Si desea devolver el objeto {mensaje: 'hola'}, deberá eliminar el salto de línea.
 
-## F.  Bucles for y setTimeout, que resultado devuelve el siguiente código
+## F.  Bucles for y setTimeout, ¿Qué resultado devuelve el siguiente código?
 
 ```jsx
 for (var i = 0; i<4; i++){ 
@@ -117,7 +117,7 @@ for (var i = 0; i<4; i++){
 La razón de esto es que las declaraciones de var tienen un ámbito de función en JavaScript, lo que significa que el valor de la variable i es accesible a lo largo de toda la función que contiene el bucle for, incluso dentro de la función de devolución de llamada pasada a setTimeout.
 En el momento en que se ejecutan las funciones de devolución de llamada de setTimeout, el bucle for ya se ha completado y el valor de i es igual a 4. Por lo tanto, todas las devoluciones de llamada de setTimeout registrarán 4 en la consola.
 
-## G. Bucles for y setTimeout, que resultado da el siguiente código
+## G. Bucles for y setTimeout, ¿Qué resultado da el siguiente código?
 
 ```jsx
 for (var i = 0; i < 4; i++) {
@@ -134,7 +134,7 @@ Respuesta en el console.log(4) pero los botones sí que se pintan correctamente.
 
 Es decir que cuando ejecute este código y haga clic en cada botón, notará que todos los botones registran el mismo mensaje, "botón 4", en la consola. Esto se debe a que la palabra clave var tiene un ámbito de función en JavaScript, por lo que todas las instancias del cierre creado por el detector de eventos comparten la misma variable i, y su valor se actualiza a 4 cuando se invoca el detector de eventos.
 
-## H. Functiones de cierre, clousers, que resultado da el siguiente código
+## H. Funciones de cierre, clousers, ¿Qué resultado da el siguiente código?
 
 ```jsx
 var passed = 3;
@@ -160,7 +160,7 @@ console.log(addTwo(1));
 
 La variable addTo tiene una función anónima que recibe 2 parámetros separados. Declaramos una variable donde le pasamos el primer argumento (passed), cuando hacemos el console.log pasamos el segundo argumento. Si solamente se pasara un argumento, devolvería undefined.
 
-## I. Asignaciones, cuál es el resultado del siguiente código
+## I. Asignaciones, ¿Qué resultado da el siguiente código?
 
 ```jsx
 var a = b = 3;
@@ -188,7 +188,7 @@ var a = b;
 
 En este caso, tanto b como a serían declarados y se les asignaría el valor 3, pero b sería una variable global y a sería una variable local.
 
-## J. Styles, cuál es el color de la palabra texto
+## J. Styles, ¿Cuál es el color de la palabra texto?
 
 ```html
 <style>
@@ -276,7 +276,7 @@ console.log(boundAdd()); // outputs 3
 
 **En resumen,** apply() y call() le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que bind() crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
 
-## L. This, que es en javascript
+## L. This, ¿Qué es en javascript?
 
 ### Respuesta
 
@@ -305,7 +305,7 @@ console.log(nombre); // ReferenceError: nombre is not defined
 let nombre = 'Victor';
 ```
 
-## N. Que resultado da en cada caso
+## N. ¿Qué resultado da en cada caso?
 
 ```jsx
 var x='global value';
