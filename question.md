@@ -1,5 +1,589 @@
 # Javascript Interview Question Explained
 
+---
+
+## A. Boolean, cuál es el resultado del código
+
+```jsx
+console.log(2 + true)
+```
+
+- null
+- 0
+- 2
+- **3**
+
+### Respuesta
+
+En Js el valor boolean es implícitamente cambiado a un número, True equivale a 1, false a 0, por lo tanto 2 + true = 3
+
+## B. Bucles, que diferencia hay entre foreach() y map()
+
+```jsx
+const array = [1, 2, 3];
+
+array.forEach(element => {
+  console.log(element);
+});
+
+// Output:
+// 1, 2, 3
+
+const squaredArray = array.map(element => {
+  return element * element;
+});
+
+console.log(squaredArray);
+
+// Output:
+// [1, 4, 9]
+```
+
+### Respuesta
+
+Ambos métodos recorren un Array y ejecutan una función por cada elemento, la diferencia es que map() crea un Array nuevo, y el foreach() no devuelve un array nuevo.
+
+## C. Equals object, cuál es el resultado
+
+```jsx
+var a = {};
+var b = {};
+console.log(a === b)
+```
+
+- true
+- **false**
+- null
+- undefined
+
+### Respuesta
+
+Aunque los dos aparentemente son iguales, apuntan a referencias diferentes, por lo cual los considera diferentes.
+
+Cuando compara dos objetos con ===, verifica si se refieren al mismo objeto en la memoria, no si tienen las mismas propiedades o valores.
+
+## D. Sumas y restas, cuál es el valor que devuelve
+
+```jsx
+console.log(2 + '2');
+console.log(2 - '2');
+```
+
+- 22
+- 0
+
+### Respuesta
+
+El operador + es para números y concatenación de strings, por lo que simplemente lo junta.
+El operador – es solmanete para los números, por lo que ambos argumentos se convierten a numéricos y hace la resta directamente.
+
+## E. Funciones que resultado da
+
+```jsx
+let x = function() {
+    return
+    {
+        message: 'hola'
+    }
+}
+
+console.log(x());
+```
+
+- null
+- **undefined**
+- “hola”
+- {message: “hola”}
+
+### Respuesta
+
+La función x devuelve indefinido debido al salto de línea después de la declaración de devolución. La declaración de retorno hace que la función salga y devuelva el valor que le sigue. En este caso, el salto de línea separa la declaración de retorno de su valor de retorno, por lo que devuelve undefined. Si desea devolver el objeto {mensaje: 'hola'}, deberá eliminar el salto de línea.
+
+## F.  Bucles for y setTimeout, que resultado devuelve el siguiente código
+
+```jsx
+for (var i = 0; i<4; i++){ 
+	setTimeout(function(){console.log(i), 0)};
+}
+```
+
+- 1,2,3,4
+- **4,4,4,4**
+- null null null null
+- 0, 0, 0, 0
+
+### Respuesta
+
+La razón de esto es que las declaraciones de var tienen un ámbito de función en JavaScript, lo que significa que el valor de la variable i es accesible a lo largo de toda la función que contiene el bucle for, incluso dentro de la función de devolución de llamada pasada a setTimeout.
+En el momento en que se ejecutan las funciones de devolución de llamada de setTimeout, el bucle for ya se ha completado y el valor de i es igual a 4. Por lo tanto, todas las devoluciones de llamada de setTimeout registrarán 4 en la consola.
+
+## G. Bucles for y setTimeout, que resultado da el siguiente código
+
+```jsx
+for (var i = 0; i < 4; i++) {
+  var button = document.createElement("button");
+  button.innerText = `button ${i}`;
+  button.addEventListener("click", () => console.log(`button ${i}`));
+  document.body.appendChild(button);
+}
+```
+
+### Respuesta
+
+Respuesta en el console.log(4) pero los botones sí que se pintan correctamente. [button 0] [button 1] [button 2] [button 3], esto es por un Modificando var por let => el click se convierte en 0,1,2,3.
+
+Es decir que cuando ejecute este código y haga clic en cada botón, notará que todos los botones registran el mismo mensaje, "botón 4", en la consola. Esto se debe a que la palabra clave var tiene un ámbito de función en JavaScript, por lo que todas las instancias del cierre creado por el detector de eventos comparten la misma variable i, y su valor se actualiza a 4 cuando se invoca el detector de eventos.
+
+## H. Functiones de cierre, clousers, que resultado da el siguiente código
+
+```jsx
+var passed = 3;
+
+var addTo = function (passed) {
+    var add = function(inner) {
+        return passed + inner;
+    }
+    return add;
+}
+
+var addTwo = new addTo(2);
+
+console.log(addTwo(1));
+```
+
+- null
+- undefined
+- **3**
+- 4
+
+### Respuesta
+
+La variable addTo tiene una función anónima que recibe 2 parámetros separados. Declaramos una variable donde le pasamos el primer argumento (passed), cuando hacemos el console.log pasamos el segundo argumento. Si solamente se pasara un argumento, devolvería undefined.
+
+## I. Asignaciones, cuál es el resultado del siguiente código
+
+```jsx
+var a = b = 3;
+```
+
+- a = undefined, b = 3;
+- **a = 3, b = 3;**
+- a = null, b = 3;
+- a = 3, b = undefined;
+
+### Respuesta
+
+El código **var** a = b = 3 declara dos variables b y a, y les asigna el valor 3 a ambas.
+
+Sin embargo, la diferencia entre los dos es que b se declara sin la palabra clave var y, por lo tanto, es una variable global a la que se puede acceder desde cualquier parte de su código, mientras que a se declara con la palabra clave var y, por lo tanto, es una variable local a la que solo se puede acceder dentro del ámbito donde fue declarada.
+
+En este código, la palabra clave var se usa solo para la declaración de a, y la asignación b = 3 se trata como una declaración independiente que declara una variable global b si aún no existe, y le asigna el valor 3. Luego, var a = b = 3 declara una variable local a y le asigna el valor de la variable global b (a la que se le acaba de asignar el valor 3).
+
+Así es como se vería el código si declara explícitamente b como una variable global:
+
+```jsx
+var b = 3;
+var a = b;
+```
+
+En este caso, tanto b como a serían declarados y se les asignaría el valor 3, pero b sería una variable global y a sería una variable local.
+
+## J. Styles, cuál es el color de la palabra texto
+
+```html
+<style>
+    h1 span {
+      color: red;
+    }
+    span {
+      color: blue;
+    }
+    .text span {
+      color: yellow;
+    }
+    span .text {
+      color: green;
+    }
+</style>
+<body>
+	<h1>
+		<span>
+	    <p>
+	      <span class="text">
+	        <span>Texto</span>
+        </span>
+			</p>
+		</span>
+	</h1>
+</body>
+```
+
+- verde
+- rojo
+- **amarillo**
+- azul
+
+### Respuesta
+
+Los estilos CSS se aplican a los elementos HTML en función de la especificidad de los selectores. El selector .text span tiene una especificidad mayor que el selector span, por lo que tendrá prioridad y hará que el texto se muestre en amarillo.
+El selector span .text no coincide con ningún elemento en el HTML, ya que está buscando una clase .text que sea un hijo directo de un elemento span, pero en este caso, la clase .text es un hermano del elemento span.
+
+## K. ¿Qué diferencias hay entre apply(), call(), bind()?
+
+### Respuesta
+
+Con estos 3 métodos varios objetos pueden compartir un mismo método.
+Los tres parecen hacer lo mismo pero hay diferencias, call() y apply() enlazan el método al objeto de forma temporal, lo ejecutan y nos devuelven el resultado, la diferencia es que call() espera valores como argumentos, mientras apply() espera un array de valores.
+Por su lado bind() también enlaza el método al objeto, lo ejecuta pero en vez de devolvernos el resultado nos devuelve una función que si la ejecutamos obtenemos el resultado.
+
+En JavaScript, **apply(), call() y bind()** son métodos que le permiten establecer el valor **this** y llamar a una función con un valor y argumentos especificados. Sin embargo, difieren en cómo pasan los argumentos a la función.
+
+Estas son las diferencias entre los tres métodos:
+
+- **apply()**: El método apply() toma dos argumentos: el valor this y una matriz de argumentos para pasar a la función. Le permite llamar a una función y establecer el valor **this**, y pasar los argumentos a la función como una matriz.
+
+```jsx
+function add(a, b) {
+  return a + b;
+}
+
+var object = {};
+console.log(add.apply(object, [1, 2])); // outputs 3
+```
+
+- **call()**: El método call() es similar a apply(), pero en lugar de tomar una matriz de argumentos, toma los argumentos como valores separados.
+
+```jsx
+function add(a, b) {
+  return a + b;
+}
+
+var object = {};
+console.log(add.call(object, 1, 2)); // outputs 3
+```
+
+- **bind():** El método bind() crea una nueva función con el valor y los argumentos especificados, y devuelve la nueva función. Luego puede llamar a la nueva función más tarde, y siempre tendrá el valor y los argumentos especificados.
+
+```jsx
+function add(a, b) {
+  return a + b;
+}
+
+var object = {};
+var boundAdd = add.bind(object, 1, 2);
+console.log(boundAdd()); // outputs 3
+```
+
+**En resumen,** apply() y call() le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que bind() crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
+
+## L. This, que es en javascript
+
+### Respuesta
+
+En javascript this hace referencia al contexto en el cual se esté ejecutando el código actual. 
+
+## M. ¿Qué es el hosting?
+
+### Respuesta
+
+El concepto de *hoisting*  de JavaScript determina que el valor de una variable declarada con *var* **puede subir al principio del *scope* de la función dentro de la que está declarada.** Pueden izarse las funciones declaradas o las variables var pero como undefined.
+
+```jsx
+// EN FUNCIONES
+console.log(l()); // Hola John!
+// SE LLAMA ANTES DE LA DECLARACIÓN DE LA MISMA
+function l(){
+	console.log('Hola John!');
+}
+
+// EN VARIABLES VAR
+console.log(nombre); // undefined
+var nombre = 'Victor';
+
+// EN VARIABLES LET O CONST
+console.log(nombre); // ReferenceError: nombre is not defined
+let nombre = 'Victor';
+```
+
+## N. Que resultado da en cada caso
+
+```jsx
+var x='global value';
+
+function foo() {
+    console.log(x); //undefined
+    var x='local value';
+    console.log(x); //local value
+}
+foo();
+console.log(x); //global value
+
+// ---------------
+greet(‘Juan’);
+
+const greet = function (nombre){
+    console.log(`Hola ${nombre}`);
+};
+
+// ----------------------
+
+greet(‘Juan’);
+
+function greet(nombre){
+    console.log(`Hola ${nombre}`);
+};
+```
+
+### Respuesta
+
+- 1º Caso:
+    
+    Cuando se llama a la función foo(), a pesar que la variable x esta inicializa y asignada, el scope de la función no esta, lo que en el primer caso es **undefined**, luego se asigna el valor de x, y el segundo caso es **local value**, una vez que sale de la función el valor que devuelve es **global value.**
+    
+- 2º Caso:
+    
+    El valor es **undefined,** ya que no se iza la función al estar en el ámbito de la variable const. 
+    
+- 3º Caso:
+    
+    El valor es **********************Hola Juan,********************** ya que se iza la función.
+    
+
+## Ñ. Dado el array siguiente, ¿cómo harías para eliminar los últimos 3 elementos?
+
+```jsx
+var nums = [1, 2, 3, 4, 5, 6, 7, 8];
+```
+
+### Respuesta
+
+```jsx
+var resultado = nums.splice(5, 3);
+```
+
+`El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por *inicio* hasta *fin* (*fin* no incluido). El array original no se modificará.
+
+- **Sintaxis**
+
+`arr.slice([inicio [, fin]])`
+
+- **Parámetros**
+
+`inicio`
+
+Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
+Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
+Si `inicio` es omitido el valor por defecto es `0`.
+Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
+
+`fin`
+
+Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
+`slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).
+Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
+Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
+Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
+
+- Retorno
+
+Un nuevo array con los valores extraídos.
+
+## O.  Explica que hace shift()
+
+El método **`shift()`** elimina el **primer** elemento del array y lo retorna. Este método modifica la longitud del array.
+
+### Respuesta
+
+El método `shift` elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad `[length](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length)` es 0, devuelve `[undefined](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined)`.
+
+`shift` es genérico; este método puede utilizarse con [call](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call) o [apply](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) a objetos simliares a arrays. Los objetos que no tengan una propiedad `length` que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.
+
+## P.  ¿Cómo clonarias un objeto?
+
+```jsx
+const fuente = {a: 1, b: 2, c: 3};
+```
+
+### Respuesta
+
+```jsx
+const copia = Object.assign({}, fuente);
+```
+
+## Q. ¿Cómo añadir un elemento a un array sin utilizar push?
+
+```jsx
+var a = ['a','b','c','d'];
+
+a[a.length] = 'e';
+
+console.log(a); // ['a','b','c','d', 'e'];
+```
+
+## R. Suma string ¿cuál es el valor?
+
+```jsx
+console.log(2 + 3 + '7');
+```
+
+- **57**
+- undefined
+- ErrorSyntaxis
+- 237
+
+### Respuesta
+
+El operario “+” sirve para números y concatenación de strings, por lo que 2+3 = 5. 5 + ‘7’ = 57.
+
+## S.  ¿Qué resultado da el siguiente código?
+
+```jsx
+var a = 3;
+
+(function () {
+  console.log(3 * a);
+})();
+
+var a = 3;
+
+(function () {
+  console.log(3 * a);
+})(a);
+```
+
+- undefined, 9
+- **9, 9**
+- ErrorReference
+- ErrorSintaxis
+
+### Respuesta
+
+En el primer caso da 9:
+
+```jsx
+var a = 3;
+
+(function () {
+  console.log(3 * a);
+})();
+```
+
+Este código declara una variable global a con el valor 3, luego crea una función autoinvocada anónima que multiplica 3 por a y registra el resultado en la consola. La función se invoca inmediatamente, por lo que registra 9 en la consola.
+
+La segunda parte del código también genera 9:
+
+```jsx
+var a = 3;
+
+(function () {
+  console.log(3 * a);
+})(a);
+```
+
+Este código es esencialmente el mismo que el de la primera parte, pero la función de autoinvocación anónima se invoca con un argumento. Como la función no usa el argumento, el resultado es el mismo que en el primer ejemplo.
+
+## T. ¿Cómo borramos una propiedad de un objeto?
+
+El operador delete de JavaScript remueve una propiedad de un objeto; si no se mantienen más referencias a la misma propiedad, eventualmente se libera automáticamente.
+
+```jsx
+const Employee = {
+  firstname: 'John',
+  lastname: 'Doe'
+};
+console.log(Employee.firstname); // Expected output: "John"
+delete Employee.firstname;
+console.log(Employee.firstname); // Expected output: undefined
+```
+
+## U.  ¿Cómo hacer un merge de dos objetos?
+
+```jsx
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+const returnedTarget = Object.assign(target, source);
+
+console.log(returnedTarget); // { a: 1, b: 4, c: 5 }
+```
+
+## V. **¿Qué método podemos utilizar para una copia profunda de Objetos?**
+
+```jsx
+JSON.parse(JSON.stringify(obj))
+```
+
+### Respuesta
+
+Stringify convierte un objeto en JSON string. Parse parsea el string y devuelve un objecto. No copia funciones.
+
+## W. Funciones de los arrays
+
+**push()**: añade un item al final del arrays, **modifica** el array original, devuelve nuevo tamaño del array
+
+```jsx
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens', 'cats', 'dogs');
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
+
+**pop():** elimina un item al final del  array, **modifica** el array original
+
+```jsx
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
+
+**unshift():** añade un item al comienzo del array, **modifica** el array original, devuelve nuevo tamaño
+
+```jsx
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
+
+**shift():** elimina un item al comienzo del array, **modifica** el array original
+
+```jsx
+var miPescado = ['ángel', 'payaso', 'mandarín', 'cirujano'];
+
+console.log('miPescado antes: ' + miPescado);
+// "miPescado antes: ángel,payaso,mandarín,cirujano"
+
+var eliminado = miPescado.shift();
+
+console.log('miPescado después: ' + miPescado);
+// "miPescado after: payaso,mandarín,cirujano"
+
+console.log('Elemento eliminado: ' + eliminado);
+// "Elemento eliminado: ángel"
+```
+
+# Preguntas
+
+---
+
 ## 1. Clases Js, hosting que resultado da
 
 ```tsx
@@ -1840,3 +2424,163 @@ setTimeout(() => {
 ```
 
 Puede usar la función .catch() en las promesas para evitar estos problemas con el código asíncrono.
+
+## 78. Let, var, cuál es el resultado del siguiente código
+
+```jsx
+function prueba(){
+	var num = 33;
+	if (true) {
+		let num = (num + 55);
+  }
+	return num;
+}
+console.log(prueba());
+```
+
+- **ReferenceError**
+- 33
+- 88
+- 55
+
+### Respuesta
+
+ReferenceError: no se puede acceder a la declaración léxica `num` antes de la inicialización. Es decir
+
+Debido al ámbito léxico, el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
+
+En esa misma línea, el `num` del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
+
+## 79. scope var, cuál es el resultado del siguiente código
+
+```jsx
+function x() {
+  y = 1;
+  var z = 2;
+}
+
+x();
+
+console.log(y);
+console.log(z);
+```
+
+- 1, 2
+- undefined, 2
+- 1, undefined
+- **ReferenceError**
+
+### Respuesta
+
+Debido a que la declaracion z, esta en el contexto de la función, devuelve un error de referencia 
+
+Las variables declaradas se limitan al contexto de ejecución en el cual son declaradas. Las variables no declaradas siempre son globales.
+
+Nota: 
+
+> En modo estricto `use strict` se lanzaría un error de referenceError, en la linea y, debido a que no acepta una variable no definida
+> 
+
+```jsx
+'use strict'
+function x() {
+  y = 1;   // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')
+  var z = 2;
+}
+x();
+```
+
+## 80. Switch, scope let, cuál es el resultado del siguiente código
+
+```jsx
+let counter = 1;
+switch (counter) {
+  case 0:
+    let name = 'John';
+		console.log(name);
+    break;
+
+  case 1:
+    let name = 'Will';
+		console.log(name);
+    break;
+}
+
+```
+
+- John
+- Will
+- undefined
+- **SyntaxisError**
+
+### Respuesta
+
+Para evitar este error, puede crear un bloque anidado dentro de una cláusula de caso y crear un nuevo entorno léxico con ámbito de bloque.
+
+```jsx
+let counter = 1;
+switch (counter) {
+  case 0: {
+    let name = "John";
+    console.log(name);
+    break;
+  }
+  case 1: {
+    let name = "Will";
+    console.log(name);
+    break;
+  }
+}
+
+// Will
+```
+
+## 81. Temporal Dead Zone, cuál es el resultado del siguiente código
+
+```jsx
+function somemethod() {
+  console.log(counter1);  
+  console.log(counter2);  
+  var counter1 = 1;
+  let counter2 = 2;
+}
+somemethod();
+```
+
+- **undefined, ReferenceError**
+- ErrorSyntaxis
+- 1, undefined
+- undefined, 2
+
+### Respuesta
+
+Esto es debido a que las variables let no son izadas, sin embargo las variables var si son izadas pero como undefined, es decir que la zona muerta temporal es un comportamiento en JavaScript que ocurre cuando se declara una variable con las palabras clave let y const, pero no con var. 
+
+En ECMAScript 6, acceder a una variable let o const antes de su declaración (dentro de su alcance) provoca un error de referencia. El lapso de tiempo cuando eso sucede, entre la creación del enlace de una variable y su declaración, se denomina zona muerta temporal.
+
+## 82. IIFE (**Immediately Invoked Function Expression) cuál es el resultado**
+
+```jsx
+(function () {
+  var message = "IIFE";
+  console.log(message);
+})();
+console.log(message);
+```
+
+- IFFE
+- undefined
+- null
+- **Error: message is not defined**
+
+### Respuesta
+
+IIFE (Expresión de función invocada inmediatamente) es una función de JavaScript que se ejecuta tan pronto como se define. La firma sería la siguiente,
+
+```jsx
+(function () {
+  // logic here
+})();
+```
+
+La razón principal para usar un IIFE es obtener privacidad de datos porque el mundo exterior no puede acceder a las variables declaradas dentro del IIFE. es decir, si intenta acceder a las variables con IIFE, arroja un error como el que daba la función: `Error: message is not defined`
