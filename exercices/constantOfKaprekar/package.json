@@ -1,0 +1,19 @@
+{
+  "name": "constante_de_kaprekar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  },
+  "dependencies": {
+    "querystring": "^0.2.1"
+  }
+}
