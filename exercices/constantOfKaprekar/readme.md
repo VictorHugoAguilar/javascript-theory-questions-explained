@@ -28,5 +28,5 @@ Por ejemplo, supongamos que partimos del número de cuatro dígitos 5432:
 8532 – 2358 = 6174
 ````
 
-***Particularidades**:
+**Particularidades**:
 Todos los números que surgen de la resta, y así también los números ordenados de menor a mayor y de mayor a menor son divisibles por 9
