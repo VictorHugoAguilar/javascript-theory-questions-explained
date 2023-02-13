@@ -6,7 +6,7 @@ describe('Check function', () => {
 
   it('check if type is arrays', () => {
     const w = wrapping(['a', 'b']);
-    expect(Array.isArray(w)).toBeTruthy();
+    expect(Array.isArray(w)).();
   })
 
   it('check if is not null result', () => {
