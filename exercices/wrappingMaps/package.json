@@ -1,0 +1,14 @@
+{
+  "name": "wrappingmaps",
+  "version": "1.0.0",
+  "description": "exercices for learn map js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "Victor Hugo Aguilar",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
