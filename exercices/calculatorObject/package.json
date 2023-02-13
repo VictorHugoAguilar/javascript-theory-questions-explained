@@ -1,0 +1,14 @@
+{
+  "name": "calculatorobject",
+  "version": "1.0.0",
+  "description": "Calculator with object method, for example",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "Victor Hugo Aguilar",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
