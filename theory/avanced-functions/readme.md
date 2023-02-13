@@ -155,7 +155,7 @@ Aquí llamamos a la misma función pow, pero no importa en absoluto. El proceso 
 
 Aquí está la pila de contexto cuando ingresamos la subllamada pow (2, 2):
 
-![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_03.png?raw=true)
+![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_03a.png?raw=true)
 
 El nuevo contexto de ejecución actual está en la parte superior (y en negrita), y los contextos recordados anteriores están debajo.
 
@@ -172,7 +172,7 @@ El proceso se repite: se realiza una nueva subllamada en la línea 5, ahora con 
 
 Se crea un nuevo contexto de ejecución, el anterior se coloca en la parte superior de la pila:
 
-![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_04.png?raw=true)
+![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_03.png?raw=true)
 
 Hay 2 contextos antiguos ahora y 1 actualmente en ejecución para pow (2, 1).
 
@@ -193,7 +193,7 @@ No hay más llamadas anidadas, por lo que la función finaliza y devuelve 2.
 
 Cuando finaliza la función, su contexto de ejecución ya no es necesario y se elimina de la memoria. El anterior se restaura desde la parte superior de la pila:
 
-![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_05.png?raw=true)
+![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_04.png?raw=true)
 
 Se reanuda la ejecución de pow (2, 2). Tiene el resultado de la subllamada pow (2, 1), por lo que también puede finalizar la evaluación de x * pow (x, n - 1), devolviendo 4.
 
