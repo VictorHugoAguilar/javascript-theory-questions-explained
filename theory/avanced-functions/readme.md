@@ -459,7 +459,7 @@ Las “listas” pueden ser mejoradas:
 
 ## Resumen
 
-###Glosario:
+### Glosario:
 
 * Recursion es concepto de programación que significa que una función se llama a sí misma. Las funciones recursivas se pueden utilizar para resolver ciertas tareas de manera elegante.
 
