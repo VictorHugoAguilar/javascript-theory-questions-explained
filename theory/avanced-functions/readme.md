@@ -121,7 +121,7 @@ Al comienzo de la llamada pow (2, 3) el contexto de ejecución almacenará varia
 
 Podemos esbozarlo como:
 
-![context]()
+![context](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_01.png?raw=true)
 
 Ahí es cuando la función comienza a ejecutarse. La condición n == 1 es falsa, por lo que el flujo continúa en la segunda rama de if:
 
@@ -139,7 +139,7 @@ alert( pow(2, 3) );
 
 Las variables son las mismas, pero la línea cambia, por lo que el contexto es ahora:
 
-![contexto_2]()
+![contexto_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_02.png?raw=true)
 
 Para calcular `x * pow (x, n - 1)`, necesitamos hacer una sub-llamada de pow con nuevos argumentos `pow (2, 2)`.
 
@@ -155,7 +155,7 @@ Aquí llamamos a la misma función pow, pero no importa en absoluto. El proceso 
 
 Aquí está la pila de contexto cuando ingresamos la subllamada pow (2, 2):
 
-![context_3]()
+![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_03.png?raw=true)
 
 El nuevo contexto de ejecución actual está en la parte superior (y en negrita), y los contextos recordados anteriores están debajo.
 
@@ -172,7 +172,7 @@ El proceso se repite: se realiza una nueva subllamada en la línea 5, ahora con 
 
 Se crea un nuevo contexto de ejecución, el anterior se coloca en la parte superior de la pila:
 
-![context_4]()
+![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_04.png?raw=true)
 
 Hay 2 contextos antiguos ahora y 1 actualmente en ejecución para pow (2, 1).
 
@@ -193,13 +193,13 @@ No hay más llamadas anidadas, por lo que la función finaliza y devuelve 2.
 
 Cuando finaliza la función, su contexto de ejecución ya no es necesario y se elimina de la memoria. El anterior se restaura desde la parte superior de la pila:
 
-![context_5]()
+![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_05.png?raw=true)
 
 Se reanuda la ejecución de pow (2, 2). Tiene el resultado de la subllamada pow (2, 1), por lo que también puede finalizar la evaluación de x * pow (x, n - 1), devolviendo 4.
 
 Luego se restaura el contexto anterior:
 
-![cotext_6]()
+![cotext_6](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_05.png?raw=true)
 
 Cuando termina, tenemos un resultado de pow (2, 3) = 8.
 
@@ -319,7 +319,7 @@ El código es corto y fácil de entender (¿Quizás?). Ese es el poder de la rec
 
 Aquí está el diagrama de llamadas:
 
-![llamadas]()
+![llamadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/llamadas_01.png?raw=true)
 
 Podemos ver fácilmente el principio: para un objeto {...} se realizan subllamadas, mientras que los Arrays [...] son las “hojas” del árbol recursivo y dan un resultado inmediato.
 
@@ -388,7 +388,7 @@ let list = {
 
 Representación gráfica de la lista:
 
-![representacion_1]()
+![representacion_1](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_01.png?raw=true)
 
 Un código alternativo para la creación:
 
@@ -410,7 +410,7 @@ let secondList = list.next.next;
 list.next.next = null;
 ````
 
-![representacion_2]()
+![representacion_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_02.png?raw=true)
 
 Para unir:
 
@@ -431,7 +431,7 @@ list.next.next.next = { value: 4 };
 // anteponer el nuevo valor a la lista
 list = { value: "new item", next: list };
 ````
-![representacion_3]()
+![representacion_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_03.png?raw=true)
 
 Para eliminar un valor del medio, cambie el next del anterior:
 
@@ -439,7 +439,7 @@ Para eliminar un valor del medio, cambie el next del anterior:
 ```js
 list.next = list.next.next;
 ```
-![representacion_4]()
+![representacion_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_04.png?raw=true)
 
 Hicimos que list.next salte sobre 1 al valor 2. El valor 1 ahora está excluido de la cadena. Si no se almacena en ningún otro lugar, se eliminará automáticamente de la memoria.
 
