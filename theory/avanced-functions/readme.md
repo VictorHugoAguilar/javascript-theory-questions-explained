@@ -70,7 +70,7 @@ pow(x, n) =
 
 También podemos decir que pow se llama a sí mismo recursivamente hasta quen == 1.
 
-![recursividad]()
+![recursividad](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/recurvisidad_01.png?raw=true)
 
 Por ejemplo, para calcular pow (2, 4) la variante recursiva realiza estos pasos:
 
