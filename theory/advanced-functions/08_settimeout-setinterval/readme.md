@@ -4,96 +4,138 @@ Podemos decidir ejecutar una función no ahora, sino un determinado tiempo despu
 
 Hay dos métodos para ello:
 
-setTimeout nos permite ejecutar una función una vez, pasado un intervalo de tiempo dado.
-setInterval nos permite ejecutar una función repetidamente, comenzando después del intervalo de tiempo, luego repitiéndose continuamente cada intervalo.
+* `setTimeout` nos permite ejecutar una función una vez, pasado un intervalo de tiempo dado.
+* `setInterval` nos permite ejecutar una función repetidamente, comenzando después del intervalo de tiempo, luego repitiéndose continuamente cada intervalo.
+
 Estos métodos no son parte de la especificación de JavaScript. Pero la mayoría de los entornos tienen el planificador interno y proporcionan estos métodos. En particular, son soportados por todos los navegadores y por Node.js.
 
-setTimeout
+## setTimeout
+
 La sintaxis:
 
+````js
 let timerId = setTimeout(func|código, [retraso], [arg1], [arg2], ...)
+````js
+
 Parámetros:
 
-func|código
-Una función o un string con código para ejecutar. Lo normal es que sea una función. Por razones históricas es posible pasar una cadena de código, pero no es recomendable.
-retraso
-El retraso o delay antes de la ejecución, en milisegundos (1000 ms = 1 segundo), por defecto 0.
-arg1, arg2…
-Argumentos para la función
-Por ejemplo, este código llama a sayHi() después de un segundo:
+`func|código`
 
+Una función o un string con código para ejecutar. Lo normal es que sea una función. Por razones históricas es posible pasar una cadena de código, pero no es recomendable.
+
+`retraso`
+
+El retraso o delay antes de la ejecución, en milisegundos (1000 ms = 1 segundo), por defecto 0.
+
+`arg1, arg2…`
+
+Argumentos para la función
+
+Por ejemplo, este código llama a `sayHi()` después de un segundo:
+
+````js
 function sayHi() {
   alert('Hola');
 }
 
 setTimeout(sayHi, 1000);
+````
+
 Con argumentos:
 
+````js
 function sayHi(phrase, who) {
   alert( phrase + ', ' + who );
 }
 
 setTimeout(sayHi, 1000, "Hola", "John"); // Hola, John
+````
+
 Si el primer argumento es un string, JavaScript crea una función a partir de él.
 
 Entonces, esto también funcionará:
 
+````js
 setTimeout("alert('Hola')", 1000);
+````
+
 Pero no se recomienda usar strings, use funciones de flecha en lugar de ello:
 
+````js
 setTimeout(() => alert('Hola'), 1000);
-Pasa una función, pero no la ejecuta
+````
+
+### ℹ️ Pasa una función, pero no la ejecuta
 Los principiantes a veces cometen un error al agregar paréntesis () después de la función:
 
+````js
 // ¡mal!
 setTimeout(sayHi(), 1000);
+````
+
 Eso no funciona, porque setTimeout espera una referencia a una función. Y aquí sayHi() ejecuta la función, y el resultado de su ejecución se pasa a setTimeout. En nuestro caso, el resultado de sayHi() es undefined (la función no devuelve nada), por lo que no habrá nada planificado.
 
-Cancelando con clearTimeout
-Una llamada a setTimeout devuelve un “identificador de temporizador” timerId que podemos usar para cancelar la ejecución.
+## Cancelando con clearTimeout
+
+Una llamada a `setTimeout` devuelve un “identificador de temporizador” timerId que podemos usar para cancelar la ejecución.
 
 La sintaxis para cancelar:
 
+````js
 let timerId = setTimeout(...);
 clearTimeout(timerId);
+````
+
 En el siguiente código, planificamos la función y luego la cancelamos (cambiamos de opinión). Como resultado, no pasa nada:
 
+````js
 let timerId = setTimeout(() => alert("no pasa nada"), 1000);
 alert(timerId); // identificador del temporizador
 
 clearTimeout(timerId);
 alert(timerId); // mismo identificador (No se vuelve nulo después de cancelar)
+````
+
 Como podemos ver en la salida alert, en un navegador el identificador del temporizador es un número. En otros entornos, esto puede ser otra cosa. Por ejemplo, Node.js devuelve un objeto de temporizador con métodos adicionales.
 
 De nuevo: no hay una especificación universal para estos métodos.
 
 Para los navegadores, los temporizadores se describen en la sección timers del estándar HTML.
 
-setInterval
-El método setInterval tiene la misma sintaxis que setTimeout:
+## setInterval
 
+El método `setInterval` tiene la misma sintaxis que setTimeout:
+
+````js
 let timerId = setInterval(func|código, [retraso], [arg1], [arg2], ...)
+````
+
 Todos los argumentos tienen el mismo significado. Pero a diferencia de setTimeout, ejecuta la función no solo una vez, sino regularmente después del intervalo de tiempo dado.
 
 Para detener las llamadas, debemos llamar a ‘clearInterval (timerId)’.
 
 El siguiente ejemplo mostrará el mensaje cada 2 segundos. Después de 5 segundos, la salida se detiene:
 
+````js
 // repetir con el intervalo de 2 segundos
 let timerId = setInterval(() => alert('tick'), 2000);
 
 // después de 5 segundos parar
 setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
-El tiempo pasa mientras se muestra ‘alerta’
+````
+
+### ℹ️ El tiempo pasa mientras se muestra ‘alerta’
 En la mayoría de los navegadores, incluidos Chrome y Firefox, el temporizador interno continúa “marcando” mientras muestra “alert/confirm/prompt”.
 
 Entonces, si ejecuta el código anterior y no descarta la ventana de ‘alerta’ por un tiempo, la próxima ‘alerta’ se mostrará de inmediato. El intervalo real entre alertas será más corto que 2 segundos.
 
-setTimeout anidado
+## setTimeout anidado
+
 Hay dos formas de ejecutar algo regularmente.
 
-Uno es setInterval. El otro es un setTimeout anidado, como este:
+Uno es `setInterval`. El otro es un `setTimeout` anidado, como este:
 
+````js
 /** en vez de:
 let timerId = setInterval(() => alert('tick'), 2000);
 */
@@ -102,14 +144,17 @@ let timerId = setTimeout(function tick() {
   alert('tick');
   timerId = setTimeout(tick, 2000); // (*)
 }, 2000);
-El setTimeout anterior planifica la siguiente llamada justo al final de la actual (*).
+````
 
-El setTimeout anidado es un método más flexible que setInterval. De esta manera, la próxima llamada se puede planificar de manera diferente, dependiendo de los resultados de la actual.
+El `setTimeout` anterior planifica la siguiente llamada justo al final de la actual (*).
+
+El `setTimeout` anidado es un método más flexible que setInterval. De esta manera, la próxima llamada se puede planificar de manera diferente, dependiendo de los resultados de la actual.
 
 Ejemplo: necesitamos escribir un servicio que envíe una solicitud al servidor cada 5 segundos solicitando datos, pero en caso de que el servidor esté sobrecargado, deber aumentar el intervalo a 10, 20, 40 segundos…
 
 Aquí está el pseudocódigo:
 
+````js
 let delay = 5000;
 
 let timerId = setTimeout(function request() {
@@ -123,29 +168,37 @@ let timerId = setTimeout(function request() {
   timerId = setTimeout(request, delay);
 
 }, delay);
+````
+
 Y si las funciones que estamos planificando requieren mucha CPU, entonces podemos medir el tiempo que tarda la ejecución y planificar la próxima llamada más tarde o más temprano.
 
-setTimeout anidado permite establecer el retraso entre las ejecuciones con mayor precisión que setInterval.
+** setTimeout anidado permite establecer el retraso entre las ejecuciones con mayor precisión que setInterval.**
 
-Comparemos dos fragmentos de código. El primero usa setInterval:
+Comparemos dos fragmentos de código. El primero usa setInterval`:
 
+````js
 let i = 1;
 setInterval(function() {
   func(i++);
 }, 100);
+````
+
 El segundo usa setTimeout anidado:
 
+````js
 let i = 1;
 setTimeout(function run() {
   func(i++);
   setTimeout(run, 100);
 }, 100);
-Para setInterval el planificador interno se ejecutará func(i++) cada 100ms:
+````
 
+Para setInterval el planificador interno se ejecutará func(i++) cada 100ms:
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/img/image_01.png?raw=true)
 
 ¿Te diste cuenta?
 
-¡El retraso real entre las llamadas de func para setInterval es menor que en el código!
+**¡El retraso real entre las llamadas de func para setInterval es menor que en el código!**
 
 Eso es normal, porque el tiempo que tarda la ejecución de func “consume” una parte del intervalo.
 
