@@ -21,7 +21,7 @@ Las herramientas de desarrollador se abrirán en la pestaña Consola de forma pr
 
 Se ve algo así:
 
-![imagen_01]()
+![imagen_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/getting-started/devtools/img/image_01.png?raw=true)
 
 El aspecto exacto de las herramientas de desarrollador depende de su versión de Chrome. Cambia de vez en cuando, pero debería ser similar.
 
@@ -47,7 +47,7 @@ Safari (navegador Mac, no compatible con Windows/Linux) es un poco especial aqu�
 
 Abra Preferencias y vaya al panel “Avanzado”. Hay una casilla de verificación en la parte inferior:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/getting-started/devtools/img/image_02.png?raw=true)
 
 Ahora combine Cmd+Opt+C para alternar a consola. Además, tenga en cuenta que ha aparecido el nuevo elemento del menú superior denominado “Desarrollar”. Tiene muchos comandos y opciones.
 
