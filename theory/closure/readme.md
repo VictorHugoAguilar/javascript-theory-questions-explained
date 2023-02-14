@@ -144,7 +144,7 @@ Entender tales cosas es excelente para el conocimiento general de JavaScript y b
 
 ## Ámbito o alcance léxico
 
-### ¡Aquí hay dragones! 🐲🐲
+### ⚠️ ¡Aquí hay dragones! 🐲🐲
 
 La explicación técnica en profundidad está por venir.
 
@@ -201,43 +201,47 @@ Una función también es un valor, como una variable.
 
 **La diferencia es que una declaración de función se inicializa completamente al instante.**
 
-Cuando se crea un entorno léxico, una declaración de función se convierte inmediatamente en una función lista para usar (a diferencia de let, que no se puede usar hasta la declaración).
+Cuando se crea un entorno léxico, una declaración de función se convierte inmediatamente en una función lista para usar (a diferencia de `let`, que no se puede usar hasta la declaración).
 
-Es por eso que podemos usar una función, declarada como declaración de función, incluso antes de la declaración misma.
+Es por eso que podemos usar una función, declarada como `declaración de función`, incluso antes de la declaración misma.
 
 Por ejemplo, aquí está el estado inicial del entorno léxico global cuando agregamos una función:
 
 ![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_03.png?raw=true)
 
-Naturalmente, este comportamiento solo se aplica a las declaraciones de funciones, no a las expresiones de funciones, donde asignamos una función a una variable, como let say = function (name) ....
+Naturalmente, este comportamiento solo se aplica a las `declaraciones de funciones`, no a las expresiones de funciones, donde asignamos una función a una variable, como `let say = function (name) ....`.
 
-Paso 3. Entorno léxico interno y externo
+## Paso 3. Entorno léxico interno y externo
+
 Cuando se ejecuta una función, al comienzo de la llamada se crea automáticamente un nuevo entorno léxico para almacenar variables y parámetros locales de la llamada.
 
-Por ejemplo, para say(" John "), se ve así (la ejecución está en la línea etiquetada con una flecha):
+Por ejemplo, para `say(" John ")`, se ve así (la ejecución está en la línea etiquetada con una flecha):
 
 ![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_04.png?raw=true)
 
 Durante la llamada a la función tenemos dos entornos léxicos: el interno (para la llamada a la función) y el externo (global):
 
-El entorno léxico interno corresponde a la ejecución actual de say. Tiene una sola propiedad: name, el argumento de la función. Llamamos a say("John"), por lo que el valor de name es "John".
-El entorno léxico externo es el entorno léxico global. Tiene la variable phrase y la función misma.
-El entorno léxico interno tiene una referencia al externo.
+* El entorno léxico interno corresponde a la ejecución actual de `say`. Tiene una sola propiedad: `name`, el argumento de la función. Llamamos a `say("John")`, por lo que el valor de name es `"John"`.
+* El entorno léxico externo es el entorno léxico global. Tiene la variable `phrase` y la función misma.
 
-Cuando el código quiere acceder a una variable: primero se busca el entorno léxico interno, luego el externo, luego el más externo y así sucesivamente hasta el global.
+El entorno léxico interno tiene una referencia al `externo`.
 
-Si no se encuentra una variable en ninguna parte, en el modo estricto se trata de un error (sin use strict, una asignación a una variable no existente crea una nueva variable global, por compatibilidad con el código antiguo).
+**Cuando el código quiere acceder a una variable: primero se busca el entorno léxico interno, luego el externo, luego el más externo y así sucesivamente hasta el global.**
+
+Si no se encuentra una variable en ninguna parte, en el modo estricto se trata de un error (sin `use strict`, una asignación a una variable no existente crea una nueva variable global, por compatibilidad con el código antiguo).
 
 En este ejemplo la búsqueda procede como sigue:
 
-Para la variable name, la alert dentro de say lo encuentra inmediatamente en el entorno léxico interno.
-Cuando quiere acceder a phrase, no existe un phrase local por lo que sigue la referencia al entorno léxico externo y lo encuentra allí.
+* Para la variable `name`, la `alert` dentro de `say` lo encuentra inmediatamente en el entorno léxico interno.
+* Cuando quiere acceder a `phrase`, no existe un `phrase` local por lo que sigue la referencia al entorno léxico externo y lo encuentra allí.
 
 ![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_05.png?raw=true)
 
-Paso 4. Devolviendo una función
+## Paso 4. Devolviendo una función
+
 Volvamos al ejemplo de makeCounter.
 
+````js
 function makeCounter() {
   let count = 0;
 
@@ -247,35 +251,38 @@ function makeCounter() {
 }
 
 let counter = makeCounter();
-Al comienzo de cada llamada a makeCounter(), se crea un nuevo objeto de entorno léxico para almacenar variables para la ejecución makeCounter.
+````
+
+Al comienzo de cada llamada a `makeCounter()`, se crea un nuevo objeto de entorno léxico para almacenar variables para la ejecución `makeCounter`.
 
 Entonces tenemos dos entornos léxicos anidados, como en el ejemplo anterior:
 
 ![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_06.png?raw=true)
 
-Lo que es diferente es que, durante la ejecución de makeCounter(), se crea una pequeña función anidada de solo una línea: return count++. Aunque no la ejecutamos, solo la creamos.
+Lo que es diferente es que, durante la ejecución de `makeCounter()`, se crea una pequeña función anidada de solo una línea: return count++. Aunque no la ejecutamos, solo la creamos.
 
-Todas las funciones recuerdan el entorno léxico en el que fueron realizadas. Técnicamente, no hay magia aquí: todas las funciones tienen la propiedad oculta llamada [[Environment], que mantiene la referencia al entorno léxico donde se creó la función:
+Todas las funciones recuerdan el entorno léxico en el que fueron realizadas. Técnicamente, no hay magia aquí: todas las funciones tienen la propiedad oculta llamada [[Environment]] que mantiene la referencia al entorno léxico donde se creó la función:
 
 ![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_07.png?raw=true)
 
 Entonces, counter.[[Environment]] tiene la referencia al Entorno léxico de {count: 0}. Así es como la función recuerda dónde se creó, sin importar dónde se la llame. La referencia [[Environment]] se establece una vez y para siempre en el momento de creación de la función.
 
-Luego, cuando counter() es llamado, un nuevo Entorno Léxico es creado por la llamada, y su referencia externa del entorno léxico se toma de counter.[[Environment]]:
+Luego, cuando `counter()` es llamado, un nuevo Entorno Léxico es creado por la llamada, y su referencia externa del entorno léxico se toma de counter.[[Environment]]:
 
 ![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_08.png?raw=true)
 
 Ahora cuando el código dentro de counter() busca la variable count, primero busca su propio entorno léxico (vacío, ya que no hay variables locales allí), luego el entorno léxico del exterior llama a makeCounter(), donde lo encuentra y lo cambia.
 
-Una variable se actualiza en el entorno léxico donde vive.
+**Una variable se actualiza en el entorno léxico donde vive.**
 
 Aquí está el estado después de la ejecución:
 
 ![image_09](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_09.png?raw=true)
 
-Si llamamos a counter() varias veces, la variable count se incrementará a 2, 3 y así sucesivamente, en el mismo lugar.
+Si llamamos a `counter()` varias veces, la variable `count` se incrementará a `2`, `3` y así sucesivamente, en el mismo lugar.
 
-Closure (clausura)
+### ℹ️ Closure (clausura)
+
 Existe un término general de programación “closure” que los desarrolladores generalmente deben conocer.
 
 Una clausura es una función que recuerda sus variables externas y puede acceder a ellas. En algunos lenguajes, eso no es posible, o una función debe escribirse de una manera especial para que suceda. Pero como se explicó anteriormente, en JavaScript todas las funciones son clausuras naturales (solo hay una excepción, que se cubrirá en La sintaxis "new Function").
@@ -284,7 +291,8 @@ Es decir: recuerdan automáticamente dónde se crearon utilizando una propiedad 
 
 Cuando en una entrevista un desarrollador frontend recibe una pregunta sobre “¿qué es una clausura?”, una respuesta válida sería una definición de clausura y una explicación de que todas las funciones en JavaScript son clausuras, y tal vez algunas palabras más sobre detalles técnicos: la propiedad [[Environment]] y cómo funcionan los entornos léxicos.
 
-Recolector de basura
+## Recolector de basura 🗑️
+
 Por lo general, un entorno léxico se elimina de la memoria con todas las variables una vez que finaliza la llamada a la función. Eso es porque ya no hay referencias a él. Como cualquier objeto de JavaScript, solo se mantiene en la memoria mientras es accesible.
 
 Sin embargo, si hay una función anidada a la que todavía se puede llegar después del final de una función, entonces tiene la propiedad [[Environment]] que hace referencia al entorno léxico.
@@ -293,6 +301,7 @@ En ese caso, el entorno léxico aún es accesible incluso después de completar 
 
 Por ejemplo:
 
+````js
 function f() {
   let value = 123;
 
@@ -303,8 +312,11 @@ function f() {
 
 let g = f(); // g.[[Environment]] almacena una referencia al entorno léxico
 // de la llamada f() correspondiente
+````
+
 Tenga en cuenta que si se llama a f() muchas veces y se guardan las funciones resultantes, todos los objetos del entorno léxico correspondientes también se conservarán en la memoria. Veamos las 3 funciones en el siguiente ejemplo:
 
+````js
 function f() {
   let value = Math.random();
 
@@ -314,10 +326,13 @@ function f() {
 // 3 funciones en un array, cada una de ellas enlaza con el entorno léxico
 // desde la ejecución f() correspondiente
 let arr = [f(), f(), f()];
+````
+
 Un objeto de entorno léxico muere cuando se vuelve inalcanzable (como cualquier otro objeto). En otras palabras, existe solo mientras haya al menos una función anidada que haga referencia a ella.
 
 En el siguiente código, después de eliminar la función anidada, su entorno léxico adjunto (y por lo tanto el value) se limpia de la memoria:
 
+````js
 function f() {
   let value = 123;
 
@@ -329,17 +344,21 @@ function f() {
 let g = f(); // mientras exista la función g, el valor permanece en la memoria
 
 g = null; // ... y ahora la memoria está limpia
-Optimizaciones en la vida real
+````
+
+### Optimizaciones en la vida real
+
 Como hemos visto, en teoría, mientras una función está viva, todas las variables externas también se conservan.
 
 Pero en la práctica, los motores de JavaScript intentan optimizar eso. Analizan el uso de variables y si es obvio que el código no usa una variable externa, la elimina.
 
-Un efecto secundario importante en V8 (Chrome, Edge, Opera) es que dicha variable no estará disponible en la depuración.
+**Un efecto secundario importante en V8 (Chrome, Edge, Opera) es que dicha variable no estará disponible en la depuración.**
 
 Intente ejecutar el siguiente ejemplo en Chrome con las Herramientas para desarrolladores abiertas.
 
-Cuando se detiene, en el tipo de consola alert(value).
+Cuando se detiene, en el tipo de consola `alert(value)`.
 
+````js
 function f() {
   let value = Math.random();
 
@@ -352,10 +371,13 @@ function f() {
 
 let g = f();
 g();
+````
+
 Como puede ver, ¡no existe tal variable! En teoría, debería ser accesible, pero el motor lo optimizó.
 
 Eso puede conducir a problemas de depuración divertidos (si no son muy largos). Uno de ellos: podemos ver una variable externa con el mismo nombre en lugar de la esperada:
 
+````js
 let value = "Surprise!";
 
 function f() {
@@ -370,16 +392,20 @@ function f() {
 
 let g = f();
 g();
+````
 
-Es bueno conocer esta característica de V8. Si está depurando con Chrome/Edge/Opera, tarde o temprano la encontrará.
+**Es bueno conocer esta característica de V8. Si está depurando con Chrome/Edge/Opera, tarde o temprano la encontrará.**
 
 Eso no es un error en el depurador, sino más bien una característica especial de V8. Tal vez en algún momento la cambiarán. Siempre puede verificarlo ejecutando los ejemplos en esta página.
 
-Tareas
-Esta función: ¿recoge los últimos cambios?
-importancia: 5
+# Tareas
+<hr>
+
+## Esta función: ¿recoge los últimos cambios?
+
 La función sayHi usa un nombre de variable externo. Cuando se ejecuta la función, ¿qué valor va a utilizar?
 
+````js
 let name = "John";
 
 function sayHi() {
@@ -389,17 +415,21 @@ function sayHi() {
 name = "Pete";
 
 sayHi(); // ¿qué mostrará: "John" o "Pete"?
+````
+
 Tales situaciones son comunes tanto en el desarrollo del navegador como del lado del servidor. Se puede programar que una función se ejecute más tarde de lo que se creó, por ejemplo, después de una acción del usuario o una solicitud de red.
 
 Entonces, la pregunta es: ¿recoge los últimos cambios?
 
-solución
-¿Qué variables están disponibles?
-importancia: 5
+[solución]()
+
+## ¿Qué variables están disponibles?
+
 La función makeWorker a continuación crea otra función y la devuelve. Esa nueva función se puede llamar desde otro lugar.
 
 ¿Tendrá acceso a las variables externas desde su lugar de creación, o desde el lugar de invocación, o ambos?
 
+````js
 function makeWorker() {
   let name = "Pete";
 
@@ -415,15 +445,19 @@ let work = makeWorker();
 
 // la llama
 work(); // ¿qué mostrará?
+````
+
 ¿Qué valor mostrará? “Pete” o “John”?
 
-solución
-¿Son independientes los contadores?
-importancia: 5
+[solución]()
+
+## ¿Son independientes los contadores?
+
 Aquí hacemos dos contadores: counter y counter2 usando la misma función makeCounter.
 
 ¿Son independientes? ¿Qué va a mostrar el segundo contador? 0,1 o 2,3 o algo más?
 
+````js
 function makeCounter() {
   let count = 0;
 
@@ -440,13 +474,17 @@ alert( counter() ); // 1
 
 alert( counter2() ); // ?
 alert( counter2() ); // ?
-solución
-Objeto contador
-importancia: 5
+````
+
+[solución]()
+
+## Objeto contador
+
 Aquí se crea un objeto contador con la ayuda de la función constructora.
 
 ¿Funcionará? ¿Qué mostrará?
 
+````js
 function Counter() {
   let count = 0;
 
@@ -463,11 +501,15 @@ let counter = new Counter();
 alert( counter.up() ); // ?
 alert( counter.up() ); // ?
 alert( counter.down() ); // ?
+````
+
 solución
-Función en if
-importancia: 5
+
+## Función en if
+
 Mira el código ¿Cuál será el resultado de la llamada en la última línea?
 
+````js
 let phrase = "Hello";
 
 if (true) {
@@ -479,22 +521,30 @@ if (true) {
 }
 
 sayHi();
-solución
-Suma con clausuras
-importancia: 4
+````
+
+[solución]()
+
+## Suma con clausuras
+
 Escriba la función sum que funcione así: sum(a)(b) = a+b.
 
 Sí, exactamente de esta manera, usando paréntesis dobles (no es un error de tipeo).
 
 Por ejemplo:
 
+````js
 sum(1)(2) = 3
 sum(5)(-1) = 4
-solución
-¿Es visible la variable?
-importancia: 4
+````
+
+[solución]()
+
+## ¿Es visible la variable?
+
 ¿Cuál será el resultado de este código?
 
+````js
 let x = 1;
 
 function func() {
@@ -504,23 +554,27 @@ function func() {
 }
 
 func();
+````
 P.D Hay una trampa en esta tarea. La solución no es obvia.
 
-solución
-Filtrar a través de una función
-importancia: 5
+[solución]()
+
+## Filtrar a través de una función
+
 Tenemos un método incorporado arr.filter(f) para arrays. Filtra todos los elementos a través de la función f. Si devuelve true, entonces ese elemento se devuelve en el array resultante.
 
 Haga un conjunto de filtros “listos para usar”:
 
-inBetween(a, b) – entre a y b o igual a ellos (inclusive).
-inArray([...]) – en el array dado
+* inBetween(a, b) – entre a y b o igual a ellos (inclusive).
+* inArray([...]) – en el array dado
+
 El uso debe ser así:
 
-arr.filter(inBetween(3,6)) – selecciona solo valores entre 3 y 6.
-arr.filter(inArray([1,2,3])) – selecciona solo elementos que coinciden con uno de los miembros de [1,2,3].
+* arr.filter(inBetween(3,6)) – selecciona solo valores entre 3 y 6.
+* arr.filter(inArray([1,2,3])) – selecciona solo elementos que coinciden con uno de los miembros de [1,2,3].
 Por ejemplo:
 
+````js
 /* .. tu código para inBetween y inArray */
 
 let arr = [1, 2, 3, 4, 5, 6, 7];
@@ -528,42 +582,52 @@ let arr = [1, 2, 3, 4, 5, 6, 7];
 alert( arr.filter(inBetween(3, 6)) ); // 3,4,5,6
 
 alert( arr.filter(inArray([1, 2, 10])) ); // 1,2
-Abrir en entorno controlado con pruebas.
+````
 
-solución
-Ordenar por campo
-importancia: 5
+[solución]()
+
+## Ordenar por campo
+
 Tenemos una variedad de objetos para ordenar:
 
+````js
 let users = [
   { name: "John", age: 20, surname: "Johnson" },
   { name: "Pete", age: 18, surname: "Peterson" },
   { name: "Ann", age: 19, surname: "Hathaway" }
 ];
+````
+
 La forma habitual de hacerlo sería:
 
+````js
 // por nombre(Ann, John, Pete)
 users.sort((a, b) => a.name > b.name ? 1 : -1);
 
 // por edad (Pete, Ann, John)
 users.sort((a, b) => a.age > b.age ? 1 : -1);
+````
+
 ¿Podemos hacerlo aún menos detallado, como este?
 
+````js
 users.sort(byField('name'));
 users.sort(byField('age'));
+````
+
 Entonces, en lugar de escribir una función, simplemente ponga byField (fieldName).
 
-Escriba la función byField que se pueda usar para eso.
+Escriba la función `byField` que se pueda usar para eso.
 
-Abrir en entorno controlado con pruebas.
+[solución]()
 
-solución
-Ejército de funciones
-importancia: 5
+## Ejército de funciones
+
 El siguiente código crea una serie de shooters.
 
 Cada función está destinada a generar su número. Pero algo anda mal …
 
+````js
 function makeArmy() {
   let shooters = [];
 
@@ -586,11 +650,10 @@ let army = makeArmy();
 army[0](); // 10 del tirador número 0
 army[1](); // 10 del tirador número 1
 army[2](); // 10 ...y así sucesivamente.
+````
+
 ¿Por qué todos los tiradores muestran el mismo valor?
 
 Arregle el código para que funcionen según lo previsto.
 
-Abrir en entorno controlado con pruebas.
-
-solución
-
+[solución]()
