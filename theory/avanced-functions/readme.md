@@ -2,17 +2,17 @@
 
 Volvamos a las funciones y estudiémoslas más en profundidad.
 
-Nuestro primer tema será la recursividad.
+Nuestro primer tema será la *recursividad*.
 
 Si no eres nuevo en la programación, probablemente te resulte familiar y puedes saltarte este capítulo.
 
 La recursión es un patrón de programación que es útil en situaciones en las que una tarea puede dividirse naturalmente en varias tareas del mismo tipo, pero más simples. O cuando una tarea se puede simplificar en una acción fácil más una variante más simple de la misma tarea. O, como veremos pronto, tratar con ciertas estructuras de datos.
 
-Sabemos que cuando una función resuelve una tarea, en el proceso puede llamar a muchas otras funciones. Un caso particular de esto se da cuando una función se llama a sí misma. Esto es lo que se llama recursividad.
+Sabemos que cuando una función resuelve una tarea, en el proceso puede llamar a muchas otras funciones. Un caso particular de esto se da cuando una función se llama a sí misma. Esto es lo que se llama *recursividad*.
 
 ## Dos formas de pensar
 
-Para comenzar con algo simple, escribamos una función pow(x, n) que eleve x a una potencia natural den. En otras palabras, multiplica x por sí mismo n veces.
+Para comenzar con algo simple, escribamos una función **pow(x, n)** que eleve x a una potencia natural den. En otras palabras, multiplica `x` por sí mismo `n` veces.
 
 ```js
 pow(2, 2) = 4
@@ -22,7 +22,7 @@ pow(2, 4) = 16
 
 Hay dos formas de implementarlo.
 
-1. Pensamiento iterativo: el bucle for:
+1. **Pensamiento iterativo**: el bucle for:
 
 ```js
 function pow(x, n) {
@@ -39,9 +39,9 @@ function pow(x, n) {
 alert( pow(2, 3) ); // 8
 ````
 
-2. Pensamiento recursivo: simplifica la tarea y se llama a sí mismo:
+2. **Pensamiento recursivo**: simplifica la tarea y se llama a sí mismo:
 
-```js
+````js
 function pow(x, n) {
   if (n == 1) {
     return x;
@@ -53,11 +53,11 @@ function pow(x, n) {
 alert( pow(2, 3) ); // 8
 ````
 
-Note cómo la variante recursiva es fundamentalmente diferente.
+> Note cómo la variante recursiva es fundamentalmente diferente.
 
-Cuando se llama a pow(x, n), la ejecución se divide en dos ramas:
+Cuando se llama a `pow(x, n)`, la ejecución se divide en dos ramas:
 
-````j
+````js
            if n==1  = x
              /
 pow(x, n) =
@@ -65,14 +65,14 @@ pow(x, n) =
               else     = x * pow(x, n - 1)
 ````
 
-1. Si n == 1, entonces todo es trivial. Esto se llama base de la recursividad, porque produce inmediatamente el resultado obvio: pow (x, 1) es igual a x.
-2. De lo contrario, podemos representar pow (x, n) como x * pow (x, n - 1). En matemáticas, uno escribiría xn = x * x n-1. Esto se llama paso recursivo: transformamos la tarea en una acción más simple (multiplicación por x) y una llamada más simple de la misma tarea (pow con menor n). Los siguientes pasos lo simplifican más y más hasta que n llegue a1.
+1. Si `n == 1`, entonces todo es trivial. Esto se llama base de la recursividad, porque produce inmediatamente el resultado obvio: `pow(x, 1)` es igual a `x`.
+2. De lo contrario, podemos representar `pow(x, n)` como `x * pow(x, n - 1)`. En matemáticas, uno escribiría `xn = x * x n-1`. Esto se llama paso recursivo: transformamos la tarea en una acción más simple (multiplicación por `x`) y una llamada más simple de la misma tarea (`pow` con menor `n`). Los siguientes pasos lo simplifican más y más hasta que n llegue a `1`.
 
-También podemos decir que pow se llama a sí mismo recursivamente hasta quen == 1.
+También podemos decir que `pow` se llama a sí mismo recursivamente hasta que `n == 1`.
 
 ![recursividad](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/recurvisidad_01.png?raw=true)
 
-Por ejemplo, para calcular pow (2, 4) la variante recursiva realiza estos pasos:
+Por ejemplo, para calcular `pow(2, 4)` la variante recursiva realiza estos pasos:
 
 1. pow(2, 4) = 2 * pow(2, 3)
 2. pow(2, 3) = 2 * pow(2, 2)
@@ -84,20 +84,22 @@ Por lo tanto, la recursión reduce una llamada de función a una más simple y l
 > La recursión suele ser más corta
 Una solución recursiva suele ser más corta que una iterativa.
 
-Aquí podemos reescribir lo mismo usando el operador condicional ? En lugar de if para hacer que pow (x, n) sea más conciso y aún bastante legible:
+Aquí podemos reescribir lo mismo usando el operador condicional `?` En lugar de `if` para hacer que `pow(x, n)` sea más conciso y aún bastante legible:
 
-```js
+````js
 function pow (x, n) {
    return (n == 1)? x: (x * pow (x, n - 1));
 }
 ````
-El número máximo de llamadas anidadas (incluida la primera) se llama profundidad de recursión. En nuestro caso, será exactamente n.
+
+El número máximo de llamadas anidadas (incluida la primera) se llama profundidad de recursión. En nuestro caso, será exactamente `n`.
 
 La profundidad máxima de recursión está limitada por el motor de JavaScript. Podemos confiar en que sea 10 000; algunos motores permiten más, pero 100 000 probablemente esté fuera del límite para la mayoría de ellos. Hay optimizaciones automáticas que ayudan a aliviar esto (“optimizaciones de llamadas de cola”), pero aún no tienen soporte en todas partes y funcionan solo en casos simples.
 
 Eso limita la aplicación de la recursividad, pero sigue siendo muy amplia. Hay muchas tareas donde la forma recursiva de pensar proporciona un código más simple y fácil de mantener.
 
 ## El contexto de ejecución y pila
+
 Ahora examinemos cómo funcionan las llamadas recursivas. Para eso espiemos lo que sucede bajo la capa en las funciones.
 
 La información sobre el proceso de ejecución de una función en ejecución se almacena en su contexto de ejecución.
@@ -113,11 +115,11 @@ Cuando una función realiza una llamada anidada, sucede lo siguiente:
 * La llamada anidada se ejecuta.
 * Una vez que finaliza, el antiguo contexto de ejecución se recupera de la pila y la función externa se reanuda desde donde se pausó.
 
-Veamos qué sucede durante la llamada de pow (2, 3).
+Veamos qué sucede durante la llamada de `pow(2, 3)`.
 
 **pow (2, 3)**
 
-Al comienzo de la llamada pow (2, 3) el contexto de ejecución almacenará variables: x = 2, n = 3, el flujo de ejecución está en la línea 1 de la función.
+Al comienzo de la llamada `pow(2, 3)` el contexto de ejecución almacenará variables: `x = 2, n = 3`, el flujo de ejecución está en la línea `1` de la función.
 
 Podemos esbozarlo como:
 
@@ -125,7 +127,7 @@ Podemos esbozarlo como:
 
 Ahí es cuando la función comienza a ejecutarse. La condición n == 1 es falsa, por lo que el flujo continúa en la segunda rama de if:
 
-```js
+````js
 function pow(x, n) {
   if (n == 1) {
     return x;
@@ -153,7 +155,7 @@ Aquí llamamos a la misma función pow, pero no importa en absoluto. El proceso 
 * El nuevo contexto se crea para la subllamada.
 * Cuando finaliza la subllamada, el contexto anterior se extrae de la pila y su ejecución continúa.
 
-Aquí está la pila de contexto cuando ingresamos la subllamada pow (2, 2):
+Aquí está la pila de contexto cuando ingresamos la subllamada `pow(2, 2)`:
 
 ![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_03a.png?raw=true)
 
@@ -162,22 +164,23 @@ El nuevo contexto de ejecución actual está en la parte superior (y en negrita)
 Cuando terminamos la subllamada: es fácil reanudar el contexto anterior, ya que mantiene ambas variables y el lugar exacto del código donde se detuvo.
 
 > Por favor tome nota:
-En la figura usamos la palabra línea “line” porque en nuestro ejemplo hay solo una subllamada en línea, pero generalmente una simple línea de código puede contener múltiples subllamadas, como pow(…) + pow(…) + otraCosa(…).
+En la figura usamos la palabra línea “line” porque en nuestro ejemplo hay solo una subllamada en línea, pero generalmente una simple línea de código puede contener múltiples subllamadas, como `pow(…) + pow(…) + otraCosa(…)`.
 
 Entonces sería más preciso decir que la ejecución se reanuda “inmediatamente después de la subllamada”.
 
 **pow(2,1)**
 
-El proceso se repite: se realiza una nueva subllamada en la línea 5, ahora con argumentosx = 2, n = 1.
+El proceso se repite: se realiza una nueva subllamada en la línea 5, ahora con argumentos `x = 2, n = 1`.
 
 Se crea un nuevo contexto de ejecución, el anterior se coloca en la parte superior de la pila:
 
 ![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_03.png?raw=true)
 
-Hay 2 contextos antiguos ahora y 1 actualmente en ejecución para pow (2, 1).
+Hay 2 contextos antiguos ahora y 1 actualmente en ejecución para `pow(2, 1)`.
 
-La salida
-Durante la ejecución de pow (2, 1), a diferencia de antes, la condición n == 1 es verdadera, por lo que funciona la primera rama de if :
+**La salida**
+
+Durante la ejecución de `pow(2, 1)`, a diferencia de antes, la condición `n == 1` es verdadera, por lo que funciona la primera rama de if :
 
 ````js
 function pow(x, n) {
@@ -189,25 +192,25 @@ function pow(x, n) {
 }
 ````
 
-No hay más llamadas anidadas, por lo que la función finaliza y devuelve 2.
+No hay más llamadas anidadas, por lo que la función finaliza y devuelve `2`.
 
 Cuando finaliza la función, su contexto de ejecución ya no es necesario y se elimina de la memoria. El anterior se restaura desde la parte superior de la pila:
 
 ![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_04.png?raw=true)
 
-Se reanuda la ejecución de pow (2, 2). Tiene el resultado de la subllamada pow (2, 1), por lo que también puede finalizar la evaluación de x * pow (x, n - 1), devolviendo 4.
+Se reanuda la ejecución de `pow(2, 2)`. Tiene el resultado de la subllamada `pow(2, 1)`, por lo que también puede finalizar la evaluación de `x * pow(x, n - 1)`, devolviendo `4`.
 
 Luego se restaura el contexto anterior:
 
 ![cotext_6](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_05.png?raw=true)
 
-Cuando termina, tenemos un resultado de pow (2, 3) = 8.
+Cuando termina, tenemos un resultado de `pow(2, 3) = 8`.
 
-La profundidad de recursión en este caso fue: 3.
+La profundidad de recursión en este caso fue: **3**.
 
 Como podemos ver en las ilustraciones anteriores, la profundidad de recursión es igual al número máximo de contexto en la pila.
 
-Tenga en cuenta los requisitos de memoria. Los contextos toman memoria. En nuestro caso, elevar a la potencia de n realmente requiere la memoria para n contextos, para todos los valores más bajos de n.
+Tenga en cuenta los requisitos de memoria. Los contextos toman memoria. En nuestro caso, elevar a la potencia de `n` realmente requiere la memoria para `n` contextos, para todos los valores más bajos de `n`.
 
 Un algoritmo basado en bucles ahorra más memoria:
 
@@ -469,10 +472,13 @@ Cada vez que una función se llama a sí misma ocurre un paso de recursión. La 
 
 Por ejemplo, la lista enlazada se puede definir como una estructura de datos que consiste en un objeto que hace referencia a una lista (o nulo).
 
+````js
 list = { value, next -> list }
+````
+
 Los árboles como el árbol de elementos HTML o el árbol de departamentos de este capítulo también son naturalmente recursivos: se ramifican y cada rama puede tener otras ramas.
 
-Las funciones recursivas se pueden usar para recorrerlas como hemos visto en el ejemplo sumSalary.
+Las funciones recursivas se pueden usar para recorrerlas como hemos visto en el ejemplo `sumSalary`.
 
 Cualquier función recursiva puede reescribirse en una iterativa. Y eso a veces es necesario para optimizar las cosas. Pero para muchas tareas, una solución recursiva es lo suficientemente rápida y fácil de escribir y mantener.
 
