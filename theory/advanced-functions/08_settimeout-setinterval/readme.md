@@ -208,23 +208,28 @@ En este caso, el motor espera a que se complete func, luego verifica el planific
 
 En caso límite, si la ejecución de la función siempre demora más que los ms de retraso, entonces las llamadas se realizarán sin pausa alguna.
 
-Y aquí está la imagen para el setTimeout anidado:
+Y aquí está la imagen para el `setTimeout` anidado:
 
+[image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/img/image_02.png?raw=true)
 
-El setTimeout anidado garantiza el retraso fijo (aquí 100ms).
+**El setTimeout anidado garantiza el retraso fijo (aquí 100ms).**
 
 Esto se debe a que se planea una nueva llamada al final de la anterior.
 
-Recolección de basura y setInterval/setTimeout callback
+### ℹ️ Recolección de basura y setInterval/setTimeout callback
 Cuando se pasa una función en setInterval / setTimeout, se crea una referencia interna y se guarda en el planificador. Esto evita que la función se recolecte, incluso si no hay otras referencias a ella…
 
+````js
 // la función permanece en la memoria hasta que el planificador la llame
 setTimeout(function() {...}, 100);
-Para setInterval, la función permanece en la memoria hasta que se invoca clearInterval.
+````
+
+Para `setInterval`, la función permanece en la memoria hasta que se invoca clearInterval.
 
 Hay un efecto secundario. Una función hace referencia al entorno léxico externo, por lo tanto, mientras vive, las variables externas también viven. Pueden tomar mucha más memoria que la función misma. Entonces, cuando ya no necesitamos la función planificada es mejor cancelarla, incluso si es muy pequeña.
 
-Retraso cero en setTimeout
+## Retraso cero en setTimeout
+
 Hay un caso de uso especial: setTimeout (func, 0), o simplemente setTimeout (func).
 
 Esto planifica la ejecución de func lo antes posible. Pero el planificador lo invocará solo después de que se complete el script que se está ejecutando actualmente.
@@ -233,18 +238,23 @@ Por lo tanto, la función está planificada para ejecutarse “justo después”
 
 Por ejemplo, esto genera “Hola”, e inmediatamente después “Mundo”:
 
+````js
 setTimeout(() => alert("Mundo"));
 
 alert("Hola");
+````
+
 La primera línea “pone la llamada en el calendario después de 0 ms”. Pero el planificador solo “verificará el calendario” una vez que se haya completado el script actual, por lo que “Hola” es primero y “Mundo” después.
 
 También hay casos de uso avanzados relacionados con el navegador y el tiempo de espera cero (zero-delay), que discutiremos en el capítulo Loop de eventos: microtareas y macrotareas.
 
-De hecho, el retraso cero no es cero (en un navegador)
+### ℹ️ De hecho, el retraso cero no es cero (en un navegador)
+
 En el navegador, hay una limitación de la frecuencia con la que se pueden ejecutar los temporizadores anidados. EL estándar dinámico de HTML dice: “después de cinco temporizadores anidados, el intervalo debe ser forzado a que el mínimo sea de 4 milisegundos”.
 
 Demostremos lo que significa con el siguiente ejemplo. La llamada setTimeout se planifica a sí misma con cero retraso. Cada llamada recuerda el tiempo real de la anterior en el array times. ¿Cómo son los retrasos reales? Veamos:
 
+````js
 let start = Date.now();
 let times = [];
 
@@ -257,6 +267,8 @@ setTimeout(function run() {
 
 // Un ejemplo de la salida:
 // 1,1,1,1,9,15,20,24,30,35,40,45,50,55,59,64,70,75,80,85,90,95,100
+````
+
 Los primeros temporizadores se ejecutan inmediatamente (tal como está escrito en la especificación), y luego vemos 9, 15, 20, 24 .... Entra en juego el retraso obligatorio de más de 4 ms entre invocaciones.
 
 Lo mismo sucede si usamos setInterval en lugar de setTimeout: setInterval(f) ejecuta f algunas veces con cero retraso, y luego con 4+ ms de retraso.
@@ -265,19 +277,22 @@ Esa limitación proviene de la antigüedad y muchos scripts dependen de ella, po
 
 Para JavaScript del lado del servidor, esa limitación no existe, y existen otras formas de planificar un trabajo asincrónico inmediato, como setImmediate para Node.js. Así que esta nota es específica del navegador.
 
-Resumen
-Los métodos setTimeout(func, delay, ... args) y setInterval(func, delay, ... args) nos permiten ejecutar func “una vez” y “regularmente” después del retardo delay dado en milisegundos.
-Para cancelar la ejecución, debemos llamar a clearTimeout / clearInterval con el valor devuelto por setTimeout / setInterval.
-Las llamadas anidadas setTimeout son una alternativa más flexible a setInterval, lo que nos permite establecer el tiempo entre ejecuciones con mayor precisión.
-La programación de retardo cero con setTimeout(func, 0)(lo mismo que setTimeout(func)) se usa para programar la llamada “lo antes posible, pero después de que se complete el script actual”.
-El navegador limita la demora mínima para cinco o más llamadas anidadas de setTimeout o para setInterval (después de la quinta llamada) a 4 ms. Eso es por razones históricas.
+## Resumen
+
+* Los métodos setTimeout(func, delay, ... args) y setInterval(func, delay, ... args) nos permiten ejecutar func “una vez” y “regularmente” después del retardo delay dado en milisegundos.
+* Para cancelar la ejecución, debemos llamar a clearTimeout / clearInterval con el valor devuelto por setTimeout / setInterval.
+* Las llamadas anidadas setTimeout son una alternativa más flexible a setInterval, lo que nos permite establecer el tiempo entre ejecuciones con mayor precisión.
+* La programación de retardo cero con setTimeout(func, 0)(lo mismo que setTimeout(func)) se usa para programar la llamada “lo antes posible, pero después de que se complete el script actual”.
+* El navegador limita la demora mínima para cinco o más llamadas anidadas de setTimeout o para setInterval (después de la quinta llamada) a 4 ms. Eso es por razones históricas.
+
 Tenga en cuenta que todos los métodos de planificación no garantizan el retraso exacto.
 
 Por ejemplo, el temporizador en el navegador puede ralentizarse por muchas razones:
 
-La CPU está sobrecargada.
-La pestaña del navegador está en modo de “segundo plano”.
-El portátil está en modo “ahorro de batería”.
+* La CPU está sobrecargada.
+* La pestaña del navegador está en modo de “segundo plano”.
+* El portátil está en modo “ahorro de batería”.
+
 Todo eso puede aumentar la resolución mínima del temporizador (el retraso mínimo) a 300 ms o incluso 1000 ms dependiendo de la configuración de rendimiento del navegador y del nivel del sistema operativo.
 
 ## ✅ Tareas
