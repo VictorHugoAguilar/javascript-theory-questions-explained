@@ -1,5 +1,4 @@
-## Trabajo avanzado con funciones
----
+# Trabajo avanzado con funciones
 
 1. Recursión y pila
 2. Parámetros Rest y operador Spread
