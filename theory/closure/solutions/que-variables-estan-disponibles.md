@@ -2,7 +2,7 @@ La respuesta es: Pete.
 
 La función work() en el código a continuación obtiene name del lugar de su origen a través de la referencia del entorno léxico externo:
 
-![que-variables-estan-disponibles]()
+![que-variables-estan-disponibles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/que-variables-estan-disponibles.png?raw=true)
 
 Entonces, el resultado es “Pete”.
 
