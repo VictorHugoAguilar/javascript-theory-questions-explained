@@ -33,3 +33,5 @@ function delay(f, ms) {
 }
 ````
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/09_call-apply-decorators)
