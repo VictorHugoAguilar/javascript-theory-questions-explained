@@ -7,7 +7,7 @@
 5. [Objeto Global](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/05_global-object/readme.md)
 6. [Función como objeto, NFE](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/06_function-object/readme.md)
 7. [La sintaxis "new Function"](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/07_new-function/readme.md)
-8. [Planificación: setTimeout y setInterval]()
+8. [Planificación: setTimeout y setInterval](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/08_settimeout-setinterval)
 9. [Decoradores y redirecciones, call/apply]()
 10. [Función bind: vinculación de funciones]()
 11. [Funciones de flecha revisadas]()
