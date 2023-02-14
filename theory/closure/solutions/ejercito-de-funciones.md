@@ -1,12 +1,16 @@
-Examinemos lo que sucede dentro de makeArmy, y la solución será obvia.
+Examinemos lo que sucede dentro de `makeArmy`, y la solución será obvia.
 
-Esta crea un array vacío de tiradores, shooters:
+1. Esta crea un array vacío de tiradores, `shooters`:
 
+````js
 let shooters = [];
-Lo llena en el bucle a través de shooters.push(function...).
+````
+
+2. Lo llena en el bucle a través de `shooters.push(function...)`.
 
 Cada elemento es una función, por lo que el array resultante se ve así:
 
+````js
 shooters = [
   function () { alert(i); },
   function () { alert(i); },
@@ -19,7 +23,9 @@ shooters = [
   function () { alert(i); },
   function () { alert(i); }
 ];
-El array se devuelve desde la función.
+````
+
+3. El array se devuelve desde la función.
 
 Más tarde la llamada a cualquier miembro, por ejemplo army[5](), obtendrá el elemento army[5] del array (será una función) y lo llamará.
 
@@ -31,6 +37,7 @@ Entonces ¿cuál será el valor de i?
 
 Si miramos la fuente:
 
+````js
 function makeArmy() {
   ...
   let i = 0;
@@ -43,14 +50,17 @@ function makeArmy() {
   }
   ...
 }
+````
+
 Podemos ver que todas las funciones shooter están creadas en el ambiente léxico asociado a la ejecución de makeArmy(). Pero cuando se llama a army[5](), makeArmy ya ha terminado su trabajo, y el valor final de i es 10 (while finaliza en i=10).
 
 Como resultado, todas las funciones shooter obtienen el mismo valor del mismo entorno léxico externo, que es el último valor i=10.
 
-img
+![imagen_1](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ejercito-de-funciones_1.png?raw=true)
 
 Como puedes ver arriba, con cada iteración del bloque while {...} un nuevo ambiente léxico es creado. Entonces, para corregir el problema podemos copiar el valor de i en una variable dentro del bloque while {...} como aquí:
 
+````js
 function makeArmy() {
   let shooters = [];
 
@@ -72,14 +82,17 @@ let army = makeArmy();
 // Ahora el código funciona correctamente
 army[0](); // 0
 army[5](); // 5
+````
+
 Aquí let j = i declara una variable de iteración local j y copia i en ella. Las primitivas son copiadas por valor, así que realmente obtenemos una copia independiente de i, perteneciente a la iteración del bucle actual.
 
 Los shooters funcionan correctamente, porque el valor de i ahora vive más cerca. No en el ambiente léxico de makeArmy() sino en el que corresponde a la iteración del bucle actual:
 
-img
+![imagen_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ejercito-de-funciones_2.png?raw=true)
 
 Tal problema habría sido evitado si hubiéramos usado for desde el principio:
 
+````js
 function makeArmy() {
 
   let shooters = [];
@@ -98,9 +111,11 @@ let army = makeArmy();
 
 army[0](); // 0
 army[5](); // 5
+````
+
 Esto es esencialmente lo mismo, ya que cada iteración de for genera un nuevo ambiente léxico con su propia variable i. Así el shooter generado en cada iteración hace referencia a su propio i, de esa misma iteración.
 
-img
+![imagen_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ejercito-de-funciones_3.png?raw=true)
 
 Ahora, como has puesto mucho esfuerzo leyendo esto, y la receta final es tan simple: simplemente usa for, puede que te preguntes: ¿valió la pena?
 
