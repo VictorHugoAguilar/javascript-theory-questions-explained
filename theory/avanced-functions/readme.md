@@ -513,7 +513,7 @@ P.D. ¿Qué variante de la solución es la más rápida? ¿Y la más lenta? ¿Po
 
 P.P.D. ¿Podemos usar la recursión para contar sumTo(100000)?
 
-[Solución_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/suma_numeros_hasta_elegido.md)
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/suma_numeros_hasta_elegido.md)
 
 ## Calcula el factorial
 
@@ -543,7 +543,7 @@ alert( factorial(5) ); // 120
 
 P.D. Pista: n! puede ser escrito como n * (n-1)! Por ejemplo: 3! = 3*2! = 3*2*1! = 6
 
-[Solución_02]()
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/factorial_numero.md)
 
 ## Sucesión de Fibonacci
 
@@ -567,7 +567,7 @@ alert(fib(77)); // 5527939700884757
 
 P.D. La función debería ser rápida. La llamada a fib(77) no debería tardar más de una fracción de segundo.
 
-[Solución_03]()
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/avanced-functions/solutions) 
 
 ## Generar una lista de un solo enlace
 
@@ -595,7 +595,7 @@ Haz dos variantes de la solución: utilizando un bucle y utilizando recursividad
 
 ¿Qué es mejor: con recursividad o sin ella?
 
-[Solución_04]()
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/generar_lista_solo_enlace.md)
 
 ## Genere una lista de un solo enlace en orden inverso
 
@@ -611,5 +611,5 @@ Genere una lista de un solo enlace a partir de la tarea anterior Generar una lis
 
 Escribe dos soluciones: utilizando un bucle y utilizando recursividad.
 
-[Solución_05]()
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/genere-una-lista-de-un-solo-enlace-en-orden-inverso.md)
 
