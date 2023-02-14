@@ -1,4 +1,4 @@
-## Javascript Explained
+## Javascript Interview Question Explained
 
 * [Teoría](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory)
 
