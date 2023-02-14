@@ -2,7 +2,7 @@
 
 Nos concentraremos en el lenguaje mismo con el mínimo de notas específicas del entorno.
 
-1. Una introducción
+1. [Una introducción](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started)
 
 2. Fundamentos de JavaScript
 
