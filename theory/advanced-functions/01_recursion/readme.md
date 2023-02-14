@@ -622,3 +622,5 @@ Escribe dos soluciones: utilizando un bucle y utilizando recursividad.
 
 [Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/solutions/genere-una-lista-de-un-solo-enlace-en-orden-inverso.md)
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
