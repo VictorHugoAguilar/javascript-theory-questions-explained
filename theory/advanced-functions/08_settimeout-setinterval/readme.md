@@ -227,27 +227,32 @@ La pestaña del navegador está en modo de “segundo plano”.
 El portátil está en modo “ahorro de batería”.
 Todo eso puede aumentar la resolución mínima del temporizador (el retraso mínimo) a 300 ms o incluso 1000 ms dependiendo de la configuración de rendimiento del navegador y del nivel del sistema operativo.
 
-Tareas
-Salida cada segundo
-importancia: 5
-Escriba una función printNumbers(from, to) que genere un número cada segundo, comenzando desde from y terminando con to.
+## ✅ Tareas
+
+## Salida cada segundo
+
+Escriba una función `printNumbers(from, to)` que genere un número cada segundo, comenzando desde `from` y terminando con `to`.
 
 Haz dos variantes de la solución.
 
-Usando setInterval.
-Usando setTimeout anidado.
-solución
-¿Qué mostrará setTimeout?
-importancia: 5
-En el siguiente código hay una llamada programada setTimeout, luego se ejecuta un cálculo pesado que demora más de 100 ms en finalizar.
+1. Usando `setInterval`.
+2. Usando `setTimeout anidado`.
+
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/solutions/salida-cada-segundo.md)
+
+## ¿Qué mostrará setTimeout?
+
+En el siguiente código hay una llamada programada `setTimeout`, luego se ejecuta un cálculo pesado que demora más de 100 ms en finalizar.
 
 ¿Cuándo se ejecutará la función programada?
 
-Después del bucle.
-Antes del bucle.
-Al comienzo del bucle.
+1. Después del bucle.
+2. Antes del bucle.
+3. Al comienzo del bucle.
+
 ¿Qué va a mostrar ´alert()´?
 
+````js
 let i = 0;
 
 setTimeout(() => alert(i), 100); // ?
@@ -256,8 +261,9 @@ setTimeout(() => alert(i), 100); // ?
 for(let j = 0; j < 100000000; j++) {
   i++;
 }
+````
 
-solución
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/solutions/que-mostrara-settimeout.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
