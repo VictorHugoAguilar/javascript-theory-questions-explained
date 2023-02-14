@@ -116,3 +116,6 @@ new Function('a , b', 'return a + b'); // separación por comas con espacios
 ````
 
 Las funciones creadas con `new Function`, tienen [[Environment]] haciendo referencia a ambiente léxico global, no al externo. En consecuencia no pueden usar variables externas. Pero eso es en realidad algo bueno, porque nos previene de errores. Pasar parámetros explícitamente es mucho mejor arquitectónicamente y no causa problemas con los minificadores.
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
