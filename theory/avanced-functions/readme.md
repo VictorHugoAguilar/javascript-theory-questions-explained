@@ -513,7 +513,7 @@ P.D. ¿Qué variante de la solución es la más rápida? ¿Y la más lenta? ¿Po
 
 P.P.D. ¿Podemos usar la recursión para contar sumTo(100000)?
 
-[Solución_01]()
+[Solución_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/suma_numeros_hasta_elegido.md)
 
 ## Calcula el factorial
 
