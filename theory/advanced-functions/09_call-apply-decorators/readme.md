@@ -460,7 +460,7 @@ En otras palabras, `delay(f, ms)` devuelve una variante "Retrasada por ms" def.
 
 En el código anterior, f es una función de un solo argumento, pero en esta solución debe pasar todos los argumentos y el contexto this.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/solutions/decorador-de-retraso.md)
 
 ## Decorador debounce
 
@@ -507,7 +507,7 @@ La tarea es implementar el decorador debounce.
 
 Sugerencia: son solo algunas líneas si lo piensas :)
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/solutions/decorador-debounce.md)
 
 ## Decorador throttle
 
@@ -559,7 +559,7 @@ f1000(3); // (throttling, 1000ms aún no)
 
 > P.D. Los argumentos y el contexto `this` pasado a `f1000` deben pasarse a la `f` original.
 
-[solucion]()
+[solucion](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/solutions/decorador-throttle.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
