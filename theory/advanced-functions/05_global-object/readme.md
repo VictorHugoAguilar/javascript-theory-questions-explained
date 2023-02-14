@@ -89,3 +89,6 @@ Eso incluye JavaScript incorporado, tales como `Array` y valores específicos de
 * En el navegador, a menos que estemos utilizando módulos, las funciones globales y las variables declaradas con `var` se convierten en propiedades del objeto global.
 
 * Para que nuestro código esté preparado para el futuro y sea más fácil de entender, debemos acceder a las propiedades del objeto global directamente, como `window.x`.
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
