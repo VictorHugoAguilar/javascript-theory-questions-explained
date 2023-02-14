@@ -22,5 +22,7 @@
 
 11. [Funciones de flecha revisadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/11_arrow-functions)
 
+---
 
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory)
 
