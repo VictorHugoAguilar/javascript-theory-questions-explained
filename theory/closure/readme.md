@@ -30,7 +30,7 @@ Por ejemplo:
   alert(message); // Hello
 }
 
-alert(message); // Error: el mensaje no se ha definido (undefined)
+alert(message); // ReferenceError: message is not defined
 ````
 
 Podemos usar esto para aislar un fragmento de código que realiza su propia tarea, con variables que solo le pertenecen a él:
