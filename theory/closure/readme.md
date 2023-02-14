@@ -59,7 +59,7 @@ let message = "Hello";
 alert(message);
 
 // ver otro mensaje
-let message = "Goodbye"; // Error: la variable ya ha sido declarada
+let message = "Goodbye"; // SyntaxError: la variable ya ha sido declarada
 alert(message);
 ````
 
@@ -72,7 +72,7 @@ if (true) {
   alert(phrase); // Hello!
 }
 
-alert(phrase); // ¡Error, no hay tal variable!
+alert(phrase); // ReferenceError, phrase is not defined
 ````
 
 Aquí, después de que `if` termine, la `alerta` a continuación no verá la `phrase`, de ahí el error.
