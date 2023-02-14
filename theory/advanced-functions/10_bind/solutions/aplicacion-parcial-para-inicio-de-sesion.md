@@ -15,4 +15,4 @@ askPassword(user.login.bind(user, true), user.login.bind(user, false));
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind#aplicacion-parcial-para-inicio-de-sesion)
