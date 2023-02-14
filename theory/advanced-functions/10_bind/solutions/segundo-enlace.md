@@ -17,4 +17,4 @@ El objeto exótico bound function devuelto por `f.bind(...)` recuerda el context
 Una función no se puede volver a vincular.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind#segundo-enlace)
