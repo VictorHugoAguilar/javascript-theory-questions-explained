@@ -51,7 +51,7 @@ Al separar el caché del código de la función principal, también permite mant
 
 El resultado de cachingDecorator(func) es un contenedor: function(x) que envuelve la llamada de func(x) en la lógica de almacenamiento en caché:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/img/image_01.png?raw=true)
 
 Desde un código externo, la función slow envuelta sigue haciendo lo mismo. Simplemente se agregó un aspecto de almacenamiento en caché a su comportamiento.
 
@@ -472,7 +472,7 @@ Por ejemplo, teníamos una función f y la reemplazamos con f = debounce(f, 1000
 
 Entonces, si la función contenedora se llama a 0ms, 200ms y 500ms, y luego no hay llamadas, entonces la ‘f’ real solo se llamará una vez, a 1500ms. Es decir: después del período de enfriamiento de 1000 ms desde la última llamada.
 
-![imagen_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/img/image_02.png?raw=true)
 
 … Y obtendrá los argumentos de la última llamada, y se ignoran las otras llamadas.
 
@@ -495,7 +495,7 @@ En un navegador web, podemos configurar un controlador de eventos, una función 
 
 En este ejemplo en vivo, el controlador coloca el resultado en un cuadro a continuación, pruébelo:
 
-![imagen_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/img/image_03.png?raw=true)
 
 ¿Lo ve? La segunda entrada llama a la función debounce, por lo que su contenido se procesa después de 1000 ms desde la última entrada.
 
