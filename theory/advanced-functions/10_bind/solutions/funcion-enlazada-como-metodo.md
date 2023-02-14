@@ -19,4 +19,4 @@ El contexto de una función enlazada es fijo. Simplemente no hay forma de cambia
 Entonces, incluso mientras ejecutamos `user.g()`, la función original se llama con `this = null`.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind#funcion-enlazada-como-metodo)
