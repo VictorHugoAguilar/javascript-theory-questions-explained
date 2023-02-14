@@ -58,7 +58,7 @@ alert( pow(2, 3) ); // 8
 Cuando se llama a `pow(x, n)`, la ejecución se divide en dos ramas:
 
 ````js
-           if n==1  = x
+              if n==1  = x
              /
 pow(x, n) =
              \
