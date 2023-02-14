@@ -10,7 +10,7 @@
 8. [Planificación: setTimeout y setInterval](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/08_settimeout-setinterval)
 9. [Decoradores y redirecciones, call/apply]()
 10. [Función bind: vinculación de funciones](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind)
-11. [Funciones de flecha revisadas]()
+11. [Funciones de flecha revisadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/11_arrow-functions)
 
 
 
