@@ -1,4 +1,6 @@
-## Usando setInterval:
+## Salida cada segundo
+
+### Usando setInterval:
 
 ````js
 function printNumbers(from, to) {
@@ -17,7 +19,7 @@ function printNumbers(from, to) {
 printNumbers(5, 10);
 ````
 
-## Usando setTimeout anidado:
+### Usando setTimeout anidado:
 
 ````js
 function printNumbers(from, to) {
