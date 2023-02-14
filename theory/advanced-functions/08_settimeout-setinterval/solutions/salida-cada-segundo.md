@@ -60,3 +60,6 @@ function printNumbers(from, to) {
 
 printNumbers(5, 10);
 ````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/08_settimeout-setinterval)
