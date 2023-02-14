@@ -435,7 +435,7 @@ for (let args of work.calls) {
 
 > P.D Ese decorador a veces es útil para pruebas unitarias. Su forma avanzada es sinon.spy en la librería Sinon.JS.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/09_call-apply-decorators/solutions/decorador-espia.md)
 
 ## Decorador de retraso
 
