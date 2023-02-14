@@ -205,7 +205,7 @@ Se reanuda la ejecución de `pow(2, 2)`. Tiene el resultado de la subllamada `po
 
 Luego se restaura el contexto anterior:
 
-![cotext_6](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_05.png?raw=true)
+![cotext_6](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/contexto_05.png?raw=true)
 
 Cuando termina, tenemos un resultado de `pow(2, 3) = 8`.
 
