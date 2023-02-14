@@ -210,7 +210,7 @@ En caso límite, si la ejecución de la función siempre demora más que los ms 
 
 Y aquí está la imagen para el `setTimeout` anidado:
 
-[image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/img/image_02.png?raw=true)
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/img/image_02.png?raw=true)
 
 **El setTimeout anidado garantiza el retraso fijo (aquí 100ms).**
 
