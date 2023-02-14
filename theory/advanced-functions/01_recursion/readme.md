@@ -73,7 +73,7 @@ Los siguientes pasos lo simplifican más y más hasta que n llegue a `1`.
 
 También podemos decir que `pow` se llama a sí mismo recursivamente hasta que `n == 1`.
 
-![recursividad](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/recurvisidad_01.png?raw=true)
+![recursividad](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/recurvisidad_01.png?raw=true)
 
 Por ejemplo, para calcular `pow(2, 4)` la variante recursiva realiza estos pasos:
 
@@ -126,7 +126,7 @@ Al comienzo de la llamada `pow(2, 3)` el contexto de ejecución almacenará vari
 
 Podemos esbozarlo como:
 
-![context](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_01.png?raw=true)
+![context](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/contexto_01.png?raw=true)
 
 Ahí es cuando la función comienza a ejecutarse. La condición n == 1 es falsa, por lo que el flujo continúa en la segunda rama de if:
 
@@ -144,7 +144,7 @@ alert( pow(2, 3) );
 
 Las variables son las mismas, pero la línea cambia, por lo que el contexto es ahora:
 
-![contexto_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_02.png?raw=true)
+![contexto_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/contexto_02.png?raw=true)
 
 Para calcular `x * pow (x, n - 1)`, necesitamos hacer una sub-llamada de pow con nuevos argumentos `pow (2, 2)`.
 
@@ -160,7 +160,7 @@ Aquí llamamos a la misma función pow, pero no importa en absoluto. El proceso 
 
 Aquí está la pila de contexto cuando ingresamos la subllamada `pow(2, 2)`:
 
-![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_03a.png?raw=true)
+![context_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/representacion_03a.png?raw=true)
 
 El nuevo contexto de ejecución actual está en la parte superior (y en negrita), y los contextos recordados anteriores están debajo.
 
@@ -177,7 +177,7 @@ El proceso se repite: se realiza una nueva subllamada en la línea 5, ahora con 
 
 Se crea un nuevo contexto de ejecución, el anterior se coloca en la parte superior de la pila:
 
-![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_03.png?raw=true)
+![context_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/contexto_03.png?raw=true)
 
 Hay 2 contextos antiguos ahora y 1 actualmente en ejecución para `pow(2, 1)`.
 
@@ -199,7 +199,7 @@ No hay más llamadas anidadas, por lo que la función finaliza y devuelve `2`.
 
 Cuando finaliza la función, su contexto de ejecución ya no es necesario y se elimina de la memoria. El anterior se restaura desde la parte superior de la pila:
 
-![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/contexto_04.png?raw=true)
+![context_5](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/contexto_04.png?raw=true)
 
 Se reanuda la ejecución de `pow(2, 2)`. Tiene el resultado de la subllamada `pow(2, 1)`, por lo que también puede finalizar la evaluación de `x * pow(x, n - 1)`, devolviendo `4`.
 
@@ -325,7 +325,7 @@ El código es corto y fácil de entender (¿Quizás?). Ese es el poder de la rec
 
 Aquí está el diagrama de llamadas:
 
-![llamadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/llamadas_01.png?raw=true)
+![llamadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/llamadas_01.png?raw=true)
 
 Podemos ver fácilmente el principio: para un objeto {...} se realizan subllamadas, mientras que los Arrays [...] son las “hojas” del árbol recursivo y dan un resultado inmediato.
 
@@ -394,7 +394,7 @@ let list = {
 
 Representación gráfica de la lista:
 
-![representacion_1](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_01.png?raw=true)
+![representacion_1](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/representacion_01.png?raw=true)
 
 Un código alternativo para la creación:
 
@@ -416,7 +416,7 @@ let secondList = list.next.next;
 list.next.next = null;
 ````
 
-![representacion_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_02.png?raw=true)
+![representacion_2](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/representacion_02.png?raw=true)
 
 Para unir:
 
@@ -437,7 +437,7 @@ list.next.next.next = { value: 4 };
 // anteponer el nuevo valor a la lista
 list = { value: "new item", next: list };
 ````
-![representacion_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_03.png?raw=true)
+![representacion_3](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/representacion_03.png?raw=true)
 
 Para eliminar un valor del medio, cambie el next del anterior:
 
@@ -445,7 +445,7 @@ Para eliminar un valor del medio, cambie el next del anterior:
 ```js
 list.next = list.next.next;
 ```
-![representacion_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/representacion_04.png?raw=true)
+![representacion_4](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/representacion_04.png?raw=true)
 
 Hicimos que list.next salte sobre 1 al valor 2. El valor 1 ahora está excluido de la cadena. Si no se almacena en ningún otro lugar, se eliminará automáticamente de la memoria.
 
@@ -522,7 +522,7 @@ P.D. ¿Qué variante de la solución es la más rápida? ¿Y la más lenta? ¿Po
 
 P.P.D. ¿Podemos usar la recursión para contar sumTo(100000)?
 
-[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/suma_numeros_hasta_elegido.md)
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/solutions/suma_numeros_hasta_elegido.md)
 
 ## Calcula el factorial
 
@@ -552,7 +552,7 @@ alert( factorial(5) ); // 120
 
 P.D. Pista: n! puede ser escrito como n * (n-1)! Por ejemplo: 3! = 3*2! = 3*2*1! = 6
 
-[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/factorial_numero.md)
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/solutions/factorial_numero.md)
 
 ## Sucesión de Fibonacci
 
@@ -604,7 +604,7 @@ Haz dos variantes de la solución: utilizando un bucle y utilizando recursividad
 
 ¿Qué es mejor: con recursividad o sin ella?
 
-[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/generar_lista_solo_enlace.md)
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/solutions/generar_lista_solo_enlace.md)
 
 ## Genere una lista de un solo enlace en orden inverso
 
@@ -620,5 +620,5 @@ Genere una lista de un solo enlace a partir de la tarea anterior Generar una lis
 
 Escribe dos soluciones: utilizando un bucle y utilizando recursividad.
 
-[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/genere-una-lista-de-un-solo-enlace-en-orden-inverso.md)
+[Solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/01_recursion/img/solutions/genere-una-lista-de-un-solo-enlace-en-orden-inverso.md)
 
