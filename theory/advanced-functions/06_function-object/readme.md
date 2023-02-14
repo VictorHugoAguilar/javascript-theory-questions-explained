@@ -336,7 +336,7 @@ Crean una función “principal” y le asignan muchas otras funciones “auxili
 
 Por lo tanto, una función puede hacer un trabajo útil por sí misma y también puede tener muchas otras funcionalidades en las propiedades.
 
-# ✅ Tareas
+## ✅ Tareas
 
 ## Establecer y disminuir un contador
 
