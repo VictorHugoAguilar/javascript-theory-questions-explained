@@ -350,7 +350,7 @@ Consulte el código en el entorno de pruebas para ver el ejemplo de uso completo
 
 > P.D. Puedes usar un “closure” o la propiedad de función para mantener el recuento actual. O escribe ambas variantes.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/06_function-object/solutions/establecer-y-disminuir-un-contador.md)
 
 ## Suma con una cantidad arbitraria de paréntesis
 
