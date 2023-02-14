@@ -658,3 +658,6 @@ army[2](); // 10 ...y así sucesivamente.
 Arregle el código para que funcionen según lo previsto.
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ejercito-de-funciones.md)
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
