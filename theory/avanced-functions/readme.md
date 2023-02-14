@@ -12,9 +12,9 @@ Sabemos que cuando una función resuelve una tarea, en el proceso puede llamar a
 
 ## Dos formas de pensar
 
-Para comenzar con algo simple, escribamos una función **pow(x, n)** que eleve x a una potencia natural den. En otras palabras, multiplica `x` por sí mismo `n` veces.
+Para comenzar con algo simple, escribamos una función `pow(x, n)` que eleve `x` a una potencia natural de `n`. En otras palabras, multiplica `x` por sí mismo `n` veces.
 
-```js
+````js
 pow(2, 2) = 4
 pow(2, 3) = 8
 pow(2, 4) = 16
@@ -22,9 +22,9 @@ pow(2, 4) = 16
 
 Hay dos formas de implementarlo.
 
-1. **Pensamiento iterativo**: el bucle for:
+1. **Pensamiento iterativo**: el bucle `for`:
 
-```js
+````js
 function pow(x, n) {
   let result = 1;
 
@@ -66,7 +66,10 @@ pow(x, n) =
 ````
 
 1. Si `n == 1`, entonces todo es trivial. Esto se llama base de la recursividad, porque produce inmediatamente el resultado obvio: `pow(x, 1)` es igual a `x`.
-2. De lo contrario, podemos representar `pow(x, n)` como `x * pow(x, n - 1)`. En matemáticas, uno escribiría `xn = x * x n-1`. Esto se llama paso recursivo: transformamos la tarea en una acción más simple (multiplicación por `x`) y una llamada más simple de la misma tarea (`pow` con menor `n`). Los siguientes pasos lo simplifican más y más hasta que n llegue a `1`.
+
+2. De lo contrario, podemos representar `pow(x, n)` como `x * pow(x, n - 1)`. En matemáticas, uno escribiría `xn = x * x n-1`. Esto se llama paso recursivo: transformamos la tarea en una acción más simple (multiplicación por `x`) y una llamada más simple de la misma tarea (`pow` con menor `n`). 
+
+Los siguientes pasos lo simplifican más y más hasta que n llegue a `1`.
 
 También podemos decir que `pow` se llama a sí mismo recursivamente hasta que `n == 1`.
 
