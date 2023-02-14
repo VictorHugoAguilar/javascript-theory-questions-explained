@@ -367,3 +367,6 @@ sum(0)(1)(2)(3)(4)(5) == 15
 > P.D. Sugerencia: es posible que deba configurar una conversión personalizada “objeto a primitiva” en su función.
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/06_function-object/solutions/suma-con-una-cantidad-arbitraria-de-parentesis.md)
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
