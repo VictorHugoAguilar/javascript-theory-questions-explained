@@ -398,7 +398,7 @@ g();
 
 Eso no es un error en el depurador, sino más bien una característica especial de V8. Tal vez en algún momento la cambiarán. Siempre puede verificarlo ejecutando los ejemplos en esta página.
 
-# Tareas
+# ✅ Tareas
 <hr>
 
 ## Esta función: ¿recoge los últimos cambios?
@@ -421,7 +421,7 @@ Tales situaciones son comunes tanto en el desarrollo del navegador como del lado
 
 Entonces, la pregunta es: ¿recoge los últimos cambios?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/esta-funcion-recoge-los-ultimos-cambios.md)
 
 ## ¿Qué variables están disponibles?
 
@@ -449,7 +449,7 @@ work(); // ¿qué mostrará?
 
 ¿Qué valor mostrará? “Pete” o “John”?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/que-variables-estan-disponibles.md)
 
 ## ¿Son independientes los contadores?
 
@@ -476,7 +476,7 @@ alert( counter2() ); // ?
 alert( counter2() ); // ?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/son-independientes-los-contadores.md)
 
 ## Objeto contador
 
@@ -503,7 +503,7 @@ alert( counter.up() ); // ?
 alert( counter.down() ); // ?
 ````
 
-solución
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/objeto-contador.md)
 
 ## Función en if
 
@@ -523,7 +523,7 @@ if (true) {
 sayHi();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/funcion-en-if.md)
 
 ## Suma con clausuras
 
@@ -538,7 +538,7 @@ sum(1)(2) = 3
 sum(5)(-1) = 4
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/suma-con-clausuras.md)
 
 ## ¿Es visible la variable?
 
@@ -557,7 +557,7 @@ func();
 ````
 P.D Hay una trampa en esta tarea. La solución no es obvia.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/es-visible-la-variable.md)
 
 ## Filtrar a través de una función
 
@@ -572,6 +572,7 @@ El uso debe ser así:
 
 * arr.filter(inBetween(3,6)) – selecciona solo valores entre 3 y 6.
 * arr.filter(inArray([1,2,3])) – selecciona solo elementos que coinciden con uno de los miembros de [1,2,3].
+
 Por ejemplo:
 
 ````js
@@ -584,7 +585,7 @@ alert( arr.filter(inBetween(3, 6)) ); // 3,4,5,6
 alert( arr.filter(inArray([1, 2, 10])) ); // 1,2
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/filtrar-a-traves-de-una-funcion.md)
 
 ## Ordenar por campo
 
@@ -619,7 +620,7 @@ Entonces, en lugar de escribir una función, simplemente ponga byField (fieldNam
 
 Escriba la función `byField` que se pueda usar para eso.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ordenar-por-campo.md)
 
 ## Ejército de funciones
 
@@ -656,4 +657,4 @@ army[2](); // 10 ...y así sucesivamente.
 
 Arregle el código para que funcionen según lo previsto.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/solutions/ejercito-de-funciones.md)
