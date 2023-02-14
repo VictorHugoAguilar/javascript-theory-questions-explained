@@ -5,4 +5,4 @@
 * [Factorial de un número](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/factorial_numero.md)
 * [Secuencia de fibonacci](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/avanced-functions/solutions)
 * [Suma todos los numeros hasta el elegido](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/generar_lista_solo_enlace.md)
-* []
+* [Genere una lista de un solo enlace en orden inverso](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/avanced-functions/solutions/genere-una-lista-de-un-solo-enlace-en-orden-inverso.md)
