@@ -14,3 +14,6 @@ for(let j = 0; j < 100000000; j++) {
   i++;
 }
 ````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/08_settimeout-setinterval)
