@@ -57,3 +57,6 @@ Ahora combine Cmd+Opt+C para alternar a consola. Además, tenga en cuenta que ha
 * Se pueden abrir con F12 para la mayoría de los navegadores en Windows. Chrome para Mac necesita la combinación Cmd+Opt+J, Safari: Cmd+Opt+C (primero debe habilitarse).
 
 Ahora tenemos el entorno listo. En la siguiente sección nos enfocaremos en JavaScript.
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started)
