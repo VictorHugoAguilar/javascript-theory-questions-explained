@@ -118,3 +118,6 @@ Funciones de flecha:
 
 Esto se debe a que están diseñadas para piezas cortas de código que no tienen su propio “contexto”, sino que funcionan en el actual. Y realmente brillan en ese caso de uso.
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
+
