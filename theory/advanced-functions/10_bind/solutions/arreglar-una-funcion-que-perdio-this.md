@@ -45,4 +45,4 @@ Aunque es un poco menos confiable en situaciones más complejas donde la variabl
 It’s a bit less reliable though in more complex situations where `user` variable might change after `askPassword` is called, but before the visitor answers and calls `() => user.loginOk()`.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/advanced-functions/10_bind#arreglar-una-funcion-que-perdio-this)
