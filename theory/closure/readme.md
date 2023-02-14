@@ -165,7 +165,7 @@ El objeto del alcance léxico consta de dos partes:
 
 En este código simple y sin funciones, solo hay un entorno léxico:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_01.png?raw=true)
 
 Este es el denominado entorno léxico global, asociado con todo el script.
 
@@ -175,7 +175,7 @@ A medida que el código comienza a ejecutarse y continúa, el entorno léxico ca
 
 Aquí hay un código un poco más largo:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_02.png?raw=true)
 
 Los rectángulos en el lado derecho demuestran cómo cambia el entorno léxico global durante la ejecución:
 
@@ -203,7 +203,7 @@ Es por eso que podemos usar una función, declarada como declaración de funció
 
 Por ejemplo, aquí está el estado inicial del entorno léxico global cuando agregamos una función:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_03.png?raw=true)
 
 Naturalmente, este comportamiento solo se aplica a las declaraciones de funciones, no a las expresiones de funciones, donde asignamos una función a una variable, como let say = function (name) ....
 
@@ -212,7 +212,7 @@ Cuando se ejecuta una función, al comienzo de la llamada se crea automáticamen
 
 Por ejemplo, para say(" John "), se ve así (la ejecución está en la línea etiquetada con una flecha):
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_04.png?raw=true)
 
 Durante la llamada a la función tenemos dos entornos léxicos: el interno (para la llamada a la función) y el externo (global):
 
@@ -229,7 +229,7 @@ En este ejemplo la búsqueda procede como sigue:
 Para la variable name, la alert dentro de say lo encuentra inmediatamente en el entorno léxico interno.
 Cuando quiere acceder a phrase, no existe un phrase local por lo que sigue la referencia al entorno léxico externo y lo encuentra allí.
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_05.png?raw=true)
 
 Paso 4. Devolviendo una función
 Volvamos al ejemplo de makeCounter.
@@ -247,19 +247,19 @@ Al comienzo de cada llamada a makeCounter(), se crea un nuevo objeto de entorno 
 
 Entonces tenemos dos entornos léxicos anidados, como en el ejemplo anterior:
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_06.png?raw=true)
 
 Lo que es diferente es que, durante la ejecución de makeCounter(), se crea una pequeña función anidada de solo una línea: return count++. Aunque no la ejecutamos, solo la creamos.
 
 Todas las funciones recuerdan el entorno léxico en el que fueron realizadas. Técnicamente, no hay magia aquí: todas las funciones tienen la propiedad oculta llamada [[Environment], que mantiene la referencia al entorno léxico donde se creó la función:
 
-![image_07]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_07.png?raw=true)
 
 Entonces, counter.[[Environment]] tiene la referencia al Entorno léxico de {count: 0}. Así es como la función recuerda dónde se creó, sin importar dónde se la llame. La referencia [[Environment]] se establece una vez y para siempre en el momento de creación de la función.
 
 Luego, cuando counter() es llamado, un nuevo Entorno Léxico es creado por la llamada, y su referencia externa del entorno léxico se toma de counter.[[Environment]]:
 
-![image_08]()
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_08.png?raw=true)
 
 Ahora cuando el código dentro de counter() busca la variable count, primero busca su propio entorno léxico (vacío, ya que no hay variables locales allí), luego el entorno léxico del exterior llama a makeCounter(), donde lo encuentra y lo cambia.
 
@@ -267,7 +267,7 @@ Una variable se actualiza en el entorno léxico donde vive.
 
 Aquí está el estado después de la ejecución:
 
-![image_09]()
+![image_09](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/closure/img/image_09.png?raw=true)
 
 Si llamamos a counter() varias veces, la variable count se incrementará a 2, 3 y así sucesivamente, en el mismo lugar.
 
