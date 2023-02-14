@@ -281,3 +281,6 @@ Patrones de uso:
 Ambos ayudan a ir entre una lista y un array de parámetros con facilidad.
 
 Todos los argumentos de un llamado a una función están también disponibles en el “viejo” `arguments`: un objeto símil-array iterable.
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/readme.md)
