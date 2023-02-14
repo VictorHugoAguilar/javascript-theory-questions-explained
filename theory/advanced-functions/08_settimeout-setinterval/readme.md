@@ -194,6 +194,7 @@ setTimeout(function run() {
 ````
 
 Para setInterval el planificador interno se ejecutará func(i++) cada 100ms:
+
 ![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/08_settimeout-setinterval/img/image_01.png?raw=true)
 
 ¿Te diste cuenta?
