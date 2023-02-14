@@ -322,7 +322,7 @@ let user = {
 user.g();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/10_bind/solutions/funcion-enlazada-como-metodo.md)
 
 ## Segundo enlace
 
@@ -340,7 +340,7 @@ f = f.bind( {name: "John"} ).bind( {name: "Ann" } );
 f();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/10_bind/solutions/segundo-enlace.md)
 
 ## Propiedad de función después del enlace
 
@@ -359,7 +359,7 @@ let bound = sayHi.bind({
 alert( bound.test ); // ¿Cuál será la salida? ¿por qué?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/10_bind/solutions/propiedad-de-funcion-despues-del-enlace.md)
 
 ## Arreglar una función que perdió "this"
 
@@ -392,7 +392,7 @@ let user = {
 askPassword(user.loginOk, user.loginFail);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/10_bind/solutions/arreglar-una-funcion-que-perdio-this.md)
 
 ## Aplicación parcial para inicio de sesión
 
@@ -422,7 +422,7 @@ askPassword(?, ?); // ?
 
 Sus cambios solo deberían modificar el fragmento resaltado.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/advanced-functions/10_bind/solutions/aplicacion-parcial-para-inicio-de-sesion.md)
 
 
 ---
