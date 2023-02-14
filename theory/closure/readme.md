@@ -144,7 +144,7 @@ Entender tales cosas es excelente para el conocimiento general de JavaScript y b
 
 ## Ámbito o alcance léxico
 
-### ¡Aquí hay dragones!
+### ¡Aquí hay dragones! 🐲🐲
 
 La explicación técnica en profundidad está por venir.
 
@@ -158,8 +158,8 @@ En JavaScript, todas las funciones en ejecución, el bloque de código {...} y e
 
 El objeto del alcance léxico consta de dos partes:
 
-* Registro de entorno: es un objeto que almacena en sus propiedades todas las variables locales (y alguna otra información, como el valor de this).
-* Una referencia al entorno léxico externo, asociado con el código externo.
+1. Registro de entorno: es un objeto que almacena en sus propiedades todas las variables locales (y alguna otra información, como el valor de this).
+2. Una referencia al entorno léxico externo, asociado con el código externo.
 
 **Una “variable” es solo una propiedad del objeto interno especial, el Registro de entorno. “Obtener o cambiar una variable” significa “obtener o cambiar una propiedad de ese objeto”.**
 
@@ -179,23 +179,27 @@ Aquí hay un código un poco más largo:
 
 Los rectángulos en el lado derecho demuestran cómo cambia el entorno léxico global durante la ejecución:
 
-Cuando se inicia el script, el entorno léxico se rellena previamente con todas las variables declaradas.      – Inicialmente, están en el estado “No inicializado”. Ese es un estado interno especial, significa que el motor conoce la variable, pero no se puede hacer referencia a ella hasta que se haya declarado con let. Es casi lo mismo que si la variable no existiera.
-Luego aparece la definición let phrase.Todavía no hay una asignación, por lo que su valor es undefined. Podemos usar la variable desde este punto en adelante.
-phrase se le asigna un valor.
-phrase cambia el valor.
+1. Cuando se inicia el script, el entorno léxico se rellena previamente con todas las variables declaradas.      
+  - Inicialmente, están en el estado “No inicializado”. Ese es un estado interno especial, significa que el motor conoce la variable, pero no se puede hacer referencia a ella hasta que se haya declarado con `let`. Es casi lo mismo que si la variable no existiera.
+2. Luego aparece la definición `let phrase`. Todavía no hay una asignación, por lo que su valor es `undefined`. Podemos usar la variable desde este punto en adelante.
+3. `phrase` se le asigna un valor.
+4. `phrase` cambia el valor.
+
 Todo parece simple por ahora, ¿verdad?
 
-Una variable es una propiedad de un objeto interno especial que está asociado con el bloque/función/script actualmente en ejecución.
-Trabajar con variables es realmente trabajar con las propiedades de ese objeto.
-El entorno léxico es un objeto de especificación
+* Una variable es una propiedad de un objeto interno especial que está asociado con el bloque/función/script actualmente en ejecución.
+* Trabajar con variables es realmente trabajar con las propiedades de ese objeto.
+
+### El entorno léxico es un objeto de especificación
 El “entorno léxico” es un objeto de especificación: solo existe “teóricamente” en la especificación del lenguaje para describir cómo funcionan las cosas. No podemos obtener este objeto en nuestro código y manipularlo directamente.
 
 Los motores de JavaScript también pueden optimizarlo, descartar variables que no se utilizan para ahorrar memoria y realizar otros trucos internos, siempre que el comportamiento visible permanezca como se describe.
 
-Paso 2. Declaración de funciones
+## Paso 2. Declaración de funciones
+
 Una función también es un valor, como una variable.
 
-La diferencia es que una declaración de función se inicializa completamente al instante.
+**La diferencia es que una declaración de función se inicializa completamente al instante.**
 
 Cuando se crea un entorno léxico, una declaración de función se convierte inmediatamente en una función lista para usar (a diferencia de let, que no se puede usar hasta la declaración).
 
