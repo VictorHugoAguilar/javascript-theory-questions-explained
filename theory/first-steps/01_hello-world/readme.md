@@ -35,7 +35,7 @@ Puedes ejecutar el ejemplo haciendo clic en el botón “Play” en la esquina s
 
 La etiqueta <script> contiene código JavaScript que se ejecuta automáticamente cuando el navegador procesa la etiqueta.
 
-## Marcado moderno
+## Marcado moderno
   
 La etiqueta `<script>` tiene algunos atributos que rara vez se usan en la actualidad, pero aún se pueden encontrar en código antiguo:
 
