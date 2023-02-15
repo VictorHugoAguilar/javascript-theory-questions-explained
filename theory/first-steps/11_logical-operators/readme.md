@@ -288,7 +288,7 @@ La precedencia de NOT `!` es la mayor de todos los operadores lógicos, así que
 alert( null || 2 || undefined );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/cual-es-el-resultado-de-or.md)
 
 ## Cual es el resultado de las alertas aplicadas al operador OR
 
@@ -298,7 +298,7 @@ alert( null || 2 || undefined );
 alert( alert(1) || 2 || alert(3) );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/cual-es-el-resultado-de-las-alertas-aplicadas-al-operador-or.md)
 
 ## Cual es el resultado de AND
 
@@ -308,7 +308,7 @@ alert( alert(1) || 2 || alert(3) );
 alert( 1 && null && 2 );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/cual-es-el-resultado-de-and.md)
 
 ## Cual es el resultado de las alertas aplicadas al operador AND
 
@@ -318,7 +318,7 @@ alert( 1 && null && 2 );
 alert( alert(1) && alert(2) );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/cual-es-el-resultado-de-las-alertas-aplicadas-al-operador-and.md)
 
 ## El resultado de OR AND OR
 
@@ -328,7 +328,7 @@ alert( alert(1) && alert(2) );
 alert( null || 2 && 3 || 4 );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/el-resultado-de-or-and-or.md)
 
 ## Comprueba el rango por dentro
 
@@ -336,7 +336,7 @@ Escribe una condición “if” para comprobar que age(edad) está entre 14 y 90
 
 “Inclusive” significa que age puede llegar a ser uno de los extremos, 14 o 90.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/comprueba-el-rango-por-dentro.md)
 
 ## Comprueba el rango por fuera
 
@@ -344,7 +344,7 @@ Escribe una condición if para comprobar que age NO está entre 14 y 90 inclusiv
 
 Crea dos variantes: la primera usando NOT !, y la segunda sin usarlo.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/comprueba-el-rango-por-fuera.md)
 
 ## Un pregunta acerca de if
 
@@ -358,9 +358,9 @@ if (-1 && 0) alert( "segundo" );
 if (null || -1 && 1) alert( "tercero" );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/un-pregunta-acerca-de-if.md)
 
-## Comprueba el inicio de sesión
+## Comprueba el inicio de sesion
 
 Escribe un código que pregunte por el inicio de sesión con `propmt`.
 
@@ -380,7 +380,7 @@ Por favor usa bloques anidados de if. Piensa en la legibilidad general del códi
 
 Pista: si se le pasa una entrada vacía a un prompt, retorna una cadena de texto vacía ''. Presionando ESC durante un prompt retorna `null`.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/solutions/comprueba-el-inicio-de-sesion.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
