@@ -1,4 +1,4 @@
-## reescribe-if-en-switch
+## Reescribe if en switch
 
 Las primeras dos validaciones se vuelven dos case. La tercera validación se separa en dos case:
 
