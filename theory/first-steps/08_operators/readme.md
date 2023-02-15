@@ -1,4 +1,4 @@
-# Operadores básicos, matemáticas
+# 📖 Operadores básicos, matemáticas
 
 Conocemos varios operadores matemáticos porque nos los enseñaron en la escuela. Son cosas como la suma `+`, multiplicación `*`, resta `-`, etcétera.
 
