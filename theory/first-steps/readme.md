@@ -12,7 +12,7 @@ Aprendamos los fundamentos para construir código.
 8. [Operadores básicos, matemáticas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators/readme.md)
 9. [Comparaciones](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/09_comparison/readme.md)
 10. [Ejecución condicional: if, '?'](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/readme.md)
-11. [Operadores Lógicos]()
+11. [Operadores Lógicos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/logical-operators/readme.md)
 12. [Operador Nullish Coalescing '??']()
 13. [Bucles: while y for]()
 14. [La sentencia "switch"]()
