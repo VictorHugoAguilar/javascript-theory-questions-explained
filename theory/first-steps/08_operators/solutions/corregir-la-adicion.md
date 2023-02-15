@@ -34,4 +34,4 @@ alert(+a + +b); // 3
 Usar ambos unario y binario + en el último ejemplo, se ve raro, ¿no?
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators#corregir-la-adicion)
