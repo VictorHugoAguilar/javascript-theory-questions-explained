@@ -1,4 +1,4 @@
-# Estructura del código
+# 📖 Estructura del código
 
 Lo primero que estudiaremos son los bloques de construcción del código.
 
