@@ -412,7 +412,7 @@ while (i) {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/ultimo-valor-del-bucle.md)
 
 ## Que valores seran mostrados por el bucle while
 
@@ -431,7 +431,7 @@ let i = 0;
 while (i++ < 5) alert( i );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/que-valores-seran-mostrados-por-el-bucle-while.md)
 
 ## Que valores seran mostrados por el bucle for
 
@@ -451,7 +451,7 @@ La forma del prefijo:
 for (let i = 0; i < 5; ++i) alert( i );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/que-valores-seran-mostrados-por-el-bucle-for.md)
 
 ## Muestra numeros pares en el bucle
 
@@ -459,7 +459,7 @@ Usa el bucle for para mostrar números pares del 2 al 10.
 
 Ejecutar el demo
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/muestra-numeros-pares-en-el-bucle.md)
 
 ## Reemplaza "for" por "while"
 
@@ -471,7 +471,7 @@ for (let i = 0; i < 3; i++) {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/reemplaza-for-por-while.md)
 
 ## Repite hasta que la entrada sea correcta
 
@@ -481,7 +481,7 @@ El bucle debe pedir un número hasta que el usuario ingrese un número mayor que
 
 Aquí podemos asumir que el usuario solo ingresará números. No hay necesidad de implementar un manejo especial para entradas no numéricas en esta tarea.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/repite-hasta-que-la-entrada-sea-correcta.md)
 
 ## Muestra numeros primos
 
@@ -497,7 +497,7 @@ Para `n = 10` el resultado será `2, 3, 5, 7`.
 
 PD. El código debería funcionar para cualquier n, no debe estar programado para valores fijos.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/solutions/muestra-numeros-primos.md)
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
