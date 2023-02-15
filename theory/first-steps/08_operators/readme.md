@@ -476,7 +476,7 @@ let c = ++a; // ?
 let d = b++; // ?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/08_operators/solutions/las-formas-sufijo-y-prefijo.md)
 
 ## Resultado de asignacion
 
@@ -488,7 +488,7 @@ let a = 2;
 let x = 1 + (a *= 2);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/08_operators/solutions/resultado-de-asignacion.md)
 
 ## Conversiones de tipos
 
@@ -513,7 +513,7 @@ undefined + 1
 
 Piensa bien, anótalos y luego compara con la respuesta.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/08_operators/solutions/corregir-la-adicion.md)
 
 ## Corregir la adicion
 
@@ -530,7 +530,7 @@ let b = prompt("¿Segundo número?", 2);
 alert(a + b); // 12
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/08_operators/solutions/corregir-la-adicion.md)
 
 
 ---
