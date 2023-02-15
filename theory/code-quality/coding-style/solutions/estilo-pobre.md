@@ -49,4 +49,4 @@ if (n <= 0) {
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/coding-style/readme.md#estilo-pobre)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/coding-style/readme.md#estilo-pobre)
