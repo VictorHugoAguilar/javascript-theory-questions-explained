@@ -14,7 +14,7 @@ Aprendamos los fundamentos para construir código.
 10. [Ejecución condicional: if, '?'](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/readme.md)
 11. [Operadores Lógicos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/11_logical-operators/readme.md)
 12. [Operador Nullish Coalescing '??'](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/12_nullish-coalescing-operator/readme.md)
-13. [Bucles: while y for]()
+13. [Bucles: while y for](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/readme.md)
 14. [La sentencia "switch"]()
 15. [Funciones]()
 16. [Expresiones de función]()
