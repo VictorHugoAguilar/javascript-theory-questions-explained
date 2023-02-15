@@ -101,7 +101,7 @@ Hay dos limitaciones comunes a todos los métodos anteriores:
 
 Ese es el precio de la simplicidad. Existen otras formas de mostrar ventanas más atractivas e interactivas para el usuario, pero si la apariencia no importa mucho, estos métodos funcionan bien.
 
-## ✅ Tareas
+# ✅ Tareas
 
 ## Una pagina simple
 
