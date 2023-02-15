@@ -1,4 +1,5 @@
-Especiales JavaScript
+# 📖 Especiales JavaScript
+
 Este capítulo resume brevemente las características de JavaScript que hemos aprendido hasta ahora, prestando especial atención a los detalles relevantes.
 
 Estructura de Código
