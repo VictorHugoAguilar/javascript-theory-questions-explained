@@ -241,7 +241,7 @@ if ("0") {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/solutions/if-un-string-con-cero.md)
 
 ## El nombre de javascript
 
@@ -249,9 +249,9 @@ Usando el constructor if..else, escribe el código que pregunta: ‘¿Cuál es e
 
 Si el visitante escribe “ECMAScript”, entonces muestra: “¡Correcto!”, de lo contrario muestra: “¿No lo sabes? ¡ECMAScript!”
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/img/image_01.png?raw=true)
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/solutions/el-nombre-de-javascript.md)
 
 ## Muestra el signo
 
@@ -263,7 +263,7 @@ Usando el constructor if..else, escribe un código que obtenga a través de un p
 
 En la tarea asumimos que siempre el usuario introduce un número.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/solutions/muestra-el-signo.md)
 
 ## Reescribe el if como signo
 
@@ -279,7 +279,7 @@ if (a + b < 4) {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/solutions/reescribe-el-if-como.md)
 
 ## Reescriba el if else con signo
 
@@ -301,7 +301,7 @@ if (login == 'Empleado') {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/10_ifelse/solutions/reescriba-el-if-else-con.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
