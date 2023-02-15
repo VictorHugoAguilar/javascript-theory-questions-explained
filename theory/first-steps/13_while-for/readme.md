@@ -400,7 +400,7 @@ Si queremos detener la iteración actual y adelantarnos a la siguiente, podemos 
 
 # ✅ Tareas
 
-## Ultimo valor del bucle
+## Ultimo valor del bucle
 
 ¿Cuál es el último valor mostrado en alerta por este código? ¿Por qué?
 
