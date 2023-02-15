@@ -21,4 +21,4 @@ Algunas de las razones:
 7. Igualdad estricta de diferentes tipos.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/09_comparison#comparaciones)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/09_comparison#Revisa-comparaciones)
