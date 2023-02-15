@@ -8,7 +8,7 @@ Ese es en realidad el arte de la programación: tomar una tarea compleja y codif
 
 Aquí hay una hoja de ayuda con algunas reglas sugeridas (ver abajo para más detalles):
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/coding-style/img/image_01.png?raw=true)
 
 Ahora discutamos en detalle las reglas y las razones para ellas.
 
