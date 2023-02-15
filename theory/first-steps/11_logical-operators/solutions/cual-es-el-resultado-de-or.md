@@ -1,4 +1,4 @@
-# cual-es-el-resultado-de-or
+# Cual es el resultado de or
 
 La respuesta es 2, ese es el primer valor verdadero.
 
