@@ -1,6 +1,7 @@
 # 📖 Código ninja
 
-> Aprender sin pensar es inútil. Pensar sin aprender, peligroso. Confucio (Analectas)
+> Aprender sin pensar es inútil. Pensar sin aprender, peligroso.
+> Confucio (Analectas)
 
 Los programadores ninjas del pasado usaron estos trucos para afilar la mente de los mantenedores de código.
 
