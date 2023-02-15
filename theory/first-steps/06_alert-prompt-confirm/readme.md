@@ -107,7 +107,7 @@ Ese es el precio de la simplicidad. Existen otras formas de mostrar ventanas má
 
 Crea una página web que pida un nombre y lo muestre.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/06_alert-prompt-confirm/solutions/una-pagina-simple.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
