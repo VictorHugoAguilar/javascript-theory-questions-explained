@@ -1,4 +1,4 @@
-# Interacción: alert, prompt, confirm
+# 📖 Interacción: alert, prompt, confirm
 
 Como usaremos el navegador como nuestro entorno de demostración, veamos un par de funciones para interactuar con el usuario: `alert`, `prompt`, y `confirm`.
 
