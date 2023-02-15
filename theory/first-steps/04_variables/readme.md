@@ -189,55 +189,75 @@ let my-name; // los guiones '-' no son permitidos en nombres
 ````
 
 ### ℹ️ La Capitalización es Importante
-Dos variables con nombres manzana y MANZANA son variables distintas.
+Dos variables con nombres `manzana` y `MANZANA` son variables distintas.
 
-Las letras que no son del alfabeto inglés están permitidas, pero no se recomiendan
+### ℹ️ Las letras que no son del alfabeto inglés están permitidas, pero no se recomiendan
 Es posible utilizar letras de cualquier alfabeto, incluyendo letras del cirílico, logogramas chinos, etc.:
 
+````js
 let имя = '...';
 let 我 = '...';
+````
+
 Técnicamente, no existe ningún error aquí. Tales nombres están permitidos, pero existe una tradición internacional de utilizar inglés en el nombramiento de variables. Incluso si estamos escribiendo un script pequeño, este puede tener una larga vida por delante. Puede ser necesario que gente de otros países deba leerlo en algún momento.
 
-Nombres reservados
+### ⚠️ Nombres reservados
 Hay una lista de palabras reservadas, las cuales no pueden ser utilizadas como nombre de variable porque el lenguaje en sí las utiliza.
 
-Por ejemplo: let, class, return, y function están reservadas.
+Por ejemplo: `let`, `class`, `return`, y `function` están reservadas.
 
 El siguiente código nos da un error de sintaxis:
 
+````js
 let let = 5; // no se puede le nombrar "let" a una variable  ¡Error!
 let return = 5; // tampoco se le puede nombrar "return", ¡Error!
-Una asignación sin utilizar use strict
+````
+
+### ⚠️ Una asignación sin utilizar use strict
 Normalmente, debemos definir una variable antes de utilizarla. Pero, en los viejos tiempos, era técnicamente posible crear una variable simplemente asignando un valor sin utilizar ‘let’. Esto aún funciona si no ponemos ‘use strict’ en nuestros scripts para mantener la compatibilidad con scripts antiguos.
 
+````js
 // nota: no se utiliza "use strict" en este ejemplo
 
 num = 5; // se crea la variable "num" si no existe antes
 
 alert(num); // 5
-Esto es una mala práctica que causaría errores en ‘strict mode’:
+````
 
+Esto es una mala práctica que causaría errores en `‘strict mode’`:
+
+````js
 "use strict";
 
 num = 5; // error: num no está definida
-Constantes
-Para declarar una variable constante (inmutable) use const en vez de let:
+````
 
+## Constantes
+Para declarar una variable constante (inmutable) use `const` en vez de `let`:
+
+````js
 const myBirthday = '18.04.1982';
+````
+
 Las variables declaradas utilizando const se llaman “constantes”. No pueden ser alteradas. Al intentarlo causaría un error:
 
+````js
 const myBirthday = '18.04.1982';
 
 myBirthday = '01.01.2001'; // ¡error, no se puede reasignar la constante!
+````
+
 Cuando un programador está seguro de que una variable nunca cambiará, puede declarar la variable con const para garantizar y comunicar claramente este hecho a todos.
 
-Constantes mayúsculas
+## Constantes mayúsculas
+
 Existe una práctica utilizada ampliamente de utilizar constantes como aliases de valores difíciles-de-recordar y que se conocen previo a la ejecución.
 
 Tales constantes se nombran utilizando letras mayúsculas y guiones bajos.
 
 Por ejemplo, creemos constantes para los colores en el formato “web” (hexadecimal):
 
+````js
 const COLOR_RED = "#F00";
 const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
@@ -246,23 +266,30 @@ const COLOR_ORANGE = "#FF7F00";
 // ...cuando debemos elegir un color
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
+````
+
 Ventajas:
 
-COLOR_ORANGE es mucho más fácil de recordar que "#FF7F00".
-Es mucho más fácil escribir mal "#FF7F00" que COLOR_ORANGE.
-Al leer el código, COLOR_ORANGE tiene mucho más significado que #FF7F00.
+* `COLOR_ORANGE` es mucho más fácil de recordar que `"#FF7F00"`.
+* Es mucho más fácil escribir mal `"#FF7F00"` que `COLOR_ORANGE`.
+* Al leer el código, `COLOR_ORANGE` tiene mucho más significado que `#FF7F00`.
+
 ¿Cuándo se deben utilizar letras mayúsculas para una constante, y cuando se debe nombrarla de manera normal? Dejémoslo claro.
 
 Ser una “constante” solo significa que el valor de la variable nunca cambia. Pero hay constantes que son conocidas previo a la ejecución (como el valor hexadecimal del color rojo) y hay constantes que son calculadas en el tiempo de ejecución, pero no cambian después de su asignación inicial.
 
 Por ejemplo:
 
+````js
 const pageLoadTime = /* el tiempo que tardó la página web para cargar */;
+````
+
 El valor de pageLoadTime no se conoce antes de cargar la página, así que la nombramos normalmente. No obstante, es una constante porque no cambia después de su asignación inicial.
 
 En otras palabras, las constantes con nombres en mayúscula son utilizadas solamente como alias para valores invariables y preestablecidos (“hard-coded”).
 
-Nombrar cosas correctamente
+## Nombrar cosas correctamente
+
 Estando en el tema de las variables, existe una cosa de mucha importancia.
 
 Una variable debe tener un nombre claro, de significado evidente, que describa el dato que almacena.
@@ -275,13 +302,14 @@ Por favor pasa tiempo pensando en el nombre adecuado para una variable antes de 
 
 Algunas reglas buenas para seguir:
 
-Use términos legibles para humanos como userName p shoppingCart.
-Evite abreviaciones o nombres cortos a, b, c, al menos que en serio sepa lo que está haciendo.
-Cree nombres que describen al máximo lo que son y sean concisos. Ejemplos que no son adecuados son data y value. Estos nombres no nos dicen nada. Estos solo está bien usarlos en el contexto de un código que deje excepcionalmente obvio cuál valor o cuales datos está referenciando la variable.
-Acuerda en tu propia mente y con tu equipo cuáles términos se utilizarán. Si a un visitante se le llamara “user”, debemos llamar las variables relacionadas currentUser o newUser en vez de currentVisitor o newManInTown.
+* Use términos legibles para humanos como userName p shoppingCart.
+* Evite abreviaciones o nombres cortos a, b, c, al menos que en serio sepa lo que está haciendo.
+* Cree nombres que describen al máximo lo que son y sean concisos. Ejemplos que no son adecuados son data y value. Estos nombres no nos dicen nada. Estos solo está bien usarlos en el contexto de un código que deje excepcionalmente obvio cuál valor o cuales datos está referenciando la variable.
+* Acuerda en tu propia mente y con tu equipo cuáles términos se utilizarán. Si a un visitante se le llamara “user”, debemos llamar las variables relacionadas currentUser o newUser en vez de currentVisitor o newManInTown.
+
 ¿Suena simple? De hecho lo es, pero no es tan fácil crear nombres de variables descriptivos y concisos a la hora de practicar. Inténtelo.
 
-¿Reusar o crear?
+### ℹ️ ¿Reusar o crear?
 Una última nota. Existen programadores haraganes que, en vez de declarar una variable nueva, tienden a reusar las existentes.
 
 El resultado de esto es que sus variables son como cajas en las cuales la gente introduce cosas distintas sin cambiar sus etiquetas. ¿Que existe dentro de la caja? ¿Quién sabe? Necesitamos acercarnos y revisar.
@@ -292,44 +320,57 @@ Una variable extra es algo bueno, no algo malvado.
 
 Los minificadores de JavaScript moderno, y los navegadores optimizan el código suficientemente bien para no generar cuestiones de rendimiento. Utilizar diferentes variables para distintos valores incluso puede ayudar a optimizar su código
 
-Resumen
-Podemos declarar variables para almacenar datos al utilizar las palabra clave var, let, o const.
+## Resumen
 
-let – es la forma moderna de declaración de una variable.
-var – es la declaración de variable de vieja escuela. Normalmente no lo utilizamos en absoluto. Cubriremos sus sutiles diferencias con let en el capítulo La vieja "var", por si lo necesitaras.
-const – es como let, pero el valor de la variable no puede ser alterado.
+Podemos declarar variables para almacenar datos al utilizar las palabra clave `var`, `let`, o `const`.
+
+* `let` – es la forma moderna de declaración de una variable.
+* `var` – es la declaración de variable de vieja escuela. Normalmente no lo utilizamos en absoluto. Cubriremos sus sutiles diferencias con `let` en el capítulo La vieja `"var"`, por si lo necesitaras.
+* `const` – es como let, pero el valor de la variable no puede ser alterado.
+
 Las variables deben ser nombradas de tal manera que entendamos fácilmente lo que está en su interior.
 
-Tareas
-Trabajando con variables.
-importancia: 2
-Declara dos variables: admin y name.
-Asigna el valor "John" a name.
-Copia el valor de name a admin.
-Muestra el valor de admin usando alert (debe salir “John”).
-solución
-Dando el nombre correcto
-importancia: 3
-Crea una variable con el nombre de nuestro planeta. ¿Cómo nombrarías a dicha variable?
-Crea una variable para almacenar el nombre del usuario actual de un sitio web. ¿Cómo nombrarías a dicha variable?
-solución
-¿const mayúsculas?
-importancia: 4
+## ✅ Tareas
+
+## Trabajando con variables.
+
+1. Declara dos variables: admin y name.
+2. Asigna el valor "John" a name.
+3. Copia el valor de name a admin.
+4. Muestra el valor de admin usando alert (debe salir “John”).
+
+[solución]()
+
+## Dando el nombre correcto
+
+1. Crea una variable con el nombre de nuestro planeta. ¿Cómo nombrarías a dicha variable?
+2. Crea una variable para almacenar el nombre del usuario actual de un sitio web. ¿Cómo nombrarías a dicha variable?
+
+[solución]()
+
+## Const mayusculas
+
 Examina el siguiente código:
 
+````js
 const birthday = '18.04.1982';
 
 const age = someCode(birthday);
-Aquí tenemos una constante birthday para la fecha de cumpleaños, y la edad age, que también es constante.
+````
 
-age es calculada desde birthday con la ayuda de “cierto código” someCode(), que es una llamada a función que no hemos explicado aún (¡lo haremos pronto!); los detalles no importan aquí, el punto es que age se calcula de alguna forma basándose en birthday.
+Aquí tenemos una constante `birthday` para la fecha de cumpleaños, y la edad `age`, que también es constante.
+
+`age` es calculada desde `birthday` con la ayuda de “cierto código” `someCode()`, que es una llamada a función que no hemos explicado aún (¡lo haremos pronto!); los detalles no importan aquí, el punto es que age se calcula de alguna forma basándose en `birthday`.
 
 ¿Sería correcto usar mayúsculas en birthday? ¿Y en age? ¿O en ambos?
 
+````js
 const BIRTHDAY = '18.04.1982'; // ¿birthday en mayúsculas?
 
 const AGE = someCode(BIRTHDAY); // ¿age en mayúsculas?
-solución
+````
+
+[solución]()
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
