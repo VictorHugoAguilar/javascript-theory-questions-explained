@@ -542,6 +542,7 @@ Modifica utilizando || o ?. La siguiente función devuelve true si el parámetro
 De lo contrario, solicita una confirmación y devuelve su resultado.
 
 ````js
+
 function checkAge(age) {
   if (age > 18) {
     return true;
