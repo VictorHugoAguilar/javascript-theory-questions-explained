@@ -1,4 +1,4 @@
-## comprueba-el-rango-por-fuera
+## Comprueba el rango por fuera
 
 * La primer variante:
 
