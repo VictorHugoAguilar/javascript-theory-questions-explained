@@ -3,7 +3,7 @@
 Aprendamos los fundamentos para construir código.
 
 1. [¡Hola, mundo!](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/01_hello-world)
-2. [Estructura del código]()
+2. [Estructura del código](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/02_structure)
 3. [El modo moderno, "use strict"]()
 4. [Variables]()
 5. [Tipos de datos]()
