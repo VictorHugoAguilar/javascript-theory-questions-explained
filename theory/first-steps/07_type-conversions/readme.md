@@ -60,7 +60,7 @@ alert(age); // NaN, conversión fallida
 
 Reglas de conversión numérica:
 
-````
+```
 |Valor          | Se convierte en…                                                              |
 |---------------|–------------------------------------------------------------------------------|
 |undefined	    | NaN                                                                           |
@@ -69,7 +69,7 @@ Reglas de conversión numérica:
 |string         |	Se eliminan los espacios (incluye espacios, tabs \t, saltos de línea \n, etc.)| 
 |               | al inicio y final del texto. Si el string resultante es vacío, el resultado es| 
 |               | 0, en caso contrario el número es “leído” del string. Un error devuelve NaN.  |
-````
+```
 
 Ejemplos:
 
