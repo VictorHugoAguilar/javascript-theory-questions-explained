@@ -22,4 +22,4 @@ alert("¡Soy JavaScript!");
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md#Mostrar-una-alerta-con-un-script-externo)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/01_hello-world#Mostrar-una-alerta-con-un-script-externo)
