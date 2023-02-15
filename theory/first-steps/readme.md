@@ -16,7 +16,7 @@ Aprendamos los fundamentos para construir código.
 12. [Operador Nullish Coalescing '??'](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/12_nullish-coalescing-operator/readme.md)
 13. [Bucles: while y for](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/13_while-for/readme.md)
 14. [La sentencia "switch"](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/14_switch/readme.md)
-15. [Funciones]()
+15. [Funciones](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/15_function-basics/readme.md)
 16. [Expresiones de función]()
 17. [Funciones Flecha, lo básico](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/17_arrow-functions-basics/readme.md)
 18. [Especiales JavaScript](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/18_javascript-specials/readme.md)
