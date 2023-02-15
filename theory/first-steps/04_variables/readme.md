@@ -96,7 +96,7 @@ Podemos comprender fácilmente el concepto de una “variable” si nos la imagi
 
 Por ejemplo, podemos imaginar la variable `message` como una caja etiquetada `"message"` con el valor `"Hola!"` adentro:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/04_variables/img/image_01.png?raw=true)
 
 Podemos introducir cualquier valor a la caja.
 
@@ -114,7 +114,7 @@ alert(message);
 
 Cuando el valor ha sido alterado, los datos antiguos serán removidos de la variable:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/04_variables/img/image_02.png?raw=true)
 
 También podemos declarar dos variables y copiar datos de una a la otra.
 
