@@ -1,4 +1,4 @@
-# cual-es-el-resultado-de-las-alertas-aplicadas-al-operador-and
+# ¿Cuál es el resultado de las alertas aplicadas al operador AND?
 
 La respuesta: 1 y después undefined.
 
