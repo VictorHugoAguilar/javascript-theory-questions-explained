@@ -10,7 +10,7 @@ Aprendamos los fundamentos para construir código.
 6. [Interacción: alert, prompt, confirm](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/06_alert-prompt-confirm)
 7. [Con versiones de Tipos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/07_type-conversions)
 8. [Operadores básicos, matemáticas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators)
-9. [Comparaciones]()
+9. [Comparaciones](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/09_comparison)
 10. [Ejecución condicional: if, '?']()
 11. [Operadores Lógicos]()
 12. [Operador Nullish Coalescing '??']()
