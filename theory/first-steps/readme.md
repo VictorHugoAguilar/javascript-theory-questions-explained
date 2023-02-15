@@ -7,7 +7,7 @@ Aprendamos los fundamentos para construir código.
 3. [El modo moderno, "use strict"](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/03_strict-mode)
 4. [Variables](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/04_variables)
 5. [Tipos de datos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/05_types)
-6. [Interacción: alert, prompt, confirm]()
+6. [Interacción: alert, prompt, confirm](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/06_alert-prompt-confirm)
 7. [Con versiones de Tipos]()
 8. [Operadores básicos, matemáticas]()
 9. [Comparaciones]()
