@@ -1,4 +1,5 @@
-Expresiones de función
+# 📖 Expresiones de función
+
 En JavaScript, una función no es una “estructura mágica del lenguaje”, sino un tipo de valor especial.
 
 La sintaxis que usamos antes se llama Declaración de Función:
