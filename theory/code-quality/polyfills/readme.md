@@ -1,4 +1,5 @@
-Polyfills y transpiladores
+# 📖 Polyfills y transpiladores
+
 El lenguaje JavaScript evoluciona constantemente. Nuevas propuestas al lenguaje aparecen regularmente, son analizadas y, si se consideran valiosas, se agregan a la lista en https://tc39.github.io/ecma262/ y luego avanzan a la especificación.
 
 Los equipos de desarrollo detrás de los intérpretes (engines) de JavaScript tienen sus propias ideas sobre qué implementar primero. Pueden decidir implementar propuestas que están en borrador y posponer cosas que ya están en la especificación porque son menos interesantes o simplemente porque son más difíciles de hacer.
