@@ -19,7 +19,7 @@ Aprendamos los fundamentos para construir código.
 15. [Funciones]()
 16. [Expresiones de función]()
 17. [Funciones Flecha, lo básico]()
-18. [Especiales JavaScript]()
+18. [Especiales JavaScript](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/18_javascript-specials/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md)
