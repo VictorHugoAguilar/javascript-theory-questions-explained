@@ -1,4 +1,4 @@
-## comprueba-el-inicio-de-sesion
+## Comprueba el inicio de sesión
 
 ````js
 let userName = prompt("Quién está ahí?", "");
