@@ -2,7 +2,7 @@
 
 Este capítulo explica las prácticas en programación que más usaremos en el desarrollo.
 
-1. [Debugging en el navegador]()
+1. [Debugging en el navegador](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/readme.md)
 2. [Estilo de codificación]()
 3. [Comentarios]()
 4. [Código ninja]()
