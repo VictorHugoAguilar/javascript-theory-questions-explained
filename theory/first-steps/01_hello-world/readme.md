@@ -129,7 +129,7 @@ Crea una página que muestre el mensaje “¡Soy JavaScript!”.
 
 Hazlo en un sandbox o en tu disco duro, no importa, solo asegúrate de que funcione.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/01_hello-world/solutions/mostrar-una-alerta.md)
 
 ## Mostrar una alerta con un script externo
 
