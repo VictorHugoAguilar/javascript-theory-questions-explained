@@ -26,4 +26,4 @@ La página completa:
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/06_alert-prompt-confirm#una-pagina-simpl)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/06_alert-prompt-confirm#Una-pagina-simpl)
