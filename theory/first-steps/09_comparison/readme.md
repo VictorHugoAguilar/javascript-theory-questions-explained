@@ -1,4 +1,4 @@
-# 💡 Comparaciones
+# 📖 Comparaciones
 
 Conocemos muchos operadores de comparación de las matemáticas:
 
