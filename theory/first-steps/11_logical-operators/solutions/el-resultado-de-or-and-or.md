@@ -1,4 +1,4 @@
-## El resultado de or and or
+## El resultado de OR and OR
 
 La respuesta: 3.
 

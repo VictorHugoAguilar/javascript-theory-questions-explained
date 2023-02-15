@@ -1,4 +1,4 @@
-# Cuál es el resultado de and
+# ¿Cuál es el resultado de AND?
 
 La respuesta: `null`, porque es el primer valor falso de la lista.
 

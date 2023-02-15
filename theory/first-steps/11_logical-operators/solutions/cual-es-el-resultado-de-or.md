@@ -1,4 +1,4 @@
-# Cual es el resultado de or
+# ¿Cuál es el resultado de OR ?
 
 La respuesta es 2, ese es el primer valor verdadero.
 
