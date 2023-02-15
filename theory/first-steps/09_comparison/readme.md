@@ -210,7 +210,7 @@ Obtenemos estos resultados porque:
 
 # ✅ Tareas
 
-## Comparaciones
+## Revisa comparaciones
 
 ¿Cuál será el resultado de las siguientes expresiones?
 
