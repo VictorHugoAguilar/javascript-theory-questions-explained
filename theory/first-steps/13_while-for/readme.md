@@ -483,7 +483,7 @@ Aquí podemos asumir que el usuario solo ingresará números. No hay necesidad d
 
 [solución]()
 
-## Muestra numeros primos
+## Muestra numeros primos
 
 Un número entero mayor que `1` es llamado primo si no puede ser dividido sin un resto por ningún número excepto `1` y él mismo.
 
