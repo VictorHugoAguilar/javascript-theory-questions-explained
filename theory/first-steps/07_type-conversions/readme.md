@@ -162,5 +162,5 @@ La mayoría de estas reglas son fáciles de entender y recordar. Las excepciones
 Los objetos no son cubiertos aquí. Volveremos a ellos más tarde en el capítulo Conversión de objeto a valor primitivo que está dedicado exclusivamente a objetos después de que aprendamos más cosas básicas sobre JavaScript.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
 

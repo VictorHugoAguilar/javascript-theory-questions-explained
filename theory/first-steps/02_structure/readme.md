@@ -156,4 +156,4 @@ Los comentarios aumentan el tamaño general del código, pero eso no es un probl
 Más adelante, en el tutorial, habrá un capítulo Estilo de codificación que también explica cómo escribir mejores comentarios.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)

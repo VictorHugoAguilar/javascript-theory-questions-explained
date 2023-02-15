@@ -84,4 +84,4 @@ El JavaScript moderno admite “clases” y “módulos”, estructuras de lengu
 A partir de ahora tenemos que saber acerca de use strict en general.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)

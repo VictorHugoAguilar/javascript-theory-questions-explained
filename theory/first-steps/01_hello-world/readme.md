@@ -140,4 +140,4 @@ Abrir la página, asegurarse que la alerta funcione.
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/01_hello-world/solutions/mostrar-una-alerta-con-un-script-externo.md)
   
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
