@@ -296,7 +296,7 @@ alert( `Hola ${"name"}` ); // ?
 alert( `Hola ${name}` ); // ?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/05_types/solutions/comillas.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
