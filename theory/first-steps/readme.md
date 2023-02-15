@@ -18,7 +18,7 @@ Aprendamos los fundamentos para construir código.
 14. [La sentencia "switch"]()
 15. [Funciones]()
 16. [Expresiones de función]()
-17. [Funciones Flecha, lo básico]()
+17. [Funciones Flecha, lo básico](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/17_arrow-functions-basics/readme.md)
 18. [Especiales JavaScript](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/18_javascript-specials/readme.md)
 
 ---
