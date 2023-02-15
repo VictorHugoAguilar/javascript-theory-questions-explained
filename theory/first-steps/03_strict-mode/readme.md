@@ -1,4 +1,4 @@
-# El modo moderno, "use strict"
+# 📖 El modo moderno, "use strict"
 
 Durante mucho tiempo, JavaScript evolucionó sin problemas de compatibilidad. Se añadían nuevas características al lenguaje sin que la funcionalidad existente cambiase.
 
