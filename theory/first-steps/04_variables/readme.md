@@ -339,14 +339,14 @@ Las variables deben ser nombradas de tal manera que entendamos fácilmente lo qu
 3. Copia el valor de name a admin.
 4. Muestra el valor de admin usando alert (debe salir “John”).
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/04_variables/solutions/trabajando-con-variables.md)
 
 ## Dando el nombre correcto
 
 1. Crea una variable con el nombre de nuestro planeta. ¿Cómo nombrarías a dicha variable?
 2. Crea una variable para almacenar el nombre del usuario actual de un sitio web. ¿Cómo nombrarías a dicha variable?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/04_variables/solutions/dando-el-nombre-correcto.md)
 
 ## Const mayusculas
 
@@ -370,7 +370,7 @@ const BIRTHDAY = '18.04.1982'; // ¿birthday en mayúsculas?
 const AGE = someCode(BIRTHDAY); // ¿age en mayúsculas?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/04_variables/solutions/const-mayusculas.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps)
