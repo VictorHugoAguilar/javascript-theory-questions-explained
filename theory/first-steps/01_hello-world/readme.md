@@ -1,4 +1,4 @@
-# ¡Hola, mundo!
+# 📖 ¡Hola, mundo!
 
 Esta parte del tutorial trata sobre el núcleo de JavaScript, el lenguaje en sí.
 
