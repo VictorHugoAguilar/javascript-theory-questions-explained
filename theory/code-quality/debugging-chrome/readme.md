@@ -16,13 +16,13 @@ Tu version de Chrome posiblemente se vea distinta, pero sigue siendo obvio lo qu
 
 Esto es lo que debería ver si lo está haciendo por primera vez:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_01.png?raw=true)
 
 El botón botón de activación (toggle button)  abre la pestaña con los archivos.
 
 Hagamos click allí y seleccionemos index.html y luego hello.js en el árbol de archivos. Esto es lo que se debería ver:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_02.png?raw=true)
 
 Podemos ver tres zonas:
 
@@ -40,7 +40,7 @@ Después de que se ejecuta una sentencia, el resultado se muestra debajo.
 
 Por ejemplo, aquí 1+2 da el resultado 3, mientras que la llamada a función hello("debugger") no devuelve nada, entonces el resultado es `undefined`:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_03.png?raw=true)
 
 ## Breakpoints (puntos de interrupción)
 
@@ -50,7 +50,7 @@ Examinemos qué pasa con el código de la página de ejemplo. En hello.js, haz c
 
 Debería verse así (en donde está azul es donde deberías hacer click):
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_04.png?raw=true)
 
 Un breakpoint es un punto de código donde el debugger pausará automáticamente la ejecución de JavaScript.
 
@@ -90,7 +90,7 @@ En nuestro ejemplo, hello() se llama durante la carga de la página, entonces la
 
 Como el breakpoint está definido, la ejecución se detiene en la línea 4:
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_05.png?raw=true)
 
 Por favor abre el desplegable de información de la derecha (etiquetado con flechas). Este nos permite examinar el estado del código actual:
 
@@ -124,7 +124,7 @@ Reanuda la ejecución. Si no hay breakpoints adicionales, entonces la ejecución
 
 Esto es lo que podemos ver al hacer click:
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/debugging-chrome/img/image_06.png?raw=true)
 
 La ejecución continuó, alcanzando el siguiente breakpoint dentro de say() y pausándose allí. Revisa el “Call stack” a la derecha. Ha incrementado su valor en una llamada. Ahora estamos dentro de say().
 
