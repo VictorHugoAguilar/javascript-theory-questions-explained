@@ -1,4 +1,4 @@
-# Variables
+# 📖 Variables
 
 La mayoría del tiempo, una aplicación de JavaScript necesita trabajar con información. Aquí hay 2 ejemplos:
 
