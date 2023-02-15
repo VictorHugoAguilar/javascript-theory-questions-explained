@@ -6,4 +6,4 @@ La respuesta es:
 * x = 5 (calculado como 1 + 4)
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/08_operators#resultado-de-asignacion)
