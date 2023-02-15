@@ -1,4 +1,4 @@
-# Tipos de datos
+# 📖 Tipos de datos
 
 Un valor en JavaScript siempre pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
 
