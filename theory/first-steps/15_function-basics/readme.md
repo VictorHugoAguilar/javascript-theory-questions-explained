@@ -533,7 +533,7 @@ function checkAge(age) {
 
 ¿Hay alguna diferencia en el comportamiento de estas dos variantes?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/15_function-basics/solutions/es-else-requerido.md)
 
 ## Reescribe la funcion utilizando o
 
@@ -558,7 +558,7 @@ Haz dos variantes de `checkAge`:
 1. Usando un operador de signo de interrogación ?
 2. Usando OR ||
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/15_function-basics/solutions/reescribe-la-funcion-utilizando-o.md)
 
 ## Funcion min a b
 
@@ -572,7 +572,7 @@ min(3, -1) == -1
 min(1, 1) == 1
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/15_function-basics/solutions/funcion-min-a-b.md)
 
 ## Funcion pow x n
 
@@ -588,7 +588,7 @@ Cree una página web que solicite x y n, y luego muestre el resultado de pow(x,n
 
 > PD: En esta tarea, la función solo debe admitir valores naturales de n: enteros desde 1.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/15_function-basics/solutions/funcion-pow-x-n.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
