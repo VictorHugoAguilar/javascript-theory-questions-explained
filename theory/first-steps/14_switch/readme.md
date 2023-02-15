@@ -187,7 +187,7 @@ switch (navegador) {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/14_switch/solutions/reescribe-el-switch-en-un-if.md)
 
 ## Reescribe if en switch
 
@@ -208,7 +208,7 @@ if (a == 2 || a == 3) {
 }
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/first-steps/14_switch/solutions/reescribe-if-en-switch.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/first-steps/readme.md)
