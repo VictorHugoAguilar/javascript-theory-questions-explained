@@ -14,22 +14,27 @@ Por otro lado, ¿cómo hacer que nuestro código moderno funcione en intérprete
 
 Hay dos herramientas para ello:
 
-Transpiladores
-Polyfills.
+1. Transpiladores
+2. Polyfills.
+
 En este artículo nuestro propósito es llegar a la esencia de cómo trabajan y su lugar en el desarrollo web.
 
-Transpiladores
+## Transpiladores
+
 Un transpilador es un software que traduce un código fuente a otro código fuente. Puede analizar (“leer y entender”) código moderno y rescribirlo usando sintaxis y construcciones más viejas para que también funcione en intérpretes antiguos.
 
 Por ejemplo, antes del año 2020 JavaScript no tenía el operador “nullish coalescing” ??. Entonces, si un visitante lo usa en un navegador desactualizado, este fallaría en entender un código como height = height ?? 100.
 
 Un transpilador analizaría nuestro código y rescribiría height ?? 100 como (height !== undefined && height !== null) ? height : 100.
 
+````js
 // antes de ejecutar el transpilador
 height = height ?? 100;
 
 // después de ejecutar el transpilador
 height = (height !== undefined && height !== null) ? height : 100;
+````
+
 Ahora el código rescrito es apto para los intérpretes de JavaScript más viejos.
 
 Usualmente, un desarrollador ejecuta el transpilador en su propia computadora y luego despliega el código transpilado al servidor.
@@ -38,12 +43,13 @@ Acerca de nombres, Babel es uno de los más prominentes transpiladores circuland
 
 Sistemas de desarrollo de proyectos modernos, tales como webpack, brindan los medios para ejecutar la transpilación automática en cada cambio de código, haciendo muy fácil la integración al proceso de desarrollo.
 
-Polyfills
+## Polyfills
+
 Nuevas características en el lenguaje pueden incluir no solo construcciones sintácticas y operadores, sino también funciones integradas.
 
-Por ejemplo, Math.trunc(n) es una función que corta la parte decimal de un número, ej. Math.trunc(1.23) devuelve 1.
+Por ejemplo, `Math.trunc(n)` es una función que corta la parte decimal de un número, ej. `Math.trunc(1.23) devuelve 1.
 
-En algunos (muy desactualizados) intérpretes JavaScript no existe Math.trunc, así que tal código fallará.
+En algunos (muy desactualizados) intérpretes JavaScript no existe `Math.trunc`, así que tal código fallará.
 
 Aquí estamos hablando de nuevas funciones, no de cambios de sintaxis. No hay necesidad de transpilar nada. Solo necesitamos declarar la función faltante.
 
@@ -51,6 +57,7 @@ Un script que actualiza o agrega funciones nuevas es llamado “polyfill”. Est
 
 En este caso particular, el polyfill para Math.trunc es un script que lo implementa:
 
+````js
 if (!Math.trunc) { // no existe tal función
   // implementarla
   Math.trunc = function(number) {
@@ -59,13 +66,17 @@ if (!Math.trunc) { // no existe tal función
     return number < 0 ? Math.ceil(number) : Math.floor(number);
   };
 }
+````
+
 JavaScript es un lenguaje muy dinámico, los scripts pueden agregar o modificar cualquier función, incluso las integradas.
 
 Dos librerías interesantes de polyfills son:
 
-core js – da muchísimo soporte, pero permite que se incluyan solamente las características necesitadas.
-polyfill.io – servicio que brinda un script con polyfills dependiendo de las características del navegador del usuario.
-Resumen
+* core js – da muchísimo soporte, pero permite que se incluyan solamente las características necesitadas.
+* polyfill.io – servicio que brinda un script con polyfills dependiendo de las características del navegador del usuario.
+
+## Resumen
+
 En este artículo queremos motivarte a estudiar las características más modernas y hasta experimentales del lenguaje, incluso si aún no tienen buen soporte en los intérpretes JavaScript.
 
 Pero no olvides usar transpiladores (si usas sintaxis u operadores modernos) y polyfills (para añadir funciones que pueden estar ausentes). Ellos se asegurarán de que el código funcione.
@@ -74,9 +85,10 @@ Por ejemplo, cuando estés más familiarizado con JavaScript puedes configurar l
 
 Buenos recursos que muestran el estado actual de soporte para varias característica:
 
-https://kangax.github.io/compat-table/es6/ – para JavaScript puro.
-https://caniuse.com/ – para funciones relacionadas al navegador.
-P.S. Google Chrome usualmente es el más actualizado con las características del lenguaje, pruébalo si algún demo del tutorial falla. Aunque la mayoría de los demos funciona con cualquier navegador moderno.
+* https://kangax.github.io/compat-table/es6/ – para JavaScript puro.
+* https://caniuse.com/ – para funciones relacionadas al navegador.
+
+> P.S. Google Chrome usualmente es el más actualizado con las características del lenguaje, pruébalo si algún demo del tutorial falla. Aunque la mayoría de los demos funciona con cualquier navegador moderno.
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/code-quality/readme.md)
