@@ -22,5 +22,5 @@ function ucFirst(str) {
 alert( ucFirst("john") ); // John
 ````
 
---
+---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/readme.md#hacer-mayuscula-el-primer-caracter)
