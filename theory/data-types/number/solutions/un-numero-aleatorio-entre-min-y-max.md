@@ -16,7 +16,7 @@ function random(min, max) {
 alert( random(1, 5) );
 alert( random(1, 5) );
 alert( random(1, 5) );
-````js
+````
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/readme.md#un-numero-aleatorio-entre-min-y-max)
