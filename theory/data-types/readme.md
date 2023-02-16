@@ -2,8 +2,8 @@
 
 Más estructuras de datos y un estudio más profundo de los tipos.
 
-1. [Métodos en tipos primitivos]()
-2. [Números]()
+1. [Métodos en tipos primitivos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/primitives-methods/readme.md)
+2. [Números](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/readme.md)
 3. [Strings](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/readme.md)
 4. [Arrays]()
 5. [Métodos de arrays]()
