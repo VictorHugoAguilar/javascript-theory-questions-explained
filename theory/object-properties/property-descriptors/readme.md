@@ -26,10 +26,10 @@ La sintaxis es:
 let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
 ````
 
-**obj**
+* **obj**
 El objeto del que se quiere obtener la información.
 
-**propertyName**
+* **propertyName**
 El nombre de la propiedad.
 
 El valor devuelto es el objeto llamado “descriptor de propiedad”: este contiene el valor de todos los indicadores.
@@ -62,10 +62,10 @@ La sintaxis es:
 Object.defineProperty(obj, propertyName, descriptor)
 ````
 
-**obj, propertyName**
+* **obj, propertyName**
 el objeto y la propiedad con los que se va a trabajar.
 
-**descriptor**
+* **descriptor**
 descriptor de propiedad a aplicar.
 
 Si la propiedad existe, defineProperty actualiza sus indicadores. De otra forma, creará la propiedad con el valor y el indicador dado; en ese caso, si el indicador no es proporcionado, es asumido como false.
