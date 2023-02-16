@@ -305,30 +305,30 @@ for (let key in user) {
 
 Otra diferencia es que for..in ignora las propiedades simbólicas y las no enumerables, pero Object.getOwnPropertyDescriptors devuelve todos los descriptores de propiedades incluyendo simbólicas y no enumerables.
 
-## Sellando un objeto globalmente
+## Sellando un objeto globalmente
 
 Los descriptores de propiedad trabajan al nivel de propiedades individuales.
 
 También hay métodos que limitan el acceso al objeto completo:
 
-**Object.preventExtensions(obj)**
+* **Object.preventExtensions(obj)**
 Prohíbe añadir propiedades al objeto.
 
-**Object.seal(obj)**
+* **Object.seal(obj)**
 Prohíbe añadir/eliminar propiedades, establece todas las propiedades existentes como configurable: false.
 
-**Object.freeze(obj)**
-Prohíbe añadir/eliminar/cambiar propiedades, establece todas las propiedades existentes como `configurable: false, writable: false.
+* **Object.freeze(obj)**
+Prohíbe añadir/eliminar/cambiar propiedades, establece todas las propiedades existentes como `configurable: false, writable: false`.
 
 También tenemos formas de probarlos:
 
-**Object.isExtensible(obj)**
+* **Object.isExtensible(obj)**
 Devuelve false si esta prohibido añadir propiedades, si no true.
 
-**Object.isSealed(obj)**
+* **Object.isSealed(obj)**
 Devuelve true si añadir/eliminar propiedades está prohibido, y todas las propiedades existentes tienen configurable: false.
 
-**Object.isFrozen(obj)**
+* **Object.isFrozen(obj)**
 Devuelve true si añadir/eliminar/cambiar propiedades está prohibido, y todas las propiedades son configurable: false, writable: false.
 
 Estos métodos son usados rara vez en la práctica.
