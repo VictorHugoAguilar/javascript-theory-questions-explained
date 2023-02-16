@@ -273,7 +273,7 @@ let user = makeUser();
 alert( user.ref.name ); // ¿Cuál es el resultado?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-methods/solutions/usando-el-this-en-un-objeto-literal.md)
 
 ## Crea una calculadora
 
@@ -293,7 +293,7 @@ alert( calculator.sum() );
 alert( calculator.mul() );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-methods/solutions/crea-una-calculadora.md)
 
 ## Encadenamiento
 
@@ -334,7 +334,7 @@ ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
 Tal enfoque es ampliamente usado entre las librerías JavaScript.
 
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-methods/solutions/encadenamiento.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md)
