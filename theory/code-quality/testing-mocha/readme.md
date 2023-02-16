@@ -84,7 +84,7 @@ Veamos el flujo de desarrollo en nuestro caso práctico.
 
 El primer paso ya está completo: tenemos una spec inicial para pow. Ahora, antes de realizar la implementación, usemos algunas librerías JavaScript para ejecutar los tests, solo para verificar que funcionan (van a fallar todos).
 
-## La spec en acción
+## La spec en acción
 
 En este tutorial estamos usando las siguientes librerías JavaScript para los tests:
 
@@ -153,8 +153,8 @@ El resultado:
 De momento, el test falla. Es lógico: tenemos el código vacío en la función `pow`, así que `pow(2,3)` devuelve `undefined` en lugar de `8`.
 
 Para más adelante, ten en cuenta que hay avanzados test-runners (Herramientas para ejecutar los test en diferentes entornos de forma automática), como karma y otros. Por lo que generalmente no es un problema configurar muchos tests diferentes.
-
-## Implementación inicial
+  
+## Implementación inicial
 
 Vamos a realizar una implementación simple de pow, suficiente para pasar el test:
 
