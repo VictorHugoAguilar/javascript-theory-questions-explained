@@ -725,32 +725,32 @@ La llamada a users.filter(army.canJoin, army) puede ser reemplazada con users.fi
 Veamos el ayudamemoria de métodos para arrays:
 
 * Para agregar/remover elementos:
-- push(...items) – agrega ítems al final,
-- pop() – extrae un ítem del final,
-- shift() – extrae un ítem del inicio,
-- unshift(...items) – agrega ítems al inicio.
-- splice(pos, deleteCount, ...items) – desde el índice pos borra deleteCount elementos e inserta items.
-- slice(start, end) – crea un nuevo array y copia elementos desde la posición start hasta end (no incluido) en el nuevo array.
-- concat(...items) – devuelve un nuevo array: copia todos los elementos del array actual y le agrega items. Si alguno de los items es un array, se toman sus elementos.
+  - push(...items) – agrega ítems al final,
+  - pop() – extrae un ítem del final,
+  - shift() – extrae un ítem del inicio,
+  - unshift(...items) – agrega ítems al inicio.
+  - splice(pos, deleteCount, ...items) – desde el índice pos borra deleteCount elementos e inserta items.
+  - slice(start, end) – crea un nuevo array y copia elementos desde la posición start hasta end (no incluido) en el nuevo array.
+  - concat(...items) – devuelve un nuevo array: copia todos los elementos del array actual y le agrega items. Si alguno de los items es un array, se toman sus elementos.
 
 * Para buscar entre elementos:
-- indexOf/lastIndexOf(item, pos) – busca por item comenzando desde la posición pos, devolviendo el índice o -1 si no se encuentra.
-- includes(value) – devuelve true si el array tiene value, si no false.
-- find/filter(func) – filtra elementos a través de la función, devuelve el primer/todos los valores que devuelven true.
-- findIndex es similar a find, pero devuelve el índice en lugar del valor.
+  - indexOf/lastIndexOf(item, pos) – busca por item comenzando desde la posición pos, devolviendo el índice o -1 si no se encuentra.
+  - includes(value) – devuelve true si el array tiene value, si no false.
+  - find/filter(func) – filtra elementos a través de la función, devuelve el primer/todos los valores que devuelven true.
+  - findIndex es similar a find, pero devuelve el índice en lugar del valor.
 
 * Para iterar sobre elementos:
-- forEach(func) – llama la func para cada elemento, no devuelve nada.
+  - forEach(func) – llama la func para cada elemento, no devuelve nada.
 
 * Para transformar el array:
-- map(func) – crea un nuevo array a partir de los resultados de llamar a la func para cada elemento.
-- sort(func) – ordena el array y lo devuelve.
-- reverse() – ordena el array de forma inversa y lo devuelve.
-- split/join – convierte una cadena en un array y viceversa.
-- reduce/reduceRight(func, initial) – calcula un solo valor para todo el array, llamando a la func para cada elemento, obteniendo un resultado parcial en cada llamada y pasándolo a la siguiente.
+  - map(func) – crea un nuevo array a partir de los resultados de llamar a la func para cada elemento.
+  - sort(func) – ordena el array y lo devuelve.
+  - reverse() – ordena el array de forma inversa y lo devuelve.
+  - split/join – convierte una cadena en un array y viceversa.
+  - reduce/reduceRight(func, initial) – calcula un solo valor para todo el array, llamando a la func para cada elemento, obteniendo un resultado parcial en cada llamada y pasándolo a la siguiente.
 
 * Adicional:
-- Array.isArray(value) comprueba si value es un array.
+  - Array.isArray(value) comprueba si value es un array.
 
 Por favor tener en cuenta que sort, reverse y splice modifican el propio array.
 
