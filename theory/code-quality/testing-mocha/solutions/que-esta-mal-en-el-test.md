@@ -50,4 +50,4 @@ describe("Raises x to power n", function() {
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/testing-mocha/readme.md#que-esta-mal-en-el-test)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/code-quality/testing-mocha/readme.md#que-esta-mal-en-el-test)
