@@ -214,13 +214,13 @@ user?.name = "John"; // Error, no funciona
 // porque se evalúa como: undefined = "John"
 ````
 
-## Resumen
+## Resumen
 
-La sintaxis de encadenamiento opcional ?. tiene tres formas:
+La sintaxis de encadenamiento opcional `?`. tiene tres formas:
 
-1. obj?.prop – devuelve obj.prop si obj existe, si no, undefined.
-2. obj?.[prop] – devuelve obj[prop] si obj existe, si no, undefined.
-3. obj.method?.() – llama a obj.method() si obj.method existe, si no devuelve undefined.
+1. `obj?.prop` – devuelve obj.prop si obj existe, si no, undefined.
+2. `obj?.[prop]` – devuelve obj[prop] si obj existe, si no, undefined.
+3. `obj.method?.()` – llama a obj.method() si obj.method existe, si no devuelve undefined.
 
 Como podemos ver, todos ellos son sencillos y fáciles de usar. El ?. comprueba si la parte izquierda es null/undefined y permite que la evaluación continúe si no es así.
 
