@@ -160,7 +160,7 @@ JSON.stringify(meetup); // Error: Convirtiendo estructura circular a JSON
 
 Aquí, la conversión falla debido a una referencia circular: room.occupiedBy hace referencia a meetup, y meetup.place hace referencia a room:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/json/img/image_01.png?raw=true)
 
 ## Excluyendo y transformando: sustituto
 
