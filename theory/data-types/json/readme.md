@@ -513,7 +513,7 @@ let user = {
 };
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/json/solutions/convierte-el-objeto-en-json-y-de-vuelta.md)
 
 ## Excluir referencias circulares
 
@@ -551,7 +551,7 @@ alert( JSON.stringify(meetup, function replacer(key, value) {
 */
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/json/solutions/excluir-referencias-circulares.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
