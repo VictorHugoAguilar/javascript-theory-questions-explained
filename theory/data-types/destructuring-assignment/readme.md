@@ -417,7 +417,7 @@ alert(item2);  // Donut
 
 Todas las propiedades del objeto options con excepción de extra que no está en el lado izquierda, son asignadas a las variables correspondientes:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/destructuring-assignment/img/image_01.png?raw=true)
 
 Por último tenemos width, height, item1, item2 y title desde el valor predeterminado.
 
