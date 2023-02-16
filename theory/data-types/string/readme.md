@@ -521,7 +521,7 @@ Además, es importante saber que los strings están basados en la codificación 
 
 # ✅ Tareas
 
-## Hacer mayuscula el primer carácter
+## Hacer mayuscula el primer caracter
 
 Escribe una función ucFirst(str) que devuelva el string str con el primer carácter en mayúscula, por ejemplo:
 
