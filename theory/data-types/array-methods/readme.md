@@ -2,7 +2,7 @@
 
 Los arrays (también llamados arreglos o matrices) cuentan con muchos métodos. Para hacer las cosas más sencillas, en este capítulo se encuentran divididos en dos partes.
 
-## Agregar/remover ítems
+## Agregar/remover ítems
 
 Ya conocemos algunos métodos que agregan o extraen elementos del inicio o final de un array:
 
