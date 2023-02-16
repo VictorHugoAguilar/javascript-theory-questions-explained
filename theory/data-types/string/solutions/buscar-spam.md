@@ -14,5 +14,5 @@ alert( checkSpam('xxxxx gratis') );
 alert( checkSpam("coneja inocente") );
 ````
 
---
+---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/readme.md#buscar-spam)
