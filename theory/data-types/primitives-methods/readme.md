@@ -141,7 +141,7 @@ alert(str.test);
 
 Qué piensas: ¿funcionará? ¿Qué mostrará?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/primitives-methods/solutions/puedo-agregar-una-propiedad-a-un-string.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
