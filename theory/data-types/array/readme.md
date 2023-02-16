@@ -133,7 +133,7 @@ Una cola es uno de los usos más comunes de un array. En ciencias de la computac
 * push inserta un elemento al final.
 * shift obtiene el elemento del principio, avanzando la cola, y así el segundo elemento se vuelve primero.
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/img/image_01.png?raw=true)
 
 Los arrays soportan ambas operaciones.
 
@@ -150,7 +150,7 @@ Entonces los elementos nuevos son agregados o tomados siempre desde el “final�
 
 Una pila es usualmente mostrada como un mazo de cartas, donde las nuevas cartas son agregadas al tope o tomadas desde el tope:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/img/image_02.png?raw=true)
 
 Para las pilas, la última introducida es la primera en ser recibida, en inglés esto es llamado principio LIFO (Last-In-First-Out, última en entrar primera en salir). Para las colas, tenemos FIFO (First-In-First-Out primera en entrar, primera en salir).
 
@@ -274,7 +274,7 @@ Piensa en los arrays como estructuras especiales para trabajar con datos ordenad
 
 Los métodos push/pop son rápidos, mientras que shift/unshift son lentos.
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/img/image_03.png?raw=true)
 
 ¿Por qué es más rápido trabajar con el final del array que con el principio? Veamos qué pasa durante la ejecución:
 
@@ -290,7 +290,7 @@ La operación shift debe hacer 3 cosas:
 2. Mover todos lo elementos hacia la izquierda y renumerarlos: desde el índice 1 a 0, de 2 a 1 y así sucesivamente.
 3. Actualizar la longitud: la propiedad length.
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/img/image_04.png?raw=true)
 
 **Cuanto más elementos haya en el array, más tiempo tomará moverlos, más operaciones en memoria.**
 
@@ -304,7 +304,7 @@ Las acciones para la operación pop:
 fruits.pop(); // toma 1 elemento del final
 ````
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/img/image_05.png?raw=true)
 
 **El método pop no necesita mover nada, porque los demás elementos mantienen sus índices. Es por ello que es muy rápido.**
 
