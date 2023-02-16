@@ -2,7 +2,8 @@
 
 Los tests automáticos serán usados en tareas que siguen, y son ampliamente usados en proyectos reales.
 
-¿Por qué necesitamos tests?
+## ¿Por qué necesitamos tests?
+
 Cuando escribimos una función, normalmente imaginamos qué debe hacer: Para ciertos parámetros, qué resultado.
 
 Durante el desarrollo, podemos comprobar la función ejecutándola y comparando el resultado con la salida esperada. Por ejemplo, podemos hacer eso en la consola.
@@ -11,30 +12,33 @@ Si algo está incorrecto corregimos el código, ejecutamos de nuevo, comprobamos
 
 Pero esas “re-ejecuciones” manuales son imperfectas.
 
-Cuando testeamos un código re-ejecutándolo manualmente es fácil obviar algo.
+**Cuando testeamos un código re-ejecutándolo manualmente es fácil obviar algo.**
 
-Por ejemplo, estamos creando una función f. Escribimos algo de código, testeamos: f(1) funciona, pero f(2) no funciona. Corregimos el código y ahora funciona f(2). ¿Está completo? Hemos olvidado re-testear f(1). Esto puede llevar a error.
+Por ejemplo, estamos creando una función f. Escribimos algo de código, testeamos: `f(1)` funciona, pero `f(2)` no funciona. Corregimos el código y ahora funciona `f(2)`. ¿Está completo? Hemos olvidado re-testear `f(1)`. Esto puede llevar a error.
 
 Todo esto es muy típico. Cuando desarrollamos algo, mantenemos muchos casos de uso posibles en la cabeza. Pero es difícil esperar que un/a programador/a los compruebe a todos después de cada cambio. Por lo que deviene fácil arreglar una cosa y romper otra.
 
-Los tests automatizados implican escribir los tests por separado, además del código. Ellos ejecutan nuestras funciones de varias formas y comparan los resultados con los esperados.
+**Los tests automatizados implican escribir los tests por separado, además del código. Ellos ejecutan nuestras funciones de varias formas y comparan los resultados con los esperados.**
 
-Desarrollo guiado por comportamiento (Behavior Driven Development, BDD)
+## Desarrollo guiado por comportamiento (Behavior Driven Development, BDD)
+
 Vamos a usar una técnica llamada Desarrollo guiado por comportamiento o por sus siglas en inglés, BDD.
 
-BDD son tres cosas en uno: tests, documentación y ejemplos.
+**BDD son tres cosas en uno: tests, documentación y ejemplos.**
 
 Para entender BDD, examinaremos un caso de desarrollo práctico:
 
-Desarrollo de “pow”: Especificación
-Digamos que queremos hacer una función pow(x, n) que eleve x a la potencia de un entero n. Asumimos que n≥0.
+## Desarrollo de “pow”: Especificación
+
+Digamos que queremos hacer una función `pow(x, n)` que eleve `x` a la potencia de un entero n. Asumimos que `n ≥ 0`.
 
 Esta tarea es sólo un ejemplo: Hay un operador ** en JavaScript que hace eso, pero queremos concentrarnos en el flujo de desarrollo que puede ser aplicado a tareas más complejas.
 
-Antes de crear el código de pow, podemos imaginar lo que hace la función y describirlo.
+Antes de crear el código de `pow`, podemos imaginar lo que hace la función y describirlo.
 
 Esa descripción es llamada especificación o “spec” y contiene las descripciones de uso junto con los test para probarlas, como:
 
+````js
 describe("pow", function() {
 
   it("eleva a la n-ésima potencia", function() {
@@ -42,47 +46,57 @@ describe("pow", function() {
   });
 
 });
+````
+
 Una spec tiene tres bloques principales, mostrados abajo:
 
-describe("titulo", function() { ... })
+`describe("titulo", function() { ... })`
+
 ¿Qué funcionalidad estamos describiendo? En nuestro caso estamos describiendo la función pow. Utilizado para agrupar los “workers” (trabajadores): los bloques it.
 
-it("titulo", function() { ... })
+`it("titulo", function() { ... })`
+
 En el título de it introducimos una descripción legible del caso de uso. El segundo argumento es la función que testea eso.
 
-assert.equal(value1, value2)
+`assert.equal(value1, value2)`
+
 El código dentro del bloque it que, si la implementación es correcta, debe ejecutar sin errores.
 
 Las funciones assert.* son usadas para comprobar que pow funcione como esperamos. Aquí mismo utilizamos una de ellas: assert.equal, que compara argumentos y produce un error si los mismos no son iguales. Arriba se está comprobando que el resultado de pow(2, 3) sea igual a 8. Hay otros tipos de comparaciones y comprobaciones que veremos más adelante.
 
 La especificación puede ser ejecutada, y hará los los test dictados en el bloque it. Lo veremos luego.
 
-El flujo de desarrollo
+## El flujo de desarrollo
+
 El flujo de desarrollo se ve así:
 
-Se escribe una especificación inicial, con tests para la funcionalidad más básica.
-Se crea Una implementación inicial.
-Para comprobar que funciona, ejecutamos el framework de test Mocha (detallado más adelante) que ejecuta la “spec”. Mostrará los errores mientras la funcionalidad no esté completa. Hacemos correcciones hasta que todo funciona.
-Ahora tenemos una implementación inicial con tests.
-Añadimos más casos de uso a la spec, seguramente no soportados aún por la implementación. Los tests empiezan a fallar.
-Ir a 3, actualizar la implementación hasta que los tests no den errores.
-Se repiten los pasos 3-6 hasta que la funcionalidad esté lista.
+1. Se escribe una especificación inicial, con tests para la funcionalidad más básica.
+2. Se crea Una implementación inicial.
+3. Para comprobar que funciona, ejecutamos el framework de test Mocha (detallado más adelante) que ejecuta la “spec”. Mostrará los errores mientras la funcionalidad no esté completa. Hacemos correcciones hasta que todo funciona.
+4. Ahora tenemos una implementación inicial con tests.
+5. Añadimos más casos de uso a la spec, seguramente no soportados aún por la implementación. Los tests empiezan a fallar.
+6. Ir a 3, actualizar la implementación hasta que los tests no den errores.
+7. Se repiten los pasos 3-6 hasta que la funcionalidad esté lista.
+
 De tal forma, el desarrollo es iterativo. Escribimos la especificación, la implementamos, nos aseguramos de que los tests pasen, entonces escribimos más tests, y nos volvemos a asegurar de que pasen, etc. Al final tenemos una implementación funcionando con tests para ella.
 
 Veamos el flujo de desarrollo en nuestro caso práctico.
 
 El primer paso ya está completo: tenemos una spec inicial para pow. Ahora, antes de realizar la implementación, usemos algunas librerías JavaScript para ejecutar los tests, solo para verificar que funcionan (van a fallar todos).
 
-La spec en acción
+## La spec en acción
+
 En este tutorial estamos usando las siguientes librerías JavaScript para los tests:
 
-Mocha – el framework central: provee funciones para test comunes como describe e it y la función principal que ejecuta los tests.
-Chai – una librería con muchas funciones de comprobación (assertions). Permite el uso de diferentes comprobaciones. De momento usaremos assert.equal.
-Sinon – una librería para espiar funciones, emular funciones incorporadas al lenguaje y más. La necesitaremos a menudo más adelante.
+* **Mocha** – el framework central: provee funciones para test comunes como describe e it y la función principal que ejecuta los tests.
+* **Chai** – una librería con muchas funciones de comprobación (assertions). Permite el uso de diferentes comprobaciones. De momento usaremos assert.equal.
+* **Sinon** – una librería para espiar funciones, emular funciones incorporadas al lenguaje y más. La necesitaremos a menudo más adelante.
+
 Estas librerías son adecuadas tanto para tests en el navegador como en el lado del servidor. Aquí nos enfocaremos en el navegador.
 
 La página HTML con estos frameworks y la spec de pow:
 
+````html
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,30 +136,40 @@ La página HTML con estos frameworks y la spec de pow:
 </body>
 
 </html>
+````
+
 La página puede ser dividida en cinco partes:
 
-El <head> – importa librerías de terceros y estilos para los tests.
-El <script> con la función a comprobar, en nuestro caso con el código de pow.
-Los tests – en nuestro caso un fichero externo test.js que contiene un sentencia describe("pow", ...)al inicio.
-El elemento HTML <div id="mocha"> utilizado para la salida de los resultados.
-Los test se inician con el comando mocha.run().
+1. El `<head>` – importa librerías de terceros y estilos para los tests.
+2. El `<script>` con la función a comprobar, en nuestro caso con el código de pow.
+3. Los tests – en nuestro caso un fichero externo test.js que contiene un sentencia `describe("pow", ...)` al inicio.
+4. El elemento HTML <div id="mocha"> utilizado para la salida de los resultados.
+5. Los test se inician con el comando `mocha.run()`.
+
 El resultado:
 
+![image_01]()
 
-De momento, el test falla. Es lógico: tenemos el código vacío en la función pow, así que pow(2,3) devuelve undefined en lugar de 8.
+De momento, el test falla. Es lógico: tenemos el código vacío en la función `pow`, así que `pow(2,3)` devuelve `undefined` en lugar de `8`.
 
 Para más adelante, ten en cuenta que hay avanzados test-runners (Herramientas para ejecutar los test en diferentes entornos de forma automática), como karma y otros. Por lo que generalmente no es un problema configurar muchos tests diferentes.
 
-Implementación inicial
+## Implementación inicial
+
 Vamos a realizar una implementación simple de pow, suficiente para pasar el test:
 
+````js
 function pow(x, n) {
   return 8; // :) ¡hacemos trampas!
 }
+````
+
 ¡Ahora funciona!
 
+![image_02]()
 
-Mejoramos el spec
+## Mejoramos el spec
+
 Lo que hemos hecho es una trampa. La función no funciona bien: ejecutar un cálculo diferente, como pow(3,4), nos devuelve un resultado incorrecto, pero el test pasa.
 
 … pero la situación es habitual, ocurre en la práctica. Los tests pasan, pero la función no funciona bien. Nuestra especificación está incompleta. Necesitamos añadir más casos de uso a la especificación.
