@@ -312,4 +312,4 @@ Todas la operaciones a través de referencias copiadas (como agregar y borrar pr
 Para hacer una “verdadera copia” (un clon), podemos usar Object.assign para la denominada “clonación superficial” (los objetos anidados son copiados por referencia), o la función de “clonación profunda” structuredClone o usar una implementación personalizada como **_.cloneDeep(obj)**.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-copy/readme.md)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md)
