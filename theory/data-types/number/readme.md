@@ -471,7 +471,7 @@ Crea un script que pida al visitante que ingrese dos números y muestre su suma.
 
 P.D. Hay una trampa con los tipos de valores.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/suma-numeros-del-visitante.md)
 
 ## Por que 6.35.toFixed(1) == 6.3
 
@@ -491,7 +491,7 @@ alert( 6.35.toFixed(1) ); // 6.3
 
 ¿Cómo redondear 6.35 de manera correcta?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/por-que-6-35-tofixed-1-6-3.md)
 
 ## Repetir hasta que lo ingresado sea un numero
 
@@ -501,7 +501,7 @@ El valor resultante debe ser devuelto como number.
 
 El visitante puede también detener el proceso ingresando una linea vacía o presionando “CANCEL”. En tal caso la función debe devolver null.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/repetir-hasta-que-lo-ingresado-sea-un-numero.md)
 
 ## Un bucle infinito ocasional
 
@@ -514,7 +514,7 @@ while (i != 10) {
 }
 ```
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/un-bucle-infinito-ocasional.md)
 
 ## Un numero aleatorio entre min y max
 
@@ -530,7 +530,7 @@ alert( random(1, 5) ); // 3.7894332423
 alert( random(1, 5) ); // 4.3435234525
 ```
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/un-entero-aleatorio-entre-min-y-max.md)
 
 ## Un entero aleatorio entre min y max
 
@@ -546,7 +546,7 @@ alert( randomInteger(1, 5) ); // 3
 alert( randomInteger(1, 5) ); // 5
 ```
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/solutions/un-numero-aleatorio-entre-min-y-max.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
