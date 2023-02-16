@@ -119,7 +119,7 @@ let salaries = {
 alert( sumSalaries(salaries) ); // 650
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/keys-values-entries/solutions/suma-las-propiedades.md)
 
 ## Contar propiedades
 
@@ -138,7 +138,7 @@ Trate de hacer el código lo más corto posible.
 
 PD: Ignore propiedades simbólicas, solamente cuente las propiedades “regulares”.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/keys-values-entries/solutions/contar-propiedades.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
