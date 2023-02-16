@@ -121,7 +121,7 @@ alert( sumSalaries(salaries) ); // 650
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/keys-values-entries/solutions/suma-las-propiedades.md)
 
-## Contar propiedades
+## Contar propiedades
 
 Escriba una función count(obj) que devuelva el número de propiedades en el objeto:
 
