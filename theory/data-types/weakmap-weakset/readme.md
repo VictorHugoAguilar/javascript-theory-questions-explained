@@ -303,7 +303,7 @@ P.D Cuando un mensaje se elimina de messages, también debería desaparecer de s
 
 P.P.D. No debemos modificar los objetos del mensaje, o agregarles nuestras propiedades. Como son administrados por el código de otra persona, eso puede generarnos resultados no deseados.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/weakmap-weakset/solutions/almacenar-banderas-no-leidas.md)
 
 ## Almacenar fechas de lectura
 
@@ -323,7 +323,7 @@ En la tarea anterior solo necesitábamos almacenar el hecho de “sí/no”. Aho
 
 P.D Las fechas se pueden almacenar como objetos de la clase incorporada Date, que cubriremos más adelante.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/weakmap-weakset/solutions/almacenar-fechas-de-lectura.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
