@@ -460,7 +460,7 @@ it("Eleva x a la potencia n", function() {
 
 P.S. El test es sintácticamente correcto y pasa.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/solutions/que-esta-mal-en-el-test.md)
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/code-quality/readme.md)
