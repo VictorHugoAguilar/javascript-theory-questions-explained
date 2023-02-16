@@ -320,7 +320,7 @@ La iteración sobre Map y Set siempre está en el orden de inserción, por lo qu
 
 #  ✅ Tareas
 
-## Filtrar miembros unicos del array
+## Filtrar miembros unicos del array
 
 Digamos que arr es un array.
 
@@ -346,7 +346,7 @@ P.D.S. Use Set para almacenar valores únicos.
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/map-set/solutions/filtrar-miembros-unicos-del-array.md)
 
-## Filtrar anagramas
+## Filtrar anagramas
 
 Anagramas son palabras que tienen el mismo número de letras, pero en diferente orden.
 
