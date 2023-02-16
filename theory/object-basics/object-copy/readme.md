@@ -15,7 +15,7 @@ let phrase = message;
 
 Como resultado tenemos dos variables independientes, cada una almacenando la cadena "Hello!".
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-copy/img/image_01.png?raw=true)
 
 Bastante obvio, ¿verdad?
 
@@ -33,7 +33,7 @@ let user = {
 
 Y así es como se almacena en la memoria:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-copy/img/image_02.png?raw=true)
 
 El objeto es almacenado en algún lugar de la memoria (a la derecha de la imagen), mientras que la variable `user` (a la izquierda) tiene una “referencia” a él.
 
@@ -55,7 +55,7 @@ let admin = user; // copia la referencia
 
 Ahora tenemos dos variables, cada una con una referencia al mismo objeto:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-copy/img/image_03.png?raw=true)
 
 Como puedes ver, aún hay un objeto, ahora con dos variables haciendo referencia a él.
 
