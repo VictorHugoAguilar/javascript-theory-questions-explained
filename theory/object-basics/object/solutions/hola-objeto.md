@@ -9,4 +9,4 @@ delete user.name;
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/new/main/theory/object-basics/object/readme.md#hola-objeto)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/readme.md#hola-objeto)
