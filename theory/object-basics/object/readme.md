@@ -8,7 +8,7 @@ Podemos crear un objeto usando las llaves `{…}` con una lista opcional de prop
 
 Podemos imaginar un objeto como un gabinete con archivos firmados. Cada pieza de datos es almacenada en su archivo por la clave. Es fácil encontrar un archivo por su nombre o agregar/eliminar un archivo.
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_01.png?raw=true)
 
 Se puede crear un objeto vacío (“gabinete vacío”) utilizando una de estas dos sintaxis:
 
@@ -16,7 +16,7 @@ Se puede crear un objeto vacío (“gabinete vacío”) utilizando una de estas 
 let user = new Object(); // sintaxis de "constructor de objetos"
 let user = {};  // sintaxis de "objeto literal"
 ````
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_02.png?raw=true)
 
 Normalmente se utilizan las llaves `{...}`. Esa declaración se llama objeto literal.
 
@@ -40,7 +40,7 @@ En el objeto `user` hay dos propiedades:
 
 Podemos imaginar al objeto `user` resultante como un gabinete con dos archivos firmados con las etiquetas “name” y “age”.
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_03.png?raw=true)
 
 Podemos agregar, eliminar y leer archivos de él en cualquier momento.
 
@@ -58,7 +58,7 @@ El valor puede ser de cualquier tipo. Agreguemos uno booleano:
 user.isAdmin = true;
 ````
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_04.png?raw=true)
 
 Para eliminar una propiedad podemos usar el operador delete:
 
@@ -66,7 +66,7 @@ Para eliminar una propiedad podemos usar el operador delete:
 delete user.age;
 ````
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_05.png?raw=true)
 
 También podemos nombrar propiedades con más de una palabra. Pero, de ser así, debemos colocar la clave entre comillas `"..."`:
 
@@ -78,7 +78,7 @@ let user = {
 };
 ````
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/img/image_06.png?raw=true)
 
 La última propiedad en la lista puede terminar con una coma:
 
