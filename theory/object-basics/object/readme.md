@@ -507,7 +507,7 @@ Escribe el código, una línea para cada acción:
 4. Cambia el valor de name a Pete.
 5. Remueve la propiedad name del objeto.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/solutions/hola-objeto.md)
 
 ## Verificar los vacios
 
@@ -525,7 +525,7 @@ schedule["8:30"] = "Hora de levantarse";
 alert( isEmpty(schedule) ); // false
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/solutions/verificar-los-vacios.md)
 
 ## Suma de propiedades de un objeto
 
@@ -543,7 +543,7 @@ Escribe el código para sumar todos los salarios y almacenar el resultado en la 
 
 Si salaries está vacío entonces el resultado será 0.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/solutions/suma-de-propiedades-de-un-objeto.md)
 
 ## Multiplicar propiedades numericas por 2
 
@@ -573,7 +573,7 @@ Nota que multiplyNumeric no necesita devolver nada. Debe modificar el objeto en 
 
 P.D. Usa typeof para verificar si hay un número aquí.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/solutions/multiplicar-propiedades-numericas-por-2.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md)
