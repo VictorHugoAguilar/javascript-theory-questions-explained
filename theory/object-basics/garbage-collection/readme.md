@@ -35,7 +35,7 @@ let user = {
 };
 ````
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_01.png?raw=true)
 
 Aquí la flecha representa una referencia de objeto. La variable global "user" hace referencia al objeto {name: "John"} (lo llamaremos John por brevedad). La propiedad "name"’ de John almacena un dato primitivo, por lo que está pintada dentro del objeto.
 
@@ -45,7 +45,7 @@ Si se sobrescribe el valor de user, se pierde la referencia:
 user = null;
 ````
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_02.png?raw=true)
 
 Ahora John se vuelve inalcanzable. No hay forma de acceder a él, no hay referencias a él. El recolector de basura desechará los datos y liberará la memoria.
 
@@ -62,7 +62,7 @@ let user = {
 let admin = user;
 ````
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_03.png?raw=true)
 
 Ahora si hacemos lo mismo
 
@@ -98,7 +98,7 @@ La función marry “casa” dos objetos dándoles referencias entre sí y devue
 
 La estructura de memoria resultante:
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_04.png?raw=true)
 
 Por ahora, todos los objetos son accesibles.
 
@@ -109,19 +109,19 @@ delete family.father;
 delete family.mother.husband;
 ````
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_05.png?raw=true)
 
 No es suficiente eliminar solo una de estas dos referencias, porque todos los objetos aún serían accesibles.
 
 Pero si eliminamos ambos, entonces podemos ver que John ya no tiene referencias entrantes:
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_06.png?raw=true)
 
 Las referencias salientes no importan. Solo los entrantes pueden hacer que un objeto sea accesible. Entonces, John ahora es inalcanzable y será eliminado de la memoria con todos sus datos que también se volvieron inaccesibles.
 
 Después de la recolección de basura:
 
-![image_07]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_07.png?raw=true)
 
 ## Isla inalcanzable
 
@@ -135,7 +135,7 @@ family = null;
 
 La imagen en memoria se convierte en:
 
-![image_08]()
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_08.png?raw=true)
 
 Este ejemplo demuestra cuán importante es el concepto de alcance.
 
@@ -157,25 +157,25 @@ Los siguientes pasos de “recolección de basura” se realizan regularmente:
 
 Por ejemplo, si nuestra estructura de objeto se ve así:
 
-![image_09]()
+![image_09](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_09.png?raw=true)
 
 Podemos ver claramente una “isla inalcanzable” al lado derecho. Ahora veamos cómo el recolector de basura maneja “marcar y barrer”.
 
 El primer paso marca las raíces:
 
-![image_10]()
+![image_10](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_10.png?raw=true)
 
 Luego se buscan sus referencias salientes y se marcan los objetos referenciados:
 
-![image_11]()
+![image_11](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_11.png?raw=true)
 
 … luego se continúa con las referencias salientes de estos objetos, y se continúa marcando mientras sea posible:
 
-![image_12]()
+![image_12](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_12.png?raw=true)
 
 Ahora los objetos que no se pudieron visitar en el proceso se consideran inalcanzables y se eliminarán:
 
-![image_13]()
+![image_13](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/garbage-collection/img/image_13.png?raw=true)
 
 Podemos imaginar el proceso como derramar un enorme cubo de pintura desde las raíces, que fluye a través de todas las referencias y marca todos los objetos alcanzables. Los elementos que no queden marcados son entonces eliminados.
 
