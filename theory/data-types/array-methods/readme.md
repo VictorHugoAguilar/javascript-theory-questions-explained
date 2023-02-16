@@ -608,7 +608,7 @@ Veamos los detalles de lo que está pasando.
 
 El flujo de cálculos:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/img/image_01.png?raw=true)
 
 O en la forma de una tabla, donde cada fila representa un llamado a una función en el próximo elemento del array:
 
