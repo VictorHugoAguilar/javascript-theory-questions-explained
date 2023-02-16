@@ -12,7 +12,7 @@ Más estructuras de datos y un estudio más profundo de los tipos.
 8. [WeakMap y WeakSet](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/weakmap-weakset/readme.md)
 9. [Object.keys, values, entries](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/keys-values-entries/readme.md)
 10. [Asignación desestructurante](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/destructuring-assignment/readme.md)
-11. [Fecha y Hora]()
+11. [Fecha y Hora](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/readme.md)
 12. [Métodos JSON, toJSON]()
 
 ---
