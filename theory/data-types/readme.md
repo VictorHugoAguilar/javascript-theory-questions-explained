@@ -13,7 +13,7 @@ Más estructuras de datos y un estudio más profundo de los tipos.
 9. [Object.keys, values, entries](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/keys-values-entries/readme.md)
 10. [Asignación desestructurante](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/destructuring-assignment/readme.md)
 11. [Fecha y Hora](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/readme.md)
-12. [Métodos JSON, toJSON]()
+12. [Métodos JSON, toJSON](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/json/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md)
