@@ -1,0 +1,24 @@
+# crea-una-fecha
+
+El constructor new Date utiliza la zona horaria local. Lo único importante por recordar es que los meses se cuentan desde el 0.
+
+Por ejemplo, febrero es el mes 1.
+
+Aquí hay un ejemplo con números como componentes de fecha:
+
+````js
+//new Date(año, mes, día, hora, minuto, segundo, milisegundo)
+let d1 = new Date(2012, 1, 20, 3, 12);
+alert( d1 );
+````
+
+También podríamos crear una fecha a partir de un string, así:
+
+````js
+//new Date(datastring)
+let d2 = new Date("2012-02-20T03:12");
+alert( d2 );
+````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/readme.md#crea-una-fecha)
