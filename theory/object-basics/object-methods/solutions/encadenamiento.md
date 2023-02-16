@@ -1,4 +1,4 @@
-# encadenamiento
+# Encadenamiento
 
 La solución es devolver el objeto mismo desde cada llamado.
 
