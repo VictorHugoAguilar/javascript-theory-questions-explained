@@ -6,7 +6,7 @@ Más estructuras de datos y un estudio más profundo de los tipos.
 2. [Números](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/number/readme.md)
 3. [Strings](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/readme.md)
 4. [Arrays](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/readme.md)
-5. [Métodos de arrays]()
+5. [Métodos de arrays](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/readme.md)
 6. [Iterables]()
 7. [Map y Set]()
 8. [WeakMap y WeakSet]()
