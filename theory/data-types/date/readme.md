@@ -1,4 +1,4 @@
-# Fecha y Hora
+# 📖 Fecha y Hora
 
 Aprendamos un nuevo objeto incorporado de JS: Date. Este objeto almacena la fecha, la hora, y brinda métodos para administrarlas.
 
@@ -433,7 +433,7 @@ Crea un objeto Date para la fecha: Feb 20, 2012, 3:12am. La zona horaria es loca
 
 Muéstralo en pantalla utilizando alert.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/crea-una-fecha.md)
 
 ## Muestra en pantalla un día de la semana
 
@@ -446,7 +446,7 @@ let date = new Date(2012, 0, 3);  // 3 Jan 2012
 alert( getWeekDay(date) );        // debería mostrar "TU"
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/muestra-en-pantalla-un-dia-de-la-semana.md)
 
 ## Dia de la semana europeo
 
@@ -457,7 +457,7 @@ let date = new Date(2012, 0, 3);  // 3 Jan 2012
 alert( getLocalDay(date) );       // tuesday, should show 2
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/dia-de-la-semana-europeo.md)
 
 ## Que dia del mes era hace algunos dias atras
 
@@ -477,7 +477,7 @@ alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
 
 P.D.: La función no debería modificar la fecha date pasada como argumento.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/que-dia-del-mes-era-hace-algunos-dias-atras.md)
 
 ## Cual es el ultimo dia del mes
 
@@ -490,7 +490,7 @@ Parámetros:
 
 Por ejemplo, getLastDayOfMonth(2012, 1) = 29 (febrero, año bisiesto).
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/cual-es-el-ultimo-dia-del-mes.md)
 
 ## Cuantos segundos transcurrieron el dia de hoy
 
@@ -503,7 +503,7 @@ getSecondsToday() == 36000 // (3600 * 10)
 ````
 La función debe poder funcionar correctamente cualquier día. Es decir, no debe poseer valores fijos en el código, como por ej. “today”.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/cuantos-segundos-transcurrieron-el-dia-de-hoy.md)
 
 ## Cuantos segundos faltan para el dia de manana
 
@@ -517,7 +517,7 @@ getSecondsToTomorrow() == 3600
 
 P.D.: La función debe poder funcionar para cualquier día, sin valores fijos en el código como “today”.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/cuantos-segundos-faltan-para-el-dia-de-manana.md)
 
 ## Cambia el formato a fecha relativa
 
@@ -541,7 +541,7 @@ alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "hace 5 min."
 alert( formatDate(new Date(new Date - 86400 * 1000)) );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/date/solutions/cambia-el-formato-a-fecha-relativa.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
