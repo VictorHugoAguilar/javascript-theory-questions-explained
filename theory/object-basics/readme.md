@@ -7,7 +7,7 @@
 5. [Constructor, operador "new"](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/constructor-new/readme.md)
 6. [Encadenamiento opcional '?.'](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/optional-chaining/readme.md)
 7. [Tipo Symbol](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/symbol/readme.md)
-8. [Conversión de objeto a valor primitivo]()
+8. [Conversión de objeto a valor primitivo](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-toprimitive/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md)
