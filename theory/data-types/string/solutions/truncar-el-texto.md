@@ -11,5 +11,5 @@ function truncate(str, maxlength) {
 }
 ````
 
---
+---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/readme.md#truncar-el-texto)
