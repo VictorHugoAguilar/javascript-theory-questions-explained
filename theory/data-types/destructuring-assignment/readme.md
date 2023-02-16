@@ -577,7 +577,7 @@ alert( age ); // 30
 alert( isAdmin ); // false
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/destructuring-assignment/solutions/asignacion-desestructurante.md)
 
 ## El salario maximo
 
@@ -598,7 +598,7 @@ Crear la función topSalary(salaries) que devuelva el nombre de la persona mejor
 
 PD: Utilice Object.entries y desestructuración para iterar sobre pares de claves/valores.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/destructuring-assignment/solutions/el-salario-maximo.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
