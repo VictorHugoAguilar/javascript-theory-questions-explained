@@ -6,7 +6,7 @@ Hasta ahora, para nosotros una propiedad era un simple par “clave-valor”. Pe
 
 En este capítulo vamos a estudiar opciones adicionales de configuración, y en el siguiente veremos como convertirlas invisiblemente en funciones ‘getter/setter’ para obtener/asignar valores.
 
-## Indicadores de propiedad
+## Indicadores de propiedad
 
 Las propiedades de objeto, aparte de un value, tienen tres atributos especiales (también llamados “indicadores”):
 
