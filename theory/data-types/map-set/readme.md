@@ -344,7 +344,7 @@ P.D. Aquí se usan strings, pero pueden ser valores de cualquier tipo.
 
 P.D.S. Use Set para almacenar valores únicos.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/map-set/solutions/filtrar-miembros-unicos-del-array.md)
 
 ## Filtrar anagramas
 
@@ -372,7 +372,7 @@ Es decir, de cada grupo de anagramas debe quedar solo una palabra, sin importar 
 
 Abrir en entorno controlado con pruebas.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/map-set/solutions/filtrar-anagramas.md)
 
 ## Claves iterables
 
@@ -393,4 +393,4 @@ keys.push("more");
 
 ¿Por qué? ¿Cómo podemos arreglar el código para que funcione keys.push?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/map-set/solutions/claves-iterables.md)
