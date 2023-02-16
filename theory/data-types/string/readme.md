@@ -529,7 +529,7 @@ Escribe una función ucFirst(str) que devuelva el string str con el primer cará
 ucFirst("john") == "John";
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/solutions/hacer-mayuscula-el-primer-caracter.md)
 
 ## Buscar spam
 
@@ -543,7 +543,7 @@ checkSpam('xxxxx gratis') == true
 checkSpam("coneja inocente") == false
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/solutions/buscar-spam.md)
 
 ## Truncar el texto
 
@@ -559,7 +559,7 @@ truncate("Lo que me gustaría contar sobre este tema es:", 20) = "Lo que me gust
 truncate("Hola a todos!", 20) = "Hola a todos!"
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/solutions/truncar-el-texto.md)
 
 ## Extraer el dinero
 
@@ -573,7 +573,7 @@ Por ejemplo:
 alert( extractCurrencyValue('$120') === 120 ); // true
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/string/solutions/extraer-el-dinero.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
