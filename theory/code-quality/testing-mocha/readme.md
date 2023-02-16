@@ -178,8 +178,9 @@ Vamos a incluir un test para ver si pow(3,4) = 81.
 
 Podemos escoger entre dos formas de organizar el test:
 
-La primera manera – añadir un assert más en el mismo it:
+1. La primera manera – añadir un assert más en el mismo it:
 
+````js
 describe("pow", function() {
 
   it("eleva a la n-ésima potencia", function() {
@@ -188,8 +189,11 @@ describe("pow", function() {
   });
 
 });
-La segunda – hacer dos tests:
+````
+  
+2. La segunda – hacer dos tests:
 
+````js
 describe("pow", function() {
 
   it("2 elevado a la potencia de 3 es 8", function() {
@@ -201,13 +205,15 @@ describe("pow", function() {
   });
 
 });
+````
+  
 La diferencia principal se da cuando assert lanza un error, el bloque it termina inmediatamente. De forma que si en la primera manera el primer assert falla, no veremos nunca el resultado del segundo assert.
 
 Hacer los tests separados es útil para recoger información sobre qué está pasando, de forma que la segunda manera es mejor.
 
 A parte de eso, hay otra regla que es bueno seguir.
 
-Un test comprueba una sola cosa
+**Un test comprueba una sola cosa**
 
 Si vemos que un test contiene dos comprobaciones independientes, es mejor separar el test en dos tests más simples.
 
@@ -215,12 +221,15 @@ Así que continuamos con la segunda manera.
 
 El resultado:
 
+![image_02]()
 
-Como podemos esperar, el segundo falla. Nuestra función siempre devuelve 8 mientras el assert espera 27.
+Como podemos esperar, el segundo falla. Nuestra función siempre devuelve 8 mientras el assert espera `27`.
 
-Mejoramos la implementación
+## Mejoramos la implementación
+
 Vamos a escribir algo más real para que pasen los tests:
 
+````js
 function pow(x, n) {
   let result = 1;
 
@@ -230,8 +239,11 @@ function pow(x, n) {
 
   return result;
 }
+````
+                        
 Para estar seguros de que la función trabaja bien, vamos a hacer comprobaciones para más valores. En lugar de escribir bloques it manualmente, vamos a generarlos con un for:
 
+````js
 describe("pow", function() {
 
   function makeTest(x) {
@@ -246,14 +258,19 @@ describe("pow", function() {
   }
 
 });
+````
+  
 El resultado:
 
+![image_03]()
 
-Describe anidados
+## Describe anidados
+
 Vamos a añadir más tests. Pero antes, hay que apuntar que la función makeTest y la instrucción for deben ser agrupados juntos. No queremos makeTest en otros tests, solo se necesita en el for: su tarea común es comprobar cómo pow eleva a una potencia concreta.
 
-Agrupar tests se realiza con describe:
+Agrupar tests se realiza con `describe`:
 
+````js
 describe("pow", function() {
 
   describe("eleva x a la potencia de 3", function() {
@@ -273,16 +290,20 @@ describe("pow", function() {
 
   // ... otros test irían aquí, se puede escribir describe como it
 });
+````
+                          
 El describe anidado define un nuevo subgrupo de tests. En la salida podemos ver la indentación en los títulos:
 
+![image_04]()
 
-En el futuro podemos añadir más it y describe en el primer nivel con funciones de ayuda para ellos mismos, no se solaparán con makeTest.
+En el futuro podemos añadir más `it` y `describe` en el primer nivel con funciones de ayuda para ellos mismos, no se solaparán con makeTest.
 
-before/after y beforeEach/afterEach
+### ℹ️ before/after y beforeEach/afterEach
 Podemos configurar funciones before/after que se ejecuten antes/después de la ejecución de los tests, y también funciones beforeEach/afterEach que ejecuten antes/después de cada it.
 
 Por ejemplo:
 
+````js
 describe("test", function() {
 
   before(() => alert("Inicio testing – antes de todos los tests"));
@@ -295,8 +316,11 @@ describe("test", function() {
   it('test 2', () => alert(2));
 
 });
+````
+
 La secuencia que se ejecuta es la siguiente:
 
+````js
 Inicio testing – antes de todos los tests (before)
 Antes de un test – entramos al test (beforeEach)
 1
@@ -305,18 +329,23 @@ Antes de un test – entramos al test (beforeEach)
 2
 Después de un test – salimos del test   (afterEach)
 Final testing – después de todos los tests (after)
-Abre el ejemplo en un sandbox.
-Normalmente, beforeEach/afterEach (before/after) son usados para realizar la inicialización, poner contadores a cero o hacer algo entre cada test o cada grupo de tests.
+````
 
-Extender los spec
-La funcionalidad básica de pow está completa. La primera iteración del desarrollo está hecha. Cuando acabemos de celebrar y beber champán – sigamos adelante y mejorémosla.
+**Abre el ejemplo en un sandbox.**
 
-Como se dijo, la función pow(x, n) está dedicada a trabajar con valores enteros positivos n.
+Normalmente, `beforeEach/afterEach (before/after)` son usados para realizar la inicialización, poner contadores a cero o hacer algo entre cada test o cada grupo de tests.
+
+## Extender los spec
+
+La funcionalidad básica de `pow` está completa. La primera iteración del desarrollo está hecha. Cuando acabemos de celebrar y beber champán – sigamos adelante y mejorémosla.
+
+Como se dijo, la función `pow(x, n)` está dedicada a trabajar con valores enteros positivos n.
 
 Para indicar un error matemático, JavaScript normalmente devuelve NaN como resultado de una función. Hagamos lo mismo para valores incorrectos de n.
 
-Primero incluyamos el comportamiento en el spec(!):
+Primero incluyamos el comportamiento en el `spec(!)`:
 
+````js
 describe("pow", function() {
 
   // ...
@@ -330,24 +359,29 @@ describe("pow", function() {
   });
 
 });
+````
+
 El resultado con los nuevos tests:
 
+![image_05]()
 
 El test recién creado falla, porque nuestra implementación no lo soporta. Así es como funciona la metodología BDD: primero escribimos un test que falle y luego realizamos la implementación para que pase.
 
-Otras comprobaciones
-Por favor, ten en cuenta la comprobación assert.isNaN: ella comprueba que el valor es NaN.
+### ℹ️ Otras comprobaciones
+Por favor, ten en cuenta la comprobación `assert.isNaN`: ella comprueba que el valor es `NaN`.
 
 Hay otras comprobaciones en Chai también Chai, por ejemplo:
 
-assert.equal(value1, value2) – prueba la igualdad value1 == value2.
-assert.strictEqual(value1, value2) – prueba la igualdad estricta value1 === value2.
-assert.notEqual, assert.notStrictEqual – el contrario que arriba.
-assert.isTrue(value) – prueba que value === true
-assert.isFalse(value) – prueba que value === false
-… la lista completa se puede encontrar en docs
+* assert.equal(value1, value2) – prueba la igualdad value1 == value2.
+* assert.strictEqual(value1, value2) – prueba la igualdad estricta value1 === value2.
+* assert.notEqual, assert.notStrictEqual – el contrario que arriba.
+* assert.isTrue(value) – prueba que value === true
+* assert.isFalse(value) – prueba que value === false
+* … la lista completa se puede encontrar en docs
+
 Así que podemos añadir un par de líneas a pow:
 
+````js
 function pow(x, n) {
   if (n < 0) return NaN;
   if (Math.round(n) != n) return NaN;
@@ -360,30 +394,38 @@ function pow(x, n) {
 
   return result;
 }
+````
+  
 Ahora funciona y todos los tests pasan:
 
-Abre el ejemplo final en un sandbox.
-Resumen
+![image_06]()
+  
+**Abre el ejemplo final en un sandbox.**
+  
+## Resumen
+
 En BDD, la especificación va primero, seguida de la implementación. Al final tenemos tanto la especificación como la implementación.
 
 El spec puede ser usado de tres formas:
 
-Como Tests garantizan que el código funciona correctamente.
-Como Docs – los títulos de los describe e it nos dicen lo que la función hace.
-Como Ejemplos – los tests son también ejemplos funcionales que muestran cómo una función puede ser usada.
+1. Como `Tests` garantizan que el código funciona correctamente.
+2. Como `Docs` – los títulos de los `describe` e `it` nos dicen lo que la función hace.
+3. Como `Ejemplos` – los tests son también ejemplos funcionales que muestran cómo una función puede ser usada.
+
 Con la especificación, podemos mejorar de forma segura, cambiar, incluso reescribir la función desde cero y estar seguros de que seguirá funcionando.
 
 Esto es especialmente importante en proyectos largos cuando una función es usada en muchos sitios. Cuando cambiamos una función, no hay forma manual de comprobar si cada sitio donde se usaba sigue funcionando correctamente.
 
 Sin tests, la gente tiene dos opciones:
 
-Realizar el cambio como sea. Luego nuestros usuarios encontrarán errores porque probablemente fallemos en encontrarlos.
-O, si el castigo por errores es duro, la gente tendrá miedo de hacer cambios en las funciones. Entonces el código envejecerá, nadie querrá meterse en él y eso no es bueno para el desarrollo.
-¡El test automatizado ayuda a evitar estos problemas!
+1. Realizar el cambio como sea. Luego nuestros usuarios encontrarán errores porque probablemente fallemos en encontrarlos.
+2. O, si el castigo por errores es duro, la gente tendrá miedo de hacer cambios en las funciones. Entonces el código envejecerá, nadie querrá meterse en él y eso no es bueno para el desarrollo.
+
+**¡El test automatizado ayuda a evitar estos problemas!**
 
 Si el proyecto esta cubierto de pruebas, no tendremos ese problema. Podemos correr los tests y hacer multitud de comprobaciones en cuestión de segundos.
 
-Además, un código bien probado tendrá una mejor arquitectura.
+**Además, un código bien probado tendrá una mejor arquitectura.**
 
 Naturalmente, porque el código será más fácil de cambiar y mejorar. Pero no sólo eso.
 
@@ -395,11 +437,13 @@ En el tutorial encontrarás más adelante muchas tareas respaldadas con pruebas.
 
 Escribir tests requiere un buen conocimiento de JavaScript. Pero nosotros justo acabamos de empezar a aprenderlo. Así que para comenzar no es necesario que escribas tests, pero ahora eres capaz de leerlos incluso si son más complejos que en este capítulo.
 
-Tareas
-¿Qué esta mal en el test?
-importancia: 5
+# ✅ Tareas
+
+## Que esta mal en el test
+
 ¿Qué es incorrecto en el test de pow de abajo?
 
+````js  
 it("Eleva x a la potencia n", function() {
   let x = 5;
 
@@ -412,9 +456,11 @@ it("Eleva x a la potencia n", function() {
   result *= x;
   assert.equal(pow(x, 3), result);
 });
+````
+
 P.S. El test es sintácticamente correcto y pasa.
 
-solución
+[solución]()
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/code-quality/readme.md)
