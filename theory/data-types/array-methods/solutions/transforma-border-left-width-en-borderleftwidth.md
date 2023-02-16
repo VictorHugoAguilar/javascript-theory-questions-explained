@@ -11,7 +11,7 @@ function camelize(str) {
     )
     .join(''); // une ['my', 'Long', 'Word'] en 'myLongWord'
 }
-
+````
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/readme.md#transforma-border-left-width-en-borderleftwidth)
