@@ -59,4 +59,4 @@ Ahora funciona, porque user.ref() es un método. Y el valor de this es estableci
 
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-method/readme.md#usando-el-this-en-un-objeto-literal)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object-methods/readme.md#usando-el-this-en-un-objeto-literal)
