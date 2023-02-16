@@ -277,4 +277,4 @@ alert(accumulator.value); // muestra la suma de estos valores
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/constructor-new/solutions/crear-nuevo-acumulador.md)
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md)
