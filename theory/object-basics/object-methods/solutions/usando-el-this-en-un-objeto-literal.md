@@ -1,4 +1,4 @@
-# usando-el-this-en-un-objeto-literal
+# Usando el this en un objeto literal
 
 **Respuesta: un error.**
 
