@@ -576,4 +576,4 @@ P.D. Usa typeof para verificar si hay un número aquí.
 [solución]()
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/new/main/theory/object-basics/readme.md)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md)
