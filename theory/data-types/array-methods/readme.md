@@ -828,7 +828,7 @@ alert( arr ); // 5,3,8,1 (array original no modificado)
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/filtrar-un-rango.md)
 
-## Filtrar rango "en el lugar"
+## Filtrar rango en el lugar
 
 Escribe una función filterRangeInPlace(arr, a, b) que obtenga un array arr y remueva del mismo todos los valores excepto aquellos que se encuentran entre a y b. El test es: a ≤ arr[i] ≤ b.
 
@@ -1031,7 +1031,7 @@ alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/obtener-edad-promedio.md)
 
-## Filtrar elementos únicos de un array
+## Filtrar elementos unicos de un array
 
 Partiendo del array arr.
 
