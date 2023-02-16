@@ -806,7 +806,7 @@ P.D. Pista: usa split para dividir el string en un array, transfórmalo y vuelve
 
 Abrir en entorno controlado con pruebas.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/transforma-border-left-width-en-borderleftwidth.md)
 
 ## Filtrar un rango
 
@@ -826,7 +826,7 @@ alert( filtered ); // 3,1 (valores dentro del rango)
 alert( arr ); // 5,3,8,1 (array original no modificado)
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/filtrar-un-rango.md)
 
 ## Filtrar rango "en el lugar"
 
@@ -844,7 +844,7 @@ filterRangeInPlace(arr, 1, 4); // remueve los números excepto aquellos entre 1 
 alert( arr ); // [3, 1]
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/filtrar-rango-en-el-lugar.md)
 
 ## Ordenar en orden decreciente
 
@@ -856,7 +856,7 @@ let arr = [5, 2, 1, -10, 8];
 alert( arr ); // 8, 5, 2, 1, -10
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/ordenar-en-orden-decreciente.md)
 
 ## Copia y ordena un array
 
@@ -873,7 +873,7 @@ alert( sorted ); // CSS, HTML, JavaScript
 alert( arr ); // HTML, JavaScript, CSS (sin cambios)
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/copia-y-ordena-un-array.md)
 
 ## Crea una calculadora extensible
 
@@ -909,7 +909,7 @@ alert( result ); // 8
 * Los números y el operador deben estar delimitados por exactamente un espacio.
 * Puede haber manejo de errores si quisieras agregarlo.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/crea-una-calculadora-extensible.md)
 
 ## Mapa a nombres
 
@@ -929,7 +929,7 @@ let names = /* ... tu código */
 alert( names ); // John, Pete, Mary
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/mapa-a-nombres.md)
 
 ## Mapa a objetos
 
@@ -962,7 +962,7 @@ alert( usersMapped[0].fullName ) // John Smith
 
 Entonces, en realidad lo que necesitas es mapear un array de objetos a otro. Intenta usar => en este caso. Hay un pequeño truco.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/mapa-a-objetos.md)
 
 ## Ordena usuarios por edad
 
@@ -985,7 +985,7 @@ alert(arr[1].name); // Mary
 alert(arr[2].name); // Pete
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/ordena-usuarios-por-edad.md)
 
 ## Barajar un array
 
@@ -1009,7 +1009,7 @@ shuffle(arr);
 
 Todos los reordenamientos de elementos tienen que tener la misma probabilidad. Por ejemplo, [1,2,3] puede ser reordenado como [1,2,3] o [1,3,2] o [3,1,2] etc, con igual probabilidad en cada caso.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/barajar-un-array.md)
 
 ## Obtener edad promedio
 
@@ -1029,7 +1029,7 @@ let arr = [ john, pete, mary ];
 alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/obtener-edad-promedio.md)
 
 ## Filtrar elementos únicos de un array
 
@@ -1051,7 +1051,7 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
 alert( unique(strings) ); // Hare, Krishna, :-O
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/filtrar-elementos-unicos-de-un-array.md)
 
 ## Crea un objeto a partir de un array
 
@@ -1089,7 +1089,7 @@ Usa el método de array .reduce en la solución.
 
 Abrir en entorno controlado con pruebas.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array-methods/solutions/crea-un-objeto-a-partir-de-un-array.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
