@@ -1,4 +1,4 @@
-# crea-una-calculadora.md
+# Crea una calculadora
 
 ````js
 let calculator = {
