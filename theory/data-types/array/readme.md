@@ -563,7 +563,7 @@ shoppingCart.push("Banana");
 alert( fruits.length ); // ¿?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/solutions/el-array-es-copiado.md)
 
 ## Operaciones en arrays.
 
@@ -585,7 +585,7 @@ Classics, Rock-n-Roll
 Rap, Reggae, Classics, Rock-n-Roll
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/solutions/operaciones-en-arrays.md)
 
 ## LLamados en un contexto de array
 
@@ -601,7 +601,7 @@ arr.push(function() {
 arr[2](); // ?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/solutions/llamados-en-un-contexto-de-array.md)
 
 ## Suma de numeros ingresados
 
@@ -613,7 +613,7 @@ Escribe una función sumInput() que:
 
 P.D. Un cero 0 es un número válido, por favor no detengas los ingresos con el cero.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/solutions/suma-de-numeros-ingresados.md)
 
 ## Subarray maximo
 
@@ -642,7 +642,7 @@ getMaxSubSum([-1, -2, -3]) = 0
 
 Trata de pensar un solución rápida: O(n2) o incluso O(n) si puedes.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/array/solutions/subarray-maximo.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
