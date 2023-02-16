@@ -10,9 +10,9 @@ En este capítulo vamos a estudiar opciones adicionales de configuración, y en 
 
 Las propiedades de objeto, aparte de un value, tienen tres atributos especiales (también llamados “indicadores”):
 
-* writable – si es true, puede ser editado, de otra manera es de solo lectura.
-* enumerable – si es true, puede ser listado en bucles, de otro modo no puede serlo.
-* configurable – si es true, la propiedad puede ser borrada y estos atributos pueden ser modificados, de otra forma no.
+* **writable** – si es true, puede ser editado, de otra manera es de solo lectura.
+* **enumerable** – si es true, puede ser listado en bucles, de otro modo no puede serlo.
+* **configurable** – si es true, la propiedad puede ser borrada y estos atributos pueden ser modificados, de otra forma no.
 
 No los vimos hasta ahora porque generalmente no se muestran. Cuando creamos una propiedad “de la forma usual”, todos ellos son true. Pero podemos cambiarlos en cualquier momento.
 
