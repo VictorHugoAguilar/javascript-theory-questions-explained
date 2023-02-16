@@ -227,9 +227,10 @@ let b = new B();
 
 alert( a == b ); // true
 ````
+
 Si es posible, entonces proporcione un ejemplo de su código.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/constructor-new/solutions/dos-funciones-un-objeto.md)
 
 ## Crear nueva Calculadora
 
@@ -249,7 +250,7 @@ alert( "Sum=" + calculator.sum() );
 alert( "Mul=" + calculator.mul() );
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/constructor-new/solutions/crear-nueva-calculadora.md)
 
 ## Crear nuevo Acumulador
 
@@ -273,7 +274,7 @@ accumulator.read(); // agrega el valor introducido por el usuario
 alert(accumulator.value); // muestra la suma de estos valores
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/constructor-new/solutions/crear-nuevo-acumulador.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/readme.md
