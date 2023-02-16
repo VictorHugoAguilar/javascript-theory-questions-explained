@@ -1,6 +1,6 @@
 ## Objetos: lo básico
 
-1. [Objetos]()
+1. [Objetos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/object-basics/object/readme.md)
 2. [Referencias de objetos y copia]()
 3. [Recolección de basura]()
 4. [Métodos del objeto, "this"]()
