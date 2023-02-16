@@ -400,7 +400,7 @@ Ahora funciona y todos los tests pasan:
 
 ![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_07.png?raw=true)
   
-**Abre el ejemplo final en un sandbox.**
+**Abre el ejemplo final en un sandbox**.
   
 ## Resumen
 
