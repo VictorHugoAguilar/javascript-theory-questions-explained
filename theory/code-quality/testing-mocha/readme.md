@@ -148,7 +148,7 @@ La página puede ser dividida en cinco partes:
 
 El resultado:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_01.png?raw=true)
 
 De momento, el test falla. Es lógico: tenemos el código vacío en la función `pow`, así que `pow(2,3)` devuelve `undefined` en lugar de `8`.
 
@@ -166,7 +166,7 @@ function pow(x, n) {
 
 ¡Ahora funciona!
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_02.png?raw=true)
 
 ## Mejoramos el spec
 
@@ -221,7 +221,7 @@ Así que continuamos con la segunda manera.
 
 El resultado:
 
-![image_02]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_03.png?raw=true)
 
 Como podemos esperar, el segundo falla. Nuestra función siempre devuelve 8 mientras el assert espera `27`.
 
@@ -262,7 +262,7 @@ describe("pow", function() {
   
 El resultado:
 
-![image_03]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_04.png?raw=true)
 
 ## Describe anidados
 
@@ -294,7 +294,7 @@ describe("pow", function() {
                           
 El describe anidado define un nuevo subgrupo de tests. En la salida podemos ver la indentación en los títulos:
 
-![image_04]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_05.png?raw=true)
 
 En el futuro podemos añadir más `it` y `describe` en el primer nivel con funciones de ayuda para ellos mismos, no se solaparán con makeTest.
 
@@ -363,7 +363,7 @@ describe("pow", function() {
 
 El resultado con los nuevos tests:
 
-![image_05]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_06.png?raw=true)
 
 El test recién creado falla, porque nuestra implementación no lo soporta. Así es como funciona la metodología BDD: primero escribimos un test que falle y luego realizamos la implementación para que pase.
 
@@ -398,7 +398,7 @@ function pow(x, n) {
   
 Ahora funciona y todos los tests pasan:
 
-![image_06]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/code-quality/testing-mocha/img/image_07.png?raw=true)
   
 **Abre el ejemplo final en un sandbox.**
   
