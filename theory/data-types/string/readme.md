@@ -4,7 +4,7 @@ En JavaScript, los datos textuales son almacenados como strings (cadena de carac
 
 El formato interno para strings es siempre UTF-16, no está vinculado a la codificación de la página.
 
-## Comillas
+## Comillas
 
 Recordemos los tipos de comillas.
 
