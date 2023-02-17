@@ -243,7 +243,7 @@ delete Rabbit.prototype.eats;
 alert( rabbit.eats ); // ?
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/function-prototype/solutions/cambiando-prototype.md)
 
 ## Crea un objeto con el mismo constructor
 
@@ -257,7 +257,7 @@ let obj2 = new obj.constructor();
 
 Dé un ejemplo de una función constructora para obj que permita que dicho código funcione correctamente. Y un ejemplo que hace que funcione mal.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/function-prototype/solutions/crea-un-objeto-con-el-mismo-constructor.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/readme.md)
