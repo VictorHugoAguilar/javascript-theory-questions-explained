@@ -90,7 +90,7 @@ Después de que el objeto new User es creado, cuando llamamos a sus métodos est
 
 Podemos ilustrar el resultado de la declaración de class User como:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class/img/image_01.png?raw=true)
 
 Aquí el código para inspeccionarlo:
 
