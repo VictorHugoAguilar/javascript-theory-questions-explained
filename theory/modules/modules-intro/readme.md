@@ -16,7 +16,7 @@ Ahora, todo esto se convierte lentamente en una parte de la historia, pero aún 
 
 El sistema de módulos a nivel de idioma apareció en el estándar en 2015, evolucionó gradualmente desde entonces y ahora es compatible con todos los principales navegadores y en Node.js. Así que estudiaremos los módulos modernos de Javascript de ahora en adelante.
 
-## Qué es un módulo?
+## Qué es un módulo?
 
 Un módulo es solo un archivo. Un script es un módulo. Tan sencillo como eso.
 
@@ -455,4 +455,4 @@ Cuando usamos módulos, cada módulo implementa la funcionalidad y la exporta. L
 En la producción, las personas a menudo usan paquetes como Webpack para agrupar módulos por rendimiento y otras razones.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/data-types/readme.md)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/modules/readme.md)
