@@ -231,7 +231,7 @@ for(let key in dictionary) {
 alert(dictionary); // "manzana,__proto__"
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-methods/solutions/anadir-tostring-al-diccionario.md)
 
 ## La diferencia entre llamadas
 
@@ -258,7 +258,7 @@ Object.getPrototypeOf(rabbit).sayHi();
 rabbit.__proto__.sayHi();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-methods/solutions/la-diferencia-entre-llamadas.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/readme.md)
