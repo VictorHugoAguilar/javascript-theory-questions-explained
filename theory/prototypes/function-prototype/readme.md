@@ -1,15 +1,15 @@
 # 📖 F.prototype
 
-Recuerde: se pueden crear nuevos objetos con una función constructora, como new F().
+Recuerde: se pueden crear nuevos objetos con una función constructora, como `new F()`.
 
-Si F.prototype es un objeto, entonces el operador new lo usa para establecerlo como [[Prototype]] en el nuevo objeto.
+Si `F.prototype` es un objeto, entonces el operador `new` lo usa para establecerlo como `[[Prototype]]` en el nuevo objeto.
 
 ### ℹ️ Por favor tome nota:
 JavaScript tiene herencia prototípica desde sus comienzos. Era una de las características principales del lenguaje.
 
 Pero en los viejos tiempos no había acceso directo a ella. Lo único que funcionaba de manera confiable era una propiedad "prototype" de la función constructora, la que describimos en este capítulo. Por ello hay muchos scripts que todavía lo usan.
 
-Tenga en cuenta que F.prototype aquí significa una propiedad regular llamada "prototype" en F. Suena algo similar al término “prototype”, pero aquí realmente queremos decir una propiedad regular con este nombre.
+Tenga en cuenta que `F.prototype` aquí significa una propiedad regular llamada `"prototype"` en `F.` Suena algo similar al término “prototype”, pero aquí realmente queremos decir una propiedad regular con este nombre.
 
 Aquí está el ejemplo:
 
@@ -29,7 +29,7 @@ let rabbit = new Rabbit("Conejo Blanco"); //  rabbit.__proto__ == animal
 alert( rabbit.eats ); // verdadero
 ````
 
-La configuración de Rabbit.prototype = animal literalmente establece lo siguiente: "Cuando se crea un new Rabbit, asigne animal a su [[Prototype]].
+La configuración de `Rabbit.prototype = animal` literalmente establece lo siguiente: "Cuando se crea un `new Rabbit`, asigne `animal` a su `[[Prototype]]`.
 
 Esta es la imagen resultante:
 
