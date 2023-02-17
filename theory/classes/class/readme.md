@@ -412,7 +412,7 @@ La clase Clock (ver en el sandbox) está escrita en estilo funcional. Reescríbe
 
 P.D. El reloj anda en la consola, ábrela para verlo.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class/solutions/tasks.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/readme.md)
