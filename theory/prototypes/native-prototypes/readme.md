@@ -206,7 +206,7 @@ f.defer(1000); // muestra "Hola!" después de 1 segundo
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/native-prototypes/solutions/agregue-el-metodo-f-defer-ms-a-las-funciones.md)
 
-## Agregue el decorado defer a las funciones
+## Agregue el decorado defer a las funciones
 
 Agregue el método defer(ms) al prototipo de todas las funciones, que devuelve un contenedor, retrasando la llamada en ms milisegundos.
 
