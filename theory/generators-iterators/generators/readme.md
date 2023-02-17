@@ -419,5 +419,8 @@ alert(generator.next().value); // 282475249
 alert(generator.next().value); // 1622650073
 Abrir en entorno controlado con pruebas.
 
-solución
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/solutions/generador-pseudoaleatorio.md)
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/readme.md)
 
