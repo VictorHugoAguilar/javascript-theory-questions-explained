@@ -205,7 +205,7 @@ Normalmente, los objetos heredan métodos nativos y getter/setter de __proto__ d
 
 # ✅ Tareas
 
-## Anadir toString al diccionario
+## Anadir toString al diccionario
 
 Hay un objeto dictionary, creado como Object.create(null), para almacenar cualquier par clave/valor.
 
