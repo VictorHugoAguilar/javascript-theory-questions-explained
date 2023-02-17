@@ -18,7 +18,7 @@ rabbit.sayHi();                        // Conejo
 Rabbit.prototype.sayHi();              // undefined
 Object.getPrototypeOf(rabbit).sayHi(); // undefined
 rabbit.__proto__.sayHi();              // undefined
-````js
+````
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-methods/readme.md#la-diferencia-entre-llamadas)
