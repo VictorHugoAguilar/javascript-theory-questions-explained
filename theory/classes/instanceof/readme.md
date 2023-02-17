@@ -1,4 +1,5 @@
-Comprobación de clase: "instanceof"
+# Comprobación de clase: "instanceof"
+
 El operador instanceof permite verificar si un objeto pertenece a una clase determinada. También tiene en cuenta la herencia.
 
 Tal verificación puede ser necesaria en muchos casos. Aquí lo usaremos para construir una función polimórfica, la que trata los argumentos de manera diferente dependiendo de su tipo.
