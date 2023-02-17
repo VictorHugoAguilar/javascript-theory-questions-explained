@@ -204,7 +204,7 @@ function f() {
 f.defer(1000); // muestra "Hola!" después de 1 segundo
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/native-prototypes/solutions/agregue-el-metodo-f-defer-ms-a-las-funciones.md)
 
 ## Agregue el decorado defer a las funciones
 
@@ -222,7 +222,7 @@ f.defer(1000)(1, 2); // muestra 3 después de 1 segundo
 
 Tenga en cuenta que los argumentos deben pasarse a la función original.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/native-prototypes/solutions/agregue-el-decorado-defer-a-las-funciones.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/readme.md)
