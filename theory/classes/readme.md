@@ -1,6 +1,6 @@
 # Clases
 
-1. [Sintaxis básica de `class`]()
+1. [Sintaxis básica de `class`](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class/readme.md)
 2. [Herencia de clase]()
 3. [Propiedades y métodos estáticos.]()
 4. [Propiedades y métodos privados y protegidos.]()
