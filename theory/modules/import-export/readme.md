@@ -398,8 +398,8 @@ export { default } from "./user.js"; // para reexportar la exportación predeter
 ```
 
 Tales rarezas de reexportar la exportación predeterminada son una de las razones por las que a algunos desarrolladores no les gustan las exportaciones predeterminadas y prefieren exportaciones con nombre.
-
-## Resumen
+  
+## Resumen
 
 Aquí están todos los tipos de ‘exportación’ que cubrimos en este y en artículos anteriores.
 
