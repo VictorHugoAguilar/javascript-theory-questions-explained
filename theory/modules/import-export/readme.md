@@ -1,13 +1,16 @@
-Export e Import
+# 📖 Export e Import
+
 Las directivas export e import tienen varias variantes de sintaxis.
 
 En el artículo anterior vimos un uso simple, ahora exploremos más ejemplos.
 
-Export antes de las sentencias
+## Export antes de las sentencias
+
 Podemos etiquetar cualquier sentencia como exportada colocando ‘export’ antes, ya sea una variable, función o clase.
 
 Por ejemplo, aquí todas las exportaciones son válidas:
 
+````js
 // exportar un array
 export let months = ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -20,21 +23,28 @@ export clase User {
     this.name = name;
   }
 }
-Sin punto y coma después de export clase/función
+````
+
+### ℹ️ Sin punto y coma después de export clase/función
 Tenga en cuenta que export antes de una clase o una función no la hace una expresión de función. Sigue siendo una declaración de función, aunque exportada.
 
 La mayoría de las guías de estilos JavaScript no recomiendan los punto y comas después de declarar funciones y clases.
 
 Es por esto que no hay necesidad de un punto y coma al final de export class y export function:
 
+````js
 export function sayHi(user) {
   alert(`Hello, ${user}!`);
 }  // no ; at the end
-Export separado de la declaración
+````
+
+## Export separado de la declaración
+
 También podemos colocar export por separado.
 
 Aquí primero declaramos y luego exportamos:
 
+````js
 // 📁 say.js
 function sayHi(user) {
   alert(`Hello, ${user}!`);
@@ -45,64 +55,87 @@ function sayBye(user) {
 }
 
 export {sayHi, sayBye}; // una lista de variables exportadas
+````
+
 …O, técnicamente podemos colocar export arriba de las funciones también.
 
-Import *
+## Import *
+
 Generalmente, colocamos una lista de lo que queremos importar en llaves import {...}, de esta manera:
 
+````js
 // 📁 main.js
 import {sayHi, sayBye} from './say.js';
 
 sayHi('John'); // Hello, John!
 sayBye('John'); // Bye, John!
+````
+
 Pero si hay mucho para importar, podemos importar todo como un objeto utilizando import * as <obj>, por ejemplo:
 
+````
 // 📁 main.js
 import * as say from './say.js';
 
 say.sayHi('John');
 say.sayBye('John');
+````
+
 A primera vista, “importar todo” parece algo tan genial, corto de escribir, por qué deberíamos listar explícitamente lo que necesitamos importar?
 
 Pues hay algunas razones.
 
-Listar explícitamente qué importar da nombres más cortos: sayHi() en lugar de say.sayHi().
-La lista explícita de importaciones ofrece una mejor visión general de la estructura del código: qué se usa y dónde. Facilita el soporte de código y la refactorización.
-No temas importar demasiado
+1. Listar explícitamente qué importar da nombres más cortos: sayHi() en lugar de say.sayHi().
+2. La lista explícita de importaciones ofrece una mejor visión general de la estructura del código: qué se usa y dónde. Facilita el soporte de código y la refactorización.
+
+### ℹ️ No temas importar demasiado
 Las herramientas de empaquetado modernas, como webpack y otras, construyen los módulos juntos y optimizan la velocidad de carga. También eliminan las importaciones no usadas.
 
 Por ejemplo, si importas import * as library desde una librería de código enorme, y usas solo unos pocos métodos, los que no se usen no son incluidos en el paquete optimizado.
 
-Importar “as”
+## Importar “as”
+  
 También podemos utilizar as para importar bajo nombres diferentes.
 
 Por ejemplo, importemos sayHi en la variable local hi para brevedad, e importar sayBye como bye:
 
+````js
 // 📁 main.js
 import {sayHi as hi, sayBye as bye} from './say.js';
 
 hi('John'); // Hello, John!
 bye('John'); // Bye, John!
-Exportar “as”
-Existe un sintaxis similar para export.
+````
+
+## Exportar “as”
+
+Existe un sintaxis similar para `export`.
 
 Exportemos funciones como hi y bye:
 
+````js
 // 📁 say.js
 ...
 export {sayHi as hi, sayBye as bye};
+````
+  
 Ahora hi y bye son los nombres oficiales para desconocidos, a ser utilizados en importaciones:
 
+````js
 // 📁 main.js
 import * as say from './say.js';
 
 say.hi('John'); // Hello, John!
 say.bye('John'); // Bye, John!
-Export default
+````
+
+## Export default
+
 En la práctica, existen principalmente dos tipos de módulos.
 
-Módulos que contienen una librería, paquete de funciones, como say.js de arriba.
-Módulos que declaran una entidad simple, por ejemplo un módulo user.js exporta únicamente class User.
+1. Módulos que contienen una librería, paquete de funciones, como say.js de arriba.
+2. Módulos que declaran una entidad simple, por ejemplo un módulo user.js exporta únicamente class User.
+
 Principalmente, se prefiere el segundo enfoque, de modo que cada “cosa” reside en su propio módulo.
 
 Naturalmente, eso requiere muchos archivos, ya que todo quiere su propio módulo, pero eso no es un problema en absoluto. En realidad, la navegación de código se vuelve más fácil si los archivos están bien nombrados y estructurados en carpetas.
