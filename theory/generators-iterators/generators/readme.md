@@ -36,7 +36,7 @@ alert(generator); // [object Generator]
 
 La ejecución del código de la función aún no ha comenzado:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_01.png?raw=true)
 
 El método principal de un generador es `next()`. Cuando se llama, se ejecuta hasta la declaración yield <value> más cercana (se puede omitir value, entonces será undefined). Luego, la ejecución de la función se detiene y el value obtenido se devuelve al código externo.
 
@@ -63,7 +63,7 @@ alert(JSON.stringify(one)); // {value: 1, done: false}
 
 A partir de ahora, obtuvimos solo el primer valor y la ejecución de la función está en la segunda línea:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_02.png?raw=true)
 
 Llamemos a `generator.next()` nuevamente. Reanuda la ejecución del código y devuelve el siguiente yield:
 
@@ -73,7 +73,7 @@ let two = generator.next();
 alert(JSON.stringify(two)); // {value: 2, done: false}
 ````
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_03.png?raw=true)
 
 Y, si lo llamamos por tercera vez, la ejecución llega a la declaración `return` que finaliza la función:
 
@@ -83,7 +83,7 @@ let three = generator.next();
 alert(JSON.stringify(three)); // {value: 3, done: true}
 ````
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_04.png?raw=true)
 
 Ahora el generador está listo. Deberíamos verlo desde done: true y procesar value: 3 como el resultado final.
 
@@ -330,7 +330,7 @@ let question = generator.next().value; // <-- yield devuelve el valor
 generator.next(4); // --> pasar el resultado al generador
 ````
 
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_05.png?raw=true)
 
 1. La primera llamada a `generator.next()` debe hacerse siempre sin un argumento (el argumento se ignora si se pasa). Inicia la ejecución y devuelve el resultado del primer `yield "2 + 2 = ?"`. En este punto, el generador detiene la ejecución, mientras permanece en la línea (*).
 2. Luego, como se muestra en la imagen de arriba, el resultado de yield entra en la variable question en el código de llamada.
@@ -371,7 +371,7 @@ alert( generator.next(9).done ); // true
 
 Imagen de la ejecución:
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/generators-iterators/generators/img/image_06.png?raw=true)
 
 1. El primer `.next()` inicia la ejecución … Llega al primer `yield`.
 2. El resultado se devuelve al código externo.
