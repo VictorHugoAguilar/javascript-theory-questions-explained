@@ -347,9 +347,9 @@ alert( rabbit.jumps ); // ? (3)
 
 Debería haber 3 respuestas.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-inheritance/solutions/trabajando-con-prototipo.md)
 
-## Algoritmo de búsqueda
+## Algoritmo de busqueda
 
 La tarea tiene dos partes.
 
@@ -377,7 +377,7 @@ let pockets = {
 Use __proto__ para asignar prototipos de manera que cualquier búsqueda de propiedades siga la ruta: pockets → bed → table → head. Por ejemplo, pockets.pen debería ser3 (que se encuentra en table), y bed.glasses debería ser 1 (que se encuentra en head).
 Responda la pregunta: ¿es más rápido obtener glasses como pockets.glasses o head.glasses? Referencie si es necesario.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-inheritance/solutions/algoritmo-de-busqueda.md)
 
 ## Donde escribe
 
@@ -399,7 +399,7 @@ let rabbit = {
 rabbit.eat();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-inheritance/solutions/donde-escribe.md)
 
 ## Por que estan llenos los dos hamsters
 
@@ -432,7 +432,7 @@ alert( speedy.stomach ); // manzana
 alert( lazy.stomach ); // manzana
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/prototype-inheritance/solutions/por-que-estan-llenos-los-dos-hamsters.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/prototypes/readme.md)
