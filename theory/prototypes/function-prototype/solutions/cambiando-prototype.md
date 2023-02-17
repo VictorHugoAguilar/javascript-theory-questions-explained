@@ -16,7 +16,7 @@ Entonces, cuando cambiamos su contenido a través de una referencia, es visible 
 
 Todas las operaciones delete se aplican directamente al objeto. Aquí delete rabbit.eats intenta eliminar la propiedad eats de rabbit, pero no la tiene. Entonces la operación no tendrá ningún efecto.
 
-4. **undefined*.
+4. **undefined**.
 
 La propiedad eats se elimina del prototipo, ya no existe.
 
