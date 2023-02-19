@@ -335,7 +335,7 @@ alert( err instanceof FormatError ); // true
 alert( err instanceof SyntaxError ); // true (porque hereda de SyntaxError)
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/error-handling/custom-errors/solutions/heredar-de-syntaxerror.md)
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/error-handling/readme.md)
