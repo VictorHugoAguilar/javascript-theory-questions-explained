@@ -635,7 +635,7 @@ Incluso si no tenemos try...catch, la mayoría de los entornos nos permiten conf
 
 Compara los dos fragmentos de código.
 
-El primero usa finally para ejecutar el código después de try..catch:
+1.  El primero usa finally para ejecutar el código después de try..catch:
 
 ````js
 try {
@@ -647,7 +647,7 @@ try {
 }
 ````
 
-El segundo fragmento coloca la limpieza justo después de try..catch:
+2.  El segundo fragmento coloca la limpieza justo después de try..catch:
 
 ````js
 try {
