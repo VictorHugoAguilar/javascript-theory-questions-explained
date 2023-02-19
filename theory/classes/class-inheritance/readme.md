@@ -173,6 +173,7 @@ setTimeout(function() { super.stop() }, 1000);
 ````
 
 ## Sobrescribir un constructor
+
 Con los constructores se pone un poco complicado.
 
 Hasta ahora, Rabbit no tenía su propio constructor.
@@ -355,7 +356,7 @@ Afortunadamente este comportamiento solo se revela si los campos sobrescritos so
 
 Si esto se vuelve un problema, uno puede corregirlo usando métodos o getters/setters en lugar de campos.
 
-## Super: internamente, [[HomeObject]]
+## Super: internamente, [[HomeObject]]
 
 ### ⚠️ Información avanzada
 Si está leyendo el tutorial por primera vez, esta sección puede omitirse.
@@ -465,7 +466,7 @@ rabbit.eat.call(this);
 
 El problema no se puede resolver usando solamente `this`.
 
-## [[HomeObject]]
+## [[HomeObject]]
 
 Para proporcionar la solución, JavaScript agrega una propiedad interna especial para las funciones: [[HomeObject]].
 
