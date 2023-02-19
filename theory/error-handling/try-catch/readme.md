@@ -661,7 +661,7 @@ Definitivamente necesitamos la limpieza después del trabajo, no importa si hubo
 
 ¿Hay alguna ventaja aquí en usar finally o ambos fragmentos de código son iguales? Si existe tal ventaja, entonces da un ejemplo cuando sea importante.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/error-handling/try-catch/solutions/finally-o-solo-el-codigo.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/error-handling/readme.md)
