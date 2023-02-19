@@ -1,4 +1,5 @@
-BigInt
+# BigInt
+
 Una adición reciente
 Esta es una adición reciente al lenguaje. Puede encontrar el estado actual del soporte en https://caniuse.com/#feat=bigint.
 BigInt es un tipo numérico especial que provee soporte a enteros de tamaño arbitrario.
@@ -91,3 +92,5 @@ En otras palabras, este enfoque sugiere que escribamos código en JSBI en lugar 
 
 Podemos usar tal código JSBI “tal como está” en motores que no soportan bigints, y para aquellos que sí lo soportan – el polyfill convertirá las llamadas en bigints nativos.
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
