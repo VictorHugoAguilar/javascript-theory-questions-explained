@@ -6,7 +6,7 @@
 4. [Propiedades y métodos privados y protegidos.](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/private-protected-properties-methods/readme.md)
 5. [Ampliación de clases integradas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/extend-natives/readme.md)
 6. [Comprobación de clase: "instanceof"](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/instanceof/readme.md)
-7. [Los Mixins]()
+7. [Los Mixins](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/mixins/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md)
