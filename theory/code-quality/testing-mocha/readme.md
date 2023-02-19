@@ -20,7 +20,7 @@ Todo esto es muy típico. Cuando desarrollamos algo, mantenemos muchos casos de 
 
 **Los tests automatizados implican escribir los tests por separado, además del código. Ellos ejecutan nuestras funciones de varias formas y comparan los resultados con los esperados.**
 
-## Desarrollo guiado por comportamiento (Behavior Driven Development, BDD)
+## Desarrollo guiado por comportamiento (Behavior Driven Development, BDD)
 
 Vamos a usar una técnica llamada Desarrollo guiado por comportamiento o por sus siglas en inglés, BDD.
 
@@ -28,7 +28,7 @@ Vamos a usar una técnica llamada Desarrollo guiado por comportamiento o por sus
 
 Para entender BDD, examinaremos un caso de desarrollo práctico:
 
-## Desarrollo de “pow”: Especificación
+## Desarrollo de “pow”: Especificación
 
 Digamos que queremos hacer una función `pow(x, n)` que eleve `x` a la potencia de un entero n. Asumimos que `n ≥ 0`.
 
