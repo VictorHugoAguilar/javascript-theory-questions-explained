@@ -66,7 +66,7 @@ Por cierto, Function.prototype también tiene métodos de función “genéricos
 
 Aquí está la imagen:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/static-properties-methods/img/image_02.png?raw=true)
 
 Por lo tanto, en pocas palabras, existen dos diferencias:
 
