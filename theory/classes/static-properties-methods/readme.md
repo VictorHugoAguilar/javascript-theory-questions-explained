@@ -4,6 +4,7 @@ También podemos asignar un método a la clase como un todo. Dichos métodos se 
 
 En la declaración de una clase, se preceden por la palabra clave static:
 
+````js
 class User {
   static staticMethod() {
     alert(this === User);
@@ -11,8 +12,11 @@ class User {
 }
 
 User.staticMethod(); // verdadero
+````
+
 Eso realmente hace lo mismo que asignarlo como una propiedad directamente:
 
+````js
 class User { }
 
 User.staticMethod = function() {
@@ -20,6 +24,8 @@ User.staticMethod = function() {
 };
 
 User.staticMethod(); // verdadero
+````
+
 El valor de this en la llamada User.staticMethod() es el mismo constructor de clase User (la regla “objeto antes de punto”).
 
 Por lo general, los métodos estáticos se utilizan para implementar funciones que pertenecen a la clase como un todo, no a un objeto particular de la misma.
@@ -28,6 +34,7 @@ Por ejemplo, tenemos objetos Article y necesitamos una función para compararlos
 
 Una solución natural sería agregar el método Article.compare:
 
+````js
 class Article {
   constructor(title, date) {
     this.title = title;
@@ -49,19 +56,23 @@ let articles = [
 articles.sort(Article.compare);
 
 alert( articles[0].title ); // CSS
+````
+
 Aquí el método Article.compare se encuentra “encima” de los artículos, como un medio para compararlos. No es el método de un artículo sino de toda la clase.
 
 Otro ejemplo sería un método llamado “factory”.
 
 Digamos que necesitamos múltiples formas de crear un artículo:
 
-Crearlo por parámetros dados (title,date etc.).
-Crear un artículo vacío con la fecha de hoy.
-… o cualquier otra manera.
+1. Crearlo por parámetros dados (title,date etc.).
+2. Crear un artículo vacío con la fecha de hoy.
+3. … o cualquier otra manera.
+
 La primera forma puede ser implementada por el constructor. Y para la segunda podemos hacer un método estático de la clase.
 
 Tal como Article.createTodays() aquí:
 
+````js
 class Article {
   constructor(title, date) {
     this.title = title;
@@ -77,38 +88,55 @@ class Article {
 let article = Article.createTodays();
 
 alert( article.title ); // Resumen de hoy
+````
+
 Ahora, cada vez que necesitamos crear un resumen de hoy, podemos llamar a Article.createTodays(). Una vez más, ese no es el método de un objeto artículo, sino el método de toda la clase.
 
 Los métodos estáticos también se utilizan en clases relacionadas con base de datos para buscar/guardar/eliminar entradas de la misma, como esta:
 
+````js
 // suponiendo que Article es una clase especial para gestionar artículos
 // método estático para eliminar el artículo por id:
 Article.remove({id: 12345});
-Los métodos estáticos no están disponibles para objetos individuales
+````
+
+### ⚠️ Los métodos estáticos no están disponibles para objetos individuales
 Los métodos estáticos son llamados sobre las clases, no sobre los objetos individuales.
 
 Por ejemplo, este código no funcionará:
 
+````js
 // ...
 article.createTodays(); /// Error: article.createTodays is not a function
-Propiedades estáticas
-Una adición reciente
+````
+
+## Propiedades estáticas
+
+### ⚠️ Una adición reciente
 Esta es una adición reciente al lenguaje. Los ejemplos funcionan en el Chrome reciente.
 Las propiedades estáticas también son posibles, se ven como propiedades de clase regular, pero precedidas por static:
 
+````js
 class Article {
   static publisher = "Ilya Kantor";
 }
 
 alert( Article.publisher ); // Ilya Kantor
+````
+
 Eso es lo mismo que una asignación directa a Article:
 
+````js
 Article.publisher = "Ilya Kantor";
-Herencia de propiedades y métodos estáticos
+````
+
+## Herencia de propiedades y métodos estáticos
+
 Las propiedades y métodos estáticos son heredados.
 
 Por ejemplo, Animal.compare y Animal.planet en el siguiente código son heredados y accesibles como Rabbit.compare y Rabbit.planet:
 
+````js
 class Animal {
   static planet = "Tierra";
   constructor(name, speed) {
@@ -144,19 +172,24 @@ rabbits.sort(Rabbit.compare);
 rabbits[0].run(); // Conejo Negro corre a una velocidad de 5.
 
 alert(Rabbit.planet); // Tierra
+````
+
 Ahora, cuando llamemos a Rabbit.compare, se llamará a Animal.compare heredado.
 
 ¿Como funciona? Nuevamente, usando prototipos. Como ya habrás adivinado, extends da a Rabbit el [[Prototype]] referente a Animal.
 
+![image_01]()
 
 Entonces, Rabbit extends Animal crea dos referencias [[Prototype]]:
 
-La función de Rabbit se hereda prototípicamente de la función de Animal.
-Rabbit.prototype prototípicamente hereda de Animal.prototype.
+1. La función de Rabbit se hereda prototípicamente de la función de Animal.
+2. Rabbit.prototype prototípicamente hereda de Animal.prototype.
+
 Como resultado, la herencia funciona tanto para métodos regulares como estáticos.
 
 Verifiquemos eso por código, aquí:
 
+````js
 class Animal {}
 class Rabbit extends Animal {}
 
@@ -165,7 +198,10 @@ alert(Rabbit.__proto__ === Animal); // verdadero
 
 // para métodos regulares
 alert(Rabbit.prototype.__proto__ === Animal.prototype); // verdadero
-Resumen
+````
+
+## Resumen
+
 Los métodos estáticos se utilizan en la funcionalidad propia de la clase “en su conjunto”. No se relaciona con una instancia de clase concreta.
 
 Por ejemplo, un método para comparar Article.compare (article1, article2) o un método de fábrica Article.createTodays().
@@ -176,6 +212,7 @@ Las propiedades estáticas se utilizan cuando queremos almacenar datos a nivel d
 
 La sintaxis es:
 
+````js
 class MyClass {
   static property = ...;
 
@@ -183,21 +220,28 @@ class MyClass {
     ...
   }
 }
+````
+
 Técnicamente, la declaración estática es lo mismo que asignar a la clase misma:
 
+````js
 MyClass.property = ...
 MyClass.method = ...
+````
+
 Las propiedades y métodos estáticos se heredan.
 
 Para class B extends A el prototipo de la clase B en sí mismo apunta a A: B.[[Prototipo]] = A. Entonces, si no se encuentra un campo en B, la búsqueda continúa en A.
 
-Tareas
-¿La clase extiende el objeto?
-importancia: 3
+# ✅ Tareas
+
+## La clase extiende el objeto
+
 Como sabemos, todos los objetos normalmente heredan de Object.prototype y obtienen acceso a métodos de objeto “genéricos” como hasOwnProperty etc.
 
 Por ejemplo:
 
+````js
 class Rabbit {
   constructor(name) {
     this.name = name;
@@ -208,12 +252,15 @@ let rabbit = new Rabbit("Rab");
 
 // el método hasOwnProperty proviene de Object.prototype
 alert( rabbit.hasOwnProperty('name') ); // verdadero
+````
+
 Pero si lo escribimos explícitamente como "class Rabbit extends Object", entonces ¿el resultado sería diferente de una simple "class Rabbit"?
 
 ¿Cuál es la diferencia?
 
 Aquí un ejemplo de dicho código (no funciona – ¿por qué? ¿Arréglalo?):
 
+````js
 class Rabbit extends Object {
   constructor(name) {
     this.name = name;
@@ -223,7 +270,10 @@ class Rabbit extends Object {
 let rabbit = new Rabbit("Rab");
 
 alert( rabbit.hasOwnProperty('name') ); // Error
-solución
+````
+
+[solución]()
+
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/readme.md)
