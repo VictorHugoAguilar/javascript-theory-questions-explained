@@ -224,7 +224,7 @@ let a = new A();
 alert( a instanceof B ); // verdadero
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/instanceof/solutions/extrano-instanceof.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/readme.md)
