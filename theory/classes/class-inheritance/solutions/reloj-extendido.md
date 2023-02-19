@@ -16,6 +16,4 @@ class ExtendedClock extends Clock {
 ````
 
 ---
-[⬅️ volver]( 
-#reloj-extendido
-)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/readme.md#reloj-extendido)
