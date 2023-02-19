@@ -1,4 +1,5 @@
-Unicode, String internals
+# Unicode, String internals
+
 Conocimiento avanzado
 Esta sección ahonda en los interioridades de los string. Este conocimiento será útil para ti si planeas lidiar con emojis, raros caracteres matemáticos, jeroglíficos, u otros símbolos extraños.
 
@@ -125,3 +126,5 @@ En realidad, este no es siempre el caso. La razón es que el símbolo Ṩ es “
 
 Si desea obtener más información sobre las reglas y variantes de normalización, se describen en el apéndice del estándar: Unicode, pero para la mayoría de los propósitos prácticos, la información de esta sección es suficiente.
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
