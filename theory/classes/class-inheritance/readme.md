@@ -620,7 +620,7 @@ let rabbit = new Rabbit("Conejo Blanco"); // Error: this no está definido
 alert(rabbit.name);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/solutions/error-al-crear-una-instancia.md)
 
 ## Reloj extendido
 
@@ -668,7 +668,7 @@ Crea una nueva clase ExtendedClock que herede de Clock y agrega el parámetro pr
 Tu código debe estar en el archivo extended-clock.js
 No modifiques el clock.js original. Extiéndelo.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/solutions/reloj-extendido.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/readme.md)
