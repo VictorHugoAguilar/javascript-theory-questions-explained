@@ -28,7 +28,7 @@ let animal = new Animal("Mi animal");
 
 Así es como podemos representar gráficamente el objeto `animal` y la clase `Animal`:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/img/image_01.png?raw=true)
 
 …Y nos gustaría crear otra clase Rabbit.
 
@@ -55,7 +55,7 @@ Los objetos de la clase Rabbit tienen acceso a los métodos de Rabbit, como rabb
 
 Internamente, la palabra clave extends funciona con la buena mecánica de prototipo: establece Rabbit.prototype.[[Prototype]] a Animal.prototype. Entonces, si no se encuentra un método en Rabbit.prototype, JavaScript lo toma de Animal.prototype.
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/img/image_02.png?raw=true)
 
 Por ejemplo, para encontrar el método rabbit.run, el motor revisa (en la imagen, de abajo hacia arriba):
 
@@ -436,7 +436,7 @@ Entonces, en ambas líneas (*) y (**) el valor de this.__proto__ es exactamente 
 
 Aquí está la imagen de lo que sucede:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/img/image_03.png?raw=true)
 
 1. Dentro de longEar.eat(), la línea (**) llama a rabbit.eat proporcionándole this=longEar.
 
@@ -554,7 +554,7 @@ La razón es simple:
 
 Aquí está el diagrama de lo que sucede:
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/img/image_04.png?raw=true)
 
 ## Métodos, no propiedades de función
 
