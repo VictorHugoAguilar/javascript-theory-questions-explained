@@ -156,7 +156,7 @@ Matarás dos pájaros de un solo tiro. Primero, el código se hará más largo y
 
 Un ninja inteligente coloca los guiones bajos en un solo lugar del código y los evita en otros lugares. Eso hace que el código sea mucho más frágil y aumenta la probabilidad de errores futuros.
 
-## Muestra tu amor
+## Muestra tu amor
 
 ¡Deja que todos vean cuán magníficas son tus entidades! Nombres como superElement, megaFrame and niceItem iluminaran sin duda al lector.
 
@@ -217,7 +217,7 @@ Acciones adicionales no deberían ser obvias por el nombre de la función. Un ve
 
 Imagina, otro desarrollador quiere solo comprobar el correo, y no mostrar ningún mensaje. Tu función validarEmail(email) que hace ambas no le será de utilidad. Así que no romperán tu meditación preguntando cualquier cosa sobre ello.
 
-## Resumen
+## Resumen
 
 Todos los consejos anteriores fueron extraidos de código real… Algunas veces, escrito por desarrolladores experimentados. Quizás incluso más experimentado que tú ;)
 
