@@ -93,7 +93,7 @@ alert(rabbit instanceof Animal); // verdadero
 
 Aquí está la ilustración de lo que rabbit instanceof Animal compara con Animal.prototype:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/instanceof/img/image_01.png?raw=true)
 
 Por cierto, también hay un método objA.isPrototypeOf(objB), que devuelve true si objA está en algún lugar de la cadena de prototipos para objB. Por lo tanto, la prueba de obj instanceof Class se puede reformular como Class.prototype.isPrototypeOf(obj).
 
