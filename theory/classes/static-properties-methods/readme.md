@@ -178,7 +178,7 @@ Ahora, cuando llamemos a Rabbit.compare, se llamará a Animal.compare heredado.
 
 ¿Como funciona? Nuevamente, usando prototipos. Como ya habrás adivinado, extends da a Rabbit el [[Prototype]] referente a Animal.
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/static-properties-methods/img/image_01.png?raw=true)
 
 Entonces, Rabbit extends Animal crea dos referencias [[Prototype]]:
 
