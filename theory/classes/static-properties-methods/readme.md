@@ -272,7 +272,7 @@ let rabbit = new Rabbit("Rab");
 alert( rabbit.hasOwnProperty('name') ); // Error
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/static-properties-methods/solutions/la-clase-extiende-el-objeto.md)
 
 
 ---
