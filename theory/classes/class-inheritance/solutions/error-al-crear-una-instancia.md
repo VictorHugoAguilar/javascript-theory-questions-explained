@@ -25,8 +25,4 @@ alert(rabbit.name); // Conejo Blanco
 ````
 
 ---
-[⬅️ volver]( 
-  
-  #error-al-crear-una-instancia
-
-  )
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/class-inheritance/readme.md#error-al-crear-una-instancia)
