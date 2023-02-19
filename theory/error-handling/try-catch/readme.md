@@ -655,7 +655,7 @@ try {
 } catch (err) {
   manejo de errores
 }
-````js
+````
 
 Definitivamente necesitamos la limpieza después del trabajo, no importa si hubo un error o no.
 
