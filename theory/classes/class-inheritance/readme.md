@@ -5,8 +5,10 @@ La herencia de clase es el modo para que una clase extienda a otra.
 De esta manera podemos añadir nueva funcionalidad a la ya existente.
 
 La palabra clave “extends”
+
 Digamos que tenemos la clase Animal:
 
+````js
 class Animal {
   constructor(name) {
     this.speed = 0;
@@ -23,6 +25,8 @@ class Animal {
 }
 
 let animal = new Animal("Mi animal");
+````
+
 Así es como podemos representar gráficamente el objeto animal y la clase Animal:
 
 
@@ -34,6 +38,7 @@ La sintaxis para extender otra clase es: class Hijo extends Padre.
 
 Construyamos la clase Rabbit que herede de Animal:
 
+````js
 class Rabbit extends Animal {
   hide() {
     alert(`¡${this.name} se esconde!`);
@@ -44,6 +49,8 @@ let rabbit = new Rabbit("Conejo Blanco");
 
 rabbit.run(5); // Conejo Blanco corre a una velocidad de 5.
 rabbit.hide(); // ¡Conejo Blanco se esconde!
+````
+
 Los objetos de la clase Rabbit tienen acceso a los métodos de Rabbit, como rabbit.hide(), y también a los métodos Animal, como rabbit.run().
 
 Internamente, la palabra clave extends funciona con la buena mecánica de prototipo: establece Rabbit.prototype.[[Prototype]] a Animal.prototype. Entonces, si no se encuentra un método en Rabbit.prototype, JavaScript lo toma de Animal.prototype.
@@ -61,6 +68,7 @@ La sintaxis de clase permite especificar no solo una clase, sino cualquier expre
 
 Por ejemplo, una llamada a función que genera la clase padre:
 
+````js
 function f(phrase) {
   return class {
     sayHi() { alert(phrase); }
@@ -70,6 +78,8 @@ function f(phrase) {
 class User extends f("Hola") {}
 
 new User().sayHi(); // Hola
+````
+
 Observa que class User hereda del resultado de f("Hola").
 
 Eso puede ser útil para patrones de programación avanzados cuando usamos funciones para generar clases dependiendo de muchas condiciones y podamos heredar de ellas.
@@ -79,15 +89,19 @@ Ahora avancemos y sobrescribamos un método. Por defecto, todos los métodos que
 
 Pero Si especificamos nuestro propio método stop() en Rabbit, es el que se utilizará en su lugar:
 
+````js
 class Rabbit extends Animal {
   stop() {
     // ...esto se usará para rabbit.stop()
     // en lugar de stop() de la clase Animal
   }
 }
+````
+
 Sin embargo, no siempre queremos reemplazar totalmente un método padre sino construir sobre él, modificarlo o ampliar su funcionalidad. Hacemos algo con nuestro método, pero queremos llamar al método padre antes, después o durante el proceso.
 
 Las clases proporcionan la palabra clave "super" para eso.
+
 
 super.metodo(...) llama un método padre.
 super(...) llama un constructor padre (solo dentro de nuestro constructor).
