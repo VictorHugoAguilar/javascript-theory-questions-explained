@@ -3,7 +3,8 @@
 La herencia de clase es el modo para que una clase extienda a otra.
 
 De esta manera podemos añadir nueva funcionalidad a la ya existente.
-## La palabra clave “extends”
+
+## La palabra clave “extends”
 
 Digamos que tenemos la clase Animal:
 
