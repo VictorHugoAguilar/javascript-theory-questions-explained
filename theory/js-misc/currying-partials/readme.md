@@ -1,4 +1,5 @@
-Currificación
+# Currificación
+
 La Currificación es una técnica avanzada de trabajo con funciones. No solo se usa en JavaScript, sino también en otros lenguajes.
 
 La currificación es una transformación de funciones que traduce una función invocable como f(a, b, c) a invocable como f(a)(b)(c).
@@ -139,3 +140,5 @@ Currificación es una transformación que hace que f(a, b, c) sea invocable como
 
 La currificación nos permite obtener parciales fácilmente. Como hemos visto en el ejemplo de registro, después de aplicar currificación a la función universal de tres argumentos log(fecha, importancia, mensaje) nos da parciales cuando se llama con un argumento (como log(fecha)) o dos argumentos (como log(fecha, importancia)).
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
