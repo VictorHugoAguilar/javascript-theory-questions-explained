@@ -63,7 +63,7 @@ Como puede ver, ahora .filter devuelve un Array. Por lo tanto, la funcionalidad 
 ### ℹ️ Otras colecciones también trabajan del mismo modo
 Otras colecciones, como Map y Set, funcionan igual. También usan Symbol.species.
 
-## Sin herencia estática en incorporados
+## Sin herencia estática en incorporados
 
 Los objetos nativos tienen sus propios métodos estáticos, por ejemplo, Object.keys, Array.isArray, etc.
 
@@ -77,7 +77,7 @@ Por ejemplo, tanto Array como Date heredan de Object, por lo que sus instancias 
 
 Imagen de la estructura para Date y Object:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/classes/extend-natives/img/image_01.png?raw=true)
 
 Como puede ver, no hay un vínculo entre Date y Object. Son independientes, solo Date.prototype hereda de Object.prototype.
 
