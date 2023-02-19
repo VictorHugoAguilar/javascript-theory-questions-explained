@@ -1,4 +1,4 @@
-Proxy y Reflect
+# Proxy y Reflect
 Un objeto Proxy envuelve (es un “wrapper”: envoltura, contenedor) a otro objeto e intercepta sus operaciones (como leer y escribir propiedades, entre otras). El proxy puede manejar estas operaciones él mismo o, en forma transparente permitirle manejarlas al objeto envuelto.
 
 Los proxys son usados en muchas librerías y en algunos frameworks de navegador. En este artículo veremos muchas aplicaciones prácticas.
@@ -918,4 +918,4 @@ P.D. En esta tarea, solo toma en cuenta la escritura de una propiedad. Otras ope
 solución
 
 ---
-[⬅️ volver]()
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
