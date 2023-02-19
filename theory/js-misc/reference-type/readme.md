@@ -1,4 +1,5 @@
-Tipo de Referencia
+# Tipo de Referencia
+
 Característica del lenguaje en profundidad
 Este artículo cubre un tema avanzado para comprender mejor ciertos casos límite.
 
@@ -118,3 +119,5 @@ obj.go();               // (1) [object Object]
 (obj.go || obj.stop)(); // (4) undefined
 solución
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
