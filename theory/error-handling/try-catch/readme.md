@@ -28,7 +28,7 @@ Funciona así:
 2.  Si no hubo errores, se ignora catch (err): la ejecución llega al final de try y continúa, omitiendo catch.
 3.  Si se produce un error, la ejecución de try se detiene y el control fluye al comienzo de catch (err). La variable err (podemos usar cualquier nombre para ella) contendrá un objeto de error con detalles sobre lo que sucedió.
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/error-handling/try-catch/img/image_01.png?raw=true)
 
 Entonces, un error dentro del bloque try {...} no mata el script; tenemos la oportunidad de manejarlo en catch.
 
