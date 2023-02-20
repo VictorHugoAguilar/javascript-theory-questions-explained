@@ -312,7 +312,7 @@ loadJson('https://javascript.info/no-such-user.json')
   .catch(alert); // Error: 404
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/async-await/solutions/rescribir-usando-async-await.md)
 
 ## Reescribir rethrow con async await
 
@@ -362,7 +362,7 @@ function demoGithubUser() {
 demoGithubUser();
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/async-await/solutions/reescribir-rethrow-con-async-await.md)
 
 ## Llamado async desde un non-async
 
@@ -384,7 +384,7 @@ function f() {
 
 P.D. La tarea es técnicamente muy simple, pero la pregunta es muy común en desarrolladores nuevos en async/await.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/async-await/solutions/llamado-async-desde-un-non-async.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/readme.md)
