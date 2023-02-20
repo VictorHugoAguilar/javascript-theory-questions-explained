@@ -345,7 +345,7 @@ Para cada una de las siguientes preguntas, da al menos una forma de cómo accede
 ¿El nodo `<ul>` del DOM?
 El segundo `<li>` (con Pete)?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/solutions/dom-children.md)
 
 ## La pregunta de los hermanos
 
@@ -354,7 +354,7 @@ Si elem – es un elemento nodo arbitrario del DOM…
 ¿Es cierto que elem.lastChild.nextSibling siempre es null?
 ¿Es cierto que elem.children[0].previousSibling siempre es null ?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/solutions/la-pregunta-de-los-hermanos.md)
 
 ## Seleccionar todas las celdas diagonales
 
@@ -371,7 +371,7 @@ El resultado debe ser:
 
 ![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/img/documento_dom-navigation_image_03.png?raw=true)
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/solutions/seleccionar-todas-las-celdas-diagonales.md)
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/readme.md)
