@@ -192,7 +192,7 @@ Las propiedades scrollLeft/scrollTop son el ancho/alto de la parte oculta y desp
 
 En la imagen abajo podemos ver scrollHeight y scrollTop para un bloque con un desplazamiento vertical.
 
-![image_11](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_011.png?raw=true)
+![image_11](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_11.png?raw=true)
 
 En otras palabras, scrollTop es “cuánto se desplaza hacia arriba”.
 
@@ -201,7 +201,7 @@ La mayoría de las propiedades aquí son solo lectura, pero scrollLeft/scrollTop
 
 Si haces clic en el elemento de abajo, se ejecuta el código elem.scrollTop += 10. Eso hace que el contenido del elemento se desplace 10px abajo.
 
-![image_12](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_012.png?raw=true) 
+![image_12](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_12.png?raw=true) 
 
 Establecer scrollTop en 0 o un valor grande, como 1e9 hará que el elemento se desplace hacia arriba/abajo respectivamente.
 
@@ -241,7 +241,7 @@ Y hay una razón más: una barra de desplazamiento. A veces, el código que func
 
 Si tu navegador reserva el espacio para la barra de desplazamiento (la mayoría de navegadores para Windows lo hacen), pueden probarlo a continuación.
 
-![image_13](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_013.png?raw=true)
+![image_13](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_13.png?raw=true)
 
 El elemento con texto tiene CSS width:300px.
 
@@ -289,13 +289,13 @@ P.S. El código debería funcionar con cualquier documento HTML, no depende de s
 
 Así es como se ve el documento de origen:
 
-![image_14](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_014.png?raw=true)
+![image_14](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_14.png?raw=true)
 
 ¿Cuáles son las coordenadas del centro de campo?
 
 Calcúlalos y úsalos para colocar la pelota en el centro del campo verde:
 
-![image_15](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_015.png?raw=true)
+![image_15](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_15.png?raw=true)
 
 * El elemento debe ser movido por JavaScript, no por CSS.
 * El código debería funcionar con cualquier una pelota de cualquier tamaño (10, 20, 30 pixels) y cualquier tamaño de campo, no debe estar vinculado a los valores dados.
