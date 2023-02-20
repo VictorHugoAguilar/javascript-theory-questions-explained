@@ -114,7 +114,7 @@ Aunque hay otra manera, la propuesta por los desarrolladores de la librería JSB
 Esta librería implementa bigint usando sus propios métodos. Podemos usarlos en lugar de bigints nativos:
 
 |Operación              |	BigInt nativo     |	JSBI                    |
-|                       |                   |                         |
+|-----------------------|-------------------|-------------------------|
 |Creación desde Number  |	a = BigInt(789)   |	a = JSBI.BigInt(789)    |
 |Suma	                  | c = a + b	        | c = JSBI.add(a, b)      |
 |Resta                  |	c = a - b	        | c = JSBI.subtract(a, b) |
