@@ -289,7 +289,7 @@ function loadCached(url) {
 
 Podemos escribir loadCached(url).then(…) porque se garantiza que la función devuelve una promesa. Siempre podremos usar .then después de loadCached. Ese es el propósito de Promise.resolve en la línea (*).
 
-## Promise.reject
+## Promise.reject
 
 Promise.reject(error) crea una promesa rechazada con error.
 
@@ -301,7 +301,7 @@ let promise = new Promise((resolve, reject) => reject(error));
 
 En la práctica este método casi nunca es usado.
 
-## Resumen
+## Resumen
 
 Existen 6 métodos estáticos de la clase Promise:
 
