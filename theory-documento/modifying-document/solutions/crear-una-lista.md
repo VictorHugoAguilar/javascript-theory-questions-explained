@@ -27,7 +27,7 @@ Observa el uso de textContent para asignar el contenido de `<li>`.
 
 </body>
 </html>
-
+````
 
 
 ---
