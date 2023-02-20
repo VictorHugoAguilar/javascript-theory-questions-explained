@@ -4,7 +4,7 @@ Las propiedades de navegación del DOM son ideales cuando los elementos están c
 
 Para estos casos existen métodos de búsqueda adicionales.
 
-## document.getElementById o sólo id
+## document.getElementById o sólo id
 
 Si un elemento tiene el atributo id, podemos obtener el elemento usando el método document.getElementById(id), sin importar dónde se encuentre.
 
