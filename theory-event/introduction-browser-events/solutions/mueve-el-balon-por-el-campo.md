@@ -8,6 +8,7 @@ Así que deberíamos usar position:absolute y, para que el posicionamiento sea r
 
 Entonces el balón se posicionará en relación al campo:
 
+````css
 #field {
   width: 200px;
   height: 150px;
@@ -20,6 +21,8 @@ Entonces el balón se posicionará en relación al campo:
   top: 0;
   transition: 1s all; /* Animación CSS para que left/top hagan al balón volar  */
 }
+````
+
 Lo siguiente es asignar el ball.style.left/top correcto. Ahora contienen coordenadas relativas al campo.
 
 Aquí está la imagen:
