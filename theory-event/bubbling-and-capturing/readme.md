@@ -199,7 +199,7 @@ El método event.stopPropagation() y su hermano event.stopImmediatePropagation()
 
 En otras palabras, normalmente el evento primero va hacia abajo (“captura”) y luego hacia arriba (“propagación”). Pero si se llama a event.stopPropagation() durante la fase de captura, se detiene la travesía del evento, y la propagación no volverá a ocurrir.
 
-## Resumen
+## Resumen
 
 Cuando ocurre un evento, el elemento más anidado dónde ocurrió se reconoce como el “elemento objetivo” (event.target).
 
