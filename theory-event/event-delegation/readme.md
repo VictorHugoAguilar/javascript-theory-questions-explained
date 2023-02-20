@@ -4,7 +4,7 @@ La captura y el propagación nos permiten implementar uno de los más poderosos 
 
 La idea es que si tenemos muchos elementos manejados de manera similar podemos, en lugar de asignar un manejador a cada uno de ellos, poner un único manejador a su ancestro común.
 
-En el manejador obtenemos event.target para ver dónde ocurrió realmente el evento y manejarlo.
+En el manejador obtenemos `event.target` para ver dónde ocurrió realmente el evento y manejarlo.
 
 Veamos un ejemplo: El diagrama Pa kua que refleja la antigua filosofía china.
 
@@ -63,7 +63,7 @@ A tal código no le interesa cuántas celdas hay en la tabla. Podemos agregar y 
 
 Pero hay un inconveniente.
 
-El clic puede ocurrir no sobre <td>, sino dentro de él.
+El clic puede ocurrir no sobre `<td>`, sino dentro de él.
 
 En nuestro caso, si miramos dentro del HTML, podemos ver tags anidados dentro de `<td>`, como `<strong>:
 
@@ -78,10 +78,11 @@ Naturalmente, si el clic ocurre en <strong>, este se vuelve el valor de event.ta
 
 ![image_02]()
 
-En el manejador table.onclick debemos tomar tal event.target e indagar si el clic fue dentro de <td> o no.
+En el manejador table.onclick debemos tomar tal `event.target` e indagar si el clic fue dentro de `<td>` o no.
 
 Aquí el código mejorado:
 
+````js
 table.onclick = function(event) {
   let td = event.target.closest('td'); // (1)
 
@@ -91,24 +92,32 @@ table.onclick = function(event) {
 
   highlight(td); // (4)
 };
-Explicación:
+````
 
-El método elem.closest(selector) devuelve el ancestro más cercano que coincide con el selector. En nuestro caso buscamos <td> hacia arriba desde el elemento de origen.
-Si event.target no ocurrió dentro de algún <td>, el llamado retorna inmediatamente pues no hay nada que hacer.
-En caso de tablas anidadas, event.target podría ser un <td>, pero fuera de la tabla actual. Entonces verificamos que sea realmente un <td> de nuestra tabla.
-Y, si es así, destacarla.
-Como resultado, tenemos un código de realzado rápido y eficiente al que no le afecta la cantidad total de <td> en la tabla.
+### Explicación:
 
-Ejemplo de delegación: acciones en markup
+1.  El método `elem.closest(selector)` devuelve el ancestro más cercano que coincide con el selector. En nuestro caso buscamos `<td>` hacia arriba desde el elemento de origen.
+2.  Si event.target no ocurrió dentro de algún `<td>`, el llamado retorna inmediatamente pues no hay nada que hacer.
+3.  En caso de tablas anidadas, event.target podría ser un `<td>`, pero fuera de la tabla actual. Entonces verificamos que sea realmente un `<td>` de nuestra tabla.
+4.  Y, si es así, destacarla.
+
+Como resultado, tenemos un código de realzado rápido y eficiente al que no le afecta la cantidad total de `<td>` en la tabla.
+
+## Ejemplo de delegación: acciones en markup
+
 Hay otros usos para la delegación de eventos.
 
 Digamos que queremos hacer un menú con los botones “Save”, “Load”, “Search” y así. Y hay objetos con los métodos save, load, search… ¿Cómo asociarlos?
 
 La primera idea podría ser asignar un controlador separado para cada botón. Pero hay una solución más elegante. Podemos agregar un controlador para el menú completo y un atributo data-action a los botones con el método a llamar:
 
+````html
 <button data-action="save">Click to Save</button>
+````
+
 El manejador lee el atributo y ejecuta el método. Puedes ver el siguiente ejemplo en funcionamiento:
 
+````html
 <div id="menu">
   <button data-action="save">Save</button>
   <button data-action="load">Load</button>
@@ -144,25 +153,32 @@ El manejador lee el atributo y ejecuta el método. Puedes ver el siguiente ejemp
 
   new Menu(menu);
 </script>
+````
 
 Ten en cuenta que this.onClick está ligado a this en (*). Esto es importante, porque de otra manera el this que está dentro haría referencia al elemento DOM (elem), no al objeto Menu, y this[action] no sería lo que necesitamos.
 
 Entonces, ¿qué ventajas nos ofrece la delegación aquí?
 
-No necesitamos escribir el código para asignar el manejador a cada botón. Simplemente hacer un método y ponerlo en el markup.
-La estructura HTML es flexible, podemos agregar y quitar botones en cualquier momento.
+* No necesitamos escribir el código para asignar el manejador a cada botón. Simplemente hacer un método y ponerlo en el markup.
+
+* La estructura HTML es flexible, podemos agregar y quitar botones en cualquier momento.
+
 Podríamos usar clases .action-save, .action-load, pero un atributo data-action es mejor semánticamente. Y podemos usarlo con reglas CSS también.
 
-El patrón “comportamiento”
+## El patrón “comportamiento”
+
 También podemos usar delegación de eventos para agregar “comportamiento” a los elementos de forma declarativa, con atributos y clases especiales.
 
-El patrón tiene dos partes:
-
+1.  El patrón tiene dos partes:
 Agregamos un atributo personalizado al elemento que describe su comportamiento.
-Un manejador rastrea eventos del documento completo, y si un evento ocurre en un elemento con el atributo ejecuta la acción.
-Comportamiento: Contador
+
+2.  Un manejador rastrea eventos del documento completo, y si un evento ocurre en un elemento con el atributo ejecuta la acción.
+
+## Comportamiento: Contador
+
 Por ejemplo, aquí el atributo data-counter agrega un comportamiento: “incrementar el valor con un clic” a los botones:
 
+````html
 Counter: <input type="button" value="1" data-counter>
 One more counter: <input type="button" value="2" data-counter>
 
@@ -175,19 +191,22 @@ One more counter: <input type="button" value="2" data-counter>
 
   });
 </script>
+````
 
 Si hacemos clic en un botón, su valor se incrementa. Lo importante aquí no son los botones sino el enfoque general.
 
 Puede haber tantos atributos data-counter como queramos. Podemos agregar nuevos al HTML en cualquier momento. Usando delegación de eventos “extendimos” el HTML, agregando un atributo que describe un nuevo comportamiento.
 
-Para manejadores de nivel de documento: siempre addEventListener
+### ⚠️ Para manejadores de nivel de documento: siempre addEventListener
 Cuando asignamos un manejador de evento al objeto document, debemos usar siempre addEventListener, no document.on<event>, porque este último causa conflictos: los manejadores nuevos sobrescribirán los viejos.
 
 En proyectos reales es normal que haya muchos manejadores en document, asignados en diferentes partes del código.
 
-Comportamiento: Conmutador (toggle)
+## Comportamiento: Conmutador (toggle)
+
 Un ejemplo más de comportamiento. Un clic en un elemento con el atributo data-toggle-id mostrará/ocultará el elemento con el id recibido:
 
+````html
 <button data-toggle-id="subscribe-mail">
   Show the subscription form
 </button>
@@ -206,6 +225,7 @@ Un ejemplo más de comportamiento. Un clic en un elemento con el atributo data-t
     elem.hidden = !elem.hidden;
   });
 </script>
+````
 
 Veamos una vez más lo que hicimos aquí: ahora, para agregar la funcionalidad de conmutación a un elemento, no hay necesidad de conocer JavaScript, simplemente usamos el atributo data-toggle-id.
 
@@ -215,50 +235,56 @@ Podemos combinar múltiples comportamientos en un único elemento también.
 
 El patrón “comportamiento” puede ser una alternativa a los mini-fragmentos de JavaScript.
 
-Resumen
+## Resumen
+
 ¡La delegación de eventos es verdaderamente fantástica! Es uno de los patrones más útiles entre los eventos DOM.
 
 A menudo es usado para manejar elementos similares, pero no solamente para eso.
 
 El algoritmo:
 
-Pone un único manejador en el contenedor.
-Dentro del manejador revisa el elemento de origen event.target.
-Si el evento ocurrió dentro de un elemento que nos interesa, maneja el evento.
+1.  Pone un único manejador en el contenedor.
+2.  Dentro del manejador revisa el elemento de origen event.target.
+3.  Si el evento ocurrió dentro de un elemento que nos interesa, maneja el evento.
+
 Beneficios:
 
-Simplifica la inicialización y ahorra memoria: no hay necesidad de agregar muchos controladores.
-Menos código: cuando agregamos o quitamos elementos, no hay necesidad de agregar y quitar controladores.
-Modificaciones del DOM: podemos agregar y quitar elementos en masa con innerHTML y similares.
+* Simplifica la inicialización y ahorra memoria: no hay necesidad de agregar muchos controladores.
+* Menos código: cuando agregamos o quitamos elementos, no hay necesidad de agregar y quitar controladores.
+* Modificaciones del DOM: podemos agregar y quitar elementos en masa con innerHTML y similares.
+
 La delegación tiene sus limitaciones por supuesto:
 
-Primero, el evento debe “propagarse”. Algunos eventos no lo hacen. Además manejadores de bajo nivel no deben usar event.stopPropagation().
-Segundo, la delegación puede agregar carga a la CPU, porque el controlador a nivel de contenedor reacciona a eventos en cualquier lugar del mismo, no importa si nos interesan o no. Pero usualmente la carga es imperceptible y no la tomamos en cuenta.
-Tareas
-Ocultar mensajes con delegación
-importancia: 5
+* Primero, el evento debe “propagarse”. Algunos eventos no lo hacen. Además manejadores de bajo nivel no deben usar `event.stopPropagation().
+* Segundo, la delegación puede agregar carga a la CPU, porque el controlador a nivel de contenedor reacciona a eventos en cualquier lugar del mismo, no importa si nos interesan o no. Pero usualmente la carga es imperceptible y no la tomamos en cuenta.
+
+# ✅ Tareas
+
+## Ocultar mensajes con delegacipn
+
 Hay una lista de mensajes con botones para borrarlos [x]. Haz que funcionen.
 
 Como esto:
 
+![image_03]()
 
 P.D. Debe haber solamente un event lintener en el contenedor, usa delegación de eventos.
 
-Abrir un entorno controlado para la tarea.
+[solución]()
 
-solución
-Menú de árbol
-importancia: 5
+## Menu de arbol
+
 Crea un árbol que muestre y oculte nodos hijos con clics:
 
+![image_04]()
 
 Requerimientos:
 
-Solamente un manejador de eventos (usa delegación)
-Un clic fuera de los nodos de títulos (en un espacio vacío) no debe hacer nada.
-Abrir un entorno controlado para la tarea.
+* Solamente un manejador de eventos (usa delegación)
+* Un clic fuera de los nodos de títulos (en un espacio vacío) no debe hacer nada.
 
-solución
+
+[solución]()
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
