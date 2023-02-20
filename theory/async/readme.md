@@ -4,7 +4,7 @@
 2.  [Promesa](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-basics/readme.md)
 3.  [Encadenamiento de promesas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-chaining/readme.md)
 4.  [Manejo de errores con promesas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-error-handling/readme.md)
-5.  [Promise API]()
+5.  [Promise API](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-api/readme.md)
 6.  [Promisificación]()
 7.  [Microtareas (Microtasks)]()
 8.  [Async/await]()
