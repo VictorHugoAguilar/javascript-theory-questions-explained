@@ -87,4 +87,5 @@ Usa la función getCoords() del capítulo Coordenadas para obtener las coordenad
 </html>
 
 
-#muestra-una-nota-cercana-al-elemento-absolute
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/readme.md#muestra-una-nota-cercana-al-elemento-absolute)
