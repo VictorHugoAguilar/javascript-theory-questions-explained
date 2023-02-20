@@ -442,3 +442,6 @@ La lista
 Abrir un entorno controlado para la tarea.
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-attributes-and-properties/solutions/haz-los-enlaces-externos-naranjas.md)
+  
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/readme.md)
