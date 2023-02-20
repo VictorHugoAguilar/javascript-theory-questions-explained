@@ -39,7 +39,7 @@ Como no hay trampas, todas las operaciones sobre proxy son redirigidas a target.
 
 Como podemos ver, sin ninguna trampa, proxy es un envoltorio transparente alrededor de target.
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/proxy/img/js-misc_proxy_image_01.png?raw=true)
 
 Proxy es un “objeto exótico” especial. No tiene propiedades propias. Con un manejador transparente redirige todas las operaciones hacia target.
 
