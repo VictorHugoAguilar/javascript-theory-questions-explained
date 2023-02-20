@@ -264,8 +264,9 @@ Esto será usado dentro de la función showNote(anchor, position, html), proveí
 
 Aquí está el demo de las notas:
 
-![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/img/documento_coordinates_image_05.png?raw=true)
-Abrir un entorno controlado para la tarea.
+
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/img/documento_coordinates_image_06.png?raw=true)
+
 
 [solución]()
 
@@ -299,7 +300,7 @@ positionAt(blockquote, "top-in", note);
 
 El resultado:
 
-![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/img/documento_coordinates_image_07.png?raw=true)
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/img/documento_coordinates_image_06.png?raw=true)
 
 Para el código fuente toma la solución de la tarea Muestra una nota cercana al elemento (absolute).
 
