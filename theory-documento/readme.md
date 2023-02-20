@@ -12,7 +12,7 @@ Aquí aprenderemos a manipular una página web usando JavaScript.
 8.  [Estilos y clases](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/styles-and-classes/readme.md)
 9.  [Tamaño de elementos y desplazamiento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/readme.md)
 10. [Tamaño de ventana y desplazamiento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll-window/readme.md)
-11. [Coordenadas]()
+11. [Coordenadas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/readme.md)
