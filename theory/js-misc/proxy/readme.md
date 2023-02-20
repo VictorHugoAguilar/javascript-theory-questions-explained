@@ -53,20 +53,21 @@ Las trampas del proxy interceptan la invocación a estos métodos. Están listad
 
 Para cada método interno, existe una “trampa” en esta tabla: es el nombre del método que podemos agregar al parámetro handler de new Proxy para interceptar la operación:
 
-Método interno	Método manejador	Cuándo se dispara
-[[Get]]	get	leyendo una propiedad
-[[Set]]	set	escribiendo una propiedad
-[[HasProperty]]	has	operador in
-[[Delete]]	deleteProperty	operador delete
-[[Call]]	apply	llamado a función
-[[Construct]]	construct	operador new
-[[GetPrototypeOf]]	getPrototypeOf	Object.getPrototypeOf
-[[SetPrototypeOf]]	setPrototypeOf	Object.setPrototypeOf
-[[IsExtensible]]	isExtensible	Object.isExtensible
-[[PreventExtensions]]	preventExtensions	Object.preventExtensions
-[[DefineOwnProperty]]	defineProperty	Object.defineProperty, Object.defineProperties
-[[GetOwnProperty]]	getOwnPropertyDescriptor	Object.getOwnPropertyDescriptor, for..in, Object.keys/values/entries
-[[OwnPropertyKeys]]	ownKeys	Object.getOwnPropertyNames, Object.getOwnPropertySymbols, for..in, Object.keys/values/entries
+| Método interno	      |  Método manejador	          |   Cuándo se dispara                                                           |
+|-----------------------|-----------------------------|-------------------------------------------------------------------------------|
+| [[Get]]               |  	get                       |	leyendo una propiedad                                                         |
+| [[Set]]               |  	set                       |	escribiendo una propiedad                                                     |
+| [[HasProperty]]       |  	has                       |	operador in                                                                   |
+| [[Delete]]            | 	deleteProperty            |	operador delete                                                               |
+| [[Call]]              | 	apply                     |	llamado a función                                                             |
+| [[Construct]]         |  	construct                 |	operador new                                                                  |
+| [[GetPrototypeOf]]    | 	getPrototypeOf            |	Object.getPrototypeOf                                                         |
+| [[SetPrototypeOf]]    | 	setPrototypeOf            |	Object.setPrototypeOf                                                         |
+| [[IsExtensible]]      | 	isExtensible	            | Object.isExtensible                                                           |
+| [[PreventExtensions]] |  	preventExtensions	        | Object.preventExtensions                                                      |
+| [[DefineOwnProperty]] |  	defineProperty            |	Object.defineProperty, Object.defineProperties                                |
+| [[GetOwnProperty]]    | 	getOwnPropertyDescriptor  |	Object.getOwnPropertyDescriptor, for..in, Object.keys/values/entries          |
+| [[OwnPropertyKeys]]   |  	ownKeys                   |	Object.getOwnPropertyNames, Object.getOwnPropertySymbols, for..in, Object.keys/values/entries |
 
 
 ### ⚠️ Invariantes
