@@ -531,14 +531,14 @@ P.D. Para esta tarea, la estructura HTML / CSS es en realidad el 90% de la soluc
       <ul>
         <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
         <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-                                                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
       </ul>
     </div>
     <button class="arrow next">⇨</button>
