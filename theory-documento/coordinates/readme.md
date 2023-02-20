@@ -227,7 +227,7 @@ Ambos sistemas de coordenadas tienen pros y contras; habrá ocasiones en que ocu
 
 # ✅ Tareas
 
-## Encuentra las coordenadas del campo en la ventana
+## Encuentra las coordenadas del campo en la ventana
 
 En el siguiente iframe puedes ver un documento con el “campo” verde.
 
@@ -270,7 +270,7 @@ Aquí está el demo de las notas:
 
 [solución]()
 
-## Muestra una nota cercana al elemento (absolute)
+## Muestra una nota cercana al elemento (absolute)
 
 Modifica la solución de la tarea previa de manera que la nota use position:absolute en lugar de position:fixed.
 
