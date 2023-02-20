@@ -253,7 +253,7 @@ Para hacerlo, abra la página web elk.html, active las herramientas para desarro
 
 Debe verse así:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-nodes/img/documento_dom-nodes_image_01.png?raw=true)
 
 Puedes ver el DOM, hacer clic sobre los elementos, ver sus detalles, etc.
 
@@ -263,7 +263,7 @@ Hacer clic en el botón  ubicado en la esquina superior izquierda nos permite el
 
 Otra forma de realizarlo sería hacer clic derecho en la página web y en el menú contextual elegir la opción “Inspeccionar Elemento”.
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-nodes/img/documento_dom-nodes_image_02.png?raw=true)
 
 En la parte derecha de las herramientas encontramos las siguientes sub-pestañas:
 
@@ -286,7 +286,7 @@ Ahora el último elemento seleccionado esta disponible como $0, el seleccionado 
 
 Podemos ejecutar comandos en ellos. Por ejemplo, $0.style.background = 'red' hace que el elemento de la lista seleccionado sea rojo, algo así:
 
-![iamge_03]()
+![iamge_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-nodes/img/documento_dom-nodes_image_03.png?raw=true)
 
 Así es como en la consola, se obtiene un nodo de los elementos.
 
@@ -294,7 +294,7 @@ También hay un camino de regreso. Si hay una variable que hace referencia a un 
 
 O simplemente podemos generar el nodo del DOM en la consola y explorar en el lugar, así como document.body a continuación:
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-nodes/img/documento_dom-nodes_image_04.png?raw=true)
 
 Desde luego, eso es para propósitos de depuración del curso. A partir del siguiente capítulo accederemos y modificaremos el DOM usando JavaScript.
 
