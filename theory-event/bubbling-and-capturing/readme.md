@@ -35,7 +35,7 @@ Digamos que tenemos 3 elementos anidados FORM > DIV > P con un manejador en cada
 </form>
 ````
 
-![image_01]() 
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_01.png?raw=true) 
   
 Un clic en el elemento del interior <p> primero ejecuta onclick:
 
@@ -44,7 +44,7 @@ Un clic en el elemento del interior <p> primero ejecuta onclick:
 3.  Luego en el <form> de más arriba.
 4.  Y así sucesivamente hasta el objeto document.
 
-![image_02]() 
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_02.png?raw=true) 
   
 Así si hacemos clic en <p>, entonces veremos 3 alertas: p → div → form.
 
@@ -121,7 +121,7 @@ El estándar de eventos del DOM describe 3 fases de la propagación de eventos:
 
 Aquí (tomada de la especificación), tenemos la imagen de las fases de captura (1), objetivo (2), y propagación (3), de un evento click en un <td> dentro de una tabla:
   
-![image_03]() 
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_03.png?raw=true) 
 
 Se explica así: por un clic en <td> el evento va primero a través de la cadena de ancestros hacia el elemento (fase de captura), luego alcanza el objetivo y se desencadena ahí (fase de objetivo), y por último va hacia arriba (fase de propagación), ejecutando los manejadores en su camino.
 
@@ -169,7 +169,7 @@ Veamos ambas fases, captura y propagación, en acción:
 </script>
 ````
 
-![image_04]() 
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_04.png?raw=true) 
   
 El código prepara manejadores de clic en cada elemento en el documento para ver cuáles están funcionando.
 
