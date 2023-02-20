@@ -292,7 +292,7 @@ Con async/await raramente necesitamos escribir promise.then/catch, pero aún no 
 
 # ✅ Tareas
 
-## Rescribir usando async await
+## Rescribir usando async await
 
 Rescribir este código de ejemplo del capítulo Encadenamiento de promesas usando async/await en vez de .then/catch:
 
