@@ -17,4 +17,5 @@ button.removeEventListener("click", handler);
 
 El handler button.onclick funciona independientemente y en adición a addEventListener.
 
-#que-handlers-se-ejecutan
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/readme.md#que-handlers-se-ejecutan)
