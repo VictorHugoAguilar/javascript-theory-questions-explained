@@ -46,7 +46,7 @@ Un clic en el elemento del interior `<p>` primero ejecuta onclick:
 
 ![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_02.png?raw=true) 
   
-Así si hacemos clic en <p>, entonces veremos 3 alertas: p → div → form.
+Así si hacemos clic en `<p>, entonces veremos 3 alertas: p → div → form.
 
 Este proceso se conoce como “propagación” porque los eventos “se propagan” desde el elemento más al interior, a través de los padres, como una burbuja en el agua.
 
@@ -120,7 +120,7 @@ El estándar de eventos del DOM describe 3 fases de la propagación de eventos:
 2.  Fase de objetivo – el evento alcanza al elemento.
 3.  Fase de propagación – el evento se propaga hacia arriba del elemento.
 
-Aquí (tomada de la especificación), tenemos la imagen de las fases de captura (1), objetivo (2), y propagación (3), de un evento click en un <td> dentro de una tabla:
+Aquí (tomada de la especificación), tenemos la imagen de las fases de captura (1), objetivo (2), y propagación (3), de un evento click en un `<td> dentro de una tabla:
   
 ![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_03.png?raw=true) 
 
