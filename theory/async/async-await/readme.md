@@ -2,7 +2,7 @@
 
 Existe una sintaxis especial para trabajar con promesas de una forma más confortable, llamada “async/await”. Es sorprendentemente fácil de entender y usar.
 
-## Funciones async
+##  Funciones async
 
 Comencemos con la palabra clave async. Puede ser ubicada delante de una función como aquí:
 
