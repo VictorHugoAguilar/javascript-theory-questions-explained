@@ -229,9 +229,9 @@ alert( document.documentElement.parentNode ); // documento
 alert( document.documentElement.parentElement ); // null
 ````
 
-La razón es que el nodo raíz document.documentElement (<html>) tiene a document como su padre. Pero document no es un elemento nodo, por lo que parentNode lo devuelve y parentElement no lo hace.
+La razón es que el nodo raíz document.documentElement `(<html>) tiene a document como su padre. Pero document no es un elemento nodo, por lo que parentNode lo devuelve y parentElement no lo hace.
 
-Este detalle puede ser útil cuando queramos navegar hacia arriba desde cualquier elemento elem al <html>, pero no hacia el document:
+Este detalle puede ser útil cuando queramos navegar hacia arriba desde cualquier elemento elem al `<html>`, pero no hacia el document:
 
 ````js
 while(elem = elem.parentElement) { // sube hasta <html>
@@ -269,24 +269,24 @@ Ciertos tipos de elementos del DOM pueden tener propiedades adicionales, especí
 
 Las tablas son un gran ejemplo de ello, y representan un particular caso importante:
 
-**El elemento <table> soporta estas propiedades (añadidas a las que hemos dado anteriormente):**
+**El elemento `<table>` soporta estas propiedades (añadidas a las que hemos dado anteriormente):**
 
-* table.rows – la colección de elementos<tr> de la tabla.
-* table.caption/tHead/tFoot – referencias a los elementos <caption>, <thead>, <tfoot>.
-* table.tBodies – la colección de elementos <tbody> (pueden ser muchos según el estándar, pero siempre habrá al menos uno, aunque no esté en el HTML el navegador lo pondrá en el DOM).
-* <thead>, <tfoot>, <tbody> estos elementos proporcionan las propiedades de las filas.
+* `table.rows` – la colección de elementos<tr> de la tabla.
+* `table.caption/tHead/tFoot` – referencias a los elementos `<caption>`, `<thead>`, `<tfoot>`.
+* `table.tBodies` – la colección de elementos `<tbody>` (pueden ser muchos según el estándar, pero siempre habrá al menos uno, aunque no esté en el HTML el navegador lo pondrá en el DOM).
+* `<thead>`, `<tfoot>`, `<tbody>` estos elementos proporcionan las propiedades de las filas.
 
-* tbody.rows – la colección dentro de <tr>.
+* `tbody.rows` – la colección dentro de `<tr>`.
 
 <tr>:
 
-* tr.cells – la colección de celdas <td> y <th> dentro del <tr> dado.
-* tr.sectionRowIndex – la posición (índice) del <tr> dado dentro del <thead>/<tbody>/<tfoot> adjunto.
-* tr.rowIndex – el número de <tr> en la tabla en su conjunto (incluyendo todas las filas de una tabla).
+* `tr.cells` – la colección de celdas `<td>` y `<th>` dentro del `<tr>` dado.
+* `tr.sectionRowIndex` – la posición (índice) del `<tr>` dado dentro del `<thead>/<tbody>/<tfoot>` adjunto.
+* `tr.rowIndex` – el número de `<tr>` en la tabla en su conjunto (incluyendo todas las filas de una tabla).
 
-<td> and <th>:
+`<td>` and `<th>`:
 
-* td.cellIndex – el número de celdas dentro del adjunto <tr>.
+* `td.cellIndex` – el número de celdas dentro del adjunto <tr>.
 Un ejemplo de uso:
 
 ````html
@@ -341,9 +341,9 @@ Mira esta página:
 
 Para cada una de las siguientes preguntas, da al menos una forma de cómo acceder a ellos:
 
-¿El nodo <div> del DOM?
-¿El nodo <ul> del DOM?
-El segundo <li> (con Pete)?
+¿El nodo `<div>` del DOM?
+¿El nodo `<ul>` del DOM?
+El segundo `<li>` (con Pete)?
 
 [solución]()
 
