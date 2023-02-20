@@ -497,7 +497,7 @@ Notas:
 ### html para la solucion
   
 ````html
-  <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 
 <head>
