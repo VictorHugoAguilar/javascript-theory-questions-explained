@@ -1005,7 +1005,7 @@ alert(user.name); // John
 alert(user.age); // ReferenceError: La propiedad no existe: "age"
   ````
   
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/proxy/solutions/error-al-leer-una-propiedad-no-existente.md)
   
 ##  Accediendo a array 1
   
@@ -1040,7 +1040,7 @@ alert( array[-2] ); // 2
 // el resto de la funcionalidad debe mantenerse igual.
   ````
   
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/proxy/solutions/accediendo-a-array-1.md)
 
 ##  Observable
 
@@ -1069,7 +1069,7 @@ Cada vez que una propiedad cambie, handler(key, value) es llamada con el nombre 
 
 P.D. En esta tarea, solo toma en cuenta la escritura de una propiedad. Otras operaciones pueden ser implementadas de manera similar.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/proxy/solutions/observable.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
