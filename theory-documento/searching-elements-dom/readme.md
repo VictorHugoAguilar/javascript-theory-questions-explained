@@ -375,7 +375,7 @@ Abra la página table.html en una ventana separada y haga uso de las herramienta
 </html>
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/searching-elements-dom/solutions/buscar-elementos.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/readme.md)
