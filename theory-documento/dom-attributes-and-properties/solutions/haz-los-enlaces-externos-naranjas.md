@@ -34,6 +34,8 @@ let links = document.querySelectorAll(selector);
 links.forEach(link => link.style.color = 'orange');
 ````
 
+## Solución completa
+
 ````html
 <!DOCTYPE HTML>
 <html>
