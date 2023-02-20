@@ -621,13 +621,13 @@ En la mayoría de los casos podemos hacerlo sin Reflect, por ejemplo, leer una p
 
 ## Proxy en un getter
 
-  Veamos un ejemplo que demuestra por qué Reflect.get es mejor. Y veremos también por qué get/set tiene el tercer argumento receiver que no usamos antes.
+Veamos un ejemplo que demuestra por qué Reflect.get es mejor. Y veremos también por qué get/set tiene el tercer argumento receiver que no usamos antes.
 
 Tenemos un objeto user con la propiedad _name y un getter para ella.
 
 Aquí hay un proxy alrededor de él:
 
-  ````js
+````js
 let user = {
   _name: "Guest",
   get name() {
@@ -642,7 +642,7 @@ let userProxy = new Proxy(user, {
 });
 
 alert(userProxy.name); // Guest
-  ````
+````
   
 La trampa get es “transparente” aquí, devuelve la propiedad original, y no hace nada más. Esto es suficiente para nuestro ejemplo.
 
