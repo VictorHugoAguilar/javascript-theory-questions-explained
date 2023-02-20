@@ -7,7 +7,7 @@
 5.  [Promise API](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-api/readme.md)
 6.  [Promisificación](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promisify/readme.md)
 7.  [Microtareas (Microtasks)](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/microtask-queue/readme.md)
-8.  [Async/await]()
+8.  [Async/await](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/async-await/readme.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/readme.md)
