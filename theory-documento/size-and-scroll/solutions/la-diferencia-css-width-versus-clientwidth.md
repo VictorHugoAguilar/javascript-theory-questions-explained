@@ -7,4 +7,5 @@ Diferencias:
 3.  clientWidth es el contenido interior del área del elemento más los rellenos, mientras el ancho de CSS (con el estándar box-sizing) es el contenido interior del área sin rellenos.
 4.  Si hay una barra de desplazamiento y el navegador reserva espacio para esta, algunos navegadores restan ese espacio del ancho de CSS (por que no está disponible para el contenido), y otros no. La propiedad clientWidth es siempre la misma: el tamaño de la barra de desplazamiento se resta si está reservado.
 
-#la-diferencia-css-width-versus-clientwidth
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/readme.md#la-diferencia-css-width-versus-clientwidth)
