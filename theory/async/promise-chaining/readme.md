@@ -369,7 +369,7 @@ Versus:
 promise.then(f1, f2);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-chaining/solutions/promesa-then-versus-catch.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/readme.md)
