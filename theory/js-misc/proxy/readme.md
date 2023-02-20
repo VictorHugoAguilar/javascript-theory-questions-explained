@@ -974,11 +974,11 @@ Los proxys tienen algunas limitaciones:
 * El test de igualdad de objeto === no puede ser interceptado.
 * Performance: los tests de velocidad dependen del motor, pero generalmente acceder a una propiedad usando el proxy más simple el tiempo se multiplica unas veces. Aunque en la práctica esto solo es importante para los objetos que son los “cuello de botella” de una aplicación.
 
-  # ✅ Tareas
+# ✅ Tareas
 
-  ## Error al leer una propiedad no existente
+##  Error al leer una propiedad no existente
 
-  Usualmente, el intento de leer una propiedad que no existe devuelve undefined.
+Usualmente, el intento de leer una propiedad que no existe devuelve undefined.
 
 Crea en su lugar un proxy que arroje un error por intentar leer una propiedad no existente.
 
@@ -988,7 +988,7 @@ Escribe una función wrap(target) que tome un objeto target y devuelva un proxy 
 
 Así es como debe funcionar:
 
-  ````js
+````js
 let user = {
   name: "John"
 };
@@ -1007,7 +1007,7 @@ alert(user.age); // ReferenceError: La propiedad no existe: "age"
   
 [solución]()
   
-## Accediendo a array 1
+##  Accediendo a array 1
   
 En algunos lenguajes de programación podemos acceder a los arrays usando índices negativos, contando desde el final.
 
@@ -1042,7 +1042,7 @@ alert( array[-2] ); // 2
   
 [solución]()
 
-  ## Observable
+##  Observable
 
   Crea una función makeObservable(target) que “haga el objeto observable” devolviendo un proxy.
 
