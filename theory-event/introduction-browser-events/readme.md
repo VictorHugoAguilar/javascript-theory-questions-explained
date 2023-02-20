@@ -448,13 +448,13 @@ Agrega JavaScript al button para hacer que <div id="text"> desaparezca al clicke
 
 [solución]()
 
-## Ocultarse
+## Ocultarse
 
 Crea un botón que se oculte a sí mismo al darle un click.
 
 [solución]() 
 
-## Que handlers se ejecutan
+## Que handlers se ejecutan
 
 Hay un botón en la variable. No hay handlers en él.
 
@@ -494,7 +494,7 @@ Notas:
 1.  El código también debe funcionar con medidas diferentes de campo y balón, no debe estar asociado a ningún valor fijo.
 2.  Usa las propiedades event.clientX/event.clientY para las coordenadas del click.
   
-### html para la solución
+### html para la solucion
   
 ````html
   <!DOCTYPE HTML>
