@@ -180,7 +180,7 @@ Entonces, estos métodos solo pueden usarse para insertar nodos DOM como piezas 
 
 Pero ¿y si queremos insertar un string HTML “como html”, con todas las etiquetas y demás funcionando, de la misma manera que lo hace elem.innerHTML?
 
-## insertAdjacentHTML/Text/Element
+## insertAdjacentHTML/Text/Element
 
 Para ello podemos usar otro métodos, muy versátil: elem.insertAdjacentHTML(where, html).
 
@@ -558,7 +558,7 @@ elem.textContent = text
 
 [solución]()
 
-## Limpiar el elemento
+## Limpiar el elemento
 
 Crea una función clear(elem) que remueva todo del elemento.
 
@@ -579,7 +579,7 @@ Crea una función clear(elem) que remueva todo del elemento.
 
 En el ejemplo de abajo, la llamada table.remove() quita la tabla del documento.
 
-Pero si la ejecutas, puedes ver que el texto “aaa”` es aún visible.
+Pero si la ejecutas, puedes ver que el texto `“aaa”` es aún visible.
 
 ¿Por qué ocurre esto?
 
@@ -608,7 +608,7 @@ Escribir una interfaz para crear una lista de lo que ingresa un usuario.
 Para cada item de la lista:
 
 1.  Preguntar al usuario acerca del contenido usando prompt.
-2.  Crear el <li> con ello y agregarlo a <ul>.
+2.  Crear el `<li>` con ello y agregarlo a `<ul>`.
 3.  Continuar hasta que el usuario cancela el ingreso (presionando Esc o con un ingreso vacío).
 
 Todos los elementos deben ser creados dinámicamente.
@@ -678,7 +678,7 @@ El resultado:
 ![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_05.png?raw=true)
 
 [solución]()
-  
+
 ## Crea un calendario
 
 Escribe una función `createCalendar(elem, year, month)`.
@@ -696,7 +696,7 @@ P.S. Para esta tarea es suficiente generar el calendario, no necesita aún ser c
 Abrir un entorno controlado para la tarea.
 
 [solución]()
-  
+
 ## Reloj coloreado con setInterval
 
 Crea un reloj coloreado como aquí:
@@ -706,7 +706,7 @@ Crea un reloj coloreado como aquí:
 Usa HTML/CSS para el estilo, JavaScript solamente actualiza la hora en elements.
 
 [solución]()
-  
+
 ## Inserta el HTML en la lista
 
 Escribe el código para insertar `<li>2</li><li>3</li>` entre dos `<li>` aquí:
@@ -720,7 +720,7 @@ Escribe el código para insertar `<li>2</li><li>3</li>` entre dos `<li>` aquí:
 
 [solución]()
 
-## Ordena la tabla
+## Ordena la tabla
 
 Tenemos una tabla:
 
