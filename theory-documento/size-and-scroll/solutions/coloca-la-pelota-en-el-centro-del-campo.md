@@ -98,4 +98,5 @@ Deberíamos arreglar eso agregando width/height en <img>:
 </html>
 ````
 
-#coloca-la-pelota-en-el-centro-del-campo
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/readme.md#coloca-la-pelota-en-el-centro-del-campo)
