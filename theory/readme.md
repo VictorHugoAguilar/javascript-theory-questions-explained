@@ -29,3 +29,7 @@ Nos concentraremos en el lenguaje mismo con el mínimo de notas específicas del
 13. [Módulos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/modules/readme.md)
 
 14. [Temas diversos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/js-misc/readme.md)
+
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/readme.md)
