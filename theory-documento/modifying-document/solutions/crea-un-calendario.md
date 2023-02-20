@@ -7,7 +7,7 @@ El algoritmo:
 1.  Crea el encabezado de la tabla con `<th>` y los nombres de los días de la semana.
 2.  Crea el objeto date d = new Date(year, month-1). Este es el primer día del mes month (tomando en cuenta que los meses en JavaScript comienzan en 0, no 1).
 3.  Las primeras celdas hasta el primer día del mes d.getDay() podrían estar vacías. Las completamos con `<td></td>`.
-4.  Incrementa el día en d: d.setDate(d.getDate()+1). Si d.getMonth() no es aún del mes siguiente, agregamos una nueva celda `<td>` al calendario. Si es domingo, agregamos un nueva línea `"</tr><tr>"`.
+4.  Incrementa el día en d: `d.setDate(d.getDate()+1)`. Si `d.getMonth() no es aún del mes siguiente, agregamos una nueva celda `<td>` al calendario. Si es domingo, agregamos un nueva línea `"</tr><tr>"`.
 5.  Si el mes terminó, pero la fila no está completa, le agregamos `<td>`vacíos para hacerlo rectangular.
 
 ````html
@@ -93,4 +93,4 @@ El algoritmo:
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md##crea-un-calendario)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md#crea-un-calendario)
