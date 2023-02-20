@@ -11,7 +11,7 @@ Aquí aprenderemos a manipular una página web usando JavaScript.
 7.  [Modificando el documento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md)
 8.  [Estilos y clases](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/styles-and-classes/readme.md)
 9.  [Tamaño de elementos y desplazamiento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/readme.md)
-10. [Tamaño de ventana y desplazamiento]()
+10. [Tamaño de ventana y desplazamiento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll-window/readme.md)
 11. [Coordenadas]()
 
 ---
