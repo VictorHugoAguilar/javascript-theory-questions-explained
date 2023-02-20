@@ -502,9 +502,9 @@ El número de `<li>` anidados: todos los descendientes, incluidos los profundame
 Demo en nueva ventana
 
 [solución]()
-  
-## Que hay en nodeType
-  
+
+## Que hay en nodeType
+
 ¿Qué muestra el script?
 
 ````html
@@ -521,7 +521,7 @@ Demo en nueva ventana
 
 [solución]()
   
-## Etiqueta en comentario
+## Etiqueta en comentario
 
 ¿Qué muestra este código?
 
@@ -537,7 +537,7 @@ Demo en nueva ventana
   
 [solución]()
 
-## Donde esta el document en la jerarquia
+## Donde esta el document en la jerarquia
 
 ¿A qué clase pertenece el document?
 
