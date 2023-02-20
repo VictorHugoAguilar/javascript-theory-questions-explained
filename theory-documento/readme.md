@@ -7,7 +7,7 @@ Aquí aprenderemos a manipular una página web usando JavaScript.
 3.  [Recorriendo el DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/readme.md)
 4.  [Buscar: getElement*, querySelector*](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/searching-elements-dom/readme.md)
 5.  [Propiedades del nodo: tipo, etiqueta y contenido](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/readme.md)
-6.  [Atributos y propiedades]()
+6.  [Atributos y propiedades](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-attributes-and-properties/readme.md)
 7.  [Modificando el documento]()
 8.  [Estilos y clases]()
 9.  [Tamaño de elementos y desplazamiento]()
