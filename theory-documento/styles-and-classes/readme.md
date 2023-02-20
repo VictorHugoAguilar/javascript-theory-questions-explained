@@ -286,7 +286,7 @@ El método getComputedStyle(elem, [pseudo]) retorna el objeto de estilo con ello
 
 # ✅ Tareas
 
-## Crear una notificación
+## Crear una notificacion
 
 Escribir una función showNotification(options) que cree una notificación: <div class="notification"> con el contenido dado. La notificación debería desaparecer automáticamente despues de 1.5 segundos.
 
