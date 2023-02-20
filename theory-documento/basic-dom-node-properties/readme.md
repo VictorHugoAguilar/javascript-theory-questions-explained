@@ -31,7 +31,7 @@ Proporciona la funcionalidad del árbol principal: parentNode, nextSibling, chil
 El objeto global document pertenece exactamente a esta clase. Sirve como punto de entrada al DOM.
 
 * CharacterData – una clase “abstract” heredada por:
-  - Text – la clase correspondiente a texto dentro de los elementos, por ejemplo Hello en <p>Hello</p>.
+  - Text – la clase correspondiente a texto dentro de los elementos, por ejemplo Hello en `<p>Hello</p>`.
   - Comment – la clase para los “comentarios”. No se muestran, pero cada comentario se vuelve un miembro del DOM.
 
 * Element – es una clase base para elementos DOM.
