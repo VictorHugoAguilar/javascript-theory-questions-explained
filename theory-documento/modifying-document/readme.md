@@ -556,7 +556,7 @@ elem.append(document.createTextNode(text))
 elem.innerHTML = text
 elem.textContent = text
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/createtextnode-vs-innerhtml-vs-textcontent.md)
 
 ## Limpiar el elemento
 
@@ -573,7 +573,7 @@ Crea una función clear(elem) que remueva todo del elemento.
   clear(elem); // borra la lista
 </script>
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/limpiar-el-elemento.md)
   
 ## Por que aaa permanece
 
@@ -599,7 +599,7 @@ Pero si la ejecutas, puedes ver que el texto `“aaa”` es aún visible.
 </script>
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/por-que-aaa-permanece.md)
 
 ## Crear una lista
 
@@ -615,7 +615,7 @@ Todos los elementos deben ser creados dinámicamente.
 
 Si el usuario ingresa etiquetas HTML, deben ser tratadas como texto.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/crear-una-lista.md)
 
 ## Crea un arbol desde el objeto
 
@@ -665,7 +665,7 @@ P.S. El árbol no debe tener elementos “extras” como `<ul></ul>` vacíos par
 
 Abrir un entorno controlado para la tarea.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/crea-un-arbol-desde-el-objeto.md)
   
 ## Mostrar descendientes en un arbol
 
@@ -677,7 +677,7 @@ El resultado:
 
 ![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_05.png?raw=true)
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/mostrar-descendientes-en-un-arbol.md)
 
 ## Crea un calendario
 
@@ -695,7 +695,7 @@ P.S. Para esta tarea es suficiente generar el calendario, no necesita aún ser c
 
 Abrir un entorno controlado para la tarea.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/crea-un-calendario.md)
 
 ## Reloj coloreado con setInterval
 
@@ -705,7 +705,7 @@ Crea un reloj coloreado como aquí:
   
 Usa HTML/CSS para el estilo, JavaScript solamente actualiza la hora en elements.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/reloj-coloreado-con-setinterval.md)
 
 ## Inserta el HTML en la lista
 
@@ -718,7 +718,7 @@ Escribe el código para insertar `<li>2</li><li>3</li>` entre dos `<li>` aquí:
 </ul>
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/inserta-el-html-en-la-lista.md)
 
 ## Ordena la tabla
 
@@ -754,4 +754,4 @@ Escribe el código para ordenarla por la columna `"name"`.
 
 Abrir un entorno controlado para la tarea.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/ordena-la-tabla.md)
