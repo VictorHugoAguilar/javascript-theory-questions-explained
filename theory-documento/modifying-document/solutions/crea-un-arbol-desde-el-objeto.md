@@ -112,6 +112,7 @@ La forma más fácil de recorrer el objeto es usando recursividad.
 
 </body>
 </html>
-  
+````
 
-#crea-un-arbol-desde-el-objeto
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md#crea-un-arbol-desde-el-objeto)
