@@ -501,7 +501,7 @@ Escribe el código que para cada `<li>` muestra:
 El número de `<li>` anidados: todos los descendientes, incluidos los profundamente anidados.
 Demo en nueva ventana
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/solutions/contar-los-descendientes.md)
 
 ## Que hay en nodeType
 
@@ -519,7 +519,7 @@ Demo en nueva ventana
 </html>
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/solutions/que-hay-en-nodetype.md)
   
 ## Etiqueta en comentario
 
@@ -535,7 +535,7 @@ Demo en nueva ventana
 </script>
 ````
   
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/solutions/etiqueta-en-comentario.md)
 
 ## Donde esta el document en la jerarquia
 
@@ -545,7 +545,7 @@ Demo en nueva ventana
 
 ¿Hereda de Node o Element, o tal vez HTMLElement?
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/solutions/donde-esta-el-document-en-la-jerarquia.md)
   
 
 ---
