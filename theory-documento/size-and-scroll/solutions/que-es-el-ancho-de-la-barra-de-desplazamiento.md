@@ -21,4 +21,5 @@ div.remove();
 alert(scrollWidth);
 ````
 
-#que-es-el-ancho-de-la-barra-de-desplazamiento
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/readme.md#que-es-el-ancho-de-la-barra-de-desplazamiento)
