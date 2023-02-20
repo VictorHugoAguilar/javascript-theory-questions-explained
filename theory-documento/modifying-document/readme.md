@@ -26,7 +26,7 @@ Así es como se verá:
 </div>
 ````
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_01.png?raw=true)
 
 Eso fue el ejemplo HTML. Ahora creemos el mismo div con JavaScript (asumiendo que los estilos ya están en HTML/CSS).
 
@@ -133,11 +133,11 @@ Aquí tenemos un ejemplo del uso de estos métodos para agregar items a una list
 </script>
 ````
 
-![image_02]()
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_08.png?raw=true)
 
 Aquí la representación visual de lo que hacen los métodos:
 
-![image_03]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_02.png?raw=true)
 
 Entonces la lista final será:
 
@@ -215,7 +215,7 @@ Así es como podemos añadir HTML arbitrario a la página.
 
 Aquí abajo, la imagen de las variantes de inserción:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_03.png?raw=true)
 
 Fácilmente podemos notar similitudes entre esta imagen y la anterior. Los puntos de inserción son los mismos, pero este método inserta HTML.
 
@@ -652,7 +652,7 @@ createTree(container, data); // crea el árbol en el contenedor
 
 El árbol resultante debe verse así:
 
-![image_05]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_04.png?raw=true)
 
 Elige una de estas dos formas para resolver esta tarea:
 
@@ -669,13 +669,13 @@ Abrir un entorno controlado para la tarea.
   
 ## Mostrar descendientes en un arbol
 
-Hay un árbol organizado como ramas ul/li.
+Hay un árbol organizado como ramas `ul/li`.
 
-Escribe el código que agrega a cada <li> el número de su descendientes. No cuentes las hojas (nodos sin hijos).
+Escribe el código que agrega a cada `<li>` el número de su descendientes. No cuentes las hojas (nodos sin hijos).
 
 El resultado:
 
-![image_06]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_05.png?raw=true)
 
 [solución]()
   
@@ -689,7 +689,7 @@ El calendario debe ser una tabla, donde una semana es `<tr>`, y un día es `<td>
 
 Por ejemplo, `createCalendar(cal, 2012, 9)` debe generar en el elemento cal el siguiente calendario:
 
-![image_07]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_06.png?raw=true)
 
 P.S. Para esta tarea es suficiente generar el calendario, no necesita aún ser cliqueable.
 
@@ -701,7 +701,7 @@ Abrir un entorno controlado para la tarea.
 
 Crea un reloj coloreado como aquí:
 
-![image_08]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/img/documento_modifying-document_image_07.png?raw=true)
   
 Usa HTML/CSS para el estilo, JavaScript solamente actualiza la hora en elements.
 
@@ -709,7 +709,7 @@ Usa HTML/CSS para el estilo, JavaScript solamente actualiza la hora en elements.
   
 ## Inserta el HTML en la lista
 
-Escribe el código para insertar <li>2</li><li>3</li> entre dos <li> aquí:
+Escribe el código para insertar `<li>2</li><li>3</li>` entre dos `<li>` aquí:
 
 ````js
 <ul id="ul">
