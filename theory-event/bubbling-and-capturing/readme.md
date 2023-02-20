@@ -101,7 +101,7 @@ Para detener la propagación y prevenir que los manejadores del elemento actual 
 ### ⚠️ ¡No detengas la propagación si no es necesario!
 La propagación es conveniente. No la detengas sin una necesidad real, obvia y arquitectónicamente bien pensada.
 
-A veces event.stopPropagation() crea trampas ocultas que luego se convierten en problemas.
+A veces `event.stopPropagation()` crea trampas ocultas que luego se convierten en problemas.
 
 Por ejemplo:
 
@@ -128,7 +128,7 @@ Se explica así: por un clic en <td> el evento va primero a través de la cadena
 
 Hasta ahora solo hablamos de la propagación, porque la fase de captura es raramente usada.
 
-De hecho, la fase de captura es invisible para nosotros, porque los manejadores agregados que usan la propiedad on<event>, ó usan atributos HTML, ó addEventListener(event, handler) de dos argumentos, no ven la fase de captura, únicamente se ejecutan en la 2da y 3ra fase.
+De hecho, la fase de captura es invisible para nosotros, porque los manejadores agregados que usan la propiedad `on<event>`, ó usan atributos HTML, ó `addEventListener(event, handler)` de dos argumentos, no ven la fase de captura, únicamente se ejecutan en la 2da y 3ra fase.
 
 Para atrapar un evento en la fase de captura, necesitamos preparar la opción capture como true en el manejador:
 
@@ -174,7 +174,7 @@ Veamos ambas fases, captura y propagación, en acción:
   
 El código prepara manejadores de clic en cada elemento en el documento para ver cuáles están funcionando.
 
-Si haces clic en <p>, verás que la secuencia es:
+Si haces clic en `<p>`, verás que la secuencia es:
 
 1.  HTML → BODY → FORM → DIV (fase de captura, el primer detector o “listener”):
 2.  P → DIV → FORM → BODY → HTML (fase de propagación, el segundo detector).
@@ -205,7 +205,7 @@ Cuando ocurre un evento, el elemento más anidado dónde ocurrió se reconoce co
 
 * Luego el evento se mueve hacia abajo desde el documento raíz hacia event.target, llamando a los manejadores en el camino asignados con addEventListener(..., true) (true es una abreviación para {capture: true}).
 * Luego los manejadores son llamados en el elemento objetivo mismo.
-* Luego el evento se propaga desde event.target hacia la raíz, llamando a los manejadores que se asignaron usando on<event>, atributos HTML y addEventListener sin el 3er argumento o con el 3er argumento false/{capture:false}.
+* Luego el evento se propaga desde event.target hacia la raíz, llamando a los manejadores que se asignaron usando `on<event>`, atributos HTML y addEventListener sin el 3er argumento o con el 3er argumento false/{capture:false}.
 
 Cada manejador puede acceder a las propiedades del objeto event:
 
@@ -219,7 +219,7 @@ La fase de captura raramente es usada, usualmente manejamos los eventos en la pr
 
 En el mundo real, cuando un accidente ocurre, las autoridades locales reaccionan primero. Ellos conocen mejor el área dónde ocurrió. Luego, si es necesario, las autoridades de alto nivel.
 
-Lo mismo para los manejadores de eventos. El código que se prepara en el manejador de un elemento en particular conoce el máximo de detalles sobre el elemento y qué hace. Un manejador en un <td> particular puede ser adecuado para ese exacto <td>, conocer todo sobre él, entonces debe tener su oportunidad primero. Luego su padre inmediato también conoce sobre el contexto, pero un poco menos, y así sucesivamente hasta el elemento de arriba que maneja conceptos generales y se ejecuta al final.
+Lo mismo para los manejadores de eventos. El código que se prepara en el manejador de un elemento en particular conoce el máximo de detalles sobre el elemento y qué hace. Un manejador en un `<td>` particular puede ser adecuado para ese exacto `<td>`, conocer todo sobre él, entonces debe tener su oportunidad primero. Luego su padre inmediato también conoce sobre el contexto, pero un poco menos, y así sucesivamente hasta el elemento de arriba que maneja conceptos generales y se ejecuta al final.
 
 La propagación y captura ponen los cimientos para “delegación de eventos”: un extremadamente poderoso patrón de manejo de eventos que se estudia en el siguiente capítulo.
   
