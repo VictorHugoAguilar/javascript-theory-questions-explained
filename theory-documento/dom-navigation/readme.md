@@ -361,7 +361,7 @@ Si elem – es un elemento nodo arbitrario del DOM…
 
 Escribe el código para pintar todas las celdas diagonales de rojo.
 
-Necesitarás obtener todas las <td> de la <table> y pintarlas usando el código:
+Necesitarás obtener todas las `<td>` de la `<table>` y pintarlas usando el código:
 
 ````html
 // td debe ser la referencia a la celda de la tabla
@@ -370,7 +370,7 @@ td.style.backgroundColor = 'red';
 
 El resultado debe ser:
 
-
+![image_03]()
 
 [solución]()
   
