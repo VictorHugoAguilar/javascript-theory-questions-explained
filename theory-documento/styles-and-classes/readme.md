@@ -304,4 +304,4 @@ showNotification({
 
 Usar posicionamiento CSS para mostrar el elemento en las coordenadas (top/right) dadas. El documento tiene los estilos necesarios.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/styles-and-classes/solutions/crear-una-notificacion.md)
