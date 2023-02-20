@@ -6,7 +6,7 @@ Todas las operaciones en el DOM comienzan con el objeto document. Este es el pri
 
 Esta imagen representa los enlaces que nos permiten viajar a través de los nodos del DOM:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/img/documento_dom-navigation_image_01.png?raw=true)
 
 Vamos a analizarlos con más detalle.
 
@@ -210,7 +210,7 @@ Pero para muchas tareas no queremos los nodos de texto o comentarios. Queremos m
 
 Así que vamos a ver más enlaces de navegación que solo tienen en cuenta los elementos nodos:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/img/documento_dom-navigation_image_02.png?raw=true)
 
 Los enlaces son similares a los de arriba, solo que tienen dentro la palabra Element:
 
@@ -369,7 +369,7 @@ Necesitarás obtener todas las `<td>` de la `<table>` y pintarlas usando el cód
 
 El resultado debe ser:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-navigation/img/documento_dom-navigation_image_03.png?raw=true)
 
 [solución]()
   
