@@ -89,4 +89,5 @@ Ten en cuenta: los elementos deben estar en el documento para leer offsetHeight 
 </html>
 ```
 
-#muestra-una-nota-cercana-al-elemento
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/readme.md#muestra-una-nota-cercana-al-elemento)
