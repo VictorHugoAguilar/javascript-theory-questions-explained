@@ -88,4 +88,5 @@ Todo el carrusel es un “componente gráfico” autónomo en la página, por lo
 </html>
 ````
 
-#carrusel
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/readme.md#carrusel)
