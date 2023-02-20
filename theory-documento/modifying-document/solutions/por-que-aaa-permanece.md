@@ -10,4 +10,5 @@ La pregunta puede ser respondida fácilmente explorando el DOM usando la herrami
 
 El estándar HTML especifica en detalle cómo procesar HTML incorrecto, y tal comportamiento del navegador es el correcto.
 
-#por-que-aaa-permanece
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md#por-que-aaa-permanece)

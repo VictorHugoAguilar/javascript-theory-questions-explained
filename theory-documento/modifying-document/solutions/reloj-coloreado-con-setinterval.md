@@ -129,4 +129,5 @@ También es importante establecer un nuevo intervalo en clockStart() solamente c
 </html>
 ````
                    
-#reloj-coloreado-con-setinterval
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md#reloj-coloreado-con-setinterval)

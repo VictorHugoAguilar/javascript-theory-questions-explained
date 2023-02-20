@@ -54,4 +54,5 @@ P.S. En nuestro caso, hay un `<tbody>` explícito en la tabla, pero incluso si l
 </script>
 ````
 
-#ordena-la-tabla
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/readme.md#ordena-la-tabla)
