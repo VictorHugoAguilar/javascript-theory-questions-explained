@@ -1,6 +1,6 @@
 # Promesas y async/await
 
-1.  [Introducción: callbacks]()
+1.  [Introducción: callbacks](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/callbacks/readme.md)
 2.  [Promesa]()
 3.  [Encadenamiento de promesas]()
 4.  [Manejo de errores con promesas]()
