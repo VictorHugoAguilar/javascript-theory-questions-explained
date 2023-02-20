@@ -755,3 +755,6 @@ Escribe el código para ordenarla por la columna `"name"`.
 Abrir un entorno controlado para la tarea.
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/modifying-document/solutions/ordena-la-tabla.md)
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory-documento#readme)
