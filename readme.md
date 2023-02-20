@@ -4,7 +4,7 @@
 
 * [Teoría Documento](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/readme.md)
 
-* [Teoría Eventos]()
+* [Teoría Eventos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
 
 * [Preguntas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/question.md)
 
