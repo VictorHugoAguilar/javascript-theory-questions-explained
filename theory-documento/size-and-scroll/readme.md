@@ -273,7 +273,7 @@ Escribe el código que funcione para un elem arbitrario.
 
 P.S. Por favor revisa tu código: si no hay desplazamiento o el elemento está complemamente desplazado, debería retornar 0.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/solutions/que-es-el-desplazamiento-desde-la-parte-inferior.md)
   
 ## Que es el ancho de la barra de desplazamiento
 
@@ -283,7 +283,7 @@ Para Windows esto usualmente varía entre 12px y 20px. Si el navegador no reserv
 
 P.S. El código debería funcionar con cualquier documento HTML, no depende de su contenido.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/solutions/que-es-el-ancho-de-la-barra-de-desplazamiento.md)
   
 ## Coloca la pelota en el centro del campo.
 
@@ -302,7 +302,7 @@ Calcúlalos y úsalos para colocar la pelota en el centro del campo verde:
 
 P.S. Claro, el centrado se podría hacer con CSS, pero aquí lo queremos específicamente con JavaScript. Además, conoceremos otros temas y situaciones más complejas en las que se debe utilizar JavaScript. Aquí hacemos un “calentamiento”.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/solutions/coloca-la-pelota-en-el-centro-del-campo.md)
 
 ## La diferencia CSS width versus clientWidth
   
@@ -310,7 +310,7 @@ P.S. Claro, el centrado se podría hacer con CSS, pero aquí lo queremos especí
 
 Dar al menos 3 diferencias. Mientras más, mejor.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/solutions/la-diferencia-css-width-versus-clientwidth.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory-documento#readme)
