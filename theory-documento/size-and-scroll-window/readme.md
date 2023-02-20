@@ -106,7 +106,7 @@ window.scrollTo(0,0)
 
 Estos métodos funcionan para todos los navegadores de la misma manera.
 
-## scrollIntoView
+## scrollIntoView
 
 Para completar, cubramos un método más: elem.scrollIntoView(top).
 
@@ -127,7 +127,7 @@ Y este botón desplaza la página para mostrarla en la parte inferior:
 this.scrollIntoView(false)
 ````
 
-## Prohibir el desplazamiento
+## Prohibir el desplazamiento
 
 A veces necesitamos hacer que el documento sea “inescrutable”. Por ejemplo, cuando necesitamos cubrirlo con un mensaje grande que requiere atención inmediata, y queremos que el visitante interactúe con ese mensaje, no con el documento.
 
