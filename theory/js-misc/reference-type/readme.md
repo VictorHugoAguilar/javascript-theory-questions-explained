@@ -120,7 +120,7 @@ let user = {
 
 P.D. Hay una trampa :)
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/reference-type/solutions/verificacion-de-sintaxis.md)
 
 ## Explica el valor de this
 
@@ -144,7 +144,7 @@ obj.go();               // (1) [object Object]
 (obj.go || obj.stop)(); // (4) undefined
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/reference-type/solutions/explica-el-valor-de-this.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/js-misc/readme.md)
