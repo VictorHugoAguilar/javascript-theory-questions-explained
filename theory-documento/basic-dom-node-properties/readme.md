@@ -6,7 +6,7 @@ En este capítulo veremos más sobre cuáles son y aprenderemos sus propiedades 
 
 ## Clases de nodo DOM
 
-Los diferentes nodos DOM pueden tener diferentes propiedades. Por ejemplo, un nodo de elemento correspondiente a la etiqueta <a> tiene propiedades relacionadas con el enlace, y el correspondiente a <input> tiene propiedades relacionadas con la entrada y así sucesivamente. Los nodos de texto no son lo mismo que los nodos de elementos. Pero también hay propiedades y métodos comunes entre todos ellos, porque todas las clases de nodos DOM forman una única jerarquía.
+Los diferentes nodos DOM pueden tener diferentes propiedades. Por ejemplo, un nodo de elemento correspondiente a la etiqueta `<a>` tiene propiedades relacionadas con el enlace, y el correspondiente a `<input>` tiene propiedades relacionadas con la entrada y así sucesivamente. Los nodos de texto no son lo mismo que los nodos de elementos. Pero también hay propiedades y métodos comunes entre todos ellos, porque todas las clases de nodos DOM forman una única jerarquía.
 
 Cada nodo DOM pertenece a la clase nativa correspondiente.
 
@@ -44,16 +44,16 @@ Un navegador admite no solo HTML, sino también XML y SVG. La clase Element sirv
 
 Es heredado por elementos HTML concretos:
 
-* HTMLInputElement – la clase para elementos <input>,
-* HTMLBodyElement – la clase para los elementos <body>,
-* HTMLAnchorElement – la clase para elementos <a>,
+* HTMLInputElement – la clase para elementos `<input>`,
+* HTMLBodyElement – la clase para los elementos `<body>`,
+* HTMLAnchorElement – la clase para elementos `<a>`,
 * …y así sucesivamente.
 
-Hay muchas otras etiquetas con sus propias clases que pueden tener propiedades y métodos específicos, mientras que algunos elementos, tales como <span>, <section>, <article>, no tienen ninguna propiedad específica entonces derivan de la clase HTMLElement.
+Hay muchas otras etiquetas con sus propias clases que pueden tener propiedades y métodos específicos, mientras que algunos elementos, tales como `<span>`, `<section>`, `<article>`, no tienen ninguna propiedad específica entonces derivan de la clase HTMLElement.
 
 Entonces, el conjunto completo de propiedades y métodos de un nodo dado viene como resultado de la cadena de herencia.
 
-Por ejemplo, consideremos el objeto DOM para un elemento <input>. Pertenece a la clase HTMLInputElement.
+Por ejemplo, consideremos el objeto DOM para un elemento `<input>`. Pertenece a la clase HTMLInputElement.
 
 Obtiene propiedades y métodos como una superposición de (enumerados en orden de herencia):
 
@@ -202,7 +202,7 @@ Si solo tratamos con elementos, entonces podemos usar tanto tagName como nodeNam
 ### ℹ️ El nombre de la etiqueta siempre está en mayúsculas, excepto en el modo XML
 El navegador tiene dos modos de procesar documentos: HTML y XML. Por lo general, el modo HTML se usa para páginas web. El modo XML está habilitado cuando el navegador recibe un documento XML con el encabezado: Content-Type: application/xml+xhtml.
 
-En el modo HTML, tagName/nodeName siempre está en mayúsculas: es BODY ya sea para <body> o <BoDy>.
+En el modo HTML, tagName/nodeName siempre está en mayúsculas: es BODY ya sea para `<body>` o `<BoDy>`.
 
 En el modo XML, el caso se mantiene “tal cual”. Hoy en día, el modo XML rara vez se usa.
 
@@ -272,7 +272,7 @@ Como el contenido se “pone a cero” y se reescribe desde cero, todas las imá
 
 En el ejemplo de chatDiv arriba, la línea chatDiv.innerHTML+="¿Cómo va?" recrea el contenido HTML y recarga smile.gif (con la esperanza de que esté en caché). Si chatDiv tiene muchos otros textos e imágenes, entonces la recarga se vuelve claramente visible.
 
-También hay otros efectos secundarios. Por ejemplo, si el texto existente se seleccionó con el mouse, la mayoría de los navegadores eliminarán la selección al reescribir innerHTML. Y si había un <input> con un texto ingresado por el visitante, entonces el texto será eliminado. Y así.
+También hay otros efectos secundarios. Por ejemplo, si el texto existente se seleccionó con el mouse, la mayoría de los navegadores eliminarán la selección al reescribir innerHTML. Y si había un `<input>` con un texto ingresado por el visitante, entonces el texto será eliminado. Y así.
 
 Afortunadamente, hay otras formas de agregar HTML además de innerHTML, y las estudiaremos pronto.
 
@@ -312,14 +312,14 @@ Considera el ejemplo:
 
 Parece realmente extraño, ¿verdad?
 
-En la línea (*) reemplazamos div con <p>Un nuevo elemento</p>. En el documento externo (el DOM) podemos ver el nuevo contenido en lugar del <div>. Pero, como podemos ver en la línea (**), ¡el valor de la antigua variable div no ha cambiado!
+En la línea (*) reemplazamos div con `<p>Un nuevo elemento</p>`. En el documento externo (el DOM) podemos ver el nuevo contenido en lugar del <div>. Pero, como podemos ver en la línea (**), ¡el valor de la antigua variable div no ha cambiado!
 
 La asignación outerHTML no modifica el elemento DOM (el objeto al que hace referencia, en este caso, la variable ‘div’), pero lo elimina del DOM e inserta el nuevo HTML en su lugar.
 
 Entonces, lo que sucedió en div.outerHTML=... es:
 
 * div fue eliminado del documento.
-* Otro fragmento de HTML <p>Un nuevo elemento</p> se insertó en su lugar.
+* Otro fragmento de HTML `<p>Un nuevo elemento</p>` se insertó en su lugar.
 * div todavía tiene su antiguo valor. El nuevo HTML no se guardó en ninguna variable.
 
 Es muy fácil cometer un error aquí: modificar div.outerHTML y luego continuar trabajando con div como si tuviera el nuevo contenido. Pero no es así. Esto es correcto para innerHTML, pero no para outerHTML.
@@ -362,7 +362,7 @@ A veces, los desarrolladores incorporan información o instrucciones de plantill
 
 ## textContent: texto puro
 
-El textContent proporciona acceso al texto dentro del elemento: solo texto, menos todas las <tags>.
+El textContent proporciona acceso al texto dentro del elemento: solo texto, menos todas las `<tags>.
 
 Por ejemplo:
 
@@ -429,11 +429,13 @@ Técnicamente, hidden funciona igual que style="display:none". Pero es más cort
 
 Aquí hay un elemento parpadeante:
 
+````html
 <div id="elem">Un elemento parpadeante</div>
 
 <script>
   setInterval(() => elem.hidden = !elem.hidden, 1000);
 </script>
+````
 
 ## Más propiedades
 
