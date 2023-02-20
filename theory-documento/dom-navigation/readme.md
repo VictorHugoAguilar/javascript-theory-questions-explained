@@ -363,8 +363,8 @@ Escribe el código para pintar todas las celdas diagonales de rojo.
 Necesitarás obtener todas las `<td>` de la `<table>` y pintarlas usando el código:
 
 ````html
-// td debe ser la referencia a la celda de la tabla
-td.style.backgroundColor = 'red';
+  // td debe ser la referencia a la celda de la tabla
+  td.style.backgroundColor = 'red';
 ````
 
 El resultado debe ser:
