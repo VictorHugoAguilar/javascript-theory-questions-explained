@@ -529,16 +529,16 @@ P.D. Para esta tarea, la estructura HTML / CSS es en realidad el 90% de la soluc
     <button class="arrow prev">⇦</button>
     <div class="gallery">
       <ul>
-        <li><img src="https://en.js.cx/carousel/1.png"></li>
-        <li><img src="https://en.js.cx/carousel/2.png"></li>
-        <li><img src="https://en.js.cx/carousel/3.png"></li>
-        <li><img src="https://en.js.cx/carousel/4.png"></li>
-        <li><img src="https://en.js.cx/carousel/5.png"></li>
-        <li><img src="https://en.js.cx/carousel/6.png"></li>
-        <li><img src="https://en.js.cx/carousel/7.png"></li>
-        <li><img src="https://en.js.cx/carousel/8.png"></li>
-        <li><img src="https://en.js.cx/carousel/9.png"></li>
-        <li><img src="https://en.js.cx/carousel/10.png"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                                                <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+                                                                        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
       </ul>
     </div>
     <button class="arrow next">⇨</button>
