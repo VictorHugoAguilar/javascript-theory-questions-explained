@@ -47,7 +47,7 @@ Los valores de estas propiedades son técnicamente números, pero estos números
 
 Comencemos a explotar las propiedades, iniciando desde el exterior del elemento.
 
-## offsetParent, offsetLeft/Top
+## offsetParent, offsetLeft/Top
 
 Estas propiedades son raramente necesarias, pero aún son las propiedades de geometría “más externas” así que comenzaremos con ellas.
 
@@ -114,7 +114,7 @@ function isHidden(elem) {
 
 Observa que tal isHidden devuelve true para elementos que están en pantalla pero tienen tamaño cero.
 
-## clientTop/Left
+## clientTop/Left
 
 Dentro del elemento, tenemos los bordes.
 
@@ -139,7 +139,7 @@ Aquí está el ejemplo en hebreo:
 
 ![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_06.png?raw=true)
 
-## clientWidth/Height
+## clientWidth/Height
 
 Esta propiedad proporciona el tamaño del área dentro de los bordes del elemento.
 
@@ -159,7 +159,7 @@ Ahora clientWidth: aquí el ancho del contenido no es 300px, sino 284px, porque 
 
 Entonces, cuando no hay relleno, podremos usar clientWidth/clientHeight para obtener el tamaño del área de contenido.
 
-## scrollWidth/Height
+## scrollWidth/Height
 
 Estas propiedades son como clientWidth/clientHeight, pero también incluyen las partes desplazadas (ocultas):
 
@@ -186,7 +186,7 @@ Clic en el botón para expandir el elemento:
 
 `element.style.height = ${element.scrollHeight}px`
 
-## scrollLeft/scrollTop
+## scrollLeft/scrollTop
 
 Las propiedades scrollLeft/scrollTop son el ancho/alto de la parte oculta y desplazada del elemento.
 
