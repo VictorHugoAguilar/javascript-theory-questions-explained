@@ -149,7 +149,7 @@ El inconveniente del método es que la barra de desplazamiento desaparece. Si oc
 
 Eso parece un poco extraño, pero puede solucionarse si comparamos clientWidth antes y después del congelamiento, y si aumentó (la barra de desplazamiento desapareció) luego agregue padding a document.body en lugar de la barra de desplazamiento, para que mantenga el ancho del contenido igual.
 
-## Resumen
+## Resumen
 
 Geometría:
 
