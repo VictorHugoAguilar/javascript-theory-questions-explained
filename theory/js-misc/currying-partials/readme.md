@@ -173,7 +173,7 @@ Por definición, el curry debería convertir sum(a, b, c) en sum(a)(b)(c).
 
 Pero la mayoría de las implementaciones de curry en JavaScript son avanzadas, como se describe: también mantienen la función invocable en la variante de múltiples argumentos.
 
-## Resumen
+## Resumen
 
 Currificación es una transformación que hace que f(a, b, c) sea invocable como f(a)(b)(c). Las implementaciones de JavaScript generalmente mantienen la función invocable normalmente y devuelven el parcial si el conteo de argumentos no es suficiente.
 
