@@ -164,7 +164,7 @@ Por ejemplo, aquí se insertan un string y un elemento:
 </script>
 ````
 
-Nota que el texto es insertado “como texto” y no “como HTML”, escapando apropiadamente los caracteres como <, >.
+Nota que el texto es insertado “como texto” y no “como HTML”, escapando apropiadamente los caracteres como `<, >`.
 
 Entonces el HTML final es:
 
@@ -328,7 +328,7 @@ Un ejemplo de copia del mensaje:
 
 Podemos agregarle nodos, pero cuando lo insertamos en algún lugar, lo que se inserta es su contenido.
 
-Por ejemplo, getListContent de abajo genera un fragmento con items <li>, que luego son insertados en <ul>:
+Por ejemplo, getListContent de abajo genera un fragmento con items `<li>`, que luego son insertados en `<ul>`:
 
 ````js
 <ul id="ul"></ul>
@@ -419,7 +419,7 @@ El siguiente ejemplo agrega un nuevo `<li>` al final de `<ol>`:
   
 Inserta node antes de nextSibling dentro de parentElem.
 
-El siguiente código inserta un nuevo ítem de lista antes del segundo <li>:
+El siguiente código inserta un nuevo ítem de lista antes del segundo `<li>`:
 
 ````html  
 <ol id="list">
@@ -447,7 +447,7 @@ Reemplaza oldChild con node entre los hijos de parentElem.
 
 Quita node de parentElem (asumiendo que node es su hijo).
 
-El siguiente ejemplo quita el primer <li> de <ol>:
+El siguiente ejemplo quita el primer `<li>` de `<ol>`:
 
 ````html
 <ol id="list">
@@ -462,11 +462,11 @@ El siguiente ejemplo quita el primer <li> de <ol>:
 </script>
 ````
 
-Todos estos métodos devuelven el nodo insertado/quitado. En otras palabras, parentElem.appendChild(node) devuelve node. Pero lo usual es que el valor no se use y solo ejecutemos el método.
+Todos estos métodos devuelven el nodo insertado/quitado. En otras palabras, `parentElem.appendChild(node)` devuelve node. Pero lo usual es que el valor no se use y solo ejecutemos el método.
 
 ## Una palabra acerca de “document.write”
 
-Hay uno más, un método muy antiguo para agregar algo a una página web: document.write.
+Hay uno más, un método muy antiguo para agregar algo a una página web: `document.write`.
 
 La sintaxis:
 
@@ -484,18 +484,21 @@ El método viene de tiempos en que no había DOM ni estándares… Realmente vie
 
 En scripts modernos rara vez lo vemos, por una importante limitación:
 
-El llamado a document.write solo funciona mientras la página está cargando.
+El llamado a `document.write` solo funciona mientras la página está cargando.
 
 Si la llamamos después, el contenido existente del documento es borrado.
 
 Por ejemplo:
 
+````html
 <p>Después de un segundo el contenido de esta página será reemplazado...</p>
 <script>
   // document.write después de 1 segundo
   // eso es después de que la página cargó, entonces borra el contenido existente
   setTimeout(() => document.write('<b>...Por esto.</b>'), 1000);
 </script>
+````
+
 Así que es bastante inusable en el estado “after loaded” (después de cargado), al contrario de los otros métodos DOM que cubrimos antes.
 
 Ese es el punto en contra.
