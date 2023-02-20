@@ -2,7 +2,7 @@
 
 Vamos a empezar con un ejemplo.
 
-Este manejador está asignado a <div>, pero también se ejecuta si haces clic a cualquier elemento anidado como <em> ó <code>:
+Este manejador está asignado a `<div>`, pero también se ejecuta si haces clic a cualquier elemento anidado como `<em>` ó `<code>`:
 
 ````html
 <div onclick="alert('¡El manejador!')">
@@ -10,7 +10,7 @@ Este manejador está asignado a <div>, pero también se ejecuta si haces clic a 
 </div>
 ````
   
-¿No es un poco extraño? ¿Por qué el manejador en <div> es ejecutado, si el clic fue hecho en <em>?
+¿No es un poco extraño? ¿Por qué el manejador en <div> es ejecutado, si el clic fue hecho en `<em>`?
 
 ## Propagación
 
@@ -37,11 +37,11 @@ Digamos que tenemos 3 elementos anidados FORM > DIV > P con un manejador en cada
 
 ![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_01.png?raw=true) 
   
-Un clic en el elemento del interior <p> primero ejecuta onclick:
+Un clic en el elemento del interior `<p>` primero ejecuta onclick:
 
-1.  En ese <p>.
-2.  Luego en el <div> de arriba.
-3.  Luego en el <form> de más arriba.
+1.  En ese `<p>`.
+2.  Luego en el `<div>` de arriba.
+3.  Luego en el `<form>` de más arriba.
 4.  Y así sucesivamente hasta el objeto document.
 
 ![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/bubbling-and-capturing/img/event_bubbling-and-capturing_image_02.png?raw=true) 
@@ -65,24 +65,25 @@ Nota la diferencia de this (=event.currentTarget):
 
 * event.target – es el elemento “objetivo” que inició el evento, no cambia a través de todo el proceso de propagación.
 * this – es el elemento “actual”, el que tiene un manejador ejecutándose en el momento.
-Por ejemplo, si tenemos un solo manejador form.onclick, este puede atrapar todos los clicks dentro del formulario. No importa dónde el clic se hizo, se propaga hasta el <form> y ejecuta el manejador.
+
+Por ejemplo, si tenemos un solo manejador form.onclick, este puede atrapar todos los clicks dentro del formulario. No importa dónde el clic se hizo, se propaga hasta el `<form>` y ejecuta el manejador.
 
 En el manejador form.onclick:
 
-* this (=event.currentTarget) es el elemento <form>, porque el manejador se ejecutó en él.
+* this (=event.currentTarget) es el elemento `<form>`, porque el manejador se ejecutó en él.
 * event.target es el elemento actual dentro de el formulario al que se le hizo clic.
 
-Es posible que event.target sea igual a this: ocurre cuando el clic se hace directamente en el elemento <form>.
+Es posible que `event.target` sea igual a this: ocurre cuando el clic se hace directamente en el elemento <form>.
 
 ## Detener la propagación
 
-Una propagación de evento empieza desde el elemento objetivo hacia arriba. Normalmente este continúa hasta <html> y luego hacia el objeto document, algunos eventos incluso alcanzan window, llamando a todos los manejadores en el camino.
+Una propagación de evento empieza desde el elemento objetivo hacia arriba. Normalmente este continúa hasta `<html>` y luego hacia el objeto document, algunos eventos incluso alcanzan window, llamando a todos los manejadores en el camino.
 
 Pero cualquier manejador podría decidir que el evento se ha procesado por completo y detener su propagación.
 
-El método para esto es event.stopPropagation().
+El método para esto es `event.stopPropagation()`.
 
-Por ejemplo, aquí body.onclick no funciona si haces clic en <button>:
+Por ejemplo, aquí `body.onclick` no funciona si haces clic en `<button>`:
 
 ````js
 <body onclick="alert(`No se propagó hasta aquí`)">
@@ -93,9 +94,9 @@ Por ejemplo, aquí body.onclick no funciona si haces clic en <button>:
 ### ℹ️ event.stopImmediatePropagation()
 Si un elemento tiene múltiples manejadores para un solo evento, aunque uno de ellos detenga la propagación, los demás aún se ejecutarán.
 
-En otras palabras, event.stopPropagation() detiene la propagación hacia arriba, pero todos los manejadores en el elemento actual se ejecutarán.
+En otras palabras, `event.stopPropagation()` detiene la propagación hacia arriba, pero todos los manejadores en el elemento actual se ejecutarán.
 
-Para detener la propagación y prevenir que los manejadores del elemento actual se ejecuten, hay un método event.stopImmediatePropagation(). Después de él, ningún otro manejador será ejecutado.
+Para detener la propagación y prevenir que los manejadores del elemento actual se ejecuten, hay un método `event.stopImmediatePropagation(). Después de él, ningún otro manejador será ejecutado.
 
 ### ⚠️ ¡No detengas la propagación si no es necesario!
 La propagación es conveniente. No la detengas sin una necesidad real, obvia y arquitectónicamente bien pensada.
