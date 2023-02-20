@@ -67,5 +67,5 @@
 ````
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/async/promise-basics/readme.md#circulo-animado-con-promesa)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-basics/readme.md#circulo-animado-con-promesa)
 
