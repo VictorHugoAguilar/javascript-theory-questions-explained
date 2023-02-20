@@ -50,7 +50,82 @@ Por favor, nota que el ancho/alto del balón se debe conocer al momento que acce
 
 ### resulto completo
 
+````html
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #field {
+      width: 200px;
+      height: 150px;
+      border: 10px solid black;
+      background-color: #00FF00;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    #ball {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      transition: all 1s;
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+
+  Haz click en un lugar del campo para mover el balón allí.
+  <br>
 
 
+  <div id="field">
+    <img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/ball.svg?raw=true" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <script>
+     field.onclick = function(event) {
+
+      // Coordenadas del campo relativas a la ventana
+      let fieldCoords = this.getBoundingClientRect();
+
+      // El balón tiene position:absolute, el campo: position:relative
+      // por lo que las coordenadas de la bola son relativas a la esquina superior izquierda interna del campo
+      let ballCoords = {
+        top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2,
+        left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2
+      };
+
+      // previniendo el cruce del limite superior del campo
+      if (ballCoords.top < 0) ballCoords.top = 0;
+
+      // previniendo el cruce del limite izquierdo del campo
+      if (ballCoords.left < 0) ballCoords.left = 0;
+
+
+      // // previniendo el cruce del limite derecho del campo
+      if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+        ballCoords.left = field.clientWidth - ball.clientWidth;
+      }
+
+      // previniendo el cruce del limite inferior del campo
+      if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+        ballCoords.top = field.clientHeight - ball.clientHeight;
+      }
+
+      ball.style.left = ballCoords.left + 'px';
+      ball.style.top = ballCoords.top + 'px';
+    }
+  </script>
+
+</body>
+</html>
+````
 
 #mueve-el-balon-por-el-campo
