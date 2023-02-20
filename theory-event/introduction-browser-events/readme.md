@@ -163,24 +163,31 @@ Si agregamos paréntesis, sayThanks() se convierte en una llamada de función. E
 
 …Por otro lado, en el markup necesitamos los paréntesis:
 
-  ````js
+````js
 <input type="button" id="button" onclick="sayThanks()">
+````
+
 La diferencia es fácil de explicar. Cuando el navegador lee el atributo crea una función handler con cuerpo a partir del contenido del atributo.
 
 Por lo que el markup genera esta propiedad:
 
+````js
 button.onclick = function() {
   sayThanks(); // <-- el contenido del atributo va aquí
 };
-No uses setAttribute para handlers.
+````
+
+### ℹ️ No uses setAttribute para handlers.
 
 Tal llamada no funcionará:
 
+````js
 // un click sobre <body> generará errores,
 // debido a que los atributos siempre son strings, la función se convierte en un string
 document.body.setAttribute('onclick', function() { alert(1) });
-Las mayúsculas en las propiedades DOM importan.
+````
 
+### ℹ️ Las mayúsculas en las propiedades DOM importan.
 Asignar un handler a elem.onclick, en lugar de elem.ONCLICK, ya que las propiedades DOM son sensibles a mayúsculas.
 
 ## addEventListener
