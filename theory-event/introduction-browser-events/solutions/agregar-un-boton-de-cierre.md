@@ -58,4 +58,5 @@ pane.firstChild.onclick = () => pane.remove();
 </html>
 ````
 
-#agregar-un-boton-de-cierre
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/readme.md#agregar-un-boton-de-cierre)
