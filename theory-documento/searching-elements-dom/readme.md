@@ -293,13 +293,15 @@ Ahora podemos ver fácilmente la diferencia. La colección estática no aumentó
 
 Hay 6 métodos principales para buscar nodos en el DOM:
 
-Método	Busca por...	¿Puede llamar a un elemento?	¿Vivo?
-querySelector	selector CSS	✔	-
-querySelectorAll	selector CSS	✔	-
-getElementById	id	-	-
-getElementsByName	name	-	✔
-getElementsByTagName	etiqueta o '*'	✔	✔
-getElementsByClassName	class	✔	✔
+| Método                  |	Busca por...      |	¿Puede llamar a un elemento?  | ¿Vivo?  |
+|-------------------------|-------------------|-------------------------------|---------|
+| querySelector	          | selector CSS      |	✔                             |	-       |
+| querySelectorAll        | selector CSS	    | ✔                             |	-       |
+| getElementById	        | id	              | -                             |	-       |
+| getElementsByName	      | name	            | -	                            | ✔       |
+| getElementsByTagName    |	etiqueta o '*'	  | ✔                             |	✔       |
+| getElementsByClassName  |	class	            | ✔                             |	✔       |
+
 Los más utilizados son querySelector y querySelectorAll, pero getElementBy* puede ser de ayuda esporádicamente o encontrarse en scripts antiguos.
 
 Aparte de eso:
