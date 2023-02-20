@@ -248,7 +248,7 @@ Las coordenadas que tú calcules deben ser iguales a las devueltas por el click 
 
 P.D. El código también debe funcionar si el elemento tiene otro tamaño o borde, no está ligado a ningún valor fijo.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/solutions/encuentra-las-coordenadas-del-campo-en-la-ventana.md)
 
 ## Muestra una nota cercana al elemento
 
@@ -268,7 +268,7 @@ Aquí está el demo de las notas:
 ![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/img/documento_coordinates_image_06.png?raw=true)
 
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/solutions/muestra-una-nota-cercana-al-elemento.md)
 
 ## Muestra una nota cercana al elemento (absolute)
 
@@ -278,7 +278,7 @@ Esto evitará que se “aleje” del elemento cuando se desplace la página.
 
 Toma la solución de la tarea anterior como punto de partida. Para testear el scroll, agrega el estilo <body style="height: 2000px">.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/solutions/muestra-una-nota-cercana-al-elemento-absolute.md)
 
 ## Posiciona la nota adentro absolute
 
@@ -304,7 +304,7 @@ El resultado:
 
 Para el código fuente toma la solución de la tarea Muestra una nota cercana al elemento (absolute).
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/solutions/posiciona-la-nota-adentro-absolute.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/readme.md)
