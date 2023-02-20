@@ -34,7 +34,7 @@ Tenga en cuenta que las propiedades de geometría de nivel superior pueden funci
 
 En HTML moderno siempre debemos escribir DOCTYPE.
 
-## Ancho/Alto del documento
+## Ancho/Alto del documento
 
 Teóricamente, como el elemento del documento raíz es document.documentElement, e incluye todo el contenido, podríamos medir el tamaño completo del documento con document.documentElement.scrollWidth / scrollHeight.
 
