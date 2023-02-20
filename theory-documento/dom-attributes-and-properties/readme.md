@@ -400,7 +400,7 @@ Escribe el código para obtener el atributo data-widget-name del documento y lee
   
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-attributes-and-properties/solutions/obten-en-atributo.md)
 
-## Haz los enlaces externos naranjas
+## Haz los enlaces externos naranjas
 
 Haz todos los enlaces externos de color orange alterando su propiedad style.
 
