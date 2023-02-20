@@ -486,6 +486,55 @@ Notas:
 
 1.  El código también debe funcionar con medidas diferentes de campo y balón, no debe estar asociado a ningún valor fijo.
 2.  Usa las propiedades event.clientX/event.clientY para las coordenadas del click.
+  
+### html para la solución
+  
+````html
+  <!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #field {
+      width: 200px;
+      height: 150px;
+      border: 10px solid black;
+      background-color: #00FF00;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    #ball {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      transition: all 1s;
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+
+  Haz click en un lugar del campo para mover el balón allí.
+  <br>
+
+
+  <div id="field">
+    <img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.svg?raw=true" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <script>
+     // Solución aqui
+  </script>
+
+</body>
+</html>
+````
 
 [solución]()
 
@@ -546,15 +595,15 @@ P.D. Para esta tarea, la estructura HTML / CSS es en realidad el 90% de la soluc
     <div class="gallery">
       <ul>
         <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
-        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/1.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/2.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/3.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/4.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/5.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/6.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/7.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/8.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/9.png?raw=true"></li>
+        <li><img src="https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/10.png?raw=true"></li>
       </ul>
     </div>
     <button class="arrow next">⇨</button>
@@ -567,8 +616,6 @@ P.D. Para esta tarea, la estructura HTML / CSS es en realidad el 90% de la soluc
 </body>
 </html>
 ````
-  
-[solución]()
   
 [solución]()
   
