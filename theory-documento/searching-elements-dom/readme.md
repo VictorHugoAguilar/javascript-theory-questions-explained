@@ -250,8 +250,8 @@ Todos los métodos "getElementsBy*" devuelven una colección viva (live collecti
 
 En el siguiente ejemplo, hay dos scripts.
 
-1.  El primero crea una referencia a la colección de <div>. Por ahora, su longitud es 1.
-2.  El segundo script se ejecuta después de que el navegador se encuentre con otro <div>, por lo que su longitud es de 2.
+1. El primero crea una referencia a la colección de `<div>`. Por ahora, su longitud es 1.
+2. El segundo script se ejecuta después de que el navegador se encuentre con otro `<div>`, por lo que su longitud es de 2.
 
 ````html
 <div>Primer div</div>
