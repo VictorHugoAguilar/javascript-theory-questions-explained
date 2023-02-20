@@ -14,7 +14,7 @@ La raíz de la jerarquía es EventTarget, que es heredada por Node, y otros nodo
 
 Aquí está la imagen, con las explicaciones a continuación:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/basic-dom-node-properties/img/documento_basic-dom-node-properties-image_01.png?raw=true)
 
 Las clases son:
 
