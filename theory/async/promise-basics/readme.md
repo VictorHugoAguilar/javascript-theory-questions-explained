@@ -361,7 +361,7 @@ let promise = new Promise(function(resolve, reject) {
 promise.then(alert);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-basics/solutions/volver-a-resolver-una-promesa.md)
 
 ## Demora con una promesa
 
@@ -377,7 +377,7 @@ function delay(ms) {
 delay(3000).then(() => alert('se ejecuta después de 3 segundos'));
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-basics/solutions/demora-con-una-promesa.md)
 
 ## Circulo animado con promesa
 
@@ -393,7 +393,7 @@ showCircle(150, 150, 100).then(div => {
 ````
 Tome la solución de la tarea Círculo animado con función de callback como base.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/promise-basics/solutions/circulo-animado-con-promesa.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory/async/readme.md)
