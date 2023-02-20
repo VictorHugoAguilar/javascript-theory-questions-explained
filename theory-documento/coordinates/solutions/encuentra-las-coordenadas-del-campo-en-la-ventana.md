@@ -40,5 +40,5 @@ let answer4 = [
 ];
 ````
 
-
-#encuentra-las-coordenadas-del-campo-en-la-ventana
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/coordinates/readme.md#encuentra-las-coordenadas-del-campo-en-la-ventana)
