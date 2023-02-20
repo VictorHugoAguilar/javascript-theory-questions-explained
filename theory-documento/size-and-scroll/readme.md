@@ -26,7 +26,7 @@ Este tiene borde, relleno y desplazamiento. El conjunto completo de funciones. N
 
 El elemento tiene este aspecto:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_01.png?raw=true)
 
 Puedes abrir el documento en la zona de pruebas.
 
@@ -41,7 +41,7 @@ Por lo general, los rellenos se muestran vacíos en nuestras ilustraciones, pero
 ## Geometría
 Aquí está la imagen general con propiedades geométricas:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_02.png?raw=true)
 
 Los valores de estas propiedades son técnicamente números, pero estos números son “de píxeles”, así que estas son medidas de píxeles.
 
@@ -76,7 +76,7 @@ En el siguiente ejemplo el <div> más interno tiene <main> como offsetParent, y 
 </script>
 ````
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_03.png?raw=true)
   
 Hay varias ocasiones en la que offsetParent es `null`:
 
@@ -90,7 +90,7 @@ Ahora pasemos al elemento en sí.
 
 Estas dos propiedades son las más simples. Proporcionan el ancho y alto “exterior” del elemento. O, en otras palabras, su tamaño completo, incluidos los bordes.
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_04.png?raw=true)
 
 Para nuestro elemento de muestra:
 
@@ -125,7 +125,7 @@ En nuestro ejemplo:
 * clientLeft = 25 – ancho del borde izquierdo
 * clientTop = 25 – ancho del borde superior
   
-![image_05]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_05.png?raw=true)
 
 … pero para ser precisos: estas propiedades no son el ancho/alto del borde sino las coordenadas relativas del lado interior respecto al lado exterior.
 
@@ -137,7 +137,7 @@ En este caso, clientLeft no es 25, sino que se suma el ancho de la barra de desp
 
 Aquí está el ejemplo en hebreo:
 
-![image_06]()
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_06.png?raw=true)
 
 ## clientWidth/Height
 
@@ -145,7 +145,7 @@ Esta propiedad proporciona el tamaño del área dentro de los bordes del element
 
 Incluyen el ancho del contenido junto con los rellenos, pero sin la barra de desplazamiento:
 
-![image_07]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_07.png?raw=true)
 
 En la imagen de arriba, consideramos primero clientHeight.
 
@@ -155,7 +155,7 @@ Ahora clientWidth: aquí el ancho del contenido no es 300px, sino 284px, porque 
 
 **Si no hay rellenos, entonces clientWidth/Height es exactamente el área de contenido, dentro de los bordes y la barra de desplazamiento (si la hay).**
 
-![image_08]()
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_08.png?raw=true)
 
 Entonces, cuando no hay relleno, podremos usar clientWidth/clientHeight para obtener el tamaño del área de contenido.
 
@@ -163,7 +163,7 @@ Entonces, cuando no hay relleno, podremos usar clientWidth/clientHeight para obt
 
 Estas propiedades son como clientWidth/clientHeight, pero también incluyen las partes desplazadas (ocultas):
 
-![image_09]()
+![image_09](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_09.png?raw=true)
 
 En la imagen de arriba:
 
@@ -181,7 +181,7 @@ element.style.height = `${element.scrollHeight}px`;
 
 Clic en el botón para expandir el elemento:
   
-![image_10]()
+![image_10](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_10.png?raw=true)
 
 
 `element.style.height = ${element.scrollHeight}px`
@@ -192,7 +192,7 @@ Las propiedades scrollLeft/scrollTop son el ancho/alto de la parte oculta y desp
 
 En la imagen abajo podemos ver scrollHeight y scrollTop para un bloque con un desplazamiento vertical.
 
-![image_11]()
+![image_11](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_011.png?raw=true)
 
 En otras palabras, scrollTop es “cuánto se desplaza hacia arriba”.
 
@@ -201,7 +201,7 @@ La mayoría de las propiedades aquí son solo lectura, pero scrollLeft/scrollTop
 
 Si haces clic en el elemento de abajo, se ejecuta el código elem.scrollTop += 10. Eso hace que el contenido del elemento se desplace 10px abajo.
 
-![image_12]() 
+![image_12](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_012.png?raw=true) 
 
 Establecer scrollTop en 0 o un valor grande, como 1e9 hará que el elemento se desplace hacia arriba/abajo respectivamente.
 
@@ -241,7 +241,7 @@ Y hay una razón más: una barra de desplazamiento. A veces, el código que func
 
 Si tu navegador reserva el espacio para la barra de desplazamiento (la mayoría de navegadores para Windows lo hacen), pueden probarlo a continuación.
 
-![image_13]()
+![image_13](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_013.png?raw=true)
 
 El elemento con texto tiene CSS width:300px.
 
@@ -289,13 +289,13 @@ P.S. El código debería funcionar con cualquier documento HTML, no depende de s
 
 Así es como se ve el documento de origen:
 
-![image_14]()
+![image_14](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_014.png?raw=true)
 
 ¿Cuáles son las coordenadas del centro de campo?
 
 Calcúlalos y úsalos para colocar la pelota en el centro del campo verde:
 
-![image_15]()
+![image_15](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/img/documento_size-and-scroll_image_015.png?raw=true)
 
 * El elemento debe ser movido por JavaScript, no por CSS.
 * El código debería funcionar con cualquier una pelota de cualquier tamaño (10, 20, 30 pixels) y cualquier tamaño de campo, no debe estar vinculado a los valores dados.
