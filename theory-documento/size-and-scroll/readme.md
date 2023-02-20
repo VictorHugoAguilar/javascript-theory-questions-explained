@@ -249,7 +249,7 @@ En un Windows OS de escritorio, Firefox, Chrome, Edge reservan el espacio para l
 
 Tenga en cuenta que la diferencia descrita es solo de leer getComputedStyle(...).width de JavaScript, visualmente todo es correcto.
 
-## Resumen
+## Resumen
 
 Los elementos tienen las siguientes propiedades geométricas:
 
