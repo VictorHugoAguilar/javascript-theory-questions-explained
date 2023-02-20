@@ -8,7 +8,7 @@ Para la mayoría de estas cuestiones, podemos usar el elemento de documento raí
 
 Para obtener el ancho y alto de la ventana, podemos usar clientWidth / clientHeight de document.documentElement:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll-window/img/documento_size-and-scroll-window_image_01.png?raw=true)
 
 ````js
 alert(document.documentElement.clientHeight)
