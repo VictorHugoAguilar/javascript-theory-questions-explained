@@ -378,7 +378,7 @@ Por ejemplo:
 </script>
 ````
 
-Como podemos ver, solo se devuelve texto, como si todas las <etiquetas> fueran recortadas, pero el texto en ellas permaneció.
+Como podemos ver, solo se devuelve texto, como si todas las `<etiquetas>` fueran recortadas, pero el texto en ellas permaneció.
 
 En la práctica, rara vez se necesita leer este tipo de texto.
 
@@ -441,9 +441,9 @@ Aquí hay un elemento parpadeante:
 
 Los elementos DOM también tienen propiedades adicionales, en particular aquellas que dependen de la clase:
 
-* value – el valor para <input>, <select> y <textarea> (HTMLInputElement, HTMLSelectElement…).
-* href – el “href” para <a href="..."> (HTMLAnchorElement).
-* id – el valor del atributo “id”, para todos los elementos (HTMLElement).
+* `value` – el valor para `<input>`, `<select>` y `<textarea>` (HTMLInputElement, HTMLSelectElement…).
+* `href` – el “href” para `<a href="...">` (HTMLAnchorElement).
+* `id – el valor del atributo “id”, para todos los elementos (HTMLElement).
 * …y mucho más…
 
 Por ejemplo:
