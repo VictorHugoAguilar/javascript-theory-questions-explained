@@ -59,9 +59,9 @@ En el DOM, el valor null significa que “no existe” o “no hay tal nodo”.
 
 Existen dos términos que vamos a utilizar de ahora en adelante:
 
-* Nodos hijos (childNodes) – elementos que son hijos directos, es decir sus descendientes inmediatos. Por ejemplo, <head> y <body> son hijos del elemento <html>.
+* Nodos hijos (childNodes) – elementos que son hijos directos, es decir sus descendientes inmediatos. Por ejemplo, `<head>` y `<body>` son hijos del elemento `<html>`.
 * Descendientes – todos los elementos anidados de un elemento dado, incluyendo los hijos, sus hijos y así sucesivamente.
-Por ejemplo, aquí <body> tiene de hijos <div> y <ul> (y unos pocos nodos de texto en blanco):
+Por ejemplo, aquí `<body>` tiene de hijos `<div>` y `<ul>` (y unos pocos nodos de texto en blanco):
 
 ````html
 <html>
@@ -77,8 +77,7 @@ Por ejemplo, aquí <body> tiene de hijos <div> y <ul> (y unos pocos nodos de tex
 </html>
 ````
 
-…Y los descendientes de <body> no son solo los hijos <div>, <ul> sino también elementos anidados más profundamente, como <li> (un hijo de <ul>) o 
-<b> (un hijo de <li>) – el subárbol entero.
+…Y los descendientes de <body> no son solo los hijos `<div>`, `<ul>` sino también elementos anidados más profundamente, como `<li>` (un hijo de `<ul>`) o `<b>` (un hijo de `<li>`) – el subárbol entero.
 
 **La colección childNodes enumera todos los nodos hijos, incluidos los nodos de texto.**
 
