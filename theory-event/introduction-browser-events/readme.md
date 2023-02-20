@@ -515,6 +515,45 @@ Más adelante podemos agregarle más funciones: desplazamiento infinito, carga d
 
 P.D. Para esta tarea, la estructura HTML / CSS es en realidad el 90% de la solución.
 
+````html
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul>
+        <li><img src="https://en.js.cx/carousel/1.png"></li>
+        <li><img src="https://en.js.cx/carousel/2.png"></li>
+        <li><img src="https://en.js.cx/carousel/3.png"></li>
+        <li><img src="https://en.js.cx/carousel/4.png"></li>
+        <li><img src="https://en.js.cx/carousel/5.png"></li>
+        <li><img src="https://en.js.cx/carousel/6.png"></li>
+        <li><img src="https://en.js.cx/carousel/7.png"></li>
+        <li><img src="https://en.js.cx/carousel/8.png"></li>
+        <li><img src="https://en.js.cx/carousel/9.png"></li>
+        <li><img src="https://en.js.cx/carousel/10.png"></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
+
+  <script>
+   // Aqui el codigo
+  </script>
+
+</body>
+</html>
+````
+  
+[solución]()
+  
 [solución]()
   
 ---
