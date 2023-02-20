@@ -398,7 +398,7 @@ Escribe el código para obtener el atributo data-widget-name del documento y lee
 </html>
 ````
   
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-attributes-and-properties/solutions/obten-en-atributo.md)
 
 ## Haz los enlaces externos naranjas
 
@@ -441,4 +441,4 @@ La lista
 
 Abrir un entorno controlado para la tarea.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/dom-attributes-and-properties/solutions/haz-los-enlaces-externos-naranjas.md)
