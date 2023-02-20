@@ -265,7 +265,7 @@ Todas las propiedades son solo lectura excepto scrollLeft/scrollTop que hacen qu
 
 # ✅ Tareas
 
-Que es el desplazamiento desde la parte inferior
+## Que es el desplazamiento desde la parte inferior
 
 La propiedad elem.scrollTop es el tamaño desplazado desde la parte superior. ¿Cómo obtener el tamaño de la parte inferior desplazada (vamos a llamarlo scrollBottom)?
 
@@ -304,8 +304,8 @@ P.S. Claro, el centrado se podría hacer con CSS, pero aquí lo queremos especí
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-documento/size-and-scroll/solutions/coloca-la-pelota-en-el-centro-del-campo.md)
 
-## La diferencia CSS width versus clientWidth
-  
+## La diferencia CSS width versus clientWidth
+
 ¿Cuál es la diferencia entre getComputedStyle(elem).width y elem.clientWidth?
 
 Dar al menos 3 diferencias. Mientras más, mejor.
