@@ -278,7 +278,7 @@ Las tablas son un gran ejemplo de ello, y representan un particular caso importa
 
 * `tbody.rows` – la colección dentro de `<tr>`.
 
-<tr>:
+`<tr>`:
 
 * `tr.cells` – la colección de celdas `<td>` y `<th>` dentro del `<tr>` dado.
 * `tr.sectionRowIndex` – la posición (índice) del `<tr>` dado dentro del `<thead>/<tbody>/<tfoot>` adjunto.
