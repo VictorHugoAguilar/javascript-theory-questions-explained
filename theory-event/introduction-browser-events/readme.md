@@ -467,7 +467,14 @@ button.onclick = () => alert(2);
 
 Mueve el balón por el campo con un click. Así:
 
+Antes del click en el centro
+  
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_01.png?raw=true)
 
+Despúes del click
+  
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_02.png?raw=true)
+  
 Requerimientos:
 
 1.  El centro del balón debe quedar exactamente bajo el cursor al hacer click (sin atravesar el borde del campo si es posible).
@@ -486,10 +493,13 @@ Notas:
 
 Crea un menú que se abra/colapse al hacer click:
 
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_03.png?raw=true)
+
+Despues de abrirlo
+  
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_04.png?raw=true)
   
 P.D. El HTML/CSS del documento fuente se debe modificar.
-
-
 
 [solución]()
   
@@ -501,15 +511,21 @@ Usa JavaScript para agregar un botón de cierre en la esquina superior derecha d
 
 El resultado debería verse algo así:
 
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_05.png?raw=true)
 
-
-
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_06.png?raw=true)
+  
 [solución]()
 
 ## Carrusel
 
 Crea un “carrusel”: una cinta de imágenes que se puede desplazar haciendo clic en las flechas.
-
+  
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_07.png?raw=true)
+  
+ Deslizando hacia la derecha
+  
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/introduction-browser-events/img/event_introduction-browser-events_image_08.png?raw=true)
 
 Más adelante podemos agregarle más funciones: desplazamiento infinito, carga dinámica, etc.
 
