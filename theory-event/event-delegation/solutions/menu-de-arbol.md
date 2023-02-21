@@ -1,0 +1,92 @@
+# menu-de-arbol
+
+## La solución tiene dos partes.
+
+1.  Envuelve cada nodo de título del árbol dentro de <span>. Luego podemos aplicarles CSS-style en :hover y manejar los clics exactamente sobre el texto, porque el ancho de <span> es exactamente el ancho del texto (no lo será si no lo tiene).
+2.  Establece el manejador al nodo raíz del tree y maneja los clics en aquellos títulos <span>.
+  
+````html
+  <!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    .tree span:hover {
+      font-weight: bold;
+    }
+
+    .tree span {
+      cursor: pointer;
+    }
+  </style>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <ul class="tree" id="tree">
+    <li>Animals
+      <ul>
+        <li>Mammals
+          <ul>
+            <li>Cows</li>
+            <li>Donkeys</li>
+            <li>Dogs</li>
+            <li>Tigers</li>
+          </ul>
+        </li>
+        <li>Other
+          <ul>
+            <li>Snakes</li>
+            <li>Birds</li>
+            <li>Lizards</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Fishes
+      <ul>
+        <li>Aquarium
+          <ul>
+            <li>Guppy</li>
+            <li>Angelfish</li>
+          </ul>
+        </li>
+        <li>Sea
+          <ul>
+            <li>Sea trout</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    // mueve todo el texto dentro de <span>
+    // esto ocupa exactamente lo necesario para el texto,
+    for (let li of tree.querySelectorAll('li')) {
+      let span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling); // mueve el nodo texto dentro de span
+    }
+
+    // atrapa clics en el árbol entero
+    tree.onclick = function(event) {
+
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+
+      let childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return; // sin hijos
+
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+
+</body>
+</html>
+````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/readme.md#menu-de-arbol)
