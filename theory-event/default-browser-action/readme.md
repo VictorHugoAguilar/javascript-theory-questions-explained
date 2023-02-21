@@ -265,3 +265,7 @@ El contenido puede tener etiquetas anidadas. Dentro de los enlaces también, com
 Abrir un entorno controlado para la tarea.
 
 [solución]()
+  
+  
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
