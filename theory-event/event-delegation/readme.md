@@ -157,7 +157,7 @@ El manejador lee el atributo y ejecuta el método. Puedes ver el siguiente ejemp
 
 ![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_03.png?raw=true)
 
-Ten en cuenta que this.onClick está ligado a this en (*). Esto es importante, porque de otra manera el this que está dentro haría referencia al elemento DOM (elem), no al objeto Menu, y this[action] no sería lo que necesitamos.
+Ten en cuenta que `this.onClick` está ligado a this en (*). Esto es importante, porque de otra manera el this que está dentro haría referencia al elemento DOM (elem), no al objeto Menu, y this[action] no sería lo que necesitamos.
 
 Entonces, ¿qué ventajas nos ofrece la delegación aquí?
 
@@ -201,7 +201,7 @@ Si hacemos clic en un botón, su valor se incrementa. Lo importante aquí no son
 Puede haber tantos atributos data-counter como queramos. Podemos agregar nuevos al HTML en cualquier momento. Usando delegación de eventos “extendimos” el HTML, agregando un atributo que describe un nuevo comportamiento.
 
 ### ⚠️ Para manejadores de nivel de documento: siempre addEventListener
-Cuando asignamos un manejador de evento al objeto document, debemos usar siempre addEventListener, no document.on<event>, porque este último causa conflictos: los manejadores nuevos sobrescribirán los viejos.
+Cuando asignamos un manejador de evento al objeto document, debemos usar siempre addEventListener, no `document.on<event>`, porque este último causa conflictos: los manejadores nuevos sobrescribirán los viejos.
 
 En proyectos reales es normal que haya muchos manejadores en document, asignados en diferentes partes del código.
 
@@ -259,7 +259,7 @@ Beneficios:
 
 La delegación tiene sus limitaciones por supuesto:
 
-* Primero, el evento debe “propagarse”. Algunos eventos no lo hacen. Además manejadores de bajo nivel no deben usar `event.stopPropagation().
+* Primero, el evento debe “propagarse”. Algunos eventos no lo hacen. Además manejadores de bajo nivel no deben usar `event.stopPropagation()`.
 * Segundo, la delegación puede agregar carga a la CPU, porque el controlador a nivel de contenedor reacciona a eventos en cualquier lugar del mismo, no importa si nos interesan o no. Pero usualmente la carga es imperceptible y no la tomamos en cuenta.
 
 # ✅ Tareas
