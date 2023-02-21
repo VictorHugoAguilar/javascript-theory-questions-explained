@@ -10,7 +10,7 @@ Veamos un ejemplo: El diagrama Pa kua que refleja la antigua filosofía china.
 
 Aquí está:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_01.png?raw=true)
 
 El HTML es este:
 
@@ -76,7 +76,7 @@ En nuestro caso, si miramos dentro del HTML, podemos ver tags anidados dentro de
 
 Naturalmente, si el clic ocurre en <strong>, este se vuelve el valor de event.target.
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_02.png?raw=true)
 
 En el manejador table.onclick debemos tomar tal `event.target` e indagar si el clic fue dentro de `<td>` o no.
 
@@ -155,6 +155,8 @@ El manejador lee el atributo y ejecuta el método. Puedes ver el siguiente ejemp
 </script>
 ````
 
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_03.png?raw=true)
+
 Ten en cuenta que this.onClick está ligado a this en (*). Esto es importante, porque de otra manera el this que está dentro haría referencia al elemento DOM (elem), no al objeto Menu, y this[action] no sería lo que necesitamos.
 
 Entonces, ¿qué ventajas nos ofrece la delegación aquí?
@@ -192,6 +194,7 @@ One more counter: <input type="button" value="2" data-counter>
   });
 </script>
 ````
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_04.png?raw=true)
 
 Si hacemos clic en un botón, su valor se incrementa. Lo importante aquí no son los botones sino el enfoque general.
 
@@ -226,6 +229,7 @@ Un ejemplo más de comportamiento. Un clic en un elemento con el atributo data-t
   });
 </script>
 ````
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_05.png?raw=true)
 
 Veamos una vez más lo que hicimos aquí: ahora, para agregar la funcionalidad de conmutación a un elemento, no hay necesidad de conocer JavaScript, simplemente usamos el atributo data-toggle-id.
 
@@ -266,7 +270,11 @@ Hay una lista de mensajes con botones para borrarlos [x]. Haz que funcionen.
 
 Como esto:
 
-![image_03]()
+![image_05](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_05.png?raw=true)
+
+Luego queda así
+
+![image_06](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_06.png?raw=true)
 
 P.D. Debe haber solamente un event lintener en el contenedor, usa delegación de eventos.
 
@@ -276,7 +284,7 @@ P.D. Debe haber solamente un event lintener en el contenedor, usa delegación de
 
 Crea un árbol que muestre y oculte nodos hijos con clics:
 
-![image_04]()
+![image_07](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_07.png?raw=true)
 
 Requerimientos:
 
