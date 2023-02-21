@@ -294,7 +294,7 @@ Requerimientos:
 
 [solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/solutions/menu-de-arbol.md)
 
-3 #Tabla ordenable
+## Tabla ordenable
 
 Haz que la tabla se pueda ordenar: los clics en elementos `<th>` deberían ordenarla por la columna correspondiente.
 
