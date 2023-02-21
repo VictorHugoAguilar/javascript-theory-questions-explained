@@ -278,7 +278,7 @@ Luego queda así
 
 P.D. Debe haber solamente un event lintener en el contenedor, usa delegación de eventos.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/solutions/ocultar-mensajes-con-delegacion.md)
 
 ## Menu de arbol
 
@@ -292,7 +292,86 @@ Requerimientos:
 * Un clic fuera de los nodos de títulos (en un espacio vacío) no debe hacer nada.
 
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/solutions/menu-de-arbol.md)
+
+3 #Tabla ordenable
+
+Haz que la tabla se pueda ordenar: los clics en elementos `<th>` deberían ordenarla por la columna correspondiente.
+
+Cada `<th>` tiene su tipo de datos en el atributo, como esto:
+
+````html
+<table id="grid">
+  <thead>
+    <tr>
+      <th data-type="number">Age</th>
+      <th data-type="string">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Ann</td>
+    </tr>
+    ...
+  </tbody>
+</table>
+````
+
+En el ejemplo anterior la primera columna tiene números y la segunda cadenas. La función de ordenamiento debe manejar el orden de acuerdo al tipo de dato.
+
+Solamente los tipos "string" y "number" deben ser soportados.
+
+Ejemplo en funcionamiento:
+
+![image_08](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_08.png?raw=true)
+
+Al hacer clic sobre titulos de la tabla, se ordenan.
+
+![image_09](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/img/event_event-delegation_imagen_09.png?raw=true)
+
+P.D. La tabla puede ser grande, con cualquier cantidad de filas y columnas.
+
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/solutions/tabla-ordenable.md)
+
+## Comportamiento tooltip
+
+Crea código JS para el comportamiento “tooltip”.
+
+Cuando un mouse pasa sobre un elemento con data-tooltip, el tooltip debe aparecer sobre él, y ocultarse cuando se va.
+
+Un ejemplo en HTML comentado:
+
+````html
+<button data-tooltip="the tooltip is longer than the element">Short button</button>
+<button data-tooltip="HTML<br>tooltip">One more button</button>
+````
+
+En esta tarea suponemos que todos los elementos con data-tooltip solo tienen texto dentro. Sin tags anidados (todavía).
+
+Detalles:
+
+* La distancia entre el elemento y el tooltip debe ser 5px.
+* El tooltip debe ser centrado relativo al elemento si es posible.
+* El tooltip no debe cruzar los bordes de la ventana. Normalmente debería estar sobre el elemento, pero si el elemento está en la parte superior de la página y no hay espacio para el tooltip, entonces debajo de él.
+* El contenido del tooltip está dado en el atributo data-tooltip. Este puede ser HTML arbitrario.
+
+Necesitarás dos eventos aquí:
+
+* mouseover se dispara cuando el puntero pasa sobre el elemento.
+* mouseout se dispara cuando el puntero deja el elemento.
+
+Usa delegación de eventos: prepare dos manejadores en el document para rastrear todos los “overs” y “outs” de los elementos con data-tooltip y administra los tooltips desde allí.
+
+Después de implementar el comportamiento, incluso gente no familiarizada con JavaScript puede agregar elementos anotados.
+
+P.D. Solamente un tooltip puede mostrarse a la vez.
+
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/event-delegation/solutions/comportamiento-tooltip.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
