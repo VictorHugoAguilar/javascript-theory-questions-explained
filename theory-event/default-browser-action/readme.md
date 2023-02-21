@@ -256,7 +256,7 @@ Haz que todos los enlaces dentro del elemento con `id="contents"` pregunten al u
 
 Así:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/default-browser-action/img/event_default-browser-action_image_01.png?raw=true)
 
 Detalles:
 
