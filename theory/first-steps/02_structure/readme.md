@@ -21,7 +21,7 @@ Generalmente, las sentencias se escriben en líneas separadas para hacer que el 
 ````js
 alert('Hola');
 alert('Mundo');
-````js
+````
 
 ## Punto y coma
 
