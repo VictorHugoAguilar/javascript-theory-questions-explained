@@ -6,7 +6,7 @@ Los componentes web son un conjunto de estándares para crear componentes autón
 2.  [Elementos personalizados]()
 3.  [Shadow DOM]()
 4.  [Elemento template]()
-5.  [Shadow DOM slots, composición]()
+5.  [Shadow DOM slots, composición](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/slots-composition/readme.md)
 6.  [Estilo Shadow DOM]()
 7.  [Shadow DOM y eventos]()
 
