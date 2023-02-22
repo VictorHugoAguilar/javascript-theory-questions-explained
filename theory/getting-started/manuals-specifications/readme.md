@@ -33,4 +33,4 @@ Todos estos recursos son de utilidad para el desarrollo con JavaScript, ya que i
 Por favor, tenlos en cuenta (o esta página) para cuando necesites información exhaustiva sobre una característica determinada.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started/readme.md)
