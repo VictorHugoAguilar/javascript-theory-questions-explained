@@ -113,8 +113,6 @@ Ejemplos de tales lenguajes:
 
 Hay más. Por supuesto, incluso si nosotros usamos alguno de estos lenguajes transpilados, deberíamos conocer también JavaScript para realmente entender qué estamos haciendo.
 
-````
-
 ## Resumen
 
 * JavaScript fue inicialmente creado como un lenguaje solamente para el navegador, pero ahora es usado también en muchos otros entornos.
