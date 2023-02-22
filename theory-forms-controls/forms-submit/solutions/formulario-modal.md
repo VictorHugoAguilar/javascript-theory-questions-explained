@@ -127,7 +127,7 @@ El formulario no debe estar en el `<div>` sino junto a él, porque no queremos q
 
 </body>
 </html>
-  
+````
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/forms-submit/readme.md#formulario-modal)
