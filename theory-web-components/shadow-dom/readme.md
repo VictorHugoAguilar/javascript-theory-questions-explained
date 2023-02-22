@@ -8,13 +8,13 @@ Shadow DOM sirve para el encapsulamiento. Le permite a un componente tener su pr
 
 Tales como `<input type="range">`:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom/img/shadow-dom_image_01.png?raw=true)
 
 El navegador usa `DOM/CSS` internamente para dibujarlos. Esa estructura `DOM` normalmente está oculta para nosotros, pero podemos verla con herramientas de desarrollo. Por ejemplo, en Chrome, necesitamos habilitar la opción “Show user agent shadow DOM” en las herramientas de desarrollo.
 
 Entonces `<input type="range">` se ve algo así:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom/img/shadow-dom_image_02.png?raw=true)
 
 Lo que ves bajo `#shadow-root` se llama “shadow DOM”.
 
@@ -33,7 +33,7 @@ input::-webkit-slider-runnable-track {
 <input type="range">
 ````
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom/img/shadow-dom_image_03.png?raw=true)
 
 De nuevo: `pseudo` no es un atributo estándar. Cronológicamente, los navegadores primero comenzaron a experimentar con estructuras DOM internas para implementar controles, y luego, con el tiempo, fue estandarizado shadow DOM que nos permite, a nosotros desarrolladores, hacer algo similar.
 
@@ -68,7 +68,7 @@ customElements.define('show-hello', class extends HTMLElement {
 
 Así es como el `DOM` resultante se ve en las herramientas de desarrollador de Chrome, todo el contenido está bajo “#shadow-root”:
 
-![image_04]()
+![image_04](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom/img/shadow-dom_image_04.png?raw=true)
 
 Primero, el llamado a `elem.attachShadow({mode: …})` crea un árbol shadow.
 
