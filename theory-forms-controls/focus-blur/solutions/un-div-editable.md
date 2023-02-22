@@ -1,0 +1,63 @@
+# un-div-editable
+
+
+````html
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="my.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <ul>
+    <li>Clica el div para editar.</li>
+    <li>Enter o blur guarda el resultado.</li>
+  </ul>
+
+  Se permite HTML.
+
+  <div id="view" class="view">Text</div>
+
+  <script>
+    let area = null;
+    let view = document.getElementById('view');
+
+    view.onclick = function() {
+      editStart();
+    };
+
+    function editStart() {
+      area = document.createElement('textarea');
+      area.className = 'edit';
+      area.value = view.innerHTML;
+
+      area.onkeydown = function(event) {
+        if (event.key == 'Enter') {
+          this.blur();
+        }
+      };
+
+      area.onblur = function() {
+        editEnd();
+      };
+
+      view.replaceWith(area);
+      area.focus();
+    }
+
+    function editEnd() {
+      view.innerHTML = area.value;
+      area.replaceWith(view);
+    }
+  </script>
+
+</body>
+</html>
+
+````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/readme.md#un-div-editable)
