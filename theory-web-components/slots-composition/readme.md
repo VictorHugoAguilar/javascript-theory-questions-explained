@@ -23,7 +23,7 @@ Podríamos intentar analizar el contenido del elemento y copiar y reorganizar di
 
 Afortunadamente, no tenemos que hacerlo. Shadow DOM soporta elementos <slot>, que se llenan automáticamente con el contenido del light DOM.
 
-## Slots con nombres
+## Slots con nombres
 
 Veamos cómo funcionan los slots en un ejemplo simple.
 
