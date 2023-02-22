@@ -1,4 +1,4 @@
-# Shadow DOM slots, composición
+# 📖 Shadow DOM slots, composición
 
 Muchos tipos de componentes; como pestañas, menús, galerías de imágenes, etc., necesitan renderizar contenido.
 
