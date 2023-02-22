@@ -283,7 +283,7 @@ En el siguiente capítulo vamos a hablar sobre los eventos `focus` y `blur` que 
 
 # ✅ Tareas
 
-## Anade una opcion al select
+## Anade una opcion al select
 
 Tenemos un `<select>`:
 
