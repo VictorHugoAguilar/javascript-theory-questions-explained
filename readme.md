@@ -6,7 +6,7 @@
 
 * [Teoría Eventos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
 
-* [Teoría Formularios]()
+* [Teoría Formularios](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/readme.md)
 
 * [Teoría WebComponents](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/readme.md)
 
