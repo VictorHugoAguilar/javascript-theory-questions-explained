@@ -6,6 +6,8 @@
 
 * [Teoría Eventos](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/readme.md)
 
+* [Teoría WebComponents](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/readme.md)
+
 * [Preguntas](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/question.md)
 
 * [Ejercicios](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/exercises.md)
