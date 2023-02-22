@@ -118,7 +118,7 @@ Crea una interfaz que permita ingresar una suma de depósito bancario y porcenta
 
 Acá una demostración:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/events-change-input/img/events-change-input_image_01.png?raw=true)
 
 Cualquier modificación debe ser procesada de inmediato.
 
