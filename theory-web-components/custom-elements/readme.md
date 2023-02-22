@@ -386,7 +386,7 @@ Uso:
 </script>
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/custom-elements/solutions/elemento-reloj-dinamico.md)
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/readme.md)
