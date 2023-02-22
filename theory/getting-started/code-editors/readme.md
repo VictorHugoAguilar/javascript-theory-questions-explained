@@ -46,4 +46,4 @@ Uso del author:
 * De otro modo, si es mayormente otro lenguaje, plataforma, y solo parcialmente frontend; entonces consideraría otros editores, como XCode (Mac), Visual Studio (Windows) o la familia Jetbrains (Webstorm, PHPStorm, RubyMine, etc.; dependiendo del lenguaje).
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started/readme.md)
