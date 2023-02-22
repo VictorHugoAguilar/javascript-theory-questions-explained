@@ -39,6 +39,7 @@ Los motores son complicados, pero los fundamentos son fáciles.
 El motor aplica optimizaciones en cada paso del proceso. Incluso observa como el script compilado se ejecuta, analiza los datos que fluyen a través de él y aplica optimizaciones al código maquina basadas en ese conocimiento.
 
 ## ¿Qué puede hacer JavaScript en el navegador?
+
 El JavaScript moderno es un lenguaje de programación “seguro”. No proporciona acceso de bajo nivel a la memoria ni a la CPU (UCP); ya que se creó inicialmente para los navegadores, los cuales no lo requieren.
 
 Las capacidades de JavaScript dependen en gran medida en el entorno en que se ejecuta. Por ejemplo, Node.JS soporta funciones que permiten a JavaScript leer y escribir archivos arbitrariamente, realizar solicitudes de red, etc.
@@ -54,6 +55,7 @@ Por ejemplo, en el navegador JavaScript es capaz de:
 * Recordar datos en el lado del cliente con el almacenamiento local (“local storage”).
 
 ## ¿Qué NO PUEDE hacer JavaScript en el navegador?
+
 Las capacidades de JavaScript en el navegador están limitadas para proteger la seguridad de usuario. El objetivo es evitar que una página maliciosa acceda a información privada o dañe los datos de usuario.
 
 Ejemplos de tales restricciones incluyen:
@@ -77,6 +79,7 @@ De nuevo: esta limitación es para la seguridad del usuario. Una página de http
 Tales limitaciones no existen si JavaScript es usado fuera del navegador; por ejemplo, en un servidor. Los navegadores modernos también permiten complementos y extensiones que pueden solicitar permisos extendidos.
 
 ## ¿Qué hace a JavaScript único?
+
 Existen al menos tres cosas geniales sobre JavaScript:
 
 * Completa integración con HTML y CSS.
@@ -90,6 +93,7 @@ Eso es lo que hace a JavaScript único. Por esto es la herramienta mas extendida
 Dicho esto, JavaScript también permite crear servidores, aplicaciones móviles, etc.
 
 ## Lenguajes “por arriba de” JavaScript
+
 La sintaxis de JavaScript no se adapta a las necesidades de todos. Personas diferentes querrán diferentes características.
 
 Esto es algo obvio, porque los proyectos y requerimientos son diferentes para cada persona.
