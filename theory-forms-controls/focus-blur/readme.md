@@ -245,9 +245,9 @@ Haz las celdas de la tabla editables al clicarlas.
 
 El demo:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/img/focus-blur_image_01.png?raw=true)
   
-![image_02]()  
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/img/focus-blur_image_02.png?raw=true)  
 
 [solución]()
   
