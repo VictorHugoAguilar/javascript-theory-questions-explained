@@ -302,7 +302,7 @@ Utiliza JavaScript para:
 
 Nota, si haz hecho todo bien, tu alert debería mostrar blues.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/form-elements/solutions/anade-una-opcion-al-select.md)
   
 
 ---
