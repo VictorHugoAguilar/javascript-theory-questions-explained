@@ -92,7 +92,7 @@ showPrompt("Escribe algo<br>...inteligente :)", function(value) {
 
 P.S. El código fuente tiene el HTML/CSS para el formulario con posición fija. Pero tú decides cómo haces el modal.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/forms-submit/solutions/formulario-modal.md)
 
 
 ---
