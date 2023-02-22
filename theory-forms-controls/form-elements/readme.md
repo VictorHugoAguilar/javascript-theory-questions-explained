@@ -215,7 +215,7 @@ Podemos obtener su colección como select.options, por ejemplo:
 </script>
 ````
 
-La especificación completa del elemento <select> está disponible en la especificación https://html.spec.whatwg.org/multipage/forms.html#the-select-element.
+La especificación completa del elemento `<select>` está disponible en la especificación https://html.spec.whatwg.org/multipage/forms.html#the-select-element.
   
 ## new Option
 
@@ -232,7 +232,7 @@ Esta sintaxis es opcional. Podemos usar `document.createElement('option')` y asi
 * `defaultSelected` – si es `true`, entonces se le crea el atributo HTML `selected`,
 * `selected` – si es `true`, el option se selecciona.
 
-La diferencia entre `defaultSelected` y `selected` es que defaultSelected asigna el atributo HTML, el que podemos obtener usando option.getAttribute('selected'), mientras que selected hace que el option esté o no seleccionado.
+La diferencia entre `defaultSelected` y `selected` es que defaultSelected asigna el atributo HTML, el que podemos obtener usando `option.getAttribute('selected')`, mientras que selected hace que el option esté o no seleccionado.
 
 En la práctica, uno debería usualmente establecer ambos valores en `true` o `false`. O simplemente omitirlos, quedarán con el predeterminado `false`.
 
@@ -254,7 +254,7 @@ Los elementos Option tienen propiedades:
 * `option.selected`
 Es el option seleccionado.
 * `option.index`
-El número del option respecto a los demás en su <select>.
+El número del option respecto a los demás en su `<select>`.
 * `option.text`
 El contenido del option (visto por el visitante).
 
