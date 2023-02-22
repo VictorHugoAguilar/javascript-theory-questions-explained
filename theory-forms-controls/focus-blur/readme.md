@@ -232,7 +232,7 @@ El textarea permite editar HTML en `<div>`.
 Cuando el usuario presiona Enter o se pierde el foco, el `<textarea>` se vuelve `<div>` de nuevo, y su contenido se vuelve el HTML del `<div>`.
 
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/solutions/un-div-editable.md)
   
 ## Editar TD al clicar
 
@@ -249,7 +249,7 @@ El demo:
   
 ![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/img/focus-blur_image_02.png?raw=true)  
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/solutions/editar-td-al-clicar.md)
   
 ## Raton manejado por teclado
 
@@ -259,7 +259,7 @@ P.S. No pongas manejadores de eventos en ningún lado excepto el elemento #mouse
 
 P.P.S. No modifiques HTML/CSS, el proceso debe ser genérico y trabajar con cualquier elemento.
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/focus-blur/solutions/raton-manejado-por-teclado.md)
 
 
 ---
