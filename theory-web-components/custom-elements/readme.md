@@ -373,7 +373,8 @@ Crea el elemento `<live-timer>` para mostrar la hora actual:
 Internamente debe usar `<time-formatted>`, no duplicar su funcionalidad.
 
 Actualiza (¡tic!) cada segundo.
-Por cada tic, se debe generar un evento personalizado llamado tick con la fecha actual en `event.detail` (ver artículo Envío de eventos personalizados).
+
+Por cada tic, se debe generar un evento personalizado llamado tick con la fecha actual en `event.detail` [ver artículo Envío de eventos personalizados](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-event/dispatch-events/readme.md).
 
 Uso:
 
