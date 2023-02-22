@@ -10,13 +10,13 @@ La idea del componente completo no es nada nuevo. Se usa en muchos frameworks y 
 
 Antes de pasar a los detalles de implementación, echemos un vistazo a este gran logro de la humanidad:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/webcomponents-intro/img/webcomponents-intro_image_01.png?raw=true)
 
 Esa es la Estación Espacial Internacional (EEI).
 
 Y así es como se ha montado (aproximadamente):
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/webcomponents-intro/img/webcomponents-intro_image_02.png?raw=true)
 
 La Estación Espacial Internacional:
 
@@ -45,7 +45,7 @@ Echemos un vistazo a un sitio web, por ejemplo Twitter.
 
 Naturalmente está divido en componentes:
 
-![image_03]()
+![image_03](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/webcomponents-intro/img/webcomponents-intro_image_03.png?raw=true)
 
 1.  Navegación superior.
 2.  Información usuario.
