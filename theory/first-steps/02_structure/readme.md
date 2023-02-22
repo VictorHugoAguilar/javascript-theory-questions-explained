@@ -6,7 +6,7 @@ Lo primero que estudiaremos son los bloques de construcción del código.
 
 Las sentencias son construcciones sintácticas y comandos que realizan acciones.
 
-Ya hemos visto una sentencia, `alert('¡Hola mundo!'), que muestra el mensaje “¡Hola mundo!”.
+Ya hemos visto una sentencia, `alert('¡Hola mundo!')`, que muestra el mensaje “¡Hola mundo!”.
 
 Podemos tener tantas sentencias en nuestro código como queramos, las cuales se pueden separar con un punto y coma.
 
