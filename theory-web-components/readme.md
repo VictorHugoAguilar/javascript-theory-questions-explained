@@ -7,7 +7,7 @@ Los componentes web son un conjunto de estándares para crear componentes autón
 3.  [Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom/readme.md)
 4.  [Elemento template](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory-web-components/template-element/readme.md)
 5.  [Shadow DOM slots, composición](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/slots-composition/readme.md)
-6.  [Estilo Shadow DOM]()
+6.  [Estilo Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/shadow-dom-style/readme.md)
 7.  [Shadow DOM y eventos]()
 
 
