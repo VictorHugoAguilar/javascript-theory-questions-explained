@@ -59,4 +59,4 @@ Ahora combine Cmd+Opt+C para alternar a consola. Además, tenga en cuenta que ha
 Ahora tenemos el entorno listo. En la siguiente sección nos enfocaremos en JavaScript.
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/getting-started/readme.md)
