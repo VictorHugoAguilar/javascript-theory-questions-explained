@@ -120,7 +120,7 @@ Para cualquier elemento, el formulario está disponible como element.form. Así 
 
 Aquí la imagen:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/form-elements/img/form-elements_image_01.png?raw=true)
 
 Por ejemplo:
 
