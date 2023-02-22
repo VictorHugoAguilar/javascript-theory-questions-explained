@@ -1,0 +1,119 @@
+# calculadora-de-deposito
+
+````html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    td select,
+    td input {
+      width: 150px;
+    }
+
+    #diagram td {
+      vertical-align: bottom;
+      text-align: center;
+      padding: 10px;
+    }
+
+    #diagram div {
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+ Calculadora de depósito.
+
+  <form name="calculator">
+    <table>
+      <tr>
+        <td>Depósito inicial</td>
+        <td>
+          <input name="money" type="number" value="10000" required>
+        </td>
+      </tr>
+      <tr>
+        <td>¿Cuántos meses?</td>
+        <td>
+          <select name="months">
+            <option value="3">3 (mínimo)</option>
+            <option value="6">6 (medio año)</option>
+            <option value="12" selected>12 (un año)</option>
+            <option value="18">18 (1.5 años)</option>
+            <option value="24">24 (2 años)</option>
+            <option value="30">30 (2.5 años)</option>
+            <option value="36">36 (3 años)</option>
+            <option value="60">60 (5 años)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>¿Interés anual?</td>
+        <td>
+          <input name="interest" type="number" value="5" required>
+        </td>
+      </tr>
+    </table>
+
+
+  </form>
+
+
+  <table id="diagram">
+    <tr>
+      <th>Inicial:</th>
+      <th>Final:</th>
+    </tr>
+    <tr>
+      <th id="money-before"></th>
+      <th id="money-after"></th>
+    </tr>
+    <td>
+      <div style="background: red;width:40px;height:100px"></div>
+    </td>
+    <td>
+      <div style="background: green;width:40px;height:0" id="height-after"></div>
+    </td>
+  </table>
+
+  <script>
+
+    let form = document.forms.calculator;
+
+    form.money.oninput = calculate;
+    form.months.onchange = calculate;
+    form.interest.oninput = calculate;
+
+    function calculate() {
+      let initial = +form.money.value;
+      if (!initial) return;
+
+      let interest = form.interest.value * 0.01;
+
+      if (!interest) return;
+
+      let years = form.months.value / 12;
+      if (!years) return;
+
+      let result = Math.round(initial * (1 + interest) ** years);
+
+      let height = result / form.money.value * 100 + 'px';
+      document.getElementById('height-after').style.height = height;
+      document.getElementById('money-before').innerHTML = form.money.value;
+      document.getElementById('money-after').innerHTML = result;
+    }
+
+    calculate();
+  </script>
+
+
+</body>
+</html>
+````
+
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/events-change-input/readme.md#calculadora-de-deposito)
