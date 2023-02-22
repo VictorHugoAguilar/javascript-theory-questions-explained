@@ -26,7 +26,7 @@ Para otros elementos: select, input type=checkbox/radio se dispara inmediatament
 </select>
 ````
 
-## Evento: input
+## Evento: input
 
 El evento input se dispara cada vez que un valor es modificado por el usuario.
 
