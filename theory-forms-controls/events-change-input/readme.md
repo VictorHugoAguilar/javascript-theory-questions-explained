@@ -105,10 +105,11 @@ Por otro lado, `navigator.clipboard` es una API más reciente, pensada para el u
 
 Eventos de modificación de datos:
 
-Evento	Descripción	Especiales
-change	Un valor fue cambiado.	En ingreso de texto, se dispara cuando el elemento pierde el foco
-input	Cada cambio de entrada de texto	Se dispara de inmediato con cada cambio, a diferencia de change.
-cut/copy/paste	Acciones cortar/copiar/pegar	La acción puede ser cancelada. La propiedad `event.clipboardData` brinda acceso al portapeles. Todos los navegadores excepto Firefox también soportan navigator.clipboard.
+| Evento        | Descripción           | Especiales                    |
+|---------------|-----------------------|-------------------------------|
+|change         | Un valor fue cambiado.|	En ingreso de texto, se dispara cuando el elemento pierde el foco |
+|input          |	Cada cambio de entrada de texto |	Se dispara de inmediato con cada cambio, a diferencia de change.  |
+|cut/copy/paste |	Acciones cortar/copiar/pegar    |	La acción puede ser cancelada. La propiedad `event.clipboardData` brinda acceso al portapeles. Todos los navegadores excepto Firefox también soportan navigator.clipboard.  |
 
 # ✅ Tareas
 
