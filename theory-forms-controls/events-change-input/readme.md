@@ -4,18 +4,18 @@ Veamos varios eventos que acompañan la actualización de datos.
 
 ## Evento: change
 
-El evento change se activa cuando el elemento finaliza un cambio.
+El evento `change` se activa cuando el elemento finaliza un cambio.
 
 Para ingreso de texto significa que el evento ocurre cuando se pierde foco en el elemento.
 
-Por ejemplo, mientras estamos escribiendo en el siguiente cuadro de texto, no hay evento. Pero cuando movemos el focus (enfoque) a otro lado, por ejemplo hacemos click en un botón, entonces ocurre el evento change:
+Por ejemplo, mientras estamos escribiendo en el siguiente cuadro de texto, no hay evento. Pero cuando movemos el focus (enfoque) a otro lado, por ejemplo hacemos click en un botón, entonces ocurre el evento `change`:
 
 ````html
 <input type="text" onchange="alert(this.value)">
 <input type="button" value="Button">
 ````
 
-Para otros elementos: select, input type=checkbox/radio se dispara inmediatamente después de cambiar la opción seleccionada:
+Para otros elementos: `select`, `input` `type=checkbox/radio` se dispara inmediatamente después de cambiar la opción seleccionada:
 
 ````html
 <select onchange="alert(this.value)">
@@ -60,7 +60,7 @@ Estos pertenecen a la clase ClipboardEvent y dan acceso a los datos cortados/cop
 
 También podemos usar `event.preventDefault()` para cancelar la acción y que nada sea cortado/copiado/pegado.
 
-El siguiente código también evita todo evento cut/copy/paste y muestra qué es los que estamos intentando cortar/copiar/pegar:
+El siguiente código también evita todo evento `cut/copy/paste` y muestra qué es los que estamos intentando cortar/copiar/pegar:
 
 ````html
 <input type="text" id="input">
