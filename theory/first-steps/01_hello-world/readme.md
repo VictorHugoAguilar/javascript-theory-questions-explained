@@ -133,7 +133,7 @@ Hazlo en un sandbox o en tu disco duro, no importa, solo asegúrate de que funci
 
 ## Mostrar una alerta con un script externo
 
-Toma la solución de la tarea anterior Mostrar una alerta. Modificarla extrayendo el contenido del script a un archivo externo alert.js, ubicado en la misma carpeta.
+Toma la solución de la tarea anterior Mostrar una alerta. Modificarla extrayendo el contenido del script a un archivo externo `alert.js`, ubicado en la misma carpeta.
 
 Abrir la página, asegurarse que la alerta funcione.
 
