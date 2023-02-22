@@ -4,7 +4,7 @@ Shadow DOM puede incluir las etiquetas `<style>` y `<link rel="stylesheet" href=
 
 Como regla general, los estilos locales solo funcionan dentro del shadow tree, y los estilos de documentos funcionan fuera de él. Pero hay pocas excepciones.
 
-## :host
+## :host
 
 El selector `:host` permite seleccionar el shadow host (el elemento que contiene el shadow tree).
 
