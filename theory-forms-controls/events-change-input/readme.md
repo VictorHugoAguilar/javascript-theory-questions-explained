@@ -125,7 +125,7 @@ Cualquier modificación debe ser procesada de inmediato.
 
 La fórmula es:
 
-````html
+````js
 // initial: la suma inicial de dinero
 // interest: e.g. 0.05 significa 5% anual
 // years: cuántos años esperar
