@@ -131,7 +131,7 @@ La fórmula es:
 let result = Math.round(initial * (1 + interest) ** years);
 ````
 
-[solución]()
+[solución](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/events-change-input/solutions/calculadora-de-deposito.md)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-forms-controls/readme.md)
