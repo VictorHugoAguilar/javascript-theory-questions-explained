@@ -148,7 +148,7 @@ Podemos acceder sus valores como `input.value` (cadena) o `input.checked` (boole
 
 De esta manera:
 
-````html
+````js
 input.value = "New value";
 textarea.value = "New text";
 
