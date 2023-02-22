@@ -365,7 +365,7 @@ Observa que no hay ningún evento slotchange después de 2 segundos, cuando se m
 
 Si quisiéramos rastrear las modificaciones internas del Light `DOM` desde JavaScript, eso también es posible usando un mecanismo más genérico: MutationObserver.
 
-## Slot API
+## Slot API
 
 Finalmente, mencionemos los métodos JavaScript relacionados con los slots.
 
