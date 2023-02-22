@@ -76,7 +76,7 @@ Creamos el shadow `DOM`, así que aquí está, en `#shadow-root`. Ahora el eleme
 
 Para fines de renderizado, para cada `<slot name="...">` en el shadow `DOM`, el navegador busca `slot="..."` con el mismo nombre en el light `DOM`. Estos elementos se renderizan dentro de los slots:
 
-![image_01]()
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/slots-composition/img/slots-composition_image_01.png?raw=true)
 
 El resultado se llama “flattened DOM” (DOM aplanado):
 
@@ -303,7 +303,7 @@ customElements.define('custom-menu', class extends HTMLElement {
 
 Aquí está la demostración completa:
 
-![image_02]()
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-web-components/slots-composition/img/slots-composition_image_02.png?raw=true)
 
 Por supuesto, podemos agregarle más funcionalidad: eventos, métodos, etc.
 
