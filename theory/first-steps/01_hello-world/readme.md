@@ -27,7 +27,7 @@ Por ejemplo:
   <p>...Después del script.</p>
 
 </body>
-
+`
 </html>
 ````
 
@@ -41,7 +41,7 @@ La etiqueta `<script>` tiene algunos atributos que rara vez se usan en la actual
 
 **El atributo** `type`: `<script type=…>`
 
-El antiguo estándar HTML, HTML4, requería que un script tuviera un type. Por lo general, era type="text/javascript". Ya no es necesario. Además, el estándar HTML moderno cambió totalmente el significado de este atributo. Ahora, se puede utilizar para módulos de JavaScript. Pero eso es un tema avanzado, hablaremos sobre módulos en otra parte del tutorial.
+El antiguo estándar HTML, HTML4, requería que un script tuviera un type. Por lo general, era `type="text/javascript"`. Ya no es necesario. Además, el estándar HTML moderno cambió totalmente el significado de este atributo. Ahora, se puede utilizar para módulos de JavaScript. Pero eso es un tema avanzado, hablaremos sobre módulos en otra parte del tutorial.
 
 **El atributo** `language`: `<script language=…>`
   
@@ -52,12 +52,12 @@ Este atributo estaba destinado a mostrar el lenguaje del script. Este atributo y
 En libros y guías muy antiguos, puedes encontrar comentarios dentro de las etiquetas <script>, como el siguiente:
 
 ````html
-<script type="text/javascript"><!--
-    ...
-//--></script>
+<script type="text/javascript">
+  <!-- ...// -->
+</script>
 ````
 
-Este truco no se utiliza en JavaScript moderno. Estos comentarios ocultaban el código JavaScript de los navegadores antiguos que no sabían cómo procesar la etiqueta <script>. Dado que los navegadores lanzados en los últimos 15 años no tienen este problema, este tipo de comentario puede ayudarte a identificar códigos realmente antiguos.
+Este truco no se utiliza en JavaScript moderno. Estos comentarios ocultaban el código JavaScript de los navegadores antiguos que no sabían cómo procesar la etiqueta `<script>`. Dado que los navegadores lanzados en los últimos 15 años no tienen este problema, este tipo de comentario puede ayudarte a identificar códigos realmente antiguos.
 
 ## Scripts externos
   
@@ -69,7 +69,7 @@ Los archivos de script se adjuntan a HTML con el atributo src:
 <script src="/path/to/script.js"></script>
 ````
 
-Aquí, `/path/to/script.js` es una ruta absoluta al archivo de script desde la raíz del sitio. También se puede proporcionar una ruta relativa desde la página actual. Por ejemplo, `src="script.js"´ significaría un archivo ´"script.js"´ en la carpeta actual.
+Aquí, `/path/to/script.js` es una ruta absoluta al archivo de script desde la raíz del sitio. También se puede proporcionar una ruta relativa desde la página actual. Por ejemplo, `src="script.js"` significaría un archivo `"script.js" en la carpeta actual.
 
 También podemos dar una URL completa. Por ejemplo:
 
@@ -92,7 +92,7 @@ Otras páginas que hacen referencia al mismo script lo tomarán del caché en lu
 Eso reduce el tráfico y hace que las páginas sean más rápidas.
 
 ### ⚠️ Si se establece src, el contenido del script se ignora.
-Una sola etiqueta <script> no puede tener el atributo src y código dentro.
+Una sola etiqueta `<script>` no puede tener el atributo src y código dentro.
 
 Esto no funcionará:
   
@@ -102,7 +102,7 @@ Esto no funcionará:
 </script>
 ````
 
-Debemos elegir un <script src="…"> externo o un <script> normal con código.
+Debemos elegir un `<script src="…">` externo o un `<script>` normal con código.
 
 El ejemplo anterior se puede dividir en dos scripts para que funcione:
 
