@@ -83,23 +83,25 @@ Para resumir, el ejecutor debe realizar una tarea (generalmente algo que toma ti
 
 Una promesa que se resuelve o se rechaza se denomina “resuelta”, en oposición a una promesa inicialmente “pendiente”.
 
+````
 ### ℹ️ Solo puede haber un único resultado, o un error
 El ejecutor debe llamar solo a un ‘resolve’ o un ‘reject’. Cualquier cambio de estado es definitivo.
 
 Se ignoran todas las llamadas adicionales de ‘resolve’ y ‘reject’:
 
-````js
+```js
 let promise = new Promise(function(resolve, reject) {
   resolve("hecho");
 
   reject(new Error("…")); // ignorado
   setTimeout(() => resolve("…")); // ignorado
 });
-````
+```
 
 La idea es que una tarea realizada por el ejecutor puede tener solo un resultado o un error.
 
 Además, resolve/reject espera solo un argumento (o ninguno) e ignorará argumentos adicionales.
+````
 
 ### ℹ️ Rechazar con objetos Error
 En caso de que algo salga mal, el ejecutor debe llamar a ‘reject’. Eso se puede hacer con cualquier tipo de argumento (al igual que resolve). Pero se recomienda usar objetos Error (u objetos que hereden de Error). El razonamiento para eso pronto se hará evidente.
