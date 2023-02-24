@@ -6,28 +6,28 @@ Aquí hay una lista con los eventos del DOM más utilizados, solo para echar un 
 
 ### Eventos del mouse:
 
-* click – cuando el mouse hace click sobre un elemento (los dispositivos touch lo generan con un toque).
-* contextmenu – cuando el mouse hace click derecho sobre un elemento.
-* mouseover / mouseout – cuando el cursor del mouse ingresa/abandona un elemento.
-* mousedown / mouseup – cuando el botón del mouse es presionado/soltado sobre un elemento.
-* mousemove – cuando el mouse se mueve.
+* `click` – cuando el mouse hace click sobre un elemento (los dispositivos touch lo generan con un toque).
+* `contextmenu` – cuando el mouse hace click derecho sobre un elemento.
+* `mouseover` / mouseout – cuando el cursor del mouse ingresa/abandona un elemento.
+* `mousedown` / mouseup – cuando el botón del mouse es presionado/soltado sobre un elemento.
+* `mousemove` – cuando el mouse se mueve.
 
 ### Eventos del teclado:
 
-* keydown / keyup – cuando se presiona/suelta una tecla.
+* `keydown/keyup` – cuando se presiona/suelta una tecla.
 
 ### Eventos del elemento form:
 
-* submit – cuando el visitante envía un <form>.
-* focus – cuando el visitante se centra sobre un elemento, por ejemplo un <input>.
+* `submit` – cuando el visitante envía un <form>.
+* `focus` – cuando el visitante se centra sobre un elemento, por ejemplo un <input>.
 
 ### Eventos del documento:
 
-* DOMContentLoaded --cuando el HTML es cargado y procesado, el DOM está completamente construido
+* `DOMContentLoaded` --cuando el HTML es cargado y procesado, el DOM está completamente construido
 
 ### Eventos del CSS:
 
-* transitionend – cuando una animación CSS concluye.
+* `transitionend` – cuando una animación CSS concluye.
 
 Hay muchos más eventos. Entraremos en más detalles con eventos particulares en los siguientes capítulos.
 
@@ -69,7 +69,7 @@ Aquí un click ejecuta la función countRabbits():
 <input type="button" onclick="countRabbits()" value="¡Cuenta los conejos!">
 ````
 
-Como ya sabemos, los nombres de los atributos HTML no distinguen entre mayúsculas y minúsculas, entonces ONCLICK funciona bien al igual que onClick y onCLICK… Pero usualmente los atributos van con minúsculas: onclick.
+Como ya sabemos, los nombres de los atributos HTML no distinguen entre mayúsculas y minúsculas, entonces ONCLICK funciona bien al igual que `onClick` y `onCLICK…` Pero usualmente los atributos van con minúsculas: `onclick`.
 
 ## Propiedad del DOM
 
@@ -109,7 +109,7 @@ Estás dos piezas de código funcionan igual:
 </script>
 ````
   
-En el primer ejemplo el atributo HTML es usado para inicializar el button.onclick. Mientras que en el segundo ejemplo se usa el script, esa es toda la diferencia.
+En el primer ejemplo el atributo HTML es usado para inicializar el `button.onclick`. Mientras que en el segundo ejemplo se usa el script, esa es toda la diferencia.
 
 Como solo hay una propiedad onclick, no podemos asignar más de un handler.
 
@@ -130,7 +130,7 @@ Para eliminar un handler, asigna `elem.onclick = null`.
 
 El valor de this dentro de un handler es el elemento. El cuál tiene el handler dentro.
 
-En el siguiente código el button muestra su contenido usando this.innerHTML:
+En el siguiente código el button muestra su contenido usando `this.innerHTML`:
 
 ````html
 <button onclick="alert(this.innerHTML)">Haz click en mí</button>
@@ -149,7 +149,7 @@ function sayThanks() {
 elem.onclick = sayThanks;
 ````
 
-Pero ten cuidado: la función debe ser asignada como sayThanks, no sayThanks().
+Pero ten cuidado: la función debe ser asignada como sayThanks, no `sayThanks()`.
 
 ````js
 // correcto
@@ -221,9 +221,9 @@ La función handler.
 * **options**
 Un objeto adicional, opcional, con las propiedades:
 
-* once: si es true entonces el listener se remueve automáticamente después de activarlo.
-* capture: la fase en la que se controla el evento, que será cubierta en el capítulo Propagación y captura. Por razones históricas, options también puede ser false/true, lo que es igual a {capture: false/true}.
-* passive: si es true entonces el handler no llamará a preventDefault(), esto lo explicaremos más adelante en Acciones predeterminadas del navegador.
+* `once`: si es true entonces el listener se remueve automáticamente después de activarlo.
+* `capture`: la fase en la que se controla el evento, que será cubierta en el capítulo Propagación y captura. Por razones históricas, options también puede ser false/true, lo que es igual a {capture: false/true}.
+* `passive`: si es true entonces el handler no llamará a `preventDefault()`, esto lo explicaremos más adelante en Acciones predeterminadas del navegador.
 
 Para remover el handler, usa removeEventListener:
 
