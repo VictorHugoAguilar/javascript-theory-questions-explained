@@ -254,28 +254,28 @@ La siguiente información muestra cómo el convertidor predeterminado maneja la 
 
 ### Convertir de atributo a propiedad
 
-- Para cadenas, cuando se define el atributo, establezca la propiedad en el valor del atributo.
-- Para Numbers, cuando se define el atributo, establezca la propiedad en `Number(attributeValue)`.
-- Para booleanos, cuando el atributo es:
+- Para `**String**`, cuando se define el atributo, establezca la propiedad en el valor del atributo.
+- Para `**Numbers**`, cuando se define el atributo, establezca la propiedad en `Number(attributeValue)`.
+- Para `**Booleans**`, cuando el atributo es:
     - non- `null`, establezca la propiedad en `true`.
     - `null` o `undefined`, establezca la propiedad en `false`.
-- Para objetos y matrices, cuando el atributo es:
+- Para `**Object**` y `**Arrays**`, cuando el atributo es:
     - Definido, establezca el valor de la propiedad en `JSON.parse(attributeValue)`.
 
 ### Convertir de propiedad a atributo
 
-- Para cadenas, cuando la propiedad es:
+- Para `**String**`, cuando la propiedad es:
     - `null`, elimine el atributo.
     - `undefined`, no cambie el atributo.
     - Definido y no `null`, establezca el atributo en el valor de la propiedad.
-- Para Numbers, cuando la propiedad es:
+- Para `**Numbers**`, cuando la propiedad es:
     - `null`, elimine el atributo.
     - `undefined`, no cambie el atributo.
     - Definido y no null, establezca el atributo en el valor de la propiedad.
-- Para booleanos, cuando la propiedad es:
+- Para `**Booleans**`, cuando la propiedad es:
     - `truthy`, crea el atributo.
     - `falsy`, elimine el atributo.
-- Para objetos y matrices, cuando la propiedad es:
+- Para `**Object**` y `**Arrays**`, cuando la propiedad es:
     - `null` o `undefined`, elimine el atributo.
     - Definido y no `null`, establezca el valor del atributo en `JSON.stringify(propertyValue)`.
 
