@@ -6,9 +6,9 @@ La plantilla de su componente se representa en su árbol DOM de sombra. Los esti
 
 ## Agregue estilos a su componente
 
-Para un rendimiento óptimo, defina estilos con ámbito en una propiedad de **estilos** estáticos.
+Para un rendimiento óptimo, defina estilos con ámbito en una propiedad de `estilos` estáticos.
 
-Defina estilos en un literal de plantilla etiquetado, utilizando la función de etiqueta **css**:
+Defina estilos en un literal de plantilla etiquetado, utilizando la función de etiqueta `css`:
 
 ```jsx
 import { LitElement, css, html } from 'lit-element';
@@ -29,7 +29,7 @@ class MyElement extends LitElement {
 
 Los estilos que agrega a su componente tienen un alcance mediante shadow DOM. Para obtener una descripción general rápida del estilo del DOM de la sombra, consulte Descripción general del estilo del DOM de la sombra.
 
-El valor de la propiedad de estilos estáticos puede ser:
+El valor de la propiedad de `estilos` estáticos puede ser:
 
 - Un único literal de plantilla etiquetada.
 
@@ -47,7 +47,7 @@ static get styles() {
 }
 ```
 
-La propiedad de estilos estáticos suele ser la mejor manera de agregar estilos a su componente, pero hay algunos casos de uso que no puede manejar de esta manera, por ejemplo, vincular a una hoja de estilo externa. Para conocer formas alternativas de agregar estilos, consulte Definir estilos con ámbito en la plantilla.
+La propiedad de `estilos` estáticos suele ser la mejor manera de agregar estilos a su componente, pero hay algunos casos de uso que no puede manejar de esta manera, por ejemplo, vincular a una hoja de estilo externa. Para conocer formas alternativas de agregar estilos, consulte Definir estilos con ámbito en la plantilla.
 
 ### Expresiones en estilos estáticos
 
@@ -56,7 +56,7 @@ Los estilos estáticos se aplican a todas las instancias de un componente. Cualq
 
 Para permitir la personalización de temas o estilos por instancia, use variables CSS y propiedades personalizadas para crear estilos configurables.
 
-Para evitar que los componentes basados en LitElement evalúen código potencialmente malicioso, la etiqueta css solo permite expresiones anidadas que son en sí mismas cadenas o números etiquetados con css.
+Para evitar que los componentes basados en LitElement evalúen código potencialmente malicioso, la etiqueta `css` solo permite expresiones anidadas que son en sí mismas cadenas o números etiquetados con `css`.
 
 ```jsx
 import { LitElement, html, css } from 'lit-element';
@@ -79,7 +79,7 @@ customElements.define('my-element', MyElement);
 
 Esta restricción existe para proteger las aplicaciones de las vulnerabilidades de seguridad mediante las cuales se pueden inyectar estilos maliciosos, o incluso códigos maliciosos, desde fuentes no confiables, como parámetros de URL o valores de bases de datos.
 
-Si debe usar una expresión en un literal css que no es en sí mismo un literal css, y está seguro de que la expresión proviene de una fuente totalmente confiable, como una constante definida en su propio código, entonces puede envolver la expresión con unsafeCSS función:
+Si debe usar una expresión en un literal `css` que no es en sí mismo un literal `css`, y está seguro de que la expresión proviene de una fuente totalmente confiable, como una constante definida en su propio código, entonces puede envolver la expresión con `unsafeCSS` función:
 
 ```jsx
 import { LitElement, html, css, unsafeCSS } from 'lit-element';
@@ -154,7 +154,7 @@ class MyElement extends LitElement {
 }
 ```
 
-También puede importar una hoja de estilo externa agregando un elemento <link> a su plantilla, pero esto tiene varias limitaciones. Para obtener más información, consulte Importar una hoja de estilo externa.
+También puede importar una hoja de estilo externa agregando un elemento `<link>` a su plantilla, pero esto tiene varias limitaciones. Para obtener más información, consulte Importar una hoja de estilo externa.
 
 ## Descripción general del estilo Shadow DOM
 
@@ -197,12 +197,12 @@ class MyElement extends LitElement {
 
 ### Dale estilo al componente en sí
 
-Puede diseñar el componente en sí usando selectores de :host especiales. (El elemento que posee o "aloja" un árbol de sombra se denomina elemento anfitrión).
+Puede diseñar el componente en sí usando selectores de `:host` especiales. (El elemento que posee o "aloja" un árbol de sombra se denomina elemento anfitrión).
 
-Para crear estilos predeterminados para el elemento host, use la pseudoclase :host CSS y la función pseudoclase CSS :host().
+Para crear estilos predeterminados para el elemento host, use la pseudoclase :host CSS y la función pseudoclase CSS :`host()`.
 
-- :host selecciona el elemento host.
-- :host(selector) selecciona el elemento anfitrión, pero solo si el elemento anfitrión coincide con el selector.
+- `:host` selecciona el elemento host.
+- :`host(selector)` selecciona el elemento anfitrión, pero solo si el elemento anfitrión coincide con el selector.
 
 ```jsx
 static get styles() {
@@ -230,9 +230,9 @@ my-element {
 
 ### Aplicar estilo a los elementos secundarios del componente
 
-Su componente puede aceptar hijos (como un elemento <ul> puede tener hijos <li>). Para renderizar elementos secundarios, su plantilla debe incluir uno o más elementos <slot>, como se describe en Renderizar elementos secundarios con el elemento slot.
+Su componente puede aceptar hijos (como un elemento `<ul>` puede tener hijos `<li>`). Para renderizar elementos secundarios, su plantilla debe incluir uno o más elementos `<slot>`, como se describe en Renderizar elementos secundarios con el elemento slot.
 
-El elemento <slot> actúa como marcador de posición en un árbol de sombra donde se muestran los elementos secundarios del elemento host. Por ejemplo:
+El elemento `<slot>` actúa como marcador de posición en un árbol de sombra donde se muestran los elementos secundarios del elemento host. Por ejemplo:
 
 ```jsx
 class MyElement extends LitElement {
@@ -246,7 +246,7 @@ class MyElement extends LitElement {
 <my-element><p>Slotted content</p></my-element>
 ```
 
-Utilice el pseudoelemento CSS ::slotted() para seleccionar elementos secundarios que se incluyen en su plantilla a través de <slot>s.
+Utilice el pseudoelemento CSS `::slotted()` para seleccionar elementos secundarios que se incluyen en su plantilla a través de <slot>s.
 
 - `::slotted(*)` matches all slotted elements.
 - `::slotted(p)` matches slotted paragraphs.
@@ -279,7 +279,7 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-Tenga en cuenta que solo los elementos secundarios directamente ranurados pueden diseñarse con :: slotted().
+Tenga en cuenta que solo los elementos secundarios directamente ranurados pueden diseñarse con `:: slotted()`.
 
 ```jsx
 <my-element>
@@ -291,7 +291,7 @@ Tenga en cuenta que solo los elementos secundarios directamente ranurados pueden
 </my-element>
 ```
 
-Además, se puede diseñar a los niños desde fuera del árbol de sombras, por lo que debe considerar sus estilos ::slotted() como estilos predeterminados que se pueden anular.
+Además, se puede diseñar a los niños desde fuera del árbol de sombras, por lo que debe considerar sus estilos `::slotted()` como estilos predeterminados que se pueden anular.
 
 ```jsx
 my-element div {
@@ -299,7 +299,7 @@ my-element div {
 }
 ```
 
-> ⚠️ ¡Cuidado con las limitaciones en el relleno polifónico Shady CSS alrededor del contenido ranurado! Consulte las limitaciones de Shady CSS para obtener detalles sobre cómo usar la sintaxis ::slotted() de una manera compatible con polyfill.
+> ⚠️ ¡Cuidado con las limitaciones en el relleno polifónico Shady CSS alrededor del contenido ranurado! Consulte las limitaciones de Shady CSS para obtener detalles sobre cómo usar la sintaxis `::slotted()` de una manera compatible con polyfill.
 > 
 
 ### Estilos configurables con propiedades personalizadas
@@ -328,7 +328,7 @@ static get styles() {
 Recomendamos usar estilos estáticos para un rendimiento óptimo. Sin embargo, a veces es posible que desee definir estilos en la plantilla LitElement. Hay dos formas de agregar estilos con ámbito en la plantilla:
 
 - Agregue estilos utilizando una hoja de estilo externa.
-- Agrega estilos usando un elemento <style>.
+- Agrega estilos usando un elemento `<style>`.
 
 Cada una de estas técnicas tiene su propio conjunto de ventajas y desventajas.
 
@@ -336,7 +336,7 @@ Cada una de estas técnicas tiene su propio conjunto de ventajas y desventajas.
 
 Recomendamos usar estilos estáticos para un rendimiento óptimo. Sin embargo, los estilos estáticos se evalúan una vez por clase. A veces, es posible que deba evaluar los estilos por instancia.
 
-Recomendamos usar propiedades CSS para crear estilos personalizables. Sin embargo, también puede incluir elementos <style> en una plantilla LitElement. Estos se actualizan por instancia.
+Recomendamos usar propiedades CSS para crear estilos personalizables. Sin embargo, también puede incluir elementos `<style>` en una plantilla LitElement. Estos se actualizan por instancia.
 
 ```jsx
 render() {
@@ -368,14 +368,14 @@ render() {
 }
 ```
 
-Las expresiones dentro de un elemento <style> no se actualizarán por instancia en ShadyCSS, debido a las limitaciones del polyfill de ShadyCSS. Consulte el archivo Léame de ShadyCSS para obtener más información.
+Las expresiones dentro de un elemento `<style>` no se actualizarán por instancia en ShadyCSS, debido a las limitaciones del polyfill de ShadyCSS. Consulte el archivo Léame de ShadyCSS para obtener más información.
 
-Además, evaluar una expresión dentro de un elemento <style> es ineficiente. Cuando cambia cualquier texto dentro de un elemento <style>, el navegador debe volver a analizar todo el elemento <style>, lo que resulta en un trabajo innecesario.
+Además, evaluar una expresión dentro de un elemento `<style>` es ineficiente. Cuando cambia cualquier texto dentro de un elemento `<style>`, el navegador debe volver a analizar todo el elemento `<style>`, lo que resulta en un trabajo innecesario.
 
-Si necesita evaluar expresiones dentro de un elemento <style>, use la siguiente estrategia para evitar crear problemas de rendimiento:
+Si necesita evaluar expresiones dentro de un elemento `<style>`, use la siguiente estrategia para evitar crear problemas de rendimiento:
 
 - Separe los estilos que requieren una evaluación por instancia de los que no.
-- Evalúe las propiedades CSS por instancia creando una expresión que capture esa propiedad dentro de un bloque <style> completo. Inclúyelo en tu plantilla.
+- Evalúe las propiedades CSS por instancia creando una expresión que capture esa propiedad dentro de un bloque `<style>` completo. Inclúyelo en tu plantilla.
 
 Ejemplo:
 
@@ -419,7 +419,7 @@ customElements.define('my-element', MyElement);
 
 ### Importar una hoja de estilo externa
 
-Recomendamos colocar sus estilos en una propiedad de estilos estáticos para un rendimiento óptimo. Sin embargo, puede incluir una hoja de estilo externa en su plantilla con un <enlace>:
+Recomendamos colocar sus estilos en una propiedad de estilos estáticos para un rendimiento óptimo. Sin embargo, puede incluir una hoja de estilo externa en su plantilla con un `<enlace>`:
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -441,26 +441,26 @@ Sin embargo, hay algunas advertencias importantes:
 
 - El polyfill ShadyCSS no admite hojas de estilo externas.
 - Los estilos externos pueden causar un destello de contenido sin estilo (FOUC) mientras se cargan.
-- La URL en el atributo href es relativa al documento principal. Esto está bien si está creando una aplicación y las URL de sus activos son bien conocidas, pero evite usar hojas de estilo externas cuando cree un elemento reutilizable.
+- La URL en el atributo `href` es relativa al documento principal. Esto está bien si está creando una aplicación y las URL de sus activos son bien conocidas, pero evite usar hojas de estilo externas cuando cree un elemento reutilizable.
 
 ## Clases y estilos dinámicos
 
-Una forma de hacer que los estilos sean dinámicos es agregar enlaces a la clase o atributos de estilo en su plantilla.
+Una forma de hacer que los estilos sean dinámicos es agregar enlaces a la `class` o atributos de `style` en su plantilla.
 
-La biblioteca lit-html ofrece dos directivas, classMap y styleMap, para aplicar convenientemente clases y estilos en plantillas HTML.
+La biblioteca lit-html ofrece dos directivas, `classMap` y `styleMap`, para aplicar convenientemente clases y estilos en plantillas HTML.
 
 Para obtener más información sobre estas y otras directivas lit-html, consulte la documentación sobre las directivas integradas lit-html.
 
-Para usar styleMap y/o classMap:
+Para usar `styleMap` y/o `classMap`:
 
-- Importar classMap y/o styleMap:
+- Importar `classMap` y/o `styleMap`:
 
 ```jsx
 import { classMap } from 'lit-html/directives/class-map';
 import { styleMap } from 'lit-html/directives/style-map';
 ```
 
-- Use classMap y/o styleMap en su plantilla de elemento:
+- Use `classMap` y/o `styleMap` en su plantilla de elemento:
 
 ```jsx
 constructor() {
@@ -477,9 +477,18 @@ render() {
 }
 ```
 
-## classMap sintaxis
+### classMap sintaxis
 
-styleMap aplica un conjunto de reglas CSS a un elemento HTML:
+`classMap` applies a set of classes to an HTML element:
+
+```jsx
+<div class=${classMap({alert:true,info:true})}>Content.</div>
+<!-- Equivalent: <div class="alert info">Content.</div> -->
+```
+
+### styleMap sintaxis
+
+`styleMap` aplica un conjunto de reglas CSS a un elemento HTML:
 
 ```jsx
 <button style=${styleMap({
@@ -495,9 +504,9 @@ styleMap aplica un conjunto de reglas CSS a un elemento HTML:
 -->
 ```
 
-Para hacer referencia a propiedades con guión, como font-family, utilice el equivalente de camelCase (fontFamily) o coloque el nombre de la propiedad con guión entre comillas ('font-family').
+Para hacer referencia a propiedades con guión, como `font-family`, utilice el equivalente de camelCase (`fontFamily`) o coloque el nombre de la propiedad con guión entre comillas (`'font-family'`).
 
-Para hacer referencia a propiedades CSS personalizadas como --custom-color, coloque el nombre completo de la propiedad entre comillas ('--custom-color').
+Para hacer referencia a propiedades CSS personalizadas como `--custom-color`, coloque el nombre completo de la propiedad entre comillas (`'--custom-color'`).
 
 | Inline style or CSS | styleMap equivalent |
 | --- | --- |
@@ -649,7 +658,7 @@ render() {
 > ℹ️ Los selectores de tipo tienen mayor especificidad que :host.
 > 
 > 
-> Un selector de tipo de elemento tiene mayor especificidad que el selector de pseudoclase :host. Los estilos establecidos para una etiqueta de elemento personalizado anularán los estilos establecidos con :host y :host():
+> Un selector de tipo de elemento tiene mayor especificidad que el selector de pseudoclase `:host`. Los estilos establecidos para una etiqueta de elemento personalizado anularán los estilos establecidos con `:host` y `:host()`:
 > 
 > ```jsx
 > <style>
@@ -672,9 +681,9 @@ render() {
 
 ## Propiedades personalizadas de CSS
 
-Todas las propiedades personalizadas de CSS (--custom-property-name) se heredan. Puede usar esto para hacer que los estilos de su componente sean configurables desde afuera.
+Todas las propiedades personalizadas de CSS (`--custom-property-name`) se heredan. Puede usar esto para hacer que los estilos de su componente sean configurables desde afuera.
 
-El siguiente componente establece su color de fondo en una variable CSS. La variable CSS usa el valor de --my-background si está disponible y, de lo contrario, el valor predeterminado es amarillo:
+El siguiente componente establece su color de fondo en una variable CSS. La variable CSS usa el valor de `--my-background` si está disponible y, de lo contrario, el valor predeterminado es `yellow`:
 
 ```jsx
 class MyElement extends LitElement {
@@ -691,7 +700,7 @@ class MyElement extends LitElement {
 }
 ```
 
-Los usuarios de este componente pueden establecer el valor de --my-background, utilizando la etiqueta my-element como selector de CSS
+Los usuarios de este componente pueden establecer el valor de `--my-background`, utilizando la etiqueta `my-element` como selector de CSS
 
 ```jsx
 <style>
@@ -702,7 +711,7 @@ Los usuarios de este componente pueden establecer el valor de --my-background, u
 <my-element></my-element>
 ```
 
--my-background es configurable por instancia de my-element:
+`—my-background` es configurable por instancia de `my-element`:
 
 ```jsx
 <style>
@@ -797,6 +806,7 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
   
+
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
 
