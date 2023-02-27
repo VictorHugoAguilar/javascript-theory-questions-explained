@@ -4,7 +4,7 @@ Agregue una plantilla a su componente para definir DOM interno para implementar 
 
 Para encapsular el DOM con plantilla, LitElement usa shadow DOM. Shadow DOM proporciona tres beneficios:
 
-- Alcance DOM. Las API de DOM como **document.querySelector** no encontrarán elementos en el DOM oculto del componente, por lo que es más difícil que los scripts globales rompan accidentalmente su componente.
+- Alcance DOM. Las API de DOM como `document.querySelector` no encontrarán elementos en el DOM oculto del componente, por lo que es más difícil que los scripts globales rompan accidentalmente su componente.
 - Alcance del estilo. Puede escribir estilos encapsulados para su shadow DOM que no afecten al resto del árbol DOM.
 - Composición. El DOM oculto del componente (administrado por el componente) está separado de los elementos secundarios del componente. Puede elegir cómo se representan los niños en su DOM con plantilla. Los usuarios de componentes pueden agregar y eliminar elementos secundarios utilizando las API de DOM estándar sin romper accidentalmente nada en su DOM oculto.
 
@@ -24,11 +24,11 @@ class MyElement extends LitElement {
 }
 ```
 
-- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes **(``)**.
-- Etiquete su literal de plantilla con la función de etiqueta **html**.
-- El método de **renderizado** del componente puede devolver cualquier cosa que lit-html pueda renderizar. Por lo general, devuelve un solo objeto **TemplateResult** (el mismo tipo devuelto por la función de etiqueta **html**).
+- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes ****`(``)`.
+- Etiquete su literal de plantilla con la función de etiqueta `html`.
+- El método de `render` del componente puede devolver cualquier cosa que lit-html pueda renderizar. Por lo general, devuelve un solo objeto `TemplateResult` (el mismo tipo devuelto por la función de etiqueta `html`).
 
-Ejemplo:
+### Ejemplo:
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -59,14 +59,14 @@ LitElement representa y vuelve a representar de forma asincrónica, actualizánd
 
 Durante una actualización, solo se vuelven a representar las partes del DOM que cambian. Para obtener los beneficios de rendimiento de este modelo, debe diseñar la plantilla de su elemento como una función pura de sus propiedades.
 
-Para hacer esto, asegúrese de que la función **render**:
+Para hacer esto, asegúrese de que la función `render`:
 
 - No cambia el estado del elemento.
 - No tiene efectos secundarios.
 - Solo depende de las propiedades del elemento.
 - Devuelve el mismo resultado cuando se le dan los mismos valores de propiedad.
 
-Además, evite realizar actualizaciones de DOM fuera del **renderizado**. En su lugar, exprese la plantilla del elemento como una función de su estado y capture su estado en propiedades.
+Además, evite realizar actualizaciones de DOM fuera del `renderizado`. En su lugar, exprese la plantilla del elemento como una función de su estado y capture su estado en propiedades.
 
 El siguiente código utiliza una manipulación DOM ineficiente:
 
@@ -118,8 +118,9 @@ render() {
 Enlace permanente a "Usar propiedades, bucles y condicionales en una plantilla"
 Al definir la plantilla de su elemento, puede vincular las propiedades del elemento a la plantilla; la plantilla se vuelve a representar cada vez que cambian las propiedades.
 
-**Propiedades**
-Para agregar un valor de propiedad a una plantilla, insértelo con **${this.propName}**:
+### **Propiedades**
+
+Para agregar un valor de propiedad a una plantilla, insértelo con `${this.propName}`:
 
 ```jsx
 static get properties() {
@@ -133,7 +134,7 @@ render() {
 }
 ```
 
-**Bucle**
+### **Bucle**
 
 Iterar sobre una matriz:
 
@@ -143,10 +144,10 @@ html`<ul>
 </ul>`;
 ```
 
-> ℹ️ Repetir directiva. En la mayoría de los casos, Array.map es la forma más eficaz de crear una plantilla repetitiva. En algunos casos, es posible que desee considerar la directiva de repetición de lit-html. En particular, si los elementos repetidos tienen estado o son muy costosos de regenerar.
+> ℹ️ Repetir directiva. En la mayoría de los casos, `Array.map` es la forma más eficaz de crear una plantilla repetitiva. En algunos casos, es posible que desee considerar la directiva de `repeat` de lit-html. En particular, si los elementos repetidos tienen estado o son muy costosos de regenerar.
 > 
 
-**********Condicionales**********
+### **********Condicionales**********
 
 Renderizado basado en una condición booleana:
 
@@ -158,7 +159,7 @@ html`
 `;
 ```
 
-****************Ejemplo:****************
+### ****************Ejemplo:****************
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -193,31 +194,31 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-### Enlazar propiedades a elementos con plantilla
+## Enlazar propiedades a elementos con plantilla
 
 Puede insertar expresiones JavaScript como marcadores de posición para contenido de texto HTML, atributos, atributos booleanos, propiedades y controladores de eventos.
 
-- Contenido del texto: **<p>${...}</p>**
-- Atributo: **<p id="${...}"></p>**
-- Atributo booleano: **?disabled="${...}"**
-- Propiedad: **.value="${...}"**
-- Controlador de eventos: **@event="${...}"**
+- Contenido del texto: `<p>${...}</p>`
+- Atributo: `<p id="${...}"></p>`
+- Atributo booleano: `?disabled="${...}"`
+- Propiedad: `.value="${...}"`
+- Controlador de eventos: `@event="${...}"`
 
 Las expresiones de JavaScript pueden incluir las propiedades de su elemento. LitElement observa y reacciona a los cambios de propiedad, por lo que sus plantillas se actualizan automáticamente.
 
-Los enlaces de datos son siempre unidireccionales (de padre a hijo). Para compartir datos de un elemento secundario con su elemento principal, active un evento y capture los datos relevantes en la propiedad de **detail**.
+Los enlaces de datos son siempre unidireccionales (de padre a hijo). Para compartir datos de un elemento secundario con su elemento principal, active un evento y capture los datos relevantes en la propiedad de `detail`.
 
-******************************Bindeo a contenido texto******************************
+### ******************************Bindeo a contenido texto******************************
 
-Bindeo **prop1** a contenido de texto
+Bindeo `prop1` a contenido de texto
 
 ```jsx
 html`<div>${this.prop1}</div>`
 ```
 
-**Bindeo a atributo**
+### **Bindeo a atributo**
 
-Bindeo **prop2** a un atributo
+Bindeo `prop2` a un atributo
 
 ```jsx
 html`<div id="${this.prop2}"></div>`
@@ -225,9 +226,9 @@ html`<div id="${this.prop2}"></div>`
 
 Los valores de atributo son siempre cadenas, por lo que un enlace de atributo debe devolver un valor que se pueda convertir en una cadena.
 
-**********************************************************Bindeo a un atributo booleano**********************************************************
+### **********************************************************Bindeo a un atributo booleano**********************************************************
 
-Bindeo **prop3** a un atributo booleano
+Bindeo `prop3` a un atributo booleano
 
 ```jsx
 html`<input type="text" ?disabled="${this.prop3}">`
@@ -235,25 +236,25 @@ html`<input type="text" ?disabled="${this.prop3}">`
 
 Los atributos booleanos se agregan si la expresión se evalúa como un valor verdadero y se eliminan si se evalúa como un valor falso.
 
-**Bindeo a una propiedad**
+### **Bindeo a una propiedad**
 
-Bindeo **prop4** a una propiedad
+Bindeo `prop4` a una propiedad
 
 ```jsx
 html`<input type="checkbox" .value="${this.prop4}"/>`
 ```
 
-**************************************************************Bindeo a un manejador de evento**************************************************************
+### **************************************************************Bindeo a un manejador de evento**************************************************************
 
-Bindeo **clickHandler** a un evento de **click**
+Bindeo `clickHandler` a un evento de `click`
 
 ```jsx
 html`<button @click="${this.clickHandler}">pie?</button>`
 ```
 
-El contexto de evento predeterminado para las expresiones **@event** es **this**, por lo que no es necesario vincular la función del controlador.
+El contexto de evento predeterminado para las expresiones `@event` es `this`, por lo que no es necesario vincular la función del controlador.
 
-Ejemplo:
+### Ejemplo:
 
 *my-element.js*
 
@@ -312,7 +313,7 @@ customElements.define('my-element', MyElement);
 
 ### Renderiza un hijo con un elemento slot
 
-Tu componente podría aceptar un hijo (como un elemento **<ul>** puede contener **<li>** hijos)
+Tu componente podría aceptar un hijo (como un elemento `<ul>` puede contener ****`<li>` hijos)
 
 ```jsx
 <my-element>
@@ -322,11 +323,11 @@ Tu componente podría aceptar un hijo (como un elemento **<ul>** puede contener 
 
 De forma predeterminada, si un elemtno tiene un árbol de sombras, sus elementos secundarios no se representan en absoluto.
 
-Para representar elemento secundarios, su plantilla deb incluir uno o más elementos **<slot>** que actúan como marcadores de posición para los nodos secundarios.
+Para representar elemento secundarios, su plantilla deb incluir uno o más elementos ****`<slot>` ****que actúan como marcadores de posición para los nodos secundarios.
 
-******************************************Usar un elemento slot******************************************
+### ******************************************Usar un elemento slot******************************************
 
-Para renderizar los elementos secundarios de un elemento, cree un **<slot>** para ellos en la plantilla del elemento. Por ejemplo:
+Para renderizar los elementos secundarios de un elemento, cree un `<slot>` ****para ellos en la plantilla del elemento. Por ejemplo:
 
 ```jsx
 render(){
@@ -338,7 +339,7 @@ render(){
 }
 ```
 
-Los niños ahora renderizarán en el <slot>
+Los niños ahora renderizarán en el `<slot>`
 
 ```jsx
 <my-element>
@@ -346,7 +347,7 @@ Los niños ahora renderizarán en el <slot>
 </my-element>
 ```
 
-Los hijos no se mueven en el árbol DOM, pero se representan como si fueran hijos del **<slot>**.
+Los hijos no se mueven en el árbol DOM, pero se representan como si fueran hijos del `<slot>`.
 
 De manera arbitraria, muchos niños pueden llenar un solo espacio:
 
@@ -358,9 +359,9 @@ De manera arbitraria, muchos niños pueden llenar un solo espacio:
 </my-element>
 ```
 
-********************Usando nombres slots********************
+### ********************Usando nombres slots********************
 
-Para asignar un hijo a un espacio específico, asegúrese de que el atributo de **slot** del hijo coincida con el atributo de **nombre** del slot:
+Para asignar un hijo a un espacio específico, asegúrese de que el atributo de ****`slot` del hijo coincida con el atributo de `nombre` del slot:
 
 ```jsx
 render(){
@@ -380,15 +381,15 @@ render(){
 </my-element>
 ```
 
-- Los slots con nombre solo aceptan hijos con un atributo de slot coincidente
+- Los `slots` con nombre solo aceptan hijos con un atributo de slot coincidente
 
-Por ejemplo, **<slot name=”one”></slot>** solo acepta hijos con el atributo **slot=”one”**
+Por ejemplo, `<slot name=”one”></slot>` solo acepta hijos con el atributo `slot=”one”`
 
 - Los hijos con un atributo slot solo se debería renderizar en un slot con una concidencia en el atributo name
 
-Por ejemplo, **<p slot=”one”>….</p>** solo se colocorá en **<slot name=”one></slot>** 
+Por ejemplo, `<p slot=”one”>….</p>` solo se colocorá en `<slot name=”one></slot>` 
 
-Ejemplo
+### Ejemplo
 
 *my-element.js*
 
@@ -445,7 +446,7 @@ customElements.define('my-element', MyElement);
 </html>
 ```
 
-******************Use name, no id para seleccionar el slots******************
+### ******************Use name, no id para seleccionar el slots******************
 
 ¡Tenga en cuenta que el atributo id de un slot no tiene ningún efecto!
 
@@ -472,7 +473,7 @@ render(){
 
 ## Componer una plantilla a partir de otras plantillas
 
-Puede componer plantillas de LitElement a partir de otras plantillas de LitElement. En el siguiente ejemplo, creamos una plantilla para un elemento llamado **<mi-página>** a partir de plantillas más pequeñas para el encabezado, el pie de página y el contenido principal de la página:
+Puede componer plantillas de LitElement a partir de otras plantillas de LitElement. En el siguiente ejemplo, creamos una plantilla para un elemento llamado `<mi-página>` ****a partir de plantillas más pequeñas para el encabezado, el pie de página y el contenido principal de la página:
 
 ```jsx
 function headerTemplate(title) {
@@ -519,7 +520,7 @@ class MyPage extends LitElement {
 
 El nodo en el que se representará la plantilla de su componente se denomina render root.
 
-De forma predeterminada, LitElement crea un shadowRoot abierto y renderiza dentro de él, produciendo la siguiente estructura DOM:
+De forma predeterminada, LitElement crea un `shadowRoot` abierto y renderiza dentro de él, produciendo la siguiente estructura DOM:
 
 ```jsx
 <my-element>
@@ -528,7 +529,7 @@ De forma predeterminada, LitElement crea un shadowRoot abierto y renderiza dentr
     <p>child 2</p>
 ```
 
-Para personalizar render root de un componente, implemente **createRenderRoot** y devuelva el nodo en el que desea que se represente la plantilla.
+Para personalizar render root de un componente, implemente ****`createRenderRoot` ****y devuelva el nodo en el que desea que se represente la plantilla.
 
 Por ejemplo, para representar la plantilla en el árbol DOM principal como elementos secundarios de su elemento:
 
@@ -538,7 +539,7 @@ Por ejemplo, para representar la plantilla en el árbol DOM principal como eleme
   <p>child 2</p>
 ```
 
-Implementando ****************************************createRenderRoot**************************************** y retorna this
+Implementando `createRenderRoot` y retorna this
 
 ```jsx
 class LightDom extends LitElement {
@@ -559,13 +560,13 @@ class LightDom extends LitElement {
 
 ## Sintaxis template cheat sheet
 
-************Render************
+### ************Render************
 
 ```jsx
 render() { return html`<p>template</p>`; }
 ```
 
-****************************Properties, loops, conditionals****************************
+### ****************************Properties, loops, conditionals****************************
 
 ```jsx
 // Property
@@ -578,7 +579,7 @@ html`${this.myArray.map(i => html`<li>${i}</li>`)}`;
 html`${this.myBool?html`<p>foo</p>`:html`<p>bar</p>`}`;
 ```
 
-************************Data binding************************
+### ************************Data binding************************
 
 ```jsx
 // Attribute
@@ -594,7 +595,7 @@ html`<input .value="${...}">`;
 html`<button @click="${this.doStuff}"></button>`;
 ```
 
-**********************Composition**********************
+### **********************Composition**********************
 
 ```jsx
 // From multiple templates on same class
@@ -624,7 +625,7 @@ class MyPage extends LitElement{
 }
 ```
 
-********Slot********
+### ********Slot********
 
 ```jsx
 render() { return html`<slot name="thing"></slot>`; }
@@ -638,9 +639,9 @@ render() { return html`<slot name="thing"></slot>`; }
 
 ## Accediendo a nodos en el shadow DOM
 
-El resultado del método render() generalmente se representa en shadow DOM, por lo que los nodos no son hijos directos del componente. Use this.shadowRoot.querySelector() o this.shadowRoot.querySelectorAll() para buscar nodos en el DOM oculto.
+El resultado del método `render()` generalmente se representa en shadow DOM, por lo que los nodos no son hijos directos del componente. Use t`his.shadowRoot.querySelector()` o `this.shadowRoot.querySelectorAll()` para buscar nodos en el DOM oculto.
 
-Puede consultar el DOM con plantilla después de su renderizado inicial (por ejemplo, en firstUpdated), o usar un patrón captador, como este:
+Puede consultar el DOM con plantilla después de su renderizado inicial (por ejemplo, en `firstUpdated`), o usar un patrón captador, como este:
 
 ```jsx
 get _closeButton() {
@@ -652,12 +653,12 @@ LitElement proporciona un conjunto de decoradores que proporcionan una forma abr
 
 ### @query, @queryAll, and @queryAsync decoratos
 
-Los decoradores @query, @queryAll y @queryAsync proporcionan una manera conveniente de acceder a los nodos en la raíz oculta del componente.
+Los decoradores `@query`, `@queryAll` y `@queryAsync` proporcionan una manera conveniente de acceder a los nodos en la raíz oculta del componente.
 
 > ℹ️ Uso de decoradores. Los decoradores son una característica de JavaScript propuesta, por lo que deberá usar un compilador como Babel o TypeScript para usar decoradores. Consulte Uso de decoradores para obtener más detalles.
 > 
 
-El decorador @query modifica una propiedad de clase, convirtiéndola en un captador que devuelve un nodo desde la raíz de representación. El segundo argumento opcional es un indicador de caché que, cuando es verdadero, realiza la consulta DOM solo una vez y almacena en caché el resultado. Esto se puede usar como una optimización del rendimiento en los casos en que no se espera que cambie el nodo que se consulta.
+El decorador `@query` modifica una propiedad de clase, convirtiéndola en un captador que devuelve un nodo desde la raíz de representación. El segundo argumento opcional es un indicador de caché que, cuando es verdadero, realiza la consulta DOM solo una vez y almacena en caché el resultado. Esto se puede usar como una optimización del rendimiento en los casos en que no se espera que cambie el nodo que se consulta.
 
 ```jsx
 import {LitElement, html} from 'lit-element';
@@ -684,10 +685,10 @@ get first() {
 }
 ```
 
-> ℹ️ shadowRoot y renderRoot. La propiedad renderRoot identifica el contenedor en el que se representa la plantilla. Por defecto, este es el shadowRoot del componente. Los decoradores usan renderRoot, por lo que deberían funcionar correctamente incluso si anulas createRenderRoot como se describe en Especificar la raíz de renderizado.
+> ℹ️ `shadowRoot` y `renderRoot`. La propiedad renderRoot identifica el contenedor en el que se representa la plantilla. Por defecto, este es el shadowRoot del componente. Los decoradores usan `renderRoot`, por lo que deberían funcionar correctamente incluso si anulas createRenderRoot como se describe en Especificar la raíz de renderizado.
 > 
 
-El decorador **@queryAll** es idéntico a query excepto que devuelve todos los nodos coincidentes, en lugar de un solo nodo. Es el equivalente a llamar a **querySelectorAll**.
+El decorador `@queryAll` es idéntico a query excepto que devuelve todos los nodos coincidentes, en lugar de un solo nodo. Es el equivalente a llamar a `querySelectorAll`.
 
 ```jsx
 import {LitElement, html} from 'lit-element';
@@ -706,7 +707,7 @@ class MyElement extends LitElement {
 }
 ```
 
-Aquí, **divs** devolvería ambos elementos **<div>** en la plantilla. Para TypeScript, la escritura de una propiedad **@queryAll** es **NodeListOf<HTMLElement>**. Si sabe exactamente qué tipo de nodos recuperará, la escritura puede ser más específica:
+Aquí, **divs** devolvería ambos elementos `<div>` en la plantilla. Para TypeScript, la escritura de una propiedad `@queryAll` es `NodeListOf<HTMLElement>`. Si sabe exactamente qué tipo de nodos recuperará, la escritura puede ser más específica:
 
 ```jsx
 @queryAll('button')
@@ -715,13 +716,13 @@ _buttons!: NodeListOf<HTMLButtonElement>
 
 El signo de exclamación (!) después de los botones es el operador de aserción no nulo de TypeScript. Le dice al compilador que trate los botones como si estuvieran siempre definidos, nunca nulos o indefinidos.
 
-Finalmente, **@queryAsync** funciona como **@query**, excepto que en lugar de devolver un nodo directamente, devuelve una Promesa que se resuelve en ese nodo. El código puede usar esto en lugar de esperar la promesa updateComplete.
+Finalmente, `@queryAsync` funciona como `@query`, excepto que en lugar de devolver un nodo directamente, devuelve una Promesa que se resuelve en ese nodo. El código puede usar esto en lugar de esperar la promesa updateComplete.
 
-Esto es útil, por ejemplo, si el nodo devuelto por @queryAsync puede cambiar como resultado de otro cambio de propiedad.
+Esto es útil, por ejemplo, si el nodo devuelto por `@queryAsync` puede cambiar como resultado de otro cambio de propiedad.
 
 ## Accediendo a slotted hijos
 
-Para acceder a los elementos secundarios asignados a las ranuras(slot) en su shadow root, puede usar el método estándar slot.assignedNodes y el evento slotchange.
+Para acceder a los elementos secundarios asignados a las ranuras(slot) en su shadow root, puede usar el método estándar `slot.assignedNodes` y el evento `slotchange`.
 
 Por ejemplo, puede crear un getter para acceder a los nodos asignados para una ranura en particular:
 
@@ -733,7 +734,7 @@ get _slottedChildren() {
 }
 ```
 
-También puede usar el evento **slotchange** para tomar medidas cuando cambien los nodos asignados. El siguiente ejemplo extrae el contenido de texto de todos los niños ranurados.
+También puede usar el evento `slotchange` para tomar medidas cuando cambien los nodos asignados. El siguiente ejemplo extrae el contenido de texto de todos los niños ranurados.
 
 ```jsx
 handleSlotchange(e) {
@@ -751,7 +752,7 @@ render() {
 
 ### @queryAssignedNodes decorator
 
-El decorador @**queryAssignedNodes** convierte una propiedad de clase en un captador que devuelve todos los nodos asignados para un espacio determinado en el árbol de sombra del componente. El segundo argumento booleano opcional cuando es verdadero aplana los nodos asignados, lo que significa que los nodos asignados que son elementos de ranura se reemplazan con sus nodos asignados. El tercer argumento opcional es un selector css que filtra los resultados a los elementos coincidentes.
+El decorador `@queryAssignedNodes` convierte una propiedad de clase en un captador que devuelve todos los nodos asignados para un espacio determinado en el árbol de sombra del componente. El segundo argumento booleano opcional cuando es verdadero aplana los nodos asignados, lo que significa que los nodos asignados que son elementos de ranura se reemplazan con sus nodos asignados. El tercer argumento opcional es un selector css que filtra los resultados a los elementos coincidentes.
 
 > ℹ️ Uso de decoradores. Los decoradores son una característica de JavaScript propuesta, por lo que deberá usar un compilador como Babel o TypeScript para usar decoradores. Consulte Uso de decoradores para obtener más detalles.
 > 
@@ -776,7 +777,7 @@ get headerNodes() {
 }
 ```
 
-Para TypeScript, la escritura de una propiedad queryAssignedNodes es NodeListOf<HTMLElement>.
+Para TypeScript, la escritura de una propiedad `queryAssignedNodes` es `NodeListOf<HTMLElement>`.
   
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
