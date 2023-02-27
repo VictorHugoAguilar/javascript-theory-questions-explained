@@ -7,8 +7,8 @@ LitElement administra sus propiedades declaradas y sus atributos correspondiente
 - Asegúrese de que se programe una actualización de elementos cuando cambie cualquier propiedad declarada.
 - Capture valores de instancia para propiedades declaradas. Aplique cualquier valor de propiedad que se establezca antes de que el navegador registre una definición de elemento personalizado.
 - Configure un atributo observado (no reflejado) con el nombre en minúsculas de cada propiedad.
-- Manejar la conversión de atributos para propiedades declaradas como tipo String, Number, Boolean, Array y Object.
-- Use la comparación directa (oldValue !== newValue) para probar los cambios de propiedad.
+- Manejar la conversión de atributos para propiedades declaradas como tipo `String`, `Number`, `Boolean`, `Array` y `Object`.
+- Use la comparación directa `(oldValue !== newValue`) para probar los cambios de propiedad.
 - Aplicar las opciones de propiedad y los accesores declarados por una superclase.
 
 > ⚠️ Recuerde declarar todas las propiedades que desea que administre LitElement. Para que se apliquen las características de la propiedad anteriores, debe declarar la propiedad.
@@ -16,7 +16,7 @@ LitElement administra sus propiedades declaradas y sus atributos correspondiente
 
 ## Declaracion de propiedades
 
-Declara las propiedades de tu elemento usando un campo de propiedades estáticas o usando decoradores:
+Declara las propiedades de tu elemento usando un campo de `properties` estáticas o usando decoradores:
 
 *Properties field*
 
@@ -42,38 +42,38 @@ En cualquier caso, puede pasar un objeto de opciones para configurar funciones p
 
 El objeto de opciones puede tener las siguientes propiedades:
 
-- atributo
+- `attribute`
 
-Si la propiedad está asociada con un atributo o un nombre personalizado para el atributo asociado. Valor predeterminado: verdadero. Consulte Configurar atributos observados. Si el atributo es falso, las opciones de conversión, reflejo y tipo se ignoran.
+Si la propiedad está asociada con un atributo o un nombre personalizado para el atributo asociado. Valor predeterminado: verdadero. Consulte Configurar atributos observados. Si el `atributo` es falso, las opciones de `converter`, `reflect` y `type` se ignoran.
 
-- convertidor
+- `converter`
 
 Un convertidor personalizado para convertir entre propiedades y atributos. Si no se especifica, utilice el convertidor de atributos predeterminado.
 
-- ha cambiado
+- `hasChanged`
 
-Una función que toma un valor antiguo y un valor nuevo y devuelve un valor booleano para indicar si una propiedad cambió cuando se estableció. Si no se especifica, LitElement usa una verificación de desigualdad estricta (newValue !== oldValue) para determinar si el valor de la propiedad ha cambiado.
+Una función que toma un `oldValue` y un `newValue` y devuelve un valor booleano para indicar si una propiedad cambió cuando se estableció. Si no se especifica, LitElement usa una verificación de desigualdad estricta (`newValue !== oldValue`) para determinar si el valor de la propiedad ha cambiado.
 
-- noAccessor
+- `noAccessor`
 
 Establézcalo en verdadero para evitar generar el descriptor de acceso de propiedad predeterminado. Valor predeterminado: falso.
 
-- reflect
+- `reflect`
 
 Si el valor de la propiedad se refleja en el atributo asociado. Valor predeterminado: falso. Consulte Configurar atributos reflejados.
 
-- type
+- `type`
 
-Una sugerencia de tipo para convertir entre propiedades y atributos. Esta sugerencia la utiliza el convertidor de atributos predeterminado de LitElement y se ignora si se establece el convertidor. Si no se especifica el tipo, se comporta como tipo: Cadena. Consulte Usar el convertidor de atributos predeterminado de LitElement.
+Una sugerencia de tipo para convertir entre propiedades y atributos. Esta sugerencia la utiliza el convertidor de atributos predeterminado de LitElement y se ignora si se establece el `convertidor`. Si no se especifica el `type`, se comporta como `type: String`. Consulte Usar el convertidor de atributos predeterminado de LitElement.
 
 Un objeto de opciones vacío es equivalente a especificar el valor predeterminado para todas las opciones.
 
-> ℹ️ Un objeto de opciones con otro nombre. Esta guía utiliza el término descriptivo "objeto de opciones". En la práctica, el objeto de opciones es una instancia de PropertyDeclaration, por lo que verá ese nombre si está utilizando un IDE o consultando la referencia de la API. Por cualquier nombre, es un objeto que define un conjunto de opciones.
+> ℹ️ Un objeto de opciones con otro nombre. Esta guía utiliza el término descriptivo "objeto de opciones". En la práctica, el objeto de opciones es una instancia de `PropertyDeclaration`, por lo que verá ese nombre si está utilizando un IDE o consultando la referencia de la API. Por cualquier nombre, es un objeto que define un conjunto de opciones.
 > 
 
 ### Declarar propiedades en un campo de propiedades estáticas
 
-Para declarar propiedades en un campo de propiedades estáticas:
+Para declarar propiedades en un campo de `propiedades` estáticas:
 
 ```jsx
 static get properties() {
@@ -90,7 +90,7 @@ Un objeto de opción vacío equivale a especificar el valor predeterminado para 
 > ℹ️ Las propiedades declaradas se inicializan como campos de clase estándar, ya sea en el constructor o con un inicializador de campo si usa decoradores.
 > 
 
-**Example: Declare properties with a static `properties` field**
+### **Example: Declare properties with a static `properties` field**
 
 ```jsx
 import {LitElement, html} from 'lit-element';
@@ -124,7 +124,7 @@ customElements.define('my-element', MyElement);
 
 ## Declarar propiedades con decoradoras.
 
-Utilice el decorador @property para declarar propiedades (en lugar del campo de propiedades estáticas).
+Utilice el decorador `@property` para declarar propiedades (en lugar del campo de `propiedades` estáticas).
 
 ```jsx
 @property({type: String})
@@ -134,23 +134,23 @@ mode = 'auto';
 data = {};
 ```
 
-El argumento del decorador @property es un objeto de opciones. Omitir el argumento equivale a especificar el valor predeterminado para todas las opciones.
+El argumento del decorador `@property` es un objeto de opciones. Omitir el argumento equivale a especificar el valor predeterminado para todas las opciones.
 
 > ℹ️ Uso de decoradores. Los decoradores son una característica de JavaScript propuesta, por lo que deberá usar un transpilador como Babel o el compilador TypeScript para usar decoradores. Consulte Uso de decoradores para obtener más detalles.
 > 
 
-También hay un decorador @internalProperty para propiedades privadas o protegidas que debería desencadenar un ciclo de actualización. No se debe hacer referencia a las propiedades declaradas con @internalProperty desde fuera del componente.
+También hay un decorador `@internalProperty` para propiedades privadas o protegidas que debería desencadenar un ciclo de actualización. No se debe hacer referencia a las propiedades declaradas con `@internalProperty` desde fuera del componente.
 
 ```jsx
 @internalProperty()
 protected active = false;
 ```
 
-El decorador @internalProperty establece automáticamente el atributo en falso; la única opción que puede especificar para una propiedad interna es la función hasChanged.
+El decorador `@internalProperty` establece automáticamente el atributo en falso; la única opción que puede especificar para una propiedad interna es la función hasChanged.
 
-El decorador @internalProperty puede servir como una pista para un minificador de código de que el nombre de la propiedad se puede cambiar durante la minificación.
+El decorador `@internalProperty` puede servir como una pista para un minificador de código de que el nombre de la propiedad se puede cambiar durante la minificación.
 
-Ejemplo: declarar propiedades con decoradores
+### Ejemplo: declarar propiedades con decoradores
 
 ```jsx
 import {LitElement, html, customElement, property} from 'lit-element';
@@ -182,9 +182,9 @@ Un cambio de propiedad puede desencadenar un ciclo de actualización asíncrono,
 Cuando una propiedad cambia, ocurre la siguiente secuencia:
 
 1. Se llama al setter de la propiedad.
-2. El setter llama a la función hasChanged de la propiedad. La función hasChanged toma los valores antiguos y nuevos de la propiedad y devuelve verdadero si el cambio desencadena una actualización. (El hasChanged predeterminado usa una prueba de desigualdad estricta (oldValue !== newValue) para determinar si la propiedad ha cambiado).
-3. Si hasChanged devuelve verdadero, el setter llama a requestUpdate para programar una actualización. La actualización en sí ocurre de forma asincrónica, por lo que si se actualizan varias propiedades a la vez, solo activan una única actualización.
-4. Se llama al método de actualización del componente, reflejando las propiedades modificadas en los atributos y volviendo a representar las plantillas del componente.
+2. El setter llama a la función `hasChanged` de la propiedad. La función `hasChanged` toma los valores antiguos y nuevos de la propiedad y devuelve verdadero si el cambio desencadena una actualización. (El `hasChanged` predeterminado usa una prueba de desigualdad estricta (`oldValue !== newValue`) para determinar si la propiedad ha cambiado).
+3. Si `hasChanged` devuelve verdadero, el setter llama a `requestUpdate` para programar una actualización. La actualización en sí ocurre de forma asincrónica, por lo que si se actualizan varias propiedades a la vez, solo activan una única actualización.
+4. Se llama al método de `updated` del componente, reflejando las propiedades modificadas en los atributos y volviendo a representar las plantillas del componente.
 
 Hay muchas formas de conectarse y modificar el ciclo de vida de la actualización. Para obtener más información, consulte Ciclo de vida.
 
@@ -212,14 +212,14 @@ constructor() {
 }
 ```
 
-> ⚠️ Recuerde llamar a super() primero en su constructor, o su elemento no se representará en absoluto.
+> ⚠️ Recuerde llamar a `super()` primero en su constructor, o su elemento no se representará en absoluto.
 > 
 
 Ejemplo: inicializar valores de propiedad en el constructor de elementos
 
 ### Inicializar valores de propiedad al usar decoradores
 
-Al usar el decorador @property, puede inicializar una propiedad como parte de la declaración:
+Al usar el decorador `@property`, puede inicializar una propiedad como parte de la declaración:
 
 ```jsx
 @property({type : String})
@@ -235,10 +235,11 @@ Mientras que las propiedades de los elementos pueden ser de cualquier tipo, los 
 - Para observar un atributo (establecer una propiedad a partir de un atributo), el valor del atributo debe convertirse de una cadena para que coincida con el tipo de propiedad.
 - Para reflejar un atributo (establecer un atributo de una propiedad), el valor de la propiedad debe convertirse en una cadena.
 
-**Usar el convertidor predeterminado**
-LitElement tiene un convertidor predeterminado que maneja los tipos de propiedad String, Number, Boolean, Array y Object.
+### **Usar el convertidor predeterminado**
 
-Para usar el convertidor predeterminado, especifique la opción de tipo en su declaración de propiedad:
+LitElement tiene un convertidor predeterminado que maneja los tipos de propiedad `String`, `Number`, `Boolean`, `Array` y `Object`.
+
+Para usar el convertidor predeterminado, especifique la opción de `type` en su declaración de propiedad:
 
 ```jsx
 // Use LitElement's default converter
@@ -254,31 +255,31 @@ La siguiente información muestra cómo el convertidor predeterminado maneja la 
 ### Convertir de atributo a propiedad
 
 - Para cadenas, cuando se define el atributo, establezca la propiedad en el valor del atributo.
-- Para Numbers, cuando se define el atributo, establezca la propiedad en Number(attributeValue).
+- Para Numbers, cuando se define el atributo, establezca la propiedad en `Number(attributeValue)`.
 - Para booleanos, cuando el atributo es:
-    - no nulo, establezca la propiedad en verdadero.
-    - nulo o indefinido, establezca la propiedad en falso.
+    - non- `null`, establezca la propiedad en `true`.
+    - `null` o `undefined`, establezca la propiedad en `false`.
 - Para objetos y matrices, cuando el atributo es:
-    - Definido, establezca el valor de la propiedad en JSON.parse(attributeValue).
+    - Definido, establezca el valor de la propiedad en `JSON.parse(attributeValue)`.
 
 ### Convertir de propiedad a atributo
 
 - Para cadenas, cuando la propiedad es:
-    - nulo, elimine el atributo.
-    - indefinido, no cambie el atributo.
-    - Definido y no nulo, establezca el atributo en el valor de la propiedad.
+    - `null`, elimine el atributo.
+    - `undefined`, no cambie el atributo.
+    - Definido y no `null`, establezca el atributo en el valor de la propiedad.
 - Para Numbers, cuando la propiedad es:
-    - nulo, elimine el atributo.
-    - indefinido, no cambie el atributo.
-    - Definido y no nulo, establezca el atributo en el valor de la propiedad.
+    - `null`, elimine el atributo.
+    - `undefined`, no cambie el atributo.
+    - Definido y no null, establezca el atributo en el valor de la propiedad.
 - Para booleanos, cuando la propiedad es:
-    - veraz, crea el atributo.
-    - falso, elimine el atributo.
+    - `truthy`, crea el atributo.
+    - `falsy`, elimine el atributo.
 - Para objetos y matrices, cuando la propiedad es:
-    - nulo o indefinido, elimine el atributo.
-    - Definido y no nulo, establezca el valor del atributo en JSON.stringify(propertyValue).
+    - `null` o `undefined`, elimine el atributo.
+    - Definido y no `null`, establezca el valor del atributo en `JSON.stringify(propertyValue)`.
 
-Ejemplo: usar el convertidor predeterminado
+### Ejemplo: usar el convertidor predeterminado
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -363,7 +364,7 @@ customElements.define('my-element', MyElement);
 
 ### Configurar un convertidor personalizado
 
-Puede especificar un convertidor de propiedad personalizado en su declaración de propiedad con la opción de convertidor:
+Puede especificar un convertidor de propiedad personalizado en su declaración de propiedad con la opción de `converter`:
 
 ```jsx
 myProp: {
@@ -371,7 +372,7 @@ myProp: {
 }
 ```
 
-El convertidor puede ser un objeto o una función. Si es un objeto, puede tener claves para fromAttribute y toAttribute:
+El `converter` puede ser un objeto o una función. Si es un objeto, puede tener claves para `fromAttribute` y `toAttribute`:
 
 ```jsx
 prop1: {
@@ -388,7 +389,7 @@ prop1: {
 }
 ```
 
-Si convertidor es una función, se usa en lugar de fromAttribute:
+Si convertidor es una función, se usa en lugar de `fromAttribute`:
 
 ```jsx
 myProp: {
@@ -399,12 +400,12 @@ myProp: {
 }
 ```
 
-Si no se proporciona la función toAttribute para un atributo reflejado, el atributo se establece en el valor de la propiedad sin conversión.
+Si no se proporciona la función `toAttribute` para un atributo reflejado, el atributo se establece en el valor de la propiedad sin conversión.
 
 Durante una actualización:
 
-- Si toAttribute devuelve nulo, se elimina el atributo.
-- Si toAttribute devuelve undefined, el atributo no cambia.
+- Si `toAttribute` devuelve `null`, se elimina el atributo.
+- Si `toAttribute` devuelve `undefined`, el atributo no cambia.
 
 ### Ejemplo: configurar un convertidor personalizado
 
@@ -485,7 +486,7 @@ customElements.define('my-element', MyElement);
 
 ### Configurar atributos observados
 
-Un atributo observado activa el atributo de devolución de llamada API de elementos personalizadosChangedCallback cada vez que cambia. De forma predeterminada, cada vez que un atributo activa esta devolución de llamada, LitElement establece el valor de propiedad del atributo mediante la función fromAttribute de la propiedad. Consulte Convertir entre propiedades y atributos para obtener más información.
+Un atributo observado activa el atributo de devolución de llamada API de elementos `attributeChangedCallback` cada vez que cambia. De forma predeterminada, cada vez que un atributo activa esta devolución de llamada, LitElement establece el valor de propiedad del atributo mediante la función `fromAttribute` de la propiedad. Consulte Convertir entre propiedades y atributos para obtener más información.
 
 De forma predeterminada, LitElement crea un atributo observado correspondiente para todas las propiedades declaradas. El nombre del atributo observado es el nombre de la propiedad, en minúsculas:
 
@@ -494,14 +495,14 @@ De forma predeterminada, LitElement crea un atributo observado correspondiente p
 myProp: { type: Number }
 ```
 
-Para crear un atributo observado con un nombre diferente, establezca el atributo en una cadena:
+Para crear un atributo observado con un nombre diferente, establezca el `attribute` en una cadena:
 
 ```jsx
 // Observed attribute will be called my-prop
 myProp: { attribute: 'my-prop' }
 ```
 
-Para evitar que se cree un atributo observado para una propiedad, establezca el atributo en falso. La propiedad no se inicializará a partir de atributos en el marcado y los cambios de atributos no la afectarán.
+Para evitar que se cree un atributo observado para una propiedad, establezca el `attribute` en `false`. La propiedad no se inicializará a partir de atributos en el marcado y los cambios de atributos no la afectarán.
 
 ```jsx
 // No observed attribute for this property
@@ -570,11 +571,11 @@ Puede configurar una propiedad para que cada vez que cambie, su valor se refleje
 myProp: {reflect: true}
 ```
 
-Cuando la propiedad cambia, LitElement usa la función toAttribute en el convertidor de la propiedad para establecer el valor del atributo a partir del nuevo valor de la propiedad.
+Cuando la propiedad cambia, LitElement usa la función `toAttribute` en el convertidor de la propiedad para establecer el valor del atributo a partir del nuevo valor de la propiedad.
 
-- Si toAttribute devuelve nulo, se elimina el atributo.
-- Si toAttribute devuelve undefined, el atributo no cambia.
-- Si toAttribute no está definido, el valor del atributo se establece en el valor de la propiedad sin conversión.
+- Si `toAttribute` devuelve `null`, se elimina el atributo.
+- Si `toAttribute` devuelve `undefined`, el atributo no cambia.
+- Si `toAttribute` no está definido, el valor del atributo se establece en el valor de la propiedad sin conversión.
 
 LitElement rastrea el estado de reflexión durante las actualizaciones. LitElement realiza un seguimiento de la información de estado para evitar crear un bucle infinito de cambios entre una propiedad y un atributo observado y reflejado.
 
@@ -617,7 +618,7 @@ customElements.define('my-element', MyElement);
 
 ### Establecer valores de propiedad a partir de atributos en el marcado
 
-Si una propiedad está configurada con atributo: verdadero (el valor predeterminado), los usuarios pueden establecer los valores de propiedad a partir de los atributos observados en el marcado estático:
+Si una propiedad está configurada con `attribute: true` (el valor predeterminado), los usuarios pueden establecer los valores de propiedad a partir de los atributos observados en el marcado estático:
 
 *index.html*
 
@@ -637,7 +638,7 @@ Consulte los atributos observados y la conversión entre propiedades y atributos
 
 ## Configurar accesores de propiedad
 
-De forma predeterminada, LitElement genera un par getter/setter para todas las propiedades declaradas. El setter se invoca cada vez que establece la propiedad:
+De forma predeterminada, LitElement genera un par `getter/setter` para todas las propiedades declaradas. El setter se invoca cada vez que establece la propiedad:
 
 ```jsx
 // Declare a property
@@ -647,7 +648,7 @@ static get properties() { return { myProp: { type: String } }; }
 this.myProp = 'hi'; // invokes myProp's generated property accessor
 ```
 
-Los accesores generados llaman automáticamente a requestUpdate, iniciando una actualización si aún no ha comenzado.
+Los accesores generados llaman automáticamente a `requestUpdate`, iniciando una actualización si aún no ha comenzado.
 
 ### Cree sus propios accesorios de propiedad
 
@@ -671,11 +672,11 @@ this.myProp = 'hi'; // Invokes your setter
 
 Si su clase define sus propios accesores para una propiedad, LitElement no los sobrescribirá con los accesores generados. Si su clase no define descriptores de acceso para una propiedad, LitElement los generará, incluso si una superclase ha definido la propiedad o los descriptores de acceso.
 
-Los configuradores que genera LitElement llaman automáticamente a requestUpdate. Si escribe su propio setter, debe llamar a requestUpdate manualmente, proporcionando el nombre de la propiedad y su valor anterior.
+Los configuradores que genera LitElement llaman automáticamente a `requestUpdate`. Si escribe su propio setter, debe llamar a `requestUpdate` manualmente, proporcionando el nombre de la propiedad y su valor anterior.
 
-Ejemplo
+### Ejemplo
 
-Un patrón común para los descriptores de acceso es almacenar el valor de la propiedad mediante una propiedad privada a la que solo se accede dentro del componente. Este ejemplo usa un prefijo de guión bajo (_prop) para identificar la propiedad privada; también podría usar las palabras clave privadas o protegidas de TypeScript.
+Un patrón común para los descriptores de acceso es almacenar el valor de la propiedad mediante una propiedad privada a la que solo se accede dentro del componente. Este ejemplo usa un prefijo de guión bajo (`_prop`) para identificar la propiedad `private`; también podría usar las palabras clave `private` o `protected` de TypeScript.
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -710,7 +711,7 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-Si desea utilizar su propio acceso a la propiedad con el decorador @property, puede lograrlo colocando el decorador en el captador:
+Si desea utilizar su propio acceso a la propiedad con el decorador `@property`, puede lograrlo colocando el decorador en el captador:
 
 ```jsx
 private _myProp: string = '';
@@ -730,7 +731,7 @@ private _myProp: string = '';
 
 En casos excepcionales, una subclase puede necesitar cambiar o agregar opciones de propiedad para una propiedad que existe en su superclase.
 
-Para evitar que LitElement genere un descriptor de acceso de propiedad que sobrescriba el descriptor de acceso definido de la superclase, establezca noAccessor en verdadero en la declaración de propiedad:
+Para evitar que LitElement genere un descriptor de acceso de propiedad que sobrescriba el descriptor de acceso definido de la superclase, establezca `noAccessor` en `true` en la declaración de propiedad:
 
 ```jsx
 static get properties() {
@@ -738,7 +739,7 @@ static get properties() {
 }
 ```
 
-No necesita configurar noAccessor al definir sus propios accesores.
+No necesita configurar `noAccessor` al definir sus propios accesores.
 
 ### Ejemplo Elemento de subclase
 
@@ -756,16 +757,16 @@ customElements.define('sub-element', SubElement);
 
 ## Configurar cambios de propiedad
 
-Todas las propiedades declaradas tienen una función, hasChanged, que se llama cuando se establece la propiedad.
+Todas las propiedades declaradas tienen una función, `hasChanged`, que se llama cuando se establece la propiedad.
 
-hasChanged compara los valores antiguos y nuevos de la propiedad y evalúa si la propiedad ha cambiado o no. Si hasChanged devuelve verdadero, LitElement inicia una actualización de elementos si aún no está programada. Consulte la documentación del ciclo de vida de actualización de elementos para obtener más información sobre cómo funcionan las actualizaciones.
+`hasChanged` compara los valores antiguos y nuevos de la propiedad y evalúa si la propiedad ha cambiado o no. Si `hasChanged` devuelve verdadero, LitElement inicia una actualización de elementos si aún no está programada. Consulte la documentación del ciclo de vida de actualización de elementos para obtener más información sobre cómo funcionan las actualizaciones.
 
 Por defecto:
 
-- hasChanged devuelve verdadero si newVal !== oldVal.
-- hasChanged devuelve falso si tanto el valor nuevo como el antiguo son NaN.
+- `hasChanged` devuelve `true` si `newVal !== oldVal`.
+- `hasChanged` devuelve `false` si tanto el valor nuevo como el antiguo son `NaN`.
 
-Para personalizar hasChanged para una propiedad, especifíquelo como una opción de propiedad:
+Para personalizar `hasChanged` para una propiedad, especifíquelo como una opción de propiedad:
 
 ```jsx
 myProp: { hasChanged(newVal, oldVal) {
@@ -774,7 +775,7 @@ myProp: { hasChanged(newVal, oldVal) {
 }}
 ```
 
-> ℹ️ no se puede llamar a hasChanged para cada cambio. Si hasChanged de una propiedad devuelve verdadero una vez, no se volverá a llamar hasta después de la próxima actualización, incluso si la propiedad se cambia varias veces. Si desea recibir una notificación cada vez que se establece una propiedad, debe crear un definidor personalizado para la propiedad, como se describe en Crear sus propios accesores de propiedad.
+> ℹ️ no se puede llamar a `hasChanged` para cada cambio. Si `hasChanged` de una propiedad devuelve verdadero una vez, no se volverá a llamar hasta después de la próxima actualización, incluso si la propiedad se cambia varias veces. Si desea recibir una notificación cada vez que se establece una propiedad, debe crear un definidor personalizado para la propiedad, como se describe en Crear sus propios accesores de propiedad.
 > 
 
 ### Ejemplo: Configurar cambios de propiedad
