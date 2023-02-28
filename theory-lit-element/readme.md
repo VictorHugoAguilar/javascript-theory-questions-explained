@@ -6,6 +6,8 @@ Indice
 * [Styles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/styles/readme.md)
 * [Properties](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/properties/readme.md)  
 * [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/events/readme.md) 
+* [Lifecicle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lifecicle/readme.md)
+
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/readme.md)
