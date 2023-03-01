@@ -99,3 +99,5 @@ Todos los decoradores se pueden importar directamente desde el módulo de lit-el
 import {eventOptions} from 'lit-element';
 ```
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
