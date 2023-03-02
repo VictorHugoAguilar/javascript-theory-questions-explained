@@ -2,7 +2,8 @@
 
 # Introducción
 
-Una expresión de plantilla lit-html no hace que se cree o actualice ningún DOM. Es solo una descripción de DOM, llamada `TemplateResult`. Para crear o actualizar DOM, debe pasar `TemplateResult` a la función `render(),` junto con un contenedor para renderizar:
+Una expresión del template `lit-html` no hace que se cree o actualice ningún DOM. Es solo una descripción de DOM, llamada `TemplateResult`. 
+En realidad para crear o actualizar DOM, debe pasar `TemplateResult` a la función `render(),` junto con un contenedor para renderizar:
 
 ```jsx
 import {html, render} from 'lit-html';
