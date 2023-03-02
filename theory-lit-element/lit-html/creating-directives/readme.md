@@ -163,7 +163,7 @@ A veces, desea que una directiva administre varias partes anidadas. Por ejemplo,
 
 Para crear partes anidadas, construye instancias de NodePart y las asocia con ubicaciones específicas en el DOM. La sección de DOM controlada por un `NodePart` determinado debe estar delimitada por nodos estáticos que sirven como marcadores. (`lit-html` generalmente usa nodos de comentarios para estos marcadores).
 
-![Captura de pantalla 2023-03-02 a las 10.19.32.png](Creating%20directives%2014412df9fb514ac39704cf0d9ba14259/Captura_de_pantalla_2023-03-02_a_las_10.19.32.png)
+![image_01](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-html/creating-directives/img/lit_html_creating_directives_image_01.png?raw=true)
 
 Como se muestra en el diagrama, los nodos administrados por NodePart aparecen entre su startNode y endNode. El siguiente código crea y agrega una nueva pieza anidada dentro de una pieza existente (la "pieza contenedora").
 
@@ -176,7 +176,7 @@ newPart.appendIntoPart(containerPart);
 
 El resultado final se parece a esto:
 
-![Captura de pantalla 2023-03-02 a las 10.19.37.png](Creating%20directives%2014412df9fb514ac39704cf0d9ba14259/Captura_de_pantalla_2023-03-02_a_las_10.19.37.png)
+![image_02](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-html/creating-directives/img/lit_html_creating_directives_image_02.png?raw=true)
 
 El método `appendIntoPart` crea los nodos de marcador e inserta la parte anidada por usted. En algunos casos, es posible que deba administrar manualmente los nodos de marcador (por ejemplo, si está insertando una parte anidada en el medio de la lista secundaria). En este caso, puedes usar un código como este:
 
