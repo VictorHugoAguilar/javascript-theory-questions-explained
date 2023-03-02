@@ -244,7 +244,7 @@ const duplicate = directive((value) => {
 });
 ```
 
-La clase `NodePart` proporciona una serie de otros métodos convenientes, incluidos otros métodos para agregar partes anidadas y un método `clear` para eliminar todo el DOM asociado con una `part`. Consulte los documentos de la API de NodePart para obtener más información.
+La clase `NodePart` proporciona una serie de otros métodos convenientes, incluidos otros métodos para agregar partes anidadas y un método `clear` para eliminar todo el DOM asociado con una `part`.
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
