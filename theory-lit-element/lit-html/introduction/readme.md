@@ -8,7 +8,7 @@
 
 ¿Construir componentes? `lit-html` no está vinculado a ningún modelo de componente, se centra solo en crear y actualizar DOM. Si desea crear componentes, consulte `litElement`, una biblioteca para construir componentes web utilizando plantillas `lit-html`.
 
-# lit-html Templates
+# `lit-html` Templates
 
 Las plantillas `lit-html` son literales de plantillas etiquetadas: se parecen a las cadenas JavaScript pero están encerradas en backticks `(``)` en lugar de citas, y etiquetados con la etiqueta `html` de `lit-html`:
 
