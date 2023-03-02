@@ -1,4 +1,4 @@
-## Javascript Interview Question Explained
+## Javascript theory and question explained
 
 * [Teoría JS](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/tree/main/theory/readme.md)
 
