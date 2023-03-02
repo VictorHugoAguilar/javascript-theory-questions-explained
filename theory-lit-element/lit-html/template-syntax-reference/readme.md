@@ -2,7 +2,8 @@
 
 # Introducción
 
-Las plantillas `lit-html` se escriben usando literales de plantilla de JavaScript etiquetados con la etiqueta html. El contenido del literal es en su mayoría simple, declarativo, HTML:
+Las plantillas `lit-html` se escriben usando literales de plantilla de JavaScript etiquetados con la etiqueta html. 
+El contenido del literal es en su mayoría simple, declarativo, HTML:
 
 ```jsx
 html`<h1>Hello World</h1>`
@@ -16,7 +17,8 @@ html`<h1>Hello ${name}</h1>`
 
 # Estructura de los template
 
-Las plantillas `lit-html` deben ser HTML bien formado, y los enlaces solo pueden ocurrir en ciertos lugares. Las plantillas son analizadas por el analizador HTML integrado del navegador antes de interpolar cualquier valor.
+Las plantillas `lit-html` deben ser HTML bien formado, y los enlaces solo pueden ocurrir en ciertos lugares. 
+Las plantillas son analizadas por el analizador HTML integrado del navegador antes de interpolar cualquier valor.
 
 **⚠️ Sin advertencias**. La mayoría de los casos de plantillas mal formadas no son detectables por `lit-html`, por lo que no verá ninguna advertencia, solo plantillas que no se comportan como esperaba, así que tenga mucho cuidado para estructurar las plantillas correctamente.
 
