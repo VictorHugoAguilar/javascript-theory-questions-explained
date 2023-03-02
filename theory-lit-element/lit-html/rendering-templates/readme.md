@@ -36,3 +36,5 @@ class MyComponent extends HTMLElement {
 
 Las opciones de renderizado no deberían cambiar entre llamadas del `render` subsiguientes.
 
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
