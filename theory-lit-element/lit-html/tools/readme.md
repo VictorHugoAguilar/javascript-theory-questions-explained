@@ -35,14 +35,14 @@ npm deduplicación
 Durante la fase de desarrollo, es posible que desee las siguientes herramientas:
 
 - Complementos IDE, para pelusa y resaltado de código.
-- Complementos Linter, para verificar plantillas lit-html.
+- Complementos Linter, para verificar plantillas `lit-html`.
 - Un servidor de desarrollo, para obtener una vista previa del código sin un paso de compilación.
 
 ## IDE plugins
 
-Hay una serie de complementos IDE que pueden ser útiles al desarrollar con lit-html. En particular, recomendamos usar un resaltador de código que funcione con plantillas de estilo lit-html. Además, recomendamos usar un linter como ESLint que admita JavaScript moderno.
+Hay una serie de complementos IDE que pueden ser útiles al desarrollar con `lit-html`. En particular, recomendamos usar un resaltador de código que funcione con plantillas de estilo `lit-html`. Además, recomendamos usar un linter como ESLint que admita JavaScript moderno.
 
-Los siguientes complementos de VS Code y TypeScript verifican las plantillas lit-html en busca de errores:
+Los siguientes complementos de VS Code y TypeScript verifican las plantillas `lit-html` en busca de errores:
 
 - [VS Code plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)
 - [TypeScript plugin (works with Sublime and Atom)](https://github.com/runem/lit-analyzer/tree/master/packages/ts-lit-plugin)
@@ -53,11 +53,11 @@ El repositorio awesome-lit-html enumera otros complementos IDE.
 
 ## Linting
 
-Se recomienda ESLint para limpiar el código lit-html. Se puede agregar el siguiente complemento ESLint para verificar algunos problemas comunes en las plantillas lit-html:
+Se recomienda ESLint para limpiar el código `lit-html`. Se puede agregar el siguiente complemento ESLint para verificar algunos problemas comunes en las plantillas `lit-html`:
 
 - [https://github.com/43081j/eslint-plugin-lit](https://github.com/43081j/eslint-plugin-lit)
 
-Otra alternativa es usar la CLI de lit-analyzer junto con ESLint para detectar problemas en sus plantillas de lit-html:
+Otra alternativa es usar la CLI de lit-analyzer junto con ESLint para detectar problemas en sus plantillas de `lit-html`:
 
 - [https://github.com/runem/lit-analyzer/tree/master/packages/lit-analyzer](https://github.com/runem/lit-analyzer/tree/master/packages/lit-analyzer)
 
@@ -105,7 +105,7 @@ Para obtener instrucciones completas de instalación y uso, consulte el sitio we
 
 # Testing
 
-lit-html no tiene muchos requisitos de prueba especiales. Si ya tiene una configuración de prueba, debería funcionar bien siempre que admita trabajar con módulos de JavaScript (y especificadores de módulos de estilo de nodo, si los usa).
+`lit-html` no tiene muchos requisitos de prueba especiales. Si ya tiene una configuración de prueba, debería funcionar bien siempre que admita trabajar con módulos de JavaScript (y especificadores de módulos de estilo de nodo, si los usa).
 
 Web Component Tester (WCT) es un entorno de prueba de extremo a extremo que admite especificadores de módulos de estilo de nodo. funciona con el marco de prueba de Mocha y (opcionalmente) la biblioteca de aserciones de Chai. Hay dos formas de agregar WCT a su proyecto:
 
@@ -127,11 +127,11 @@ Muchas herramientas de compilación pueden hacer esto por usted. Actualmente rec
 
 Si está utilizando otra herramienta o creando su propia configuración de resumen, consulte la sección sobre Consideraciones de compilación.
 
-Para obtener más detalles sobre los pasos de compilación, consulte la guía LitElement Build for production. lit-html tiene los mismos requisitos que LitElement, excepto que lit-html requiere solo el polyfill de plantilla, no los polyfill completos de componentes web.
+Para obtener más detalles sobre los pasos de compilación, consulte la guía LitElement Build for production. `lit-html` tiene los mismos requisitos que LitElement, excepto que `lit-html` requiere solo el polyfill de plantilla, no los polyfill completos de componentes web.
 
 ## Construye tu proyecto con Rollup
 
-Rollup funciona bien con lit-html. El repositorio lit-html-build es un proyecto de ejemplo simple que usa lit-html con una compilación acumulada.
+Rollup funciona bien con `lit-html`. El repositorio lit-html-build es un proyecto de ejemplo simple que usa `lit-html` con una compilación acumulada.
 
 Para obtener más información sobre los pasos de compilación, consulte la guía LitElement Build for production.
 
@@ -149,10 +149,10 @@ Si está creando su propia configuración para webpack, Rollup u otra herramient
 
 - Compilación de ES6 a ES5.
 - Transformar módulos de JavaScript a otros formatos para navegadores heredados.
-- minificación de la plantilla lit-html.
+- minificación de la plantilla `lit-html`.
 - Polifills.
 
-Para obtener más detalles sobre estas consideraciones, consulte la guía LitElement Build para producción. lit-html tiene los mismos requisitos que LitElement, excepto que lit-html requiere solo el polyfill de plantilla, no los polyfill completos de componentes web.
+Para obtener más detalles sobre estas consideraciones, consulte la guía LitElement Build para producción. `lit-html` tiene los mismos requisitos que LitElement, excepto que `lit-html` requiere solo el polyfill de plantilla, no los polyfill completos de componentes web.
 
 ## Compilación y transformación de módulos
 
