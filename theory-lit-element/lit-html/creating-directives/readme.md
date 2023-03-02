@@ -5,9 +5,7 @@
 Las directivas son funciones que pueden personalizar cómo `lit-html` representa los valores. Los autores de plantillas pueden usar directivas en sus plantillas como otras funciones
 
 ```jsx
-html`<div>
-     ${fancyDirective('some text')}
-  </div>`
+html`<div>${fancyDirective("some text")}</div>`;
 ```
 
 Sin embargo, en lugar de devolver un valor para renderizar, la directiva controla lo que se renderiza en su ubicación en el DOM.
@@ -17,9 +15,10 @@ Internamente, `lit-html` usa la interfaz `Part` para representar el DOM dinámic
 Para crear una directiva, pase una función de fábrica a la función de directiva de `lit-html`:
 
 ```jsx
-const helloDirective = directive(() => (part) => { part.setValue('Hello')});
-
-const helloTemplate = html`<div>${helloDirective()}</div>`
+const helloDirective = directive(() => (part) => {
+  part.setValue("Hello");
+});
+const helloTemplate = html`<div>${helloDirective()}</div>`;
 ```
 
 La función de fábrica puede tomar argumentos opcionales para que el autor de la plantilla pase la configuración y los valores.
@@ -72,10 +71,7 @@ const renderCounter = directive((initialValue) => (part) =>
 El usuario lo usa en una plantilla pasando un valor inicial:
 
 ```jsx
-const myTemplate = () => html`
-  <div>
-    ${renderCounter(0)}
-  </div>`;
+const myTemplate = () => html` <div>${renderCounter(0)}</div>`;
 ```
 
 # Limitar una directiva a un tipo de enlace
@@ -99,7 +95,7 @@ Las directivas se invocan durante el proceso de renderizado. Las directivas de e
 
 A veces, desea que una directiva pueda actualizar el DOM de forma asíncrona, por ejemplo, si depende de un evento asíncrono como una solicitud de red.
 
-Cuando una directiva establece un valor de forma asincrónica, debe llamar  a la parte del método `commit` para escribir el valor actualizado en el DOM.
+Cuando una directiva establece un valor de forma asincrónica, debe llamar a la parte del método `commit` para escribir el valor actualizado en el DOM.
 
 Aquí hay un ejemplo trivial de una directiva asíncrona:
 
@@ -125,8 +121,7 @@ const waitForIt = new Promise((resolve, reject) => {
   }, 1000);
 });
 
-const myTemplate = () =>
-   html`<div>${resolvePromise(waitForIt)}</div>`;
+const myTemplate = () => html`<div>${resolvePromise(waitForIt)}</div>`;
 ```
 
 Aquí, la plantilla renderizada muestra "Esperando que se resuelva la promesa", seguido un segundo más tarde por "Promesa resuelta".
@@ -138,7 +133,7 @@ Si su directiva necesita mantener el estado entre renderizaciones, puede confiar
 Si necesita almacenar un estado más complicado, puede usar un `WeakMap`, usando la `part` como clave.
 
 ```jsx
-import {directive} from 'lit-html';
+import { directive } from "lit-html";
 
 // Define the map at module level
 const stateMap = new WeakMap();
@@ -155,7 +150,6 @@ const statefulDirective = directive(() => (part) => {
 ```
 
 > ℹ️ ¿Por qué un mapa débil? El uso de un mapa débil garantiza que los objetos Part y los datos de estado se puedan recolectar como elementos no utilizados cuando ya no estén en uso, lo que evita una pérdida de memoria. Para obtener más información, consulte la página de MDN en WeakMap.
-> 
 
 # Repetición de directivas en enlaces de contenido
 
@@ -168,7 +162,7 @@ Para crear partes anidadas, construye instancias de NodePart y las asocia con ub
 Como se muestra en el diagrama, los nodos administrados por NodePart aparecen entre su startNode y endNode. El siguiente código crea y agrega una nueva pieza anidada dentro de una pieza existente (la "pieza contenedora").
 
 ```jsx
-import {NodePart} from 'lit-html';
+import { NodePart } from "lit-html";
 const newPart = new NodePart(containerPart.options);
 
 newPart.appendIntoPart(containerPart);
@@ -181,7 +175,7 @@ El resultado final se parece a esto:
 El método `appendIntoPart` crea los nodos de marcador e inserta la parte anidada por usted. En algunos casos, es posible que deba administrar manualmente los nodos de marcador (por ejemplo, si está insertando una parte anidada en el medio de la lista secundaria). En este caso, puedes usar un código como este:
 
 ```jsx
-import {NodePart, createMarker} from 'lit-html';
+import { NodePart, createMarker } from "lit-html";
 
 // Create a new part, passing in the render options from the original part
 const newPart = new NodePart(containerPart.options);
@@ -199,7 +193,7 @@ Poniéndolo todo junto: la siguiente directiva de ejemplo toma un valor y lo ins
 
 ```jsx
 // Import lit-html APIs
-import {html, render, directive, NodePart, appendIntoPart} from 'lit-html';
+import { html, render, directive, NodePart, appendIntoPart } from "lit-html";
 
 // Stores the nested parts associated with a single instance of the directive
 const nestedPartMap = new WeakMap();
@@ -211,16 +205,17 @@ const createAndAppendPart = (containerPart) => {
   newPart.appendIntoPart(containerPart);
 
   return newPart;
-}
+};
 
 // duplicate directive takes a single value, and renders it
 // in the DOM twice
 const duplicate = directive((value) => {
-
   // the directive function itself
   return (containerPart) => {
     if (!(containerPart instanceof NodePart)) {
-      throw new Error('duplicate directive can only be used in content bindings');
+      throw new Error(
+        "duplicate directive can only be used in content bindings"
+      );
     }
 
     let part1, part2;
@@ -240,11 +235,12 @@ const duplicate = directive((value) => {
     part1.commit();
     part2.setValue(value);
     part2.commit();
-  }
+  };
 });
 ```
 
 La clase `NodePart` proporciona una serie de otros métodos convenientes, incluidos otros métodos para agregar partes anidadas y un método `clear` para eliminar todo el DOM asociado con una `part`.
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

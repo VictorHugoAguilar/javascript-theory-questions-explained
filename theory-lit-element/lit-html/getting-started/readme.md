@@ -15,7 +15,7 @@ npm install lit-html
 Rambien puedes leer `lit-html` directamente desde [unpkg.com](http://unpkg.com/) CDN:
 
 ```jsx
-import {html, render} from 'https://unpkg.com/lit-html?module';
+import { html, render } from "https://unpkg.com/lit-html?module";
 ```
 
 ## Editores online
@@ -34,8 +34,7 @@ Para usar `lit-html`, importárelo a través de una ruta:
 
 ```jsx
 <script type="module">
-  import {html, render} from './node_modules/lit-html/lit-html.js';
-  ...
+  import {(html, render)} from './node_modules/lit-html/lit-html.js'; ...
 </script>
 ```
 
@@ -46,7 +45,7 @@ La ruta a usar depende de dónde haya instalado `lit-html`. Los navegadores solo
 Si usa una herramienta que convierte los nombres de paquetes en rutas, puede importar por nombre del paquete:
 
 ```jsx
-import {html, render} from 'lit-html';
+import { html, render } from "lit-html";
 ```
 
 Para simplificar, los ejemplos en estos documentos usan nombres de paquetes (también conocidos como especificadores de módulos de estilo nodo).
@@ -64,14 +63,15 @@ lit-html tiene dos API principales
 
 ```jsx
 // Import lit-html
-import {html, render} from 'lit-html';
+import { html, render } from "lit-html";
 
 // Define a template
 const myTemplate = (name) => html`<p>Hello ${name}</p>`;
 
 // Render the template to the document
-render(myTemplate('World'), document.body);
+render(myTemplate("World"), document.body);
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

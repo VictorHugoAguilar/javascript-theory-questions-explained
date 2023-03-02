@@ -27,7 +27,7 @@ npm i lit-html
 1. Si está trabajando en un proyecto con muchas dependencias front-end, es posible que desee utilizar el comando npm dedupe para intentar reducir los módulos duplicados:
 
 ```jsx
-npm deduplicación 
+npm deduplicación
 ```
 
 # Develpolment
@@ -68,7 +68,7 @@ lit-analyzer usa el mismo backend que los complementos de VS Code y TypeScript q
 `lit-html` está empaquetado como módulos de JavaScript. Muchos desarrolladores prefieren importar módulos usando especificadores de módulos básicos:
 
 ```jsx
-import {html, render} from 'lit-html';
+import { html, render } from "lit-html";
 ```
 
 Para ejecutarse en el navegador, el identificador simple ('lit-html') debe transformarse en una ruta o URL que el navegador pueda cargar (como '/node_modules/lit-html/lit-html.js'). El servidor de desarrollo ES es un servidor de desarrollo de código abierto que maneja esta y otras transformaciones.
@@ -200,4 +200,5 @@ Usando el template polyfills:
 Nota: al transpilar para IE11, los polyfills de Babel deben agruparse por separado del código de la aplicación y cargarse antes que el polyfill de la plantilla. Esto se demuestra en el archivo index-prod.html en el proyecto de ejemplo de resumen.
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

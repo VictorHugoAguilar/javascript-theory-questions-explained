@@ -60,7 +60,8 @@ El ejemplo anterior muestra la interpolación de un valor de texto simple, pero 
 
 ```jsx
 const myTemplate = (subtotal, tax) => html`<div>Total: ${subtotal + tax}</div>`;
-const myTemplate2 = (name) => html`<div>${formatName(name.given, name.family, name.title)}</div>`;
+const myTemplate2 = (name) =>
+  html`<div>${formatName(name.given, name.family, name.title)}</div>`;
 ```
 
 # Bindeo a atributos
@@ -71,7 +72,8 @@ Por defecto, una expresión en el valor de un atributo crea un enlace de atribut
 
 ```jsx
 // set the class attribute
-const myTemplate = (data) => html`<div class=${data.cssClass}>Stylish text.</div>`;
+const myTemplate = (data) =>
+  html`<div class=${data.cssClass}>Stylish text.</div>`;
 ```
 
 Dado que los valores de los atributos son siempre cadenas, la expresión debe devolver un valor que se puede convertir en una cadena.
@@ -79,7 +81,8 @@ Dado que los valores de los atributos son siempre cadenas, la expresión debe de
 Utilizar el `?` prefijo para una vinculación de atributos booleanos. El atributo se agrega si la expresión se evalúa a un valor de verdad, eliminado si se evalúa a un valor de falsificación:
 
 ```jsx
-const myTemplate2 = (data) => html`<div ?disabled=${!data.active}>Stylish text.</div>`;
+const myTemplate2 = (data) =>
+  html`<div ?disabled=${!data.active}>Stylish text.</div>`;
 ```
 
 # Bindeo a propiedades
@@ -93,7 +96,8 @@ const myTemplate3 = (data) => html`<input .value=${data.value}></input>`;
 Puede usar enlaces de propiedades para pasar datos complejos en el árbol a subcomponentes. Por ejemplo, si tiene un componente `my-list` con una propiedad `ListItems`, puede pasarlo una variedad de objetos:
 
 ```jsx
-const myTemplate4 = (data) => html`<my-list .listItems=${data.items}></my-list>`;
+const myTemplate4 = (data) =>
+  html`<my-list .listItems=${data.items}></my-list>`;
 ```
 
 Tenga en cuenta que el nombre de la propiedad en este ejemplo, `listitems`, es un caso mixto. Aunque los atributos HTML son insensibles al caso, `lit-html` conserva el caso cuando procesa la plantilla.
@@ -103,7 +107,8 @@ Tenga en cuenta que el nombre de la propiedad en este ejemplo, `listitems`, es u
 Las plantillas también pueden incluir oyentes de eventos declarativos. Un oyente de eventos parece un atributo vinculante, pero con el prefijo `@` seguido de un nombre de evento:
 
 ```jsx
-const myTemplate = () => html`<button @click=${clickHandler}>Click Me!</button>`;
+const myTemplate = () =>
+  html`<button @click=${clickHandler}>Click Me!</button>`;
 ```
 
 Esto es equivalente a llamar a `addEventListener('clic', ClickHandler)` en el elemento del botón.
@@ -244,7 +249,8 @@ const employeeList = (employees) => html`
     ${repeat(
       employees,
       (employee) => employee.id,
-      (employee, index) => html` <li>${index}: ${employee.familyName}, ${employee.givenName}</li> `
+      (employee, index) =>
+        html` <li>${index}: ${employee.familyName}, ${employee.givenName}</li> `
     )}
   </ul>
 `;
@@ -303,7 +309,9 @@ Entonces, extendiendo el ejemplo anterior:
 import { nothing, html } from "lit-html";
 
 html`
-  <example-element>${user.isAdmin ? html`<button>DELETE</button>` : nothing}</example-element>
+  <example-element
+    >${user.isAdmin ? html`<button>DELETE</button>` : nothing}</example-element
+  >
 `;
 ```
 
@@ -344,4 +352,5 @@ Cuando `lit-html`vuelve a representar una plantilla, solo actualiza las porcione
 La Directiva Cache almacena el DOM generado para una plantilla de enlace y entrada dada. En el ejemplo anterior, caché el DOM para los template `summaryView` y `detailView`. Cuando cambia de una vista a otra, `lit-html` solo necesita intercambiar la versión en caché de la nueva vista y actualizarla con los últimos datos.
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

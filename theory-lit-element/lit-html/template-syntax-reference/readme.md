@@ -2,22 +2,22 @@
 
 # Introducción
 
-Las plantillas `lit-html` se escriben usando literales de plantilla de JavaScript etiquetados con la etiqueta html. 
+Las plantillas `lit-html` se escriben usando literales de plantilla de JavaScript etiquetados con la etiqueta html.
 El contenido del literal es en su mayoría simple, declarativo, HTML:
 
 ```jsx
-html`<h1>Hello World</h1>`
+html`<h1>Hello World</h1>`;
 ```
 
 Los **bindeos o expresiones** se indican con la sintaxis estándar de JavaScript para los literales de plantilla:
 
 ```jsx
-html`<h1>Hello ${name}</h1>`
+html`<h1>Hello ${name}</h1>`;
 ```
 
 # Estructura de los template
 
-Las plantillas `lit-html` deben ser HTML bien formado, y los enlaces solo pueden ocurrir en ciertos lugares. 
+Las plantillas `lit-html` deben ser HTML bien formado, y los enlaces solo pueden ocurrir en ciertos lugares.
 Las plantillas son analizadas por el analizador HTML integrado del navegador antes de interpolar cualquier valor.
 
 **⚠️ Sin advertencias**. La mayoría de los casos de plantillas mal formadas no son detectables por `lit-html`, por lo que no verá ninguna advertencia, solo plantillas que no se comportan como esperaba, así que tenga mucho cuidado para estructurar las plantillas correctamente.
@@ -50,7 +50,7 @@ Siga estas reglas para plantillas bien formadas:
 
 ```jsx
 // HTML parser closes this div after "Some text"
-const template1 = html`<div class="broken-div">Some text`;
+const template1 = html`<div class="broken-div">Some text</div>`;
 // When joined, "more text" does not end up in .broken-div
 const template2 = html`${template1} more text. </div>`;
 ```
@@ -64,7 +64,7 @@ Hay algunos tipos de enlaces:
 - Texto:
 
 ```jsx
-html`<h1>Hello ${name}</h1>`
+html`<h1>Hello ${name}</h1>`;
 ```
 
 Los enlaces de texto pueden ocurrir en cualquier parte del contenido de texto de un elemento.
@@ -72,25 +72,25 @@ Los enlaces de texto pueden ocurrir en cualquier parte del contenido de texto de
 - Attribute:
 
 ```jsx
-html`<div id=${id}></div>`
+html`<div id=${id}></div>`;
 ```
 
 - Boolean Attribute:
 
 ```jsx
-html`<input type="checkbox" ?checked=${checked}>`
+html`<input type="checkbox" ?checked=${checked} />`;
 ```
 
 - Property:
 
 ```jsx
-html`<input .value=${value}>`
+html`<input .value=${value} />`;
 ```
 
 - Event Listener:
 
 ```jsx
-html`<button @click=${(e) => console.log('clicked')}>Click Me</button>`
+html`<button @click=${(e) => console.log("clicked")}>Click Me</button>`;
 ```
 
 ## Event listeners
@@ -100,12 +100,12 @@ Los event listenner pueden ser funciones u objetos con un método `handleEvent`.
 ```jsx
 const listener = {
   handleEvent(e) {
-    console.log('clicked');
+    console.log("clicked");
   },
   capture: true,
 };
 
-html`<button @click=${listener}>Click Me</button>`
+html`<button @click=${listener}>Click Me</button>`;
 ```
 
 # Supported Data Types
@@ -149,7 +149,7 @@ const page = html`
 Cualquier nodo DOM se puede pasar a una expresión de posición de texto. El nodo se adjunta al árbol DOM en ese punto y, por lo tanto, se elimina de cualquier padre actual:
 
 ```jsx
-const div = document.createElement('div');
+const div = document.createElement("div");
 const page = html`
   ${div}
   <p>This is some text</p>
@@ -183,12 +183,7 @@ const list = () => html`items = ${Object.entries(items)}`;
 Las expresiones ternarias son una excelente manera de agregar condicionales en línea:
 
 ```jsx
-html`
-  ${user.isloggedIn
-      ? html`Welcome ${user.name}`
-      : html`Please log in`
-  }
-`;
+html` ${user.isloggedIn ? html`Welcome ${user.name}` : html`Please log in`} `;
 ```
 
 ## Ifs con sentencias if
@@ -258,8 +253,8 @@ Las directivas son funciones que pueden extender `lit-html` al personalizar la f
 ## asyncAppend and asyncReplace
 
 ```jsx
-asyncAppend(asyncIterable)
-asyncReplace(asyncIterable)
+asyncAppend(asyncIterable);
+asyncReplace(asyncIterable);
 ```
 
 ### Location: text bindings
@@ -274,7 +269,7 @@ Los iteradores asíncronos de JavaScript proporcionan una interfaz genérica par
 Ejemplo:
 
 ```jsx
-import {asyncReplace} from 'lit-html/directives/async-replace.js';
+import { asyncReplace } from "lit-html/directives/async-replace.js";
 
 const wait = (t) => new Promise((resolve) => setTimeout(resolve, t));
 /**
@@ -288,19 +283,17 @@ async function* countUp() {
   }
 }
 
-render(html`
-  Count: <span>${asyncReplace(countUp())}</span>.
-`, document.body);
+render(html` Count: <span>${asyncReplace(countUp())}</span>. `, document.body);
 ```
 
 En un futuro cercano, `ReadableStreams` será iterable asíncrono, lo que permitirá transmitir `fetch()` directamente en una plantilla:
 
 ```jsx
-import {asyncAppend} from 'lit-html/directives/async-append.js';
+import { asyncAppend } from "lit-html/directives/async-append.js";
 
 // Endpoint that returns a billion digits of PI, streamed.
 const url =
-    'https://cors-anywhere.herokuapp.com/http://stuff.mit.edu/afs/sipb/contrib/pi/pi-billion.txt';
+  "https://cors-anywhere.herokuapp.com/http://stuff.mit.edu/afs/sipb/contrib/pi/pi-billion.txt";
 
 const streamingResponse = (async () => {
   const response = await fetch(url);
@@ -312,7 +305,7 @@ render(html`π is: ${asyncAppend(streamingResponse)}`, document.body);
 ## cache
 
 ```jsx
-cache(conditionalTemplate)
+cache(conditionalTemplate);
 ```
 
 ### Location: text bindings
@@ -322,15 +315,12 @@ Almacena en caché los nodos DOM renderizados para plantillas cuando no están e
 Ejemplo:
 
 ```jsx
-import {cache} from 'lit-html/directives/cache.js';
+import { cache } from "lit-html/directives/cache.js";
 
 const detailView = (data) => html`<div>...</div>`;
 const summaryView = (data) => html`<div>...</div>`;
 
-html`${cache(data.showDetails
-  ? detailView(data)
-  : summaryView(data)
-)}`
+html`${cache(data.showDetails ? detailView(data) : summaryView(data))}`;
 ```
 
 Cuando `lit-html` vuelve a renderizar una plantilla, solo actualiza las partes modificadas: no crea ni elimina más DOM del necesario. Pero cuando cambia de una plantilla a otra, `lit-html` necesita eliminar el DOM anterior y generar un nuevo árbol DOM.
@@ -348,7 +338,7 @@ class=${classMap(classObj)}
 Establece una lista de clases basadas en un objeto. Cada clave del objeto se trata como un nombre de clase y, si el valor asociado con la clave es verdadero, esa clase se agrega al elemento.
 
 ```jsx
-import {classMap} from 'lit-html/directives/class-map.js';
+import { classMap } from "lit-html/directives/class-map.js";
 
 let classes = { highlight: true, enabled: true, hidden: false };
 
@@ -359,13 +349,15 @@ html`<div class=${classMap(classes)}>Classy text</div>`;
 El `classMap` debe ser el único enlace en el atributo de clase, pero se puede combinar con valores estáticos:
 
 ```jsx
-html`<div class="my-widget ${classMap(dynamicClasses)}">Static and dynamic</div>`;
+html`<div class="my-widget ${classMap(dynamicClasses)}">
+  Static and dynamic
+</div>`;
 ```
 
 ## ifDefined
 
 ```jsx
-ifDefined(value)
+ifDefined(value);
 ```
 
 ### Location: attribute bindings
@@ -377,17 +369,17 @@ Para otros tipos de piezas, esta directiva no funciona.
 Ejemplo:
 
 ```jsx
-import {ifDefined} from 'lit-html/directives/if-defined';
+import { ifDefined } from "lit-html/directives/if-defined";
 
 const myTemplate = () => html`
-  <img src="/images/${ifDefined(image.filename)}">
+  <img src="/images/${ifDefined(image.filename)}" />
 `;
 ```
 
 ## guard
 
 ```jsx
-guard(dependencies, valueFn)
+guard(dependencies, valueFn);
 ```
 
 ### Location: any
@@ -404,11 +396,13 @@ Dónde:
 Ejemplo:
 
 ```jsx
-import {guard} from 'lit-html/directives/guard';
+import { guard } from "lit-html/directives/guard";
 
 const template = html`
   <div>
-    ${guard([immutableItems], () => immutableItems.map(item => html`${item}`))}
+    ${guard([immutableItems], () =>
+      immutableItems.map((item) => html`${item}`)
+    )}
   </div>
 `;
 ```
@@ -432,7 +426,7 @@ En estos casos, si el valor DOM cambia, pero el valor establecido a través de e
 Ejemplo:
 
 ```jsx
-html`<input .value=${live(x)}>`
+html`<input .value=${live(x)} />`;
 ```
 
 `live()` realiza una verificación de igualdad estricta con el valor DOM en vivo, y si el nuevo valor es igual al valor en vivo, no hace nada. Esto significa que `live()` no debe usarse cuando el enlace provocará una conversión de tipo. Si usa `live()` con un enlace de atributo, asegúrese de que solo se pasen cadenas, o el enlace actualizará cada representación.
@@ -440,8 +434,8 @@ html`<input .value=${live(x)}>`
 ## repeat
 
 ```jsx
-repeat(items, keyfn, template)
-repeat(items, template)
+repeat(items, keyfn, template);
+repeat(items, template);
 ```
 
 ### Location: text bindings
@@ -451,12 +445,15 @@ Repite una serie de valores (generalmente `TemplateResults`) generados a partir 
 Ejemplo:
 
 ```jsx
-import {repeat} from 'lit-html/directives/repeat';
+import { repeat } from "lit-html/directives/repeat";
 
 const myTemplate = () => html`
   <ul>
-    ${repeat(items, (i) => i.id, (i, index) => html`
-      <li>${index}: ${i.name}</li>`)}
+    ${repeat(
+      items,
+      (i) => i.id,
+      (i, index) => html` <li>${index}: ${i.name}</li>`
+    )}
   </ul>
 `;
 ```
@@ -474,9 +471,9 @@ style=${styleMap(styles)}
 La directiva `styleMap` establece estilos en un elemento basado en un objeto, donde cada clave en el objeto se trata como una propiedad de estilo y el valor se trata como el valor de esa propiedad. Por ejemplo:
 
 ```jsx
-import {styleMap} from 'lit-html/directives/style-map.js';
+import { styleMap } from "lit-html/directives/style-map.js";
 
-let styles = { backgroundColor: 'blue', color: 'white' };
+let styles = { backgroundColor: "blue", color: "white" };
 html`<p style=${styleMap(styles)}>Hello style!</p>`;
 ```
 
@@ -496,7 +493,7 @@ html`<p style="color: white; ${styleMap(moreStyles)}">More styles!</p>`;
 ## templateContent
 
 ```jsx
-templateContent(templateElement)
+templateContent(templateElement);
 ```
 
 ### Location: text bindings
@@ -508,20 +505,18 @@ Tenga en cuenta que el contenido de la plantilla debe ser controlado por el desa
 Ejemplo:
 
 ```jsx
-import {templateContent} from 'lit-html/directives/template-content';
+import { templateContent } from "lit-html/directives/template-content";
 
-const templateEl = document.querySelector('template#myContent');
+const templateEl = document.querySelector("template#myContent");
 
-const template = html`
-  Here's some content from a template element:
-
-  ${templateContent(templateEl)}`;
+const template = html` Here's some content from a template element:
+${templateContent(templateEl)}`;
 ```
 
 ## unsafeHTML
 
 ```jsx
-unsafeHTML(html)
+unsafeHTML(html);
 ```
 
 ### Location: text bindings
@@ -533,19 +528,18 @@ Tenga en cuenta que esto no es seguro de usar con cualquier entrada proporcionad
 Ejemplo:
 
 ```jsx
-import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
+import { unsafeHTML } from "lit-html/directives/unsafe-html.js";
 
-const markup = '<div>Some HTML to render.</div>';
+const markup = "<div>Some HTML to render.</div>";
 const template = html`
-  Look out, potentially unsafe HTML ahead:
-  ${unsafeHTML(markup)}
+  Look out, potentially unsafe HTML ahead: ${unsafeHTML(markup)}
 `;
 ```
 
 ## unsafeSVG
 
 ```jsx
-unsafeSVG(svg)
+unsafeSVG(svg);
 ```
 
 ### Location: text bindings
@@ -557,22 +551,28 @@ Tenga en cuenta que esto no es seguro de usar con cualquier entrada proporcionad
 Ejemplo:
 
 ```jsx
-import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
+import { unsafeSVG } from "lit-html/directives/unsafe-svg";
 
-const svg = '<circle cx="50" cy="50" r="40" fill="red" />'
+const svg = '<circle cx="50" cy="50" r="40" fill="red" />';
 
 const template = html`
   Look out, potentially unsafe SVG ahead:
-  <svg width="40" height="40" viewBox="0 0 100 100"
-    xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+  >
     ${unsafeSVG(svg)}
-  </svg> `;
+  </svg>
+`;
 ```
 
 ## until
 
 ```jsx
-until(...values)
+until(...values);
 ```
 
 ### Location: any
@@ -586,12 +586,13 @@ La prioridad de los valores se puede usar para crear contenido de marcador de po
 Ejemplo:
 
 ```jsx
-import {until} from 'lit-html/directives/until.js';
+import { until } from "lit-html/directives/until.js";
 
-const content = fetch('./content.txt').then(r => r.text());
+const content = fetch("./content.txt").then((r) => r.text());
 
-html`${until(content, html`<span>Loading...</span>`)}`
+html`${until(content, html`<span>Loading...</span>`)}`;
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

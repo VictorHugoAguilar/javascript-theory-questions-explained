@@ -11,18 +11,18 @@ Para un rendimiento óptimo, defina estilos con ámbito en una propiedad de `est
 Defina estilos en un literal de plantilla etiquetado, utilizando la función de etiqueta `css`:
 
 ```jsx
-import { LitElement, css, html } from 'lit-element';
+import { LitElement, css, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get styles() {
     return css`
-      div { color: red; }
+      div {
+        color: red;
+      }
     `;
   }
   render() {
-    return html`
-      <div>I'm styled!</div>
-    `;
+    return html` <div>I'm styled!</div> `;
   }
 }
 ```
@@ -59,14 +59,16 @@ Para permitir la personalización de temas o estilos por instancia, use variable
 Para evitar que los componentes basados en LitElement evalúen código potencialmente malicioso, la etiqueta `css` solo permite expresiones anidadas que son en sí mismas cadenas o números etiquetados con `css`.
 
 ```jsx
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from "lit-element";
 
 const mainColor = css`red`;
 
 class MyElement extends LitElement {
   static get styles() {
     return css`
-      div { color: ${mainColor} }
+      div {
+        color: ${mainColor};
+      }
     `;
   }
   render() {
@@ -74,7 +76,7 @@ class MyElement extends LitElement {
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 Esta restricción existe para proteger las aplicaciones de las vulnerabilidades de seguridad mediante las cuales se pueden inyectar estilos maliciosos, o incluso códigos maliciosos, desde fuentes no confiables, como parámetros de URL o valores de bases de datos.
@@ -82,14 +84,16 @@ Esta restricción existe para proteger las aplicaciones de las vulnerabilidades 
 Si debe usar una expresión en un literal `css` que no es en sí mismo un literal `css`, y está seguro de que la expresión proviene de una fuente totalmente confiable, como una constante definida en su propio código, entonces puede envolver la expresión con `unsafeCSS` función:
 
 ```jsx
-import { LitElement, html, css, unsafeCSS } from 'lit-element';
+import { LitElement, html, css, unsafeCSS } from "lit-element";
 
 class MyElement extends LitElement {
   static get styles() {
-    const mainColor = 'red';
+    const mainColor = "red";
 
     return css`
-      div { color: ${unsafeCSS(mainColor)} }
+      div {
+        color: ${unsafeCSS(mainColor)};
+      }
     `;
   }
   render() {
@@ -97,11 +101,10 @@ class MyElement extends LitElement {
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 > ⚠️ Solo use la etiqueta unsafeCSS con entrada confiable. Inyectar CSS sin desinfectar es un riesgo de seguridad. Por ejemplo, el CSS malicioso puede "llamar a casa" agregando una URL de imagen que apunta a un servidor de terceros.
-> 
 
 ### Herencia de styles
 
@@ -110,10 +113,7 @@ Usando una matriz de literales de plantilla etiquetados, un componente puede her
 ```jsx
 class MyElement extends SuperElement {
   static get styles() {
-    return [
-      super.styles,
-      css`...`
-    ];
+    return [super.styles, css`...`];
   }
 }
 ```
@@ -123,7 +123,7 @@ class MyElement extends SuperElement {
 Puede compartir estilos entre componentes creando un módulo que exporte estilos etiquetados:
 
 ```jsx
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const buttonStyles = css`
   .blue-button {
@@ -132,7 +132,8 @@ export const buttonStyles = css`
   }
   .blue-button:disabled {
     background-color: grey;
-  }`;
+  }
+`;
 ```
 
 Luego, su elemento puede importar los estilos y agregarlos a su propiedad de estilos estáticos:
@@ -177,11 +178,21 @@ class MyElement extends LitElement {
   static get styles() {
     // Write styles in standard CSS
     return css`
-      * { color: red; }
-      p { font-family: sans-serif; }
-      .myclass { margin: 100px; }
-      #main { padding: 30px; }
-      h1 { font-size: 4em; }
+      * {
+        color: red;
+      }
+      p {
+        font-family: sans-serif;
+      }
+      .myclass {
+        margin: 100px;
+      }
+      #main {
+        padding: 30px;
+      }
+      h1 {
+        font-size: 4em;
+      }
     `;
   }
   render() {
@@ -243,7 +254,9 @@ class MyElement extends LitElement {
 ```
 
 ```jsx
-<my-element><p>Slotted content</p></my-element>
+<my-element>
+  <p>Slotted content</p>
+</my-element>
 ```
 
 Utilice el pseudoelemento CSS `::slotted()` para seleccionar elementos secundarios que se incluyen en su plantilla a través de <slot>s.
@@ -259,14 +272,20 @@ Utilice el pseudoelemento CSS `::slotted()` para seleccionar elementos secundari
 ```
 
 ```jsx
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from "lit-element";
 
 class MyElement extends LitElement {
   static get styles() {
     return css`
-      ::slotted(*) { font-family: Roboto; }
-      ::slotted(p) { color: blue; }
-      div ::slotted(*) { color: red; }
+      ::slotted(*) {
+        font-family: Roboto;
+      }
+      ::slotted(p) {
+        color: blue;
+      }
+      div ::slotted(*) {
+        color: red;
+      }
     `;
   }
   render() {
@@ -276,7 +295,7 @@ class MyElement extends LitElement {
     `;
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 Tenga en cuenta que solo los elementos secundarios directamente ranurados pueden diseñarse con `:: slotted()`.
@@ -300,7 +319,6 @@ my-element div {
 ```
 
 > ⚠️ ¡Cuidado con las limitaciones en el relleno polifónico Shady CSS alrededor del contenido ranurado! Consulte las limitaciones de Shady CSS para obtener detalles sobre cómo usar la sintaxis `::slotted()` de una manera compatible con polyfill.
-> 
 
 ### Estilos configurables con propiedades personalizadas
 
@@ -380,7 +398,7 @@ Si necesita evaluar expresiones dentro de un elemento `<style>`, use la siguient
 Ejemplo:
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 const perClassStyle = html`
   <style>
@@ -393,11 +411,19 @@ const perClassStyle = html`
 `;
 
 const blueText = html`
-  <style> :host { color: blue; } </style>
+  <style>
+    :host {
+      color: blue;
+    }
+  </style>
 `;
 
 const redText = html`
-  <style> :host { color: red; } </style>
+  <style>
+    :host {
+      color: red;
+    }
+  </style>
 `;
 
 class MyElement extends LitElement {
@@ -407,14 +433,13 @@ class MyElement extends LitElement {
   }
   render() {
     return html`
-      ${perClassStyle}
-      ${this.perInstanceStyle}
+      ${perClassStyle} ${this.perInstanceStyle}
       <div>Hello World</div>
     `;
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### Importar una hoja de estilo externa
@@ -422,19 +447,19 @@ customElements.define('my-element', MyElement);
 Recomendamos colocar sus estilos en una propiedad de estilos estáticos para un rendimiento óptimo. Sin embargo, puede incluir una hoja de estilo externa en su plantilla con un `<enlace>`:
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   render() {
     return html`
-      <link rel="stylesheet" href="./app-styles.css">
+      <link rel="stylesheet" href="./app-styles.css" />
       <button>a button</button>
       <div>a div</div>
     `;
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 Sin embargo, hay algunas advertencias importantes:
@@ -456,8 +481,8 @@ Para usar `styleMap` y/o `classMap`:
 - Importar `classMap` y/o `styleMap`:
 
 ```jsx
-import { classMap } from 'lit-html/directives/class-map';
-import { styleMap } from 'lit-html/directives/style-map';
+import { classMap } from "lit-html/directives/class-map";
+import { styleMap } from "lit-html/directives/style-map";
 ```
 
 - Use `classMap` y/o `styleMap` en su plantilla de elemento:
@@ -508,25 +533,26 @@ Para hacer referencia a propiedades con guión, como `font-family`, utilice el e
 
 Para hacer referencia a propiedades CSS personalizadas como `--custom-color`, coloque el nombre completo de la propiedad entre comillas (`'--custom-color'`).
 
-| Inline style or CSS | styleMap equivalent |
-| --- | --- |
-| background-color: blue; | backgroundColor: 'blue'or'background-color': 'blue' |
+| Inline style or CSS                     | styleMap equivalent                                                                 |
+| --------------------------------------- | ----------------------------------------------------------------------------------- |
+| background-color: blue;                 | backgroundColor: 'blue'or'background-color': 'blue'                                 |
 | font-family: Roboto, Arial, sans-serif; | fontFamily: 'Roboto, Arial, sans-serif'or'font-family': 'Roboto, Arial, sans-serif' |
-| --custom-color: #FFFABC; | '--custom-color': '#FFFABC;' |
-| --otherCustomColor: #FFFABC; | '--otherCustomColor': '#FFFABC;' |
-| color: var(--customprop, blue); | color: 'var(--customprop, blue)' |
+| --custom-color: #FFFABC;                | '--custom-color': '#FFFABC;'                                                        |
+| --otherCustomColor: #FFFABC;            | '--otherCustomColor': '#FFFABC;'                                                    |
+| color: var(--customprop, blue);         | color: 'var(--customprop, blue)'                                                    |
 
 Ejemplo:
 
 Inline style syntax:
 
 ```jsx
-<div style="
+<div
+  style="
   background-color:blue;
   font-family:Roboto;
   --custom-color:#e26dd2;
-  --otherCustomColor:#77e26d;">
-</div>
+  --otherCustomColor:#77e26d;"
+></div>
 ```
 
 Equivalent CSS syntax:
@@ -544,13 +570,15 @@ Equivalent `styleMap` syntax:
 
 ```jsx
 html`
-  <div style=${styleMap({
-    'background-color': 'blue',
-    fontFamily: 'Roboto',
-    '--custom-color': '#e26dd2',
-    '--otherCustomColor': '#77e26d'
-  })}></div>
-`
+  <div
+    style=${styleMap({
+      "background-color": "blue",
+      fontFamily: "Roboto",
+      "--custom-color": "#e26dd2",
+      "--otherCustomColor": "#77e26d",
+    })}
+  ></div>
+`;
 ```
 
 ## Theming
@@ -656,28 +684,30 @@ render() {
 ```
 
 > ℹ️ Los selectores de tipo tienen mayor especificidad que :host.
-> 
-> 
+>
 > Un selector de tipo de elemento tiene mayor especificidad que el selector de pseudoclase `:host`. Los estilos establecidos para una etiqueta de elemento personalizado anularán los estilos establecidos con `:host` y `:host()`:
-> 
+>
 > ```jsx
 > <style>
 >   my-element { font-family: Courier; }
 > </style>
 > <my-element></my-element>
 > ```
-> 
+>
 > ```jsx
 > class MyElement extends LitElement {
 >   static get styles() {
->     return css`:host { font-family: Roboto; }`
+>     return css`
+>       :host {
+>         font-family: Roboto;
+>       }
+>     `;
 >   }
 >   render() {
 >     return html`<p>Will use courier</p>`;
 >   }
 > }
 > ```
-> 
 
 ## Propiedades personalizadas de CSS
 
@@ -749,7 +779,7 @@ Si el usuario de un componente tiene un tema de aplicación existente, puede con
 
 Ejemplo simple theme
 
-*index.html*
+_index.html_
 
 ```jsx
 <html>
@@ -780,10 +810,10 @@ Ejemplo simple theme
 </html>
 ```
 
-*my-element.js*
+_my-element.js_
 
 ```jsx
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from "lit-element";
 
 class MyElement extends LitElement {
   static get styles() {
@@ -803,10 +833,9 @@ class MyElement extends LitElement {
     return html`<div>Hello World</div>`;
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
-  
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
 
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

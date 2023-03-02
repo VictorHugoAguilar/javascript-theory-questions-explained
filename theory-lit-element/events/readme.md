@@ -100,7 +100,7 @@ Al agregar detectores de manera imperativa con `addEventListener`, deberá vincu
 
 ```jsx
 this.boundResizeHandler = this.handleResize.bind(this);
-window.addEventListener('resize', this.boundResizeHandler);
+window.addEventListener("resize", this.boundResizeHandler);
 ```
 
 O use una función de flecha como un campo de clase:
@@ -120,7 +120,9 @@ export class MyElement extends LitElement {
 Cuando agrega imperativamente un detector de eventos, mediante `addEventListener`, puede especificar varias opciones de detectores de eventos. Por ejemplo, para usar un detector de eventos pasivo en JavaScript simple, haría algo como esto:
 
 ```jsx
-someElement.addEventListener('touchstart', this._handleTouchStart, {passive: true});
+someElement.addEventListener("touchstart", this._handleTouchStart, {
+  passive: true,
+});
 ```
 
 El decorador `eventOptions` le permite agregar opciones de detectores de eventos a un detector que se agrega declarativamente en su plantilla.
@@ -140,7 +142,6 @@ render() {
 ```
 
 > ℹ️ Uso de decoradores. Los decoradores son una característica de JavaScript propuesta, por lo que deberá usar un compilador como Babel o TypeScript para usar decoradores. Consulte Uso de decoradores para obtener más información.
-> 
 
 El objeto pasado a eventOptions se usa como parámetro de opciones para addEventListener.
 
@@ -161,10 +162,10 @@ class MyElement extends LitElement {
     return html`<div>Hello World</div>`;
   }
   firstUpdated(changedProperties) {
-    let event = new CustomEvent('my-event', {
+    let event = new CustomEvent("my-event", {
       detail: {
-        message: 'Something important happened'
-      }
+        message: "Something important happened",
+      },
     });
     this.dispatchEvent(event);
   }
@@ -179,7 +180,7 @@ class MyElement extends LitElement {
     return html`<div>Hello World</div>`;
   }
   updated(changedProperties) {
-    let click = new Event('click');
+    let click = new Event("click");
     this.dispatchEvent(click);
   }
 }
@@ -198,8 +199,10 @@ Para escuchar eventos activados desde un componente basado en LitElement en otro
 En HTML simple y JavaScript, esta sería la API `addEventListener`:
 
 ```jsx
-const myElement = document.querySelector('my-element');
-myElement.addEventListener('my-event', (e) => {console.log(e)});
+const myElement = document.querySelector("my-element");
+myElement.addEventListener("my-event", (e) => {
+  console.log(e);
+});
 ```
 
 # Trabajando con eventos y shadow DOM
@@ -261,6 +264,6 @@ firstUpdated(changedProperties) {
 }
 ```
 
- 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

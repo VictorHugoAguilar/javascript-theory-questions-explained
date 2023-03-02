@@ -7,26 +7,25 @@ Los decoradores son expresiones especiales que pueden alterar el comportamiento 
 Por ejemplo, los decoradores `@customelement` y `@property` hacen que una definición de elemento básico sea más compacta:
 
 ```jsx
-import {LitElement, html, customElement, property} from 'lit-element';
+import { LitElement, html, customElement, property } from "lit-element";
 
-@customElement('my-element')
+@customElement("my-element")
 class MyElement extends LitElement {
+  // Declare observed properties
+  @property()
+  adjective = "awesome";
 
- // Declare observed properties
- @property()
- adjective = 'awesome';
-
- // Define the element's template
- render() {
-   return html`<p>your ${this.adjective} template here</p>`;
- }
+  // Define the element's template
+  render() {
+    return html`<p>your ${this.adjective} template here</p>`;
+  }
 }
 ```
 
 El decorador `@CustomElement` define un elemento personalizado, equivalente a llamar:
 
 ```jsx
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 El decorador `@Property` declara una propiedad reactiva. Las líneas:
@@ -55,7 +54,6 @@ constructor() {
 Para usar los decoradores, debe usar un compilador como Babel o el compilador TypeScript.
 
 > ℹ️ La propuesta de los decoradores. Los decoradores son una propuesta de la Etapa 2 para la adición al estándar Ecmascript, lo que significa que no están finalizados ni implementados en los navegadores todavía. Los compiladores como Babel y TypeScript brindan soporte para las características propuestas como los decoradores al compilarlos en JavaScript estándar que puede ejecutar un navegador.
-> 
 
 ## Para usar decoradores con TypeScript
 
@@ -78,8 +76,8 @@ Para habilitar los complementos, agregaría código como este a su configuració
 
 ```jsx
 plugins = [
-  '@babel/plugin-proposal-class-properties',
-  ['@babel/plugin-proposal-decorators', {decoratorsBeforeExport: true}],
+  "@babel/plugin-proposal-class-properties",
+  ["@babel/plugin-proposal-decorators", { decoratorsBeforeExport: true }],
 ];
 ```
 
@@ -96,8 +94,9 @@ Litelement proporciona los siguientes decoradores:
 Todos los decoradores se pueden importar directamente desde el módulo de lit-element.
 
 ```jsx
-import {eventOptions} from 'lit-element';
+import { eventOptions } from "lit-element";
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

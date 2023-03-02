@@ -12,13 +12,12 @@ LitElement administra sus propiedades declaradas y sus atributos correspondiente
 - Aplicar las opciones de propiedad y los accesores declarados por una superclase.
 
 > ⚠️ Recuerde declarar todas las propiedades que desea que administre LitElement. Para que se apliquen las características de la propiedad anteriores, debe declarar la propiedad.
-> 
 
 ## Declaracion de propiedades
 
 Declara las propiedades de tu elemento usando un campo de `properties` estáticas o usando decoradores:
 
-*Properties field*
+_Properties field_
 
 ```jsx
 static get properties() {
@@ -28,7 +27,7 @@ static get properties() {
 }
 ```
 
-*Decorator (requires TypeScript or Babel)*
+_Decorator (requires TypeScript or Babel)_
 
 ```jsx
 export class MyElement extends LitElement {
@@ -69,7 +68,6 @@ Una sugerencia de tipo para convertir entre propiedades y atributos. Esta sugere
 Un objeto de opciones vacío es equivalente a especificar el valor predeterminado para todas las opciones.
 
 > ℹ️ Un objeto de opciones con otro nombre. Esta guía utiliza el término descriptivo "objeto de opciones". En la práctica, el objeto de opciones es una instancia de `PropertyDeclaration`, por lo que verá ese nombre si está utilizando un IDE o consultando la referencia de la API. Por cualquier nombre, es un objeto que define un conjunto de opciones.
-> 
 
 ### Declarar propiedades en un campo de propiedades estáticas
 
@@ -88,26 +86,25 @@ static get properties() {
 Un objeto de opción vacío equivale a especificar el valor predeterminado para todas las opciones.
 
 > ℹ️ Las propiedades declaradas se inicializan como campos de clase estándar, ya sea en el constructor o con un inicializador de campo si usa decoradores.
-> 
 
 ### **Example: Declare properties with a static `properties` field**
 
 ```jsx
-import {LitElement, html} from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
     return {
-      greeting: {type: String},
-      data: {attribute: false},
-      items: {type: Array},
+      greeting: { type: String },
+      data: { attribute: false },
+      items: { type: Array },
     };
   }
 
   constructor() {
     super();
-    this.greeting = 'Hello';
-    this.data = {name: 'Cora'};
+    this.greeting = "Hello";
+    this.data = { name: "Cora" };
     this.items = [1, 2, 3];
   }
 
@@ -119,7 +116,7 @@ class MyElement extends LitElement {
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## Declarar propiedades con decoradoras.
@@ -137,7 +134,6 @@ data = {};
 El argumento del decorador `@property` es un objeto de opciones. Omitir el argumento equivale a especificar el valor predeterminado para todas las opciones.
 
 > ℹ️ Uso de decoradores. Los decoradores son una característica de JavaScript propuesta, por lo que deberá usar un transpilador como Babel o el compilador TypeScript para usar decoradores. Consulte Uso de decoradores para obtener más detalles.
-> 
 
 También hay un decorador `@internalProperty` para propiedades privadas o protegidas que debería desencadenar un ciclo de actualización. No se debe hacer referencia a las propiedades declaradas con `@internalProperty` desde fuera del componente.
 
@@ -153,17 +149,17 @@ El decorador `@internalProperty` puede servir como una pista para un minificador
 ### Ejemplo: declarar propiedades con decoradores
 
 ```jsx
-import {LitElement, html, customElement, property} from 'lit-element';
+import { LitElement, html, customElement, property } from "lit-element";
 
-@customElement('my-element')
+@customElement("my-element")
 export class MyElement extends LitElement {
   @property()
-  greeting = 'Hello';
+  greeting = "Hello";
 
-  @property({attribute: false})
-  data = {name: 'Cora'};
+  @property({ attribute: false })
+  data = { name: "Cora" };
 
-  @property({type: Array})
+  @property({ type: Array })
   items = [1, 2, 3];
 
   render() {
@@ -213,7 +209,6 @@ constructor() {
 ```
 
 > ⚠️ Recuerde llamar a `super()` primero en su constructor, o su elemento no se representará en absoluto.
-> 
 
 Ejemplo: inicializar valores de propiedad en el constructor de elementos
 
@@ -257,53 +252,55 @@ La siguiente información muestra cómo el convertidor predeterminado maneja la 
 - Para `**String**`, cuando se define el atributo, establezca la propiedad en el valor del atributo.
 - Para `**Numbers**`, cuando se define el atributo, establezca la propiedad en `Number(attributeValue)`.
 - Para `**Booleans**`, cuando el atributo es:
-    - non- `null`, establezca la propiedad en `true`.
-    - `null` o `undefined`, establezca la propiedad en `false`.
+  - non- `null`, establezca la propiedad en `true`.
+  - `null` o `undefined`, establezca la propiedad en `false`.
 - Para `**Object**` y `**Arrays**`, cuando el atributo es:
-    - Definido, establezca el valor de la propiedad en `JSON.parse(attributeValue)`.
+  - Definido, establezca el valor de la propiedad en `JSON.parse(attributeValue)`.
 
 ### Convertir de propiedad a atributo
 
 - Para `**String**`, cuando la propiedad es:
-    - `null`, elimine el atributo.
-    - `undefined`, no cambie el atributo.
-    - Definido y no `null`, establezca el atributo en el valor de la propiedad.
+  - `null`, elimine el atributo.
+  - `undefined`, no cambie el atributo.
+  - Definido y no `null`, establezca el atributo en el valor de la propiedad.
 - Para `**Numbers**`, cuando la propiedad es:
-    - `null`, elimine el atributo.
-    - `undefined`, no cambie el atributo.
-    - Definido y no null, establezca el atributo en el valor de la propiedad.
+  - `null`, elimine el atributo.
+  - `undefined`, no cambie el atributo.
+  - Definido y no null, establezca el atributo en el valor de la propiedad.
 - Para `**Booleans**`, cuando la propiedad es:
-    - `truthy`, crea el atributo.
-    - `falsy`, elimine el atributo.
+  - `truthy`, crea el atributo.
+  - `falsy`, elimine el atributo.
 - Para `**Object**` y `**Arrays**`, cuando la propiedad es:
-    - `null` o `undefined`, elimine el atributo.
-    - Definido y no `null`, establezca el valor del atributo en `JSON.stringify(propertyValue)`.
+  - `null` o `undefined`, elimine el atributo.
+  - Definido y no `null`, establezca el valor del atributo en `JSON.stringify(propertyValue)`.
 
 ### Ejemplo: usar el convertidor predeterminado
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
-  static get properties() { return {
-    prop1: { type: String, reflect: true },
-    prop2: { type: Number, reflect: true },
-    prop3: { type: Boolean, reflect: true },
-    prop4: { type: Array, reflect: true },
-    prop5: { type: Object, reflect: true }
-  };}
+  static get properties() {
+    return {
+      prop1: { type: String, reflect: true },
+      prop2: { type: Number, reflect: true },
+      prop3: { type: Boolean, reflect: true },
+      prop4: { type: Array, reflect: true },
+      prop5: { type: Object, reflect: true },
+    };
+  }
 
   constructor() {
     super();
-    this.prop1 = '';
+    this.prop1 = "";
     this.prop2 = 0;
     this.prop3 = false;
     this.prop4 = [];
-    this.prop5 = { };
+    this.prop5 = {};
   }
 
   attributeChangedCallback(name, oldVal, newVal) {
-    console.log('attribute change: ', name, newVal);
+    console.log("attribute change: ", name, newVal);
     super.attributeChangedCallback(name, oldVal, newVal);
   }
 
@@ -313,13 +310,16 @@ class MyElement extends LitElement {
       <p>prop2 ${this.prop2}</p>
       <p>prop3 ${this.prop3}</p>
 
-      <p>prop4: ${this.prop4.map((item, index) =>
-        html`<span>[${index}]:${item}&nbsp;</span>`)}
+      <p>
+        prop4: ${this.prop4.map(
+          (item, index) => html`<span>[${index}]:${item}&nbsp;</span>`
+        )}
       </p>
 
-      <p>prop5:
-        ${Object.keys(this.prop5).map(item =>
-          html`<span>${item}: ${this.prop5[item]}&nbsp;</span>`)}
+      <p>
+        prop5: ${Object.keys(this.prop5).map(
+          (item) => html`<span>${item}: ${this.prop5[item]}&nbsp;</span>`
+        )}
       </p>
 
       <button @click="${this.changeProperties}">change properties</button>
@@ -328,27 +328,29 @@ class MyElement extends LitElement {
   }
 
   changeAttributes() {
-    let randy = Math.floor(Math.random()*10);
-    let myBool = this.getAttribute('prop3');
+    let randy = Math.floor(Math.random() * 10);
+    let myBool = this.getAttribute("prop3");
 
-    this.setAttribute('prop1', randy.toString());
-    this.setAttribute('prop2', randy.toString());
-    this.setAttribute('prop3', myBool? '' : null);
-    this.setAttribute('prop4', JSON.stringify([...this.prop4, randy]));
-    this.setAttribute('prop5',
-      JSON.stringify(Object.assign({}, this.prop5, {[randy]: randy})));
+    this.setAttribute("prop1", randy.toString());
+    this.setAttribute("prop2", randy.toString());
+    this.setAttribute("prop3", myBool ? "" : null);
+    this.setAttribute("prop4", JSON.stringify([...this.prop4, randy]));
+    this.setAttribute(
+      "prop5",
+      JSON.stringify(Object.assign({}, this.prop5, { [randy]: randy }))
+    );
     this.requestUpdate();
   }
 
   changeProperties() {
-    let randy = Math.floor(Math.random()*10);
+    let randy = Math.floor(Math.random() * 10);
     let myBool = this.prop3;
 
     this.prop1 = randy.toString();
     this.prop2 = randy;
     this.prop3 = !myBool;
     this.prop4 = [...this.prop4, randy];
-    this.prop5 = Object.assign({}, this.prop5, {[randy]: randy});
+    this.prop5 = Object.assign({}, this.prop5, { [randy]: randy });
   }
 
   updated(changedProperties) {
@@ -356,10 +358,9 @@ class MyElement extends LitElement {
       console.log(`${propName} changed. oldValue: ${oldValue}`);
     });
   }
-
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### Configurar un convertidor personalizado
@@ -396,7 +397,7 @@ myProp: {
   converter: (value, type) => {
     // `value` is a string
     // Convert it to a value of type `type` and return it
-  }
+  };
 }
 ```
 
@@ -410,47 +411,50 @@ Durante una actualización:
 ### Ejemplo: configurar un convertidor personalizado
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
-  static get properties() { return {
-    myProp: {
-      reflect: true,
-      converter: {
-        toAttribute(value) {
-          console.log('myProp\'s toAttribute.');
-          console.log('Processing:', value, typeof(value));
-          let retVal = String(value);
-          console.log('Returning:', retVal, typeof(retVal));
+  static get properties() {
+    return {
+      myProp: {
+        reflect: true,
+        converter: {
+          toAttribute(value) {
+            console.log("myProp's toAttribute.");
+            console.log("Processing:", value, typeof value);
+            let retVal = String(value);
+            console.log("Returning:", retVal, typeof retVal);
+            return retVal;
+          },
+
+          fromAttribute(value) {
+            console.log("myProp's fromAttribute.");
+            console.log("Processing:", value, typeof value);
+            let retVal = Number(value);
+            console.log("Returning:", retVal, typeof retVal);
+            return retVal;
+          },
+        },
+      },
+
+      theProp: {
+        reflect: true,
+        converter(value) {
+          console.log("theProp's converter.");
+          console.log("Processing:", value, typeof value);
+
+          let retVal = Number(value);
+          console.log("Returning:", retVal, typeof retVal);
           return retVal;
         },
-
-        fromAttribute(value) {
-          console.log('myProp\'s fromAttribute.');
-          console.log('Processing:', value, typeof(value));
-          let retVal = Number(value);
-          console.log('Returning:', retVal, typeof(retVal));
-          return retVal;
-        }
-      }
-    },
-
-    theProp: {
-      reflect: true,
-      converter(value) {
-        console.log('theProp\'s converter.');
-        console.log('Processing:', value, typeof(value));
-
-        let retVal = Number(value);
-        console.log('Returning:', retVal, typeof(retVal));
-        return retVal;
-      }},
-  };}
+      },
+    };
+  }
 
   constructor() {
     super();
-    this.myProp = 'myProp';
-    this.theProp = 'theProp';
+    this.myProp = "myProp";
+    this.theProp = "theProp";
   }
 
   attributeChangedCallback(name, oldval, newval) {
@@ -469,19 +473,19 @@ class MyElement extends LitElement {
   }
 
   changeAttributes() {
-    let randomString = Math.floor(Math.random()*100).toString();
-    this.setAttribute('myprop', 'myprop ' + randomString);
-    this.setAttribute('theprop', 'theprop ' + randomString);
+    let randomString = Math.floor(Math.random() * 100).toString();
+    this.setAttribute("myprop", "myprop " + randomString);
+    this.setAttribute("theprop", "theprop " + randomString);
     this.requestUpdate();
   }
 
   changeProperties() {
-    let randomString = Math.floor(Math.random()*100).toString();
-    this.myProp='myProp ' + randomString;
-    this.theProp='theProp ' + randomString;
+    let randomString = Math.floor(Math.random() * 100).toString();
+    this.myProp = "myProp " + randomString;
+    this.theProp = "theProp " + randomString;
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### Configurar atributos observados
@@ -492,21 +496,27 @@ De forma predeterminada, LitElement crea un atributo observado correspondiente p
 
 ```jsx
 // observed attribute name is "myprop"
-myProp: { type: Number }
+myProp: {
+  type: Number;
+}
 ```
 
 Para crear un atributo observado con un nombre diferente, establezca el `attribute` en una cadena:
 
 ```jsx
 // Observed attribute will be called my-prop
-myProp: { attribute: 'my-prop' }
+myProp: {
+  attribute: "my-prop";
+}
 ```
 
 Para evitar que se cree un atributo observado para una propiedad, establezca el `attribute` en `false`. La propiedad no se inicializará a partir de atributos en el marcado y los cambios de atributos no la afectarán.
 
 ```jsx
 // No observed attribute for this property
-myProp: { attribute: false }
+myProp: {
+  attribute: false;
+}
 ```
 
 Un atributo observado se puede usar para proporcionar un valor inicial para una propiedad a través del marcado. Consulte Inicializar propiedades con atributos en marcado.
@@ -514,24 +524,26 @@ Un atributo observado se puede usar para proporcionar un valor inicial para una 
 ### Ejemplo: Configurar atributos observados
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
-  static get properties() { return {
-    myProp: { attribute: true },
-    theProp: { attribute: false },
-    otherProp: { attribute: 'other-prop' },
-  };}
+  static get properties() {
+    return {
+      myProp: { attribute: true },
+      theProp: { attribute: false },
+      otherProp: { attribute: "other-prop" },
+    };
+  }
 
   constructor() {
     super();
-    this.myProp = 'myProp';
-    this.theProp = 'theProp';
-    this.otherProp = 'otherProp';
+    this.myProp = "myProp";
+    this.theProp = "theProp";
+    this.otherProp = "otherProp";
   }
 
   attributeChangedCallback(name, oldval, newval) {
-    console.log('attribute change: ', name, newval);
+    console.log("attribute change: ", name, newval);
     super.attributeChangedCallback(name, oldval, newval);
   }
 
@@ -546,10 +558,10 @@ class MyElement extends LitElement {
   }
 
   changeAttributes() {
-    let randomString = Math.floor(Math.random()*100).toString();
-    this.setAttribute('myprop', 'myprop ' + randomString);
-    this.setAttribute('theprop', 'theprop ' + randomString);
-    this.setAttribute('other-prop', 'other-prop ' + randomString);
+    let randomString = Math.floor(Math.random() * 100).toString();
+    this.setAttribute("myprop", "myprop " + randomString);
+    this.setAttribute("theprop", "theprop " + randomString);
+    this.setAttribute("other-prop", "other-prop " + randomString);
     this.requestUpdate();
   }
 
@@ -559,7 +571,7 @@ class MyElement extends LitElement {
     });
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### Configurar atributos reflejados
@@ -568,7 +580,9 @@ Puede configurar una propiedad para que cada vez que cambie, su valor se refleje
 
 ```jsx
 // Value of property "myProp" will reflect to attribute "myprop"
-myProp: {reflect: true}
+myProp: {
+  reflect: true;
+}
 ```
 
 Cuando la propiedad cambia, LitElement usa la función `toAttribute` en el convertidor de la propiedad para establecer el valor del atributo a partir del nuevo valor de la propiedad.
@@ -582,20 +596,22 @@ LitElement rastrea el estado de reflexión durante las actualizaciones. LitEleme
 ### Ejemplo: Configurar atributos reflejados
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
-  static get properties() { return {
-    myProp: { reflect: true }
-  };}
+  static get properties() {
+    return {
+      myProp: { reflect: true },
+    };
+  }
 
   constructor() {
     super();
-    this.myProp='myProp';
+    this.myProp = "myProp";
   }
 
   attributeChangedCallback(name, oldval, newval) {
-    console.log('attribute change: ', newval);
+    console.log("attribute change: ", newval);
     super.attributeChangedCallback(name, oldval, newval);
   }
 
@@ -608,19 +624,18 @@ class MyElement extends LitElement {
   }
 
   changeProperty() {
-    let randomString = Math.floor(Math.random()*100).toString();
-    this.myProp='myProp ' + randomString;
+    let randomString = Math.floor(Math.random() * 100).toString();
+    this.myProp = "myProp " + randomString;
   }
-
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### Establecer valores de propiedad a partir de atributos en el marcado
 
 Si una propiedad está configurada con `attribute: true` (el valor predeterminado), los usuarios pueden establecer los valores de propiedad a partir de los atributos observados en el marcado estático:
 
-*index.html*
+_index.html_
 
 ```jsx
 <my-element
@@ -628,13 +643,13 @@ Si una propiedad está configurada con `attribute: true` (el valor predeterminad
   mynumber="5"
   mybool
   myobj='{"stuff":"hi"}'
-  myarray='[1,2,3,4]'></my-element>
+  myarray="[1,2,3,4]"
+></my-element>
 ```
 
 Consulte los atributos observados y la conversión entre propiedades y atributos para obtener más información sobre cómo configurar la inicialización a partir de atributos.
 
 > ℹ️ Atributos versus enlaces de propiedad. Establecer un valor de atributo estático no es lo mismo que vincularlo a una propiedad. Consulte Vincular a una propiedad.
-> 
 
 ## Configurar accesores de propiedad
 
@@ -679,7 +694,7 @@ Los configuradores que genera LitElement llaman automáticamente a `requestUpdat
 Un patrón común para los descriptores de acceso es almacenar el valor de la propiedad mediante una propiedad privada a la que solo se accede dentro del componente. Este ejemplo usa un prefijo de guión bajo (`_prop`) para identificar la propiedad `private`; también podría usar las palabras clave `private` o `protected` de TypeScript.
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
@@ -689,10 +704,12 @@ class MyElement extends LitElement {
   set prop(val) {
     let oldVal = this._prop;
     this._prop = Math.floor(val);
-    this.requestUpdate('prop', oldVal);
+    this.requestUpdate("prop", oldVal);
   }
 
-  get prop() { return this._prop; }
+  get prop() {
+    return this._prop;
+  }
 
   constructor() {
     super();
@@ -702,13 +719,17 @@ class MyElement extends LitElement {
   render() {
     return html`
       <p>prop: ${this.prop}</p>
-      <button @click="${() =>  { this.prop = Math.random()*10; }}">
+      <button
+        @click="${() => {
+          this.prop = Math.random() * 10;
+        }}"
+      >
         change prop
       </button>
     `;
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 Si desea utilizar su propio acceso a la propiedad con el decorador `@property`, puede lograrlo colocando el decorador en el captador:
@@ -744,7 +765,7 @@ No necesita configurar `noAccessor` al definir sus propios accesores.
 ### Ejemplo Elemento de subclase
 
 ```jsx
-import { SuperElement } from './super-element.js';
+import { SuperElement } from "./super-element.js";
 
 class SubElement extends SuperElement {
   static get properties() {
@@ -752,7 +773,7 @@ class SubElement extends SuperElement {
   }
 }
 
-customElements.define('sub-element', SubElement);
+customElements.define("sub-element", SubElement);
 ```
 
 ## Configurar cambios de propiedad
@@ -776,61 +797,61 @@ myProp: { hasChanged(newVal, oldVal) {
 ```
 
 > ℹ️ no se puede llamar a `hasChanged` para cada cambio. Si `hasChanged` de una propiedad devuelve verdadero una vez, no se volverá a llamar hasta después de la próxima actualización, incluso si la propiedad se cambia varias veces. Si desea recibir una notificación cada vez que se establece una propiedad, debe crear un definidor personalizado para la propiedad, como se describe en Crear sus propios accesores de propiedad.
-> 
 
 ### Ejemplo: Configurar cambios de propiedad
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
-  static get properties(){ return {
-    myProp: {
-      type: Number,
+  static get properties() {
+    return {
+      myProp: {
+        type: Number,
 
-      /**
-       * Compare myProp's new value with its old value.
-       *
-       * Only consider myProp to have changed if newVal is larger than
-       * oldVal.
-       */
-      hasChanged(newVal, oldVal) {
-        if (newVal > oldVal) {
-          console.log(`${newVal} > ${oldVal}. hasChanged: true.`);
-          return true;
-        }
-        else {
-          console.log(`${newVal} <= ${oldVal}. hasChanged: false.`);
-          return false;
-        }
-      }
-    }};
+        /**
+         * Compare myProp's new value with its old value.
+         *
+         * Only consider myProp to have changed if newVal is larger than
+         * oldVal.
+         */
+        hasChanged(newVal, oldVal) {
+          if (newVal > oldVal) {
+            console.log(`${newVal} > ${oldVal}. hasChanged: true.`);
+            return true;
+          } else {
+            console.log(`${newVal} <= ${oldVal}. hasChanged: false.`);
+            return false;
+          }
+        },
+      },
+    };
   }
 
-  constructor(){
+  constructor() {
     super();
     this.myProp = 1;
   }
 
-  render(){
+  render() {
     return html`
       <p>${this.myProp}</p>
       <button @click="${this.getNewVal}">get new value</button>
     `;
   }
 
-  updated(){
-    console.log('updated');
+  updated() {
+    console.log("updated");
   }
 
-  getNewVal(){
-    let newVal = Math.floor(Math.random()*10);
+  getNewVal() {
+    let newVal = Math.floor(Math.random() * 10);
     this.myProp = newVal;
   }
-
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

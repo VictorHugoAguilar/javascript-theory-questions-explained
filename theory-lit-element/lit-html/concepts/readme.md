@@ -9,7 +9,7 @@
 Un literal de plantilla de JavaScript es un literal de cadena que puede tener expresiones de JavaScript incrustadas:
 
 ```jsx
-`My name is ${name}.`
+`My name is ${name}.`;
 ```
 
 El literal usa acentos graves en lugar de comillas y puede abarcar varias líneas. La parte dentro de `${}` puede ser cualquier expresión de JavaScript.
@@ -17,8 +17,8 @@ El literal usa acentos graves en lugar de comillas y puede abarcar varias línea
 Un literal de plantilla etiquetada tiene como prefijo una función de etiqueta de plantilla especial:
 
 ```jsx
-let name = 'Monica';
-tag`My name is ${name}.`
+let name = "Monica";
+tag`My name is ${name}.`;
 ```
 
 Las etiquetas `tags` son funciones que toman las cadenas literales de la plantilla y los valores de las expresiones incrustadas y devuelven un nuevo valor. Puede ser cualquier tipo de valor, no solo cadenas. `lit-html` devuelve un objeto que representa la plantilla, llamado TemplateResult.
@@ -60,7 +60,7 @@ Luego, `lit-html` recorre el DOM de la plantilla y extrae los marcadores de posi
 `lit-html` mantiene una tabla auxiliar de dónde estaban las expresiones:
 
 ```jsx
-[{type: 'node', index: 1}]
+[{ type: "node", index: 1 }];
 ```
 
 # Template rendering
@@ -95,13 +95,14 @@ Actualmente, el navegador solo acepta módulos especificados mediante una ruta c
 
 ```jsx
 // Node-style module import:
-import {html, render} from 'lit-html';
+import { html, render } from "lit-html";
 ```
 
 ```jsx
 // Browser-ready module import
-import {html, render} from '../node_modules/lit-html/lit-html.js';
+import { html, render } from "../node_modules/lit-html/lit-html.js";
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

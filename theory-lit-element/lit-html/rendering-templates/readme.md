@@ -2,17 +2,17 @@
 
 # Introducción
 
-Una expresión del template `lit-html` no hace que se cree o actualice ningún DOM. Es solo una descripción de DOM, llamada `TemplateResult`. 
+Una expresión del template `lit-html` no hace que se cree o actualice ningún DOM. Es solo una descripción de DOM, llamada `TemplateResult`.
 En realidad para crear o actualizar DOM, debe pasar `TemplateResult` a la función `render(),` junto con un contenedor para renderizar:
 
 ```jsx
-import {html, render} from 'lit-html';
+import { html, render } from "lit-html";
 
 const sayHi = (name) => html`<h1>Hello ${name}</h1>`;
-render(sayHi('Amy'), document.body);
+render(sayHi("Amy"), document.body);
 
 // subsequent renders will update the DOM
-render(sayHi('Zoe'), document.body);
+render(sayHi("Zoe"), document.body);
 ```
 
 # Opciones de render
@@ -30,7 +30,7 @@ class MyComponent extends HTMLElement {
 
   _update() {
     // Bind event listeners to the current instance of MyComponent
-    render(this._template(), this._renderRoot, {eventContext: this});
+    render(this._template(), this._renderRoot, { eventContext: this });
   }
 }
 ```
@@ -38,4 +38,5 @@ class MyComponent extends HTMLElement {
 Las opciones de renderizado no deberían cambiar entre llamadas del `render` subsiguientes.
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

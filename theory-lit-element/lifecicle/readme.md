@@ -7,8 +7,8 @@ En un nivel alto, el ciclo de vida de la actualización es:
 1. Se establece una propiedad.
 2. Compruebe si se necesita una actualización. Si se necesita una actualización, solicítela.
 3. Realice la actualización:
-    - Propiedades y atributos del proceso.
-    - Renderiza el elemento.
+   - Propiedades y atributos del proceso.
+   - Renderiza el elemento.
 4. Resolver una Promesa, indicando que la actualización está completa.
 
 ## LitElement y el bucle de eventos del navegador
@@ -31,7 +31,6 @@ LitElement también hereda las devoluciones de llamada del ciclo de vida predete
 - `atributeChangedCallback`: se invoca cuando cambia el atributo del componente.
 
 > ℹ️ Tenga en cuenta que adoptCallback no está polillenado.
-> 
 
 ## Todos los métodos de ciclo de vida deben llamar al supermétodo.
 
@@ -67,7 +66,7 @@ async myFunc(data) {
 Debido a que las funciones `async` devuelven una Promesa, también puede esperarlas:
 
 ```jsx
-let result = await myFunc('stuff');
+let result = await myFunc("stuff");
 // `result` is resolved! You can do something with it
 ```
 
@@ -111,10 +110,10 @@ this.requestUpdate();
 this.requestUpdate(propertyName, oldValue);
 ```
 
-| Params | propertyNameoldValue | Nombre de la propiedad a actualizar. Valor de la propiedad anterior. |
-| --- | --- | --- |
-| Returns | Promise | Devuelve updateComplete Promise, que se resuelve al finalizar la actualización. |
-| Updates? | No | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
+| Params   | propertyNameoldValue | Nombre de la propiedad a actualizar. Valor de la propiedad anterior.                        |
+| -------- | -------------------- | ------------------------------------------------------------------------------------------- |
+| Returns  | Promise              | Devuelve updateComplete Promise, que se resuelve al finalizar la actualización.             |
+| Updates? | No                   | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
 
 Si `hasChanged` devolvió verdadero, se activa `requestUpdate` y continúa la actualización.
 
@@ -125,14 +124,14 @@ Para implementar un establecedor de propiedades personalizadas que admita opcion
 ### **Example: Manually start an element update**
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   constructor() {
     super();
 
     // Request an update in response to an event
-    this.addEventListener('load-complete', async (e) => {
+    this.addEventListener("load-complete", async (e) => {
       console.log(e.detail.message);
       console.log(await this.requestUpdate());
     });
@@ -143,19 +142,19 @@ class MyElement extends LitElement {
     `;
   }
   fire() {
-    let newMessage = new CustomEvent('load-complete', {
-      detail: { message: 'hello. a load-complete happened.' }
+    let newMessage = new CustomEvent("load-complete", {
+      detail: { message: "hello. a load-complete happened." },
     });
     this.dispatchEvent(newMessage);
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ### **Example: Call `requestUpdate` from a custom property setter**
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
@@ -165,10 +164,12 @@ class MyElement extends LitElement {
   set prop(val) {
     let oldVal = this._prop;
     this._prop = Math.floor(val);
-    this.requestUpdate('prop', oldVal);
+    this.requestUpdate("prop", oldVal);
   }
 
-  get prop() { return this._prop; }
+  get prop() {
+    return this._prop;
+  }
 
   constructor() {
     super();
@@ -178,13 +179,17 @@ class MyElement extends LitElement {
   render() {
     return html`
       <p>prop: ${this.prop}</p>
-      <button @click="${() =>  { this.prop = Math.random()*10; }}">
+      <button
+        @click="${() => {
+          this.prop = Math.random() * 10;
+        }}"
+      >
         change prop
       </button>
     `;
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## performUpdate
@@ -196,9 +201,9 @@ customElements.define('my-element', MyElement);
 performUpdate() { ... }
 ```
 
-| Returns | void or Promise | Realiza una actualización. |
-| --- | --- | --- |
-| Updates? | No | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
+| Returns  | void or Promise | Realiza una actualización.                                                                  |
+| -------- | --------------- | ------------------------------------------------------------------------------------------- |
+| Updates? | No              | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
 
 Cuando se realiza una actualización, se llama al método `performUpdate()`. Este método llama a una serie de otros métodos de ciclo de vida.
 
@@ -222,23 +227,23 @@ async performUpdate() {
 shouldUpdate(changedProperties) { ... }
 ```
 
-| Params | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
-| --- | --- | --- |
-| Returns | Boolean | If true, update proceeds. Default return value is true. |
-| Updates? | No | Los cambios de propiedad dentro de este método no activarán una actualización de elemento. |
+| Params   | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Returns  | Boolean           | If true, update proceeds. Default return value is true.                                                                  |
+| Updates? | No                | Los cambios de propiedad dentro de este método no activarán una actualización de elemento.                               |
 
 Controla si una actualización debe continuar. Implemente `shouldUpdate` para especificar qué cambios de propiedad deben generar actualizaciones. De forma predeterminada, este método siempre devuelve `true`.
 
 ### **Example: Customize which property changes should cause updates**
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
     return {
       prop1: { type: Number },
-      prop2: { type: Number }
+      prop2: { type: Number },
     };
   }
   constructor() {
@@ -251,8 +256,12 @@ class MyElement extends LitElement {
     return html`
       <p>prop1: ${this.prop1}</p>
       <p>prop2: ${this.prop2}</p>
-      <button @click="${() => this.prop1=this.change()}">Change prop1</button>
-      <button @click="${() => this.prop2=this.change()}">Change prop2</button>
+      <button @click="${() => (this.prop1 = this.change())}">
+        Change prop1
+      </button>
+      <button @click="${() => (this.prop2 = this.change())}">
+        Change prop2
+      </button>
     `;
   }
 
@@ -263,21 +272,21 @@ class MyElement extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       console.log(`${propName} changed. oldValue: ${oldValue}`);
     });
-    return changedProperties.has('prop1');
+    return changedProperties.has("prop1");
   }
 
   change() {
-    return Math.floor(Math.random()*10);
+    return Math.floor(Math.random() * 10);
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## update
 
-| Params | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
-| --- | --- | --- |
-| Updates? | No | Los cambios de propiedad dentro de este método no desencadenan una actualización de elementos. |
+| Params   | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Updates? | No                | Los cambios de propiedad dentro de este método no desencadenan una actualización de elementos.                           |
 
 Refleja los valores de propiedad de los atributos y llama a `render` para renderizar DOM a través de lit-html. Proporcionado aquí como referencia. No es necesario anular o llamar a este método. Pero si lo anula, asegúrese de llamar a `super.update(changedProperties)` o nunca se llamará a render.
 
@@ -290,9 +299,9 @@ Refleja los valores de propiedad de los atributos y llama a `render` para render
 render() { ... }
 ```
 
-| Returns | TemplateResult | Debe devolver un lit-html TemplateResult. |
-| --- | --- | --- |
-| Updates? | No | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
+| Returns  | TemplateResult | Debe devolver un lit-html TemplateResult.                                                   |
+| -------- | -------------- | ------------------------------------------------------------------------------------------- |
+| Updates? | No             | Los cambios de propiedad dentro de este método no activarán una actualización del elemento. |
 
 Los cambios de propiedad dentro de este método no activarán una actualización del elemento.
 
@@ -305,28 +314,28 @@ Los cambios de propiedad dentro de este método no activarán una actualización
 firstUpdated(changedProperties) { ... }
 ```
 
-| Params | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
-| --- | --- | --- |
-| Updates? | Yes | Los cambios de propiedad dentro de este método desencadenarán una actualización del elemento. |
+| Params   | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Updates? | Yes               | Los cambios de propiedad dentro de este método desencadenarán una actualización del elemento.                            |
 
 Los cambios de propiedad dentro de este método desencadenarán una actualización del elemento.
 
 ### **Example: Focus an input element on first update**
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
     return {
       textAreaId: { type: String },
-      startingText: { type: String }
+      startingText: { type: String },
     };
   }
   constructor() {
     super();
-    this.textAreaId = 'myText';
-    this.startingText = 'Focus me on first update';
+    this.textAreaId = "myText";
+    this.startingText = "Focus me on first update";
   }
   render() {
     return html`
@@ -341,7 +350,7 @@ class MyElement extends LitElement {
     textArea.focus();
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## updated
@@ -353,22 +362,22 @@ customElements.define('my-element', MyElement);
 updated(changedProperties) { ... }
 ```
 
-| Params | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
-| --- | --- | --- |
-| Updates? | Yes | Los cambios de propiedad dentro de este método desencadenarán una actualización del elemento. |
+| Params   | changedProperties | Map. Las claves son los nombres de las propiedades modificadas; Los valores son los valores anteriores correspondientes. |
+| -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Updates? | Yes               | Los cambios de propiedad dentro de este método desencadenarán una actualización del elemento.                            |
 
 Llamado cuando el DOM del elemento ha sido actualizado y renderizado. Implementar para realizar alguna tarea después de una actualización.
 
 ### **Example: Focus an element after update**
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
     return {
       prop1: { type: Number },
-      prop2: { type: Number }
+      prop2: { type: Number },
     };
   }
   constructor() {
@@ -378,24 +387,32 @@ class MyElement extends LitElement {
   }
   render() {
     return html`
-      <style>button:focus { background-color: aliceblue; }</style>
+      <style>
+        button:focus {
+          background-color: aliceblue;
+        }
+      </style>
 
       <p>prop1: ${this.prop1}</p>
       <p>prop2: ${this.prop2}</p>
 
-      <button id="a" @click="${() => this.prop1=Math.random()}">prop1</button>
-      <button id="b" @click="${() => this.prop2=Math.random()}">prop2</button>
+      <button id="a" @click="${() => (this.prop1 = Math.random())}">
+        prop1
+      </button>
+      <button id="b" @click="${() => (this.prop2 = Math.random())}">
+        prop2
+      </button>
     `;
   }
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
       console.log(`${propName} changed. oldValue: ${oldValue}`);
     });
-    let b = this.shadowRoot.getElementById('b');
+    let b = this.shadowRoot.getElementById("b");
     b.focus();
   }
 }
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## updateComplete
@@ -405,9 +422,9 @@ customElements.define('my-element', MyElement);
 await this.updateComplete;
 ```
 
-| Type | Promise | Resuelve con un Boolean cuando el elemento se ha terminado de actualizar. |
-| --- | --- | --- |
-| Resolves | true si no hay mas actualizaciones pendientes.false si este ciclo de actualización desencadenó otra actualización. |  |
+| Type     | Promise                                                                                                            | Resuelve con un Boolean cuando el elemento se ha terminado de actualizar. |
+| -------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Resolves | true si no hay mas actualizaciones pendientes.false si este ciclo de actualización desencadenó otra actualización. |                                                                           |
 
 La promesa `updateComplete` se resuelve cuando el elemento ha terminado de actualizarse. Use `updateComplete` para esperar una actualización:
 
@@ -417,18 +434,20 @@ await this.updateComplete;
 ```
 
 ```jsx
-this.updateComplete.then(() => { /* do stuff */ });
+this.updateComplete.then(() => {
+  /* do stuff */
+});
 ```
 
 ### Ejemplo
 
 ```jsx
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from "lit-element";
 
 class MyElement extends LitElement {
   static get properties() {
     return {
-      prop1: { type: Number }
+      prop1: { type: Number },
     };
   }
 
@@ -451,16 +470,16 @@ class MyElement extends LitElement {
   async changeProp() {
     this.prop1 = Math.random();
     await Promise.all([this.updateComplete, this.getMoreState()]);
-    console.log('Update complete. Other state completed.');
+    console.log("Update complete. Other state completed.");
   }
 }
 
-customElements.define('my-element', MyElement);
+customElements.define("my-element", MyElement);
 ```
 
 ## Anulando updateComplete
 
-Para esperar un estado adicional antes de cumplir la promesa updateComplete, invalide el método _getUpdateComplete. Por ejemplo, puede ser útil esperar aquí la actualización de un elemento secundario. Primero espere `super._getUpdateComplete()`, luego cualquier estado posterior.
+Para esperar un estado adicional antes de cumplir la promesa updateComplete, invalide el método \_getUpdateComplete. Por ejemplo, puede ser útil esperar aquí la actualización de un elemento secundario. Primero espere `super._getUpdateComplete()`, luego cualquier estado posterior.
 
 Se recomienda anular el método `_getUpdateComplete` en lugar del captador updateComplete para garantizar la compatibilidad con los usuarios que utilizan la salida ES5 de TypeScript (consulte TypeScript n.º 338).
 
@@ -506,10 +525,10 @@ Las mutaciones (cambios en las subpropiedades de los objetos y los elementos de 
 
 ```jsx
 // Option 1: Rewrite whole object, triggering an update
-this.prop1 = Object.assign({}, this.prop1, { subProp: 'data' });
+this.prop1 = Object.assign({}, this.prop1, { subProp: "data" });
 
 // Option 2: Mutate a subproperty, then call requestUpdate
-this.prop1.subProp = 'data';
+this.prop1.subProp = "data";
 this.requestUpdate();
 ```
 
@@ -519,10 +538,10 @@ Llamar `requestUpdate`
 
 ```jsx
 // Request an update in response to an event
-this.addEventListener('load-complete', async (e) => {
+this.addEventListener("load-complete", async (e) => {
   console.log(e.detail.message);
   console.log(await this.requestUpdate());
-})
+});
 ```
 
 ## Solicite una actualización independientemente de los cambios de propiedad
@@ -539,8 +558,8 @@ Llamar `requestUpdate(propName, oldValue)`:
 
 ```jsx
 let oldValue = this.prop1;
-this.prop1 = 'new value';
-this.requestUpdate('prop1', oldValue);
+this.prop1 = "new value";
+this.requestUpdate("prop1", oldValue);
 ```
 
 ## Hacer algo después de la primera actualización
@@ -593,4 +612,5 @@ updateComplete.then(() => {
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)

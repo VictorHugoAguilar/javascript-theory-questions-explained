@@ -20,13 +20,13 @@ Para ayudar con el estilo dinámico, `lit-html` proporciona dos directivas para 
 Al igual que `Stylemap`, la directiva `ClassMap` le permite establecer un grupo de clases basado en un objeto.
 
 ```jsx
-import {html} from 'lit-html';
-import {classMap} from 'lit-html/directives/class-map.js';
+import { html } from "lit-html";
+import { classMap } from "lit-html/directives/class-map.js";
 
 const itemTemplate = (item) => {
-  const classes = {selected: item.selected};
+  const classes = { selected: item.selected };
   return html`<div class="menu-item ${classMap(classes)}">Classy text</div>`;
-}
+};
 ```
 
 # Estilos en línea con styleMap
@@ -60,8 +60,12 @@ Al renderizar una raíz de sombra, generalmente desea agregar una hoja de estilo
 ```jsx
 html`
   <style>
-    :host { ... }
-    .test { ... }
+    :host {
+      ...;
+    }
+    .test {
+      ...;
+    }
   </style>
   <div class="test">...</div>
 `;
@@ -105,14 +109,15 @@ El ReadMe ShadyCSS proporciona algunas instrucciones para usar CSS sombreado. Al
 - No necesita llamar a `shadycss.preTemplate`. En su lugar, pase el nombre del alcance como una opción Render. Para elementos personalizados, use el nombre del elemento como nombre de alcance. Por ejemplo:
 
 ```jsx
-import {render, TemplateResult} from 'lit-html/lib/shady-render';
+import { render, TemplateResult } from "lit-html/lib/shady-render";
 
 class MyShadyBaseClass extends HTMLElement {
-
   // ...
 
   _update() {
-    render(this.myTemplate(), this.shadowRoot, { scopeName: this.tagName.toLowerCase() });
+    render(this.myTemplate(), this.shadowRoot, {
+      scopeName: this.tagName.toLowerCase(),
+    });
   }
 }
 ```
@@ -140,4 +145,5 @@ connectedCallback() {
 ```
 
 ---
+
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
