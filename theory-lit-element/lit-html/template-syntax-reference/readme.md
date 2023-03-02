@@ -575,7 +575,7 @@ until(...values)
 
 ### Location: any
 
-Muestra el contenido del marcador de posición hasta que el contenido final está disponible.
+Renders el contenido del placeholder hasta que el contenido final está disponible.
 
 Toma una serie de valores, incluyendo Promesas. Los valores se representan en orden de prioridad, con el primer argumento que tiene la prioridad más alta y el último argumento que tiene la prioridad más baja. Si un valor es una Promesa, se representará un valor de menor prioridad hasta que se resuelva.
 
