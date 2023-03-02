@@ -10,7 +10,7 @@ Lit-html le permite escribir plantillas HTML en JavaScript usando literales de p
 
 # lit-html Templates
 
-Las plantillas lithtml son literales de plantillas etiquetadas: se parecen a las cadenas JavaScript pero están encerradas en backticks `(`)`en lugar de citas, y etiquetados con la etiqueta`html` de Lit -HTML:
+Las plantillas lithtml son literales de plantillas etiquetadas: se parecen a las cadenas JavaScript pero están encerradas en backticks `(``)` en lugar de citas, y etiquetados con la etiqueta`html` de Lit -HTML:
 
 ```jsx
 html`<h1>Hello ${name}</h1>`;
