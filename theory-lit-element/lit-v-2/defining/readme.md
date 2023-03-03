@@ -34,7 +34,7 @@ La clase base `LitElement` es una subclase de `HTMLElement`, por lo que un compo
 
 Específicamente, `LitElement` hereda de `ReactiveElement`, que implementa propiedades reactivas y, a su vez, hereda de `HTMLElement`.
 
-![image_01]()
+![image](https://user-images.githubusercontent.com/37599330/222720526-2061953d-400f-4980-84be-4426e574d3ff.png)
 
 # Providing good TypeScript typings
 
