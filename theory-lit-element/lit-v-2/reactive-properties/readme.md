@@ -119,7 +119,7 @@ plugins = [
 
 El objeto de opciones puede tener las siguientes propiedades:
 
-`**atributo**`
+**`atributo`**
 
 Si la propiedad está asociada con un atributo o un nombre personalizado para el atributo asociado. Valor predeterminado: verdadero. Si el `attribute` es `false`, las opciones de `converter`, `reflex` y `type` se ignoran. Para obtener más información, consulte Establecer el nombre del atributo.
 
