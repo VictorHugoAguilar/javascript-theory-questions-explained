@@ -41,7 +41,6 @@ Indice
 - [Styles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/styles/readme.md)
 - [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/readme.md)
 - [Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/shadow-dom/readme.md)
-- [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/readme.md)
 - [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/events/readme.md)
 - [Decorators](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/decorators/readme.md)
 
