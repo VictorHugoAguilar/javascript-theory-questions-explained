@@ -123,27 +123,27 @@ El objeto de opciones puede tener las siguientes propiedades:
 
 Si la propiedad está asociada con un atributo o un nombre personalizado para el atributo asociado. Valor predeterminado: verdadero. Si el `attribute` es `false`, las opciones de `converter`, `reflex` y `type` se ignoran. Para obtener más información, consulte Establecer el nombre del atributo.
 
-`**converter**`
+**`converter`**
 
 Un convertidor personalizado para convertir entre propiedades y atributos. Si no se especifica, utilice el convertidor de atributos predeterminado.
 
-`**hasChanged**`
+**`hasChanged`**
 
 Una función llamada cada vez que se establece la propiedad para determinar si la propiedad ha cambiado y debe desencadenar una actualización. Si no se especifica, LitElement usa una verificación de desigualdad estricta (`newValue !== oldValue`) para determinar si el valor de la propiedad ha cambiado. Para obtener más información, consulte Personalización de la detección de cambios.
 
-`**noAccessor**`
+**`noAccessor`**
 
 Establézcalo en verdadero para evitar generar los descriptores de acceso de propiedad predeterminados. Esta opción rara vez es necesaria. Valor predeterminado: `false`. Para obtener más información, consulte Impedir que Lit genere un descriptor de acceso de propiedad.
 
-`**reflex**`
+**`reflex`**
 
 Si el valor de la propiedad se refleja en el atributo asociado. Valor predeterminado: falso. Para obtener más información, consulte Habilitación de la `reflex` de atributos.
 
-`**state**`
+**`state`**
 
 Establézcalo en verdadero para declarar la propiedad como estado reactivo interno. El estado reactivo interno desencadena actualizaciones como propiedades reactivas públicas, pero Lit no genera un atributo para él y los usuarios no deben acceder a él desde fuera del componente. Equivale a usar el decorador `@state`. Valor predeterminado: `false`. Para obtener más información, consulte Estado reactivo interno.
 
-`**type**`
+**`type`**
 
 Al convertir un atributo con valor de cadena en una propiedad, el convertidor de atributos predeterminado de Lit analizará la cadena en el tipo dado y viceversa al reflejar una propiedad en un atributo. Si se establece el convertidor, este campo se pasa al convertidor. Si no se especifica el tipo, el convertidor predeterminado lo trata como `tipo: string`. Consulte Uso del convertidor predeterminado.
 
