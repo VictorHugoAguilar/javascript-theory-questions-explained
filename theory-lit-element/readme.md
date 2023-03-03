@@ -26,6 +26,8 @@ Indice
 ## Migrating from Polymer to Lit
 - [Changes between polymer and lit](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/polymer-to-lit/changes/readme.md)
 
+---
+
 # LIT-element v.2
 
 Indice
