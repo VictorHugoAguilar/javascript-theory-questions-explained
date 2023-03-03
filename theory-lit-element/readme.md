@@ -23,8 +23,8 @@ Indice
 - [Concepts](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-html/concepts/readme.md)
 - [Tools](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-html/tools/readme.md)
 
-## Migrating polymer to lit
-- [changes between polymer and lit](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/polymer-to-lit/changes/readme.md)
+## Migrating from Polymer to Lit
+- [Changes between polymer and lit](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/polymer-to-lit/changes/readme.md)
 
 ---
 
