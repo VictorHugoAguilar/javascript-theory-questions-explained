@@ -727,7 +727,7 @@ El uso de `willUpdate()` le permite elegir qué hacer en función del conjunto c
 Los mixins fueron una de varias formas de empaquetar la funcionalidad reutilizable para usarla en un componente Polymer. Si está portando una mezcla de Polymer a Lit, tiene varias opciones.
 
 - **Funciones independientes (Standalone functions)**. Debido a que los enlaces de datos de Polymer solo pueden acceder a los miembros de la instancia, la gente a menudo creaba un mixin simplemente para hacer que una función estuviera disponible en un enlace de datos. Esto no es obligatorio en Lit, ya que puede usar cualquier expresión de JavaScript en su plantilla. En lugar de usar un mixin, puede importar una función de otro módulo y usarla directamente en su plantilla.
-- **Mezclas encendidas (Lit mixins)**. Los mixins de Lit funcionan de manera muy similar a los mixins de Polymer, por lo que muchos mixins de Polymer se pueden volver a implementar como mixins de Lit.
+- **Lit mixins**. Los mixins de Lit funcionan de manera muy similar a los mixins de Polymer, por lo que muchos mixins de Polymer se pueden volver a implementar como mixins de Lit.
 - **Controladores reactivos (Reactive controllers)**. Los controladores reactivos son una forma alternativa de empaquetar funciones reutilizables.
 
 # Lifecycle
