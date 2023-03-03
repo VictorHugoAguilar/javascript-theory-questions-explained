@@ -1,4 +1,4 @@
-LIT-element v.1
+# LIT-element v.1
 
 Indice
 
@@ -25,6 +25,28 @@ Indice
 
 ## Migrating from Polymer to Lit
 - [Changes between polymer and lit](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/polymer-to-lit/changes/readme.md)
+
+# LIT-element v.2
+
+Indice
+
+## Components
+
+- [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/overview/readme.md)
+- [Defining](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/defining/readme.md)
+- [Rendering](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/rendering/readme.md)
+- [Reactive properties](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/reactive-properties/readme.md)
+- [Styles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/styles/readme.md)
+- [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/readme.md)
+- [Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/shadow-dom/readme.md)
+- [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/readme.md)
+- [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/events/readme.md)
+- [Decorators](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/decorators/readme.md)
+
+ 
+
+
+
 
 ---
 
