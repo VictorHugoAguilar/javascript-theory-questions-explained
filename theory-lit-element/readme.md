@@ -44,8 +44,14 @@ Indice
 - [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/events/readme.md)
 - [Decorators](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/decorators/readme.md)
 
- 
+## Templates
 
+Overview
+Expressions
+Conditionals
+Lists
+Built-in directives
+Custom directives
 
 
 
