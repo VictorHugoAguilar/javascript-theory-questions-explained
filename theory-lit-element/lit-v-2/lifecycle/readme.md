@@ -123,17 +123,17 @@ Con más detalle, se ve así:
 
 ### Pre-Update
 
-![Untitled](Lifecycle%208e08b4f08c754cff84bf0ec04df687a3/Untitled.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_01.png?raw=true)
 
-![Untitled](Lifecycle%208e08b4f08c754cff84bf0ec04df687a3/Untitled%201.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_02.png?raw=true)
 
 ### **Update**
 
-![Untitled](Lifecycle%208e08b4f08c754cff84bf0ec04df687a3/Untitled%202.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_03.png?raw=true)
 
 ### Post-Update
 
-![Untitled](Lifecycle%208e08b4f08c754cff84bf0ec04df687a3/Untitled%203.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_04.png?raw=true)
 
 ## The changedProperties map
 
@@ -462,7 +462,7 @@ El paquete de renderizado del lado del servidor de Lit se encuentra actualmente 
 
 No se llama a todo el ciclo de actualización al renderizar Lit en el servidor. Los siguientes métodos se llaman en el servidor.
 
-![Untitled](Lifecycle%208e08b4f08c754cff84bf0ec04df687a3/Untitled%204.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_05.png?raw=true)
 
 ---
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
