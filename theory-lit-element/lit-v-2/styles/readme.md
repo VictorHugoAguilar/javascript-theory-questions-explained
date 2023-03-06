@@ -26,7 +26,7 @@ export class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-Los estilos que agrega a su componente tienen un alcance usando shadow DOM.
+Los estilos que se agregan al componente tienen un alcance usando shadow DOM.
 
 El valor del campo de clase de `style` estáticos puede ser:
 
