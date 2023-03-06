@@ -8,7 +8,7 @@ Shadow DOM proporciona tres beneficios:
 
 - **Alcance DOM**. Las API de DOM como `document.querySelector` no encontrarán elementos en el DOM oculto del componente, por lo que es más difícil que los scripts globales rompan accidentalmente su componente.
 - **Style scoping** (alcance del estilo). Puede escribir estilos encapsulados para su shadow DOM que no afecten al resto del árbol DOM.
-- **Composición**. La raíz oculta del componente, que contiene su DOM interno, está separada de los elementos secundarios del componente. Puede elegir cómo se representan los elementos secundarios en el DOM interno de su componente.
+- **Composición**. El shadown root del componente, que contiene su DOM interno, está separada de los elementos secundarios del componente. Puede elegir cómo se representan los elementos secundarios en el DOM interno de su componente.
 
 Para obtener más información sobre shadow DOM:
 
@@ -112,7 +112,7 @@ Esto es útil, por ejemplo, si el nodo devuelto por `@queryAsync` puede cambiar 
 
 # Rendering children with slots
 
-Su componente puede aceptar hijos (como un elemento `<ul>` puede tener hijos `<li>`).
+El componente puede aceptar hijos (como un elemento `<ul>` puede tener hijos `<li>`).
 
 ```jsx
 <my-element>
