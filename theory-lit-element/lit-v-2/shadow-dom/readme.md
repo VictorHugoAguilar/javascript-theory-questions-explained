@@ -15,7 +15,7 @@ Para obtener más información sobre shadow DOM:
 - [Shadow DOM v1](https://web.dev/shadowdom-v1/): componentes web autónomos sobre fundamentos web.
 - Usando shadow [DOM en MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
-> `ℹ️`Navegadores más antiguos. En navegadores más antiguos en los que el Shadow DOM nativo no está disponible, se pueden usar los polyfills de componentes web. Tenga en cuenta que el módulo de soporte de polyfill de Lit debe cargarse junto con los polyfills de los componentes web. Consulte Requisitos para navegadores heredados para obtener más información.
+> `ℹ️`Navegadores más antiguos. En navegadores más antiguos en los que el Shadow DOM nativo no está disponible, se pueden usar los polyfills de componentes web. Tenga en cuenta que el módulo de soporte de polyfill de Lit debe cargarse junto con los polyfills de los componentes web.
 > 
 
 # Accessing nodes in the shadow DOM
@@ -321,7 +321,7 @@ class DelegatesFocus extends LitElement {
 
 ## Implementing createRenderRoot
 
-La implementación predeterminada de `createRenderRoot` crea una raíz de sombra abierta y le agrega cualquier estilo establecido en el campo de clase de `estilos estáticos`. Para obtener más información sobre estilos, consulte Estilos.
+La implementación predeterminada de `createRenderRoot` crea una raíz de sombra abierta y le agrega cualquier estilo establecido en el campo de clase de `estilos estáticos`.
 
 Para personalizar la raíz de representación de un componente, implemente `createRenderRoot` y devuelva el nodo en el que desea que se represente la plantilla.
 
