@@ -2,7 +2,7 @@
 
 # Introducción
 
-Los componentes iluminados usan shadow DOM para encapsular su DOM. Shadow DOM proporciona una forma de agregar un árbol DOM aislado y encapsulado separado a un elemento. La encapsulación DOM es la clave para desbloquear la interoperabilidad con cualquier otro código,***incluidos otros componentes web o componentes de Lit***, que funcione en la página.
+Los componentes iluminados usan shadow DOM para encapsular su DOM. Shadow DOM proporciona una forma de agregar un árbol DOM aislado y encapsulado separado a un elemento. La encapsulación DOM es la clave para desbloquear la interoperabilidad con cualquier otro código, ***incluidos otros componentes web o componentes de Lit***, que funcione en la página.
 
 Shadow DOM proporciona tres beneficios:
 
