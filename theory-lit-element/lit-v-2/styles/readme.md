@@ -42,7 +42,7 @@ static styles = css`...`;
 static styles = [ css`...`, css`...`];
 ```
 
-El campo de clase de estilos estáticos es casi siempre la mejor manera de agregar estilos a su componente, pero hay algunos casos de uso que no puede manejar de esta manera, por ejemplo, personalizar estilos por instancia.
+El campo de clase de estilos estáticos es casi siempre la mejor manera de agregar estilos al  componente, pero hay algunos casos de uso que no puede manejar de esta manera, por ejemplo, personalizar estilos por instancia.
 
 ### Uso de expresiones en estilos estáticos
 
@@ -127,7 +127,7 @@ customElements.define('super-element', SuperElement);
 
 También puede usar `super.styles` para hacer referencia a la propiedad de estilos de la superclase en JavaScript. Si usa TypeScript, le recomendamos que evite los `super.styles`, ya que el compilador no siempre los convierte correctamente. Hacer referencia explícita a la superclase, como se muestra en el ejemplo, evita este problema.
 
-Al escribir componentes destinados a ser subclasificados en TypeScript, el campo de `estilos estáticos` debe escribirse explícitamente como `CSSResultGroup` para permitir flexibilidad a los usuarios para anular `estilos` con una matriz:
+Al escribir componentes destinados a ser subclasificados en TypeScript, el campo de `static styles` debe escribirse explícitamente como `CSSResultGroup` para permitir flexibilidad a los usuarios para anular `styles` con una matriz:
 
 ```jsx
 // Prevent typescript from narrowing the type of `styles` to `CSSResult`
