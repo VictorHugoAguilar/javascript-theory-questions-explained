@@ -2389,9 +2389,9 @@ Las promesas anteriores se liquidaron al mismo tiempo, pero una de ellas se reso
 Promise.allSettled([promiseOne, promiseTwo]).then(data => console.log(data));
 ```
 	
->El método `Promise.all()` funciona como un **>>todo o nada<<**: devuelve una promesa que se cumple cuando todas las promesas del **array** se cumplen. Si alguna de ellas se rechaza, `Promise.all()` también lo hace.
+>El método `Promise.all()` funciona como un **<<todo o nada>>**: devuelve una promesa que se cumple cuando todas las promesas del **array** se cumplen. Si alguna de ellas se rechaza, `Promise.all()` también lo hace.
 	
->El método `Promise.allSettled()` funciona como un **>>todas procesadas<<**: devuelve una promesa que se cumple cuando todas las promesas del **array** se hayan procesado, independientemente de que se hayan cumplido o rechazado.
+>El método `Promise.allSettled()` funciona como un **<<todas procesadas>>**: devuelve una promesa que se cumple cuando todas las promesas del **array** se hayan procesado, independientemente de que se hayan cumplido o rechazado.
 
 ## 77. setTimeout, cual es el resultado del siguiente código
 
