@@ -33,15 +33,15 @@ El decorador `@property` declara una propiedad reactiva.
 
 | Decorator | Summary | More Info |
 | --- | --- | --- |
-| https://lit.dev/docs/api/decorators#customElement | Defines a custom element | https://lit.dev/docs/components/decorators/#custom-element |
-| https://lit.dev/docs/api/decorators#eventOptions | Adds event listener options. | https://lit.dev/docs/components/events/#event-options-decorator |
-| https://lit.dev/docs/api/decorators#property | Defines a public property. | https://lit.dev/docs/components/properties/#declare-with-decorators |
-| https://lit.dev/docs/api/decorators#state | Defines a private state property | https://lit.dev/docs/components/properties/#declare-with-decorators |
-| https://lit.dev/docs/api/decorators#query | Defines a property that returns an element in the component template. | https://lit.dev/docs/components/shadow-dom/#query |
-| https://lit.dev/docs/api/decorators#queryAll | Defines a property that returns a list of elements in the component template. | https://lit.dev/docs/components/shadow-dom/#query-all |
-| https://lit.dev/docs/api/decorators#queryAsync | Defines a property that returns a promise that resolves to an element in the component template. | https://lit.dev/docs/components/shadow-dom/#query-async |
-| https://lit.dev/docs/api/decorators#queryAssignedElements | Defines a property that returns the child elements assigned to a specific slot. | https://lit.dev/docs/components/shadow-dom/#query-assigned-nodes |
-| https://lit.dev/docs/api/decorators#queryAssignedNodes | Defines a property that returns the child nodes assigned to a specific slot. | https://lit.dev/docs/components/shadow-dom/#query-assigned-nodes |
+| @customElement | Defines a custom element | https://lit.dev/docs/components/decorators/#custom-element |
+| @eventOptions | Adds event listener options. | https://lit.dev/docs/components/events/#event-options-decorator |
+| @property | Defines a public property. | https://lit.dev/docs/components/properties/#declare-with-decorators |
+| @state | Defines a private state property | https://lit.dev/docs/components/properties/#declare-with-decorators |
+| @query | Defines a property that returns an element in the component template. | https://lit.dev/docs/components/shadow-dom/#query |
+| @queryAll | Defines a property that returns a list of elements in the component template. | https://lit.dev/docs/components/shadow-dom/#query-all |
+| @queryAsync | Defines a property that returns a promise that resolves to an element in the component template. | https://lit.dev/docs/components/shadow-dom/#query-async |
+| @queryAssignedElements | Defines a property that returns the child elements assigned to a specific slot. | https://lit.dev/docs/components/shadow-dom/#query-assigned-nodes |
+| @queryAssignedNodes | Defines a property that returns the child nodes assigned to a specific slot. | https://lit.dev/docs/components/shadow-dom/#query-assigned-nodes |
 
 # Importing decorators
 
@@ -146,7 +146,6 @@ Los campos de clase tienen una interacción problemática con la declaración de
 La propuesta actual de la **etapa 3** de los decoradores no aborda directamente este problema, pero debe resolverse a medida que la propuesta evolucione y madure.
 
 Al usar decoradores, la configuración del transpilador para Babel y TypeScript debe configurarse correctamente como se muestra en las secciones anteriores para TypeScript y Babel.
-
 
 
 ---
