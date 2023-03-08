@@ -10,7 +10,7 @@ html`<h1>Hello ${name}</h1>`
 
 La sintaxis de los templates puede parecer que solo está haciendo una interpolación de cadenas. Pero con los literales de plantilla etiquetados, el navegador pasa a la función de etiqueta una matriz de cadenas (las partes estáticas de la plantilla) y una matriz de expresiones (las partes dinámicas). Lit usa esto para crear una representación eficiente de su plantilla, por lo que puede volver a representar solo las partes de la plantilla que han cambiado.
 
-Las plantillas Lit son extremadamente expresivas y le permiten representar contenido dinámico en una variedad de formas:
+Los templates de Lit son extremadamente expresivas y le permiten representar contenido dinámico en una variedad de formas:
 
 - **Expresiones**: las plantillas pueden incluir valores dinámicos llamados expresiones que se pueden usar para representar atributos, texto, propiedades, controladores de eventos e incluso otras plantillas.
 - **Condicionales**: las expresiones pueden representar contenido condicional mediante el control de flujo de JavaScript estándar.
