@@ -12,12 +12,12 @@ Aquí hay una referencia rápida seguida de información más detallada sobre ca
 
 | Type | Example |
 | --- | --- |
-| Child nodes | html``<h1>Hello ${name}</h1> <ul> ${listItems} </ul>` |
-| Attributes | `html'<div class=${highlightClass}></div>'` |
-| Boolean Attributes | `html'<div ?hidden=${!show}></div>'` |
-| Properties | `html'<input .value=${value}>'` |
-| Event listeners | `html'<button @click=${this._clickHandler}>Go</button>'` |
-| Element directives | `html'<input ${ref(inputRef)}>'` |
+| Child nodes | html`<h1>Hello ${name}</h1> <ul> ${listItems} </ul>` |
+| Attributes | html`<div class=${highlightClass}></div>` |
+| Boolean Attributes | html`<div ?hidden=${!show}></div>` |
+| Properties | html`<input .value=${value}>` |
+| Event listeners | html`<button @click=${this._clickHandler}>Go</button>` |
+| Element directives | html`<input ${ref(inputRef)}>` |
 
 Este ejemplo básico muestra una variedad de diferentes tipos de expresiones.
 
