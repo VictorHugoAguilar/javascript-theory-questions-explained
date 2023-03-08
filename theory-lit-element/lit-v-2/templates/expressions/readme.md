@@ -12,7 +12,7 @@ Aquí hay una referencia rápida seguida de información más detallada sobre ca
 
 | Type | Example |
 | --- | --- |
-| Child nodes | html`<h1>Hello ${name}</h1> <ul> ${listItems} </ul>` |
+| Child nodes | <pre>html`<h1>Hello ${name}</h1> <ul> ${listItems} </ul>`</pre> |
 | Attributes | html`<div class=${highlightClass}></div>` |
 | Boolean Attributes | html`<div ?hidden=${!show}></div>` |
 | Properties | html`<input .value=${value}>` |
