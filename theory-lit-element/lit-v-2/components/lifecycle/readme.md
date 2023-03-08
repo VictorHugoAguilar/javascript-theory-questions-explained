@@ -465,4 +465,4 @@ No se llama a todo el ciclo de actualización al renderizar Lit en el servidor. 
 ![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/img/lit_element_lifecycle_image_05.png?raw=true)
 
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/readme.md#lit-element-v2)

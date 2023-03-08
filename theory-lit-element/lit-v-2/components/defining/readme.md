@@ -70,6 +70,6 @@ myElement.aNumber = 10;
 
 Recomendamos agregar una entrada `HTMLElementTagNameMap` para todos los elementos creados en TypeScript y asegurarse de publicar sus tipos de .d.ts en su paquete npm.
 
----
 
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
+---
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/readme.md#lit-element-v2)
