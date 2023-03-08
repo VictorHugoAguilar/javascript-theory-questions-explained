@@ -2,7 +2,7 @@
 
 # Introducción
 
-Las plantillas iluminadas pueden incluir valores dinámicos llamados expresiones. Una expresión puede ser cualquier expresión de JavaScript. La expresión se evalúa cuando se evalúa la plantilla y el resultado de la expresión se incluye cuando se representa la plantilla. En un componente Lit, esto significa cada vez que se llama al método render.
+Las plantillas iluminadas pueden incluir valores dinámicos llamados expresiones. Una expresión puede ser cualquier expresión de Javascript. La expresión se evalúa cuando se evalúa la plantilla y el resultado de la expresión se incluye cuando se representa la plantilla. En un componente Lit, esto significa cada vez que se llama al método render.
 
 Las expresiones solo se pueden colocar en ubicaciones específicas de la plantilla, y la forma en que se interpreta una expresión depende de dónde aparece. Las expresiones dentro de la propia etiqueta del elemento afectan al elemento. Expresiones dentro del contenido del elemento, donde van los nodos secundarios, representan nodos secundarios o texto.
 
