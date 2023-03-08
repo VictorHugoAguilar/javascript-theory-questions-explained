@@ -34,24 +34,24 @@ Indice
 
 ## Components
 
-- [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/overview/readme.md)
-- [Defining](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/defining/readme.md)
-- [Rendering](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/rendering/readme.md)
-- [Reactive properties](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/reactive-properties/readme.md)
-- [Styles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/styles/readme.md)
-- [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/lifecycle/readme.md)
-- [Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/shadow-dom/readme.md)
-- [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/events/readme.md)
-- [Decorators](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/decorators/readme.md)
+- [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/overview/readme.md)
+- [Defining](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/defining/readme.md)
+- [Rendering](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/rendering/readme.md)
+- [Reactive properties](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/reactive-properties/readme.md)
+- [Styles](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/styles/readme.md)
+- [Lifecycle](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/lifecycle/readme.md)
+- [Shadow DOM](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/shadow-dom/readme.md)
+- [Events](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/events/readme.md)
+- [Decorators](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/components/decorators/readme.md)
 
 ## Templates
 
-- [Overview]()
-- [Expressions]()
-- [Conditionals]()
-- [Lists]()
-- [Built-in directives]()
-- [Custom directives]()
+- [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/overview/readme.md)
+- [Expressions](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/expressions/readme.md)
+- [Conditionals](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/conditionals/readme.md)
+- [Lists](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/lists/readme.md)
+- [Built-in directives](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/built-in-directives/readme.md)
+- [Custom directives](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/custom-directives/readme.md)
 
 
 
