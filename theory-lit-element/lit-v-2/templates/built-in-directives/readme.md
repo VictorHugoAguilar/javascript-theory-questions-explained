@@ -43,8 +43,8 @@ Las directivas son funciones que pueden extender Lit al personalizar la forma en
 
 Establece una lista de clases para un elemento basado en un objeto.
 
-| Import | import {classMap} from 'lit/directives/class-map.js'; |
 | --- | --- |
+| Import | import {classMap} from 'lit/directives/class-map.js'; |
 | Signature | classMap(classInfo: {[name: string]: string | boolean | number}) |
 | Usable location | class attribute expression (must be the only expression in the class attribute) |
 
