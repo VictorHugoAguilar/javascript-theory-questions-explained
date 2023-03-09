@@ -53,7 +53,11 @@ Indice
 - [Built-in directives](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/built-in-directives/readme.md)
 - [Custom directives](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/custom-directives/readme.md)
 
-
+## Composition
+Overview
+Component composition
+Mixins
+Controllers
 
 ---
 
