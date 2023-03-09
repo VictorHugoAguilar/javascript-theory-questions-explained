@@ -4,7 +4,6 @@
 
 Las directivas son funciones que pueden extender Lit al personalizar la forma en que se representa una expresión. Lit incluye una serie de directivas integradas para ayudar con una variedad de necesidades de representación:
 
-<pre>
 | Directive | Summary |
 | --- | --- |
 | Styling |  |
@@ -33,7 +32,8 @@ Las directivas son funciones que pueden extender Lit al personalizar la forma en
 | until | Representa contenido de marcador de posición hasta que se resuelven una o más promesas. |
 | asyncAppend | Agrega valores de un 'AsyncIterable' en el DOM a medida que se obtienen. |
 | asyncReplace | Representa el valor más reciente de un 'AsyncIterable' en el DOM a medida que se obtiene. |
-</pre>
+
+Nota:
 
 > ℹ️ Empaca solo lo que usas. Estas se llaman directivas "incorporadas" porque son parte del paquete Lit. Pero cada directiva es un módulo separado, por lo que su aplicación solo incluye las directivas que importa.
 >
