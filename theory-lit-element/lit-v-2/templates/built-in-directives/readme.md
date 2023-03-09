@@ -47,7 +47,7 @@ Establece una lista de clases para un elemento basado en un objeto.
 | --- | --- |
 | Import | import {classMap} from 'lit/directives/class-map.js'; |
 | Signature | classMap(classInfo: {[name: string]: string | boolean | number}) |
-| Usable location | class attribute expression (must be the only expression in the class attribute) |
+| Usable location | expresión de atributo de `class` (debe ser la única expresión en el atributo de clase) |
 
 La directiva `classMap` usa la API `element.classList` para agregar y quitar clases de manera eficiente a un elemento en función de un objeto pasado por el usuario. Cada clave del objeto se trata como un nombre de clase y, si el valor asociado con la clave es verdadero, esa clase se agrega al elemento. En renderizaciones subsiguientes, se eliminan todas las clases establecidas previamente que sean falsas o que ya no estén en el objeto.
 
