@@ -269,16 +269,9 @@ Devuelve un iterable que contiene los valores de los `items` intercalados con el
 
 | key | value |
 | --- | --- |
-| Import | import {join} from 'lit/directives/join.js'; |
-| Signature | join<I, J>(
-  items: Iterable<I> | undefined,
-  joiner: J
-): Iterable<I | J>;
-
-join<I, J>(
-  items: Iterable<I> | undefined,
-  joiner: (index: number) => J
-): Iterable<I | J>; |
+| Import          | import {join} from 'lit/directives/join.js'; |
+| Signature       | join<I, J>( items: Iterable<I> | undefined, joiner: J ): Iterable<I | J>; |
+|                 | join<I, J>( items: Iterable<I> | undefined, joiner: (index: number) => J ): Iterable<I | J>; |
 | Usable location | Any |
 
 ```jsx
