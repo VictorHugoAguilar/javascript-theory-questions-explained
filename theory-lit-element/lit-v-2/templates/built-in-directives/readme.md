@@ -83,8 +83,8 @@ Establece una lista de propiedades de estilo para un elemento basado en un objet
 
 | key | value |
 | --- | --- |
-| Import | import {styleMap} from 'lit/directives/style-map.js'; |
-| Signature | styleMap(styleInfo: {[name: string]: string | undefined | null}) |
+| Import          | `import {styleMap} from 'lit/directives/style-map.js';` |
+| Signature       | `styleMap(styleInfo: {[name: string]: string or undefined or null })` |
 | Usable location | style attribute expression (must be the only expression in the style attribute) |
 
 La directiva `styleMap` utiliza la API `element.style` para agregar y eliminar estilos en línea de manera eficiente a un elemento en función de un objeto pasado por el usuario. Cada clave en el objeto se trata como un nombre de propiedad de estilo, el valor se trata como el valor de esa propiedad. En las renderizaciones posteriores, se eliminan todas las propiedades de estilo establecidas anteriormente que sean  `undefined` o son `null` (se establecen en `null`).
@@ -135,12 +135,8 @@ Representa una de dos templates en función de una condición.
 
 | key | value |
 | --- | --- |
-| Import | import {when} from 'lit/directives/when.js'; |
-| Signature | when<T, F>(
-  condition: boolean,
-  trueCase: () => T,
-  falseCase?: () => F
-) |
+| Import          | `import {when} from 'lit/directives/when.js';` |
+| Signature       | `when<T, F>( condition: boolean, trueCase: () => T, falseCase?: () => F)` |
 | Usable location | Any |
 
 Cuando la condición es `true`, devuelve el resultado de llamar a `trueCase()`, de lo contrario, devuelve el resultado de llamar a `falseCase()` si se define `falseCase`.
@@ -163,12 +159,8 @@ Choose y evalúa una función de plantilla de una lista de casos en función de 
 
 | key | value |
 | --- | --- |
-| Import | import {choose} from 'lit/directives/choose.js'; |
-| Signature | choose<T, V>(
-  value: T,
-  cases: Array<[T, () => V]>,
-  defaultCase?: () => V
-) |
+| Import          | `import {choose} from 'lit/directives/choose.js';` |
+| Signature       | `choose<T, V>(value: T, cases: Array<[T, () => V]>, defaultCase?: () => V )` |
 | Usable location | Any |
 
 Los casos están estructurados como `[caseValue, func]`. `value` coincide con `caseValue` por estricta igualdad. Se selecciona el primer partido. Los valores de caso pueden ser de cualquier tipo, incluidos primitivos, objetos y símbolos.
@@ -195,11 +187,8 @@ Devuelve un iterable que contiene el resultado de llamar a `f(valor)` en cada va
 
 | key | value |
 | --- | --- |
-| Import | import {map} from 'lit/directives/map.js'; |
-| Signature | map<T>(
-  items: Iterable<T> | undefined,
-  f: (value: T, index: number) => unknown
-) |
+| Import          | `import {map} from 'lit/directives/map.js';` |
+| Signature       | `map<T>( items: Iterable<T> | undefined, f: (value: T, index: number) => unknown )` |
 | Usable location | Any |
 
 `map()` es un contenedor simple alrededor de un bucle for/of que hace que trabajar con iterables en expresiones sea un poco más fácil. `map()` siempre actualiza cualquier DOM creado en su lugar; no hace ninguna diferencia ni movimiento de DOM. Si necesita que vea **repetir**. `map()` es más pequeño y más rápido que `repeat()`, por lo que si no necesita diferencias y estabilidad DOM, prefiera `map()`.
@@ -222,14 +211,11 @@ Representa valores de un iterable en el DOM, con claves opcionales para permitir
 
 | key | value |
 | --- | --- |
-| Import | import {repeat} from 'lit/directives/repeat.js'; |
-| Signature | repeat(items: Iterable<T>, keyfn: KeyFn<T>, template: ItemTemplate<T>)
-
-repeat(items: Iterable<T>, template: ItemTemplate<T>)
-
-type KeyFn<T> = (item: T, index: number) => unknown;
-
-type ItemTemplate<T> = (item: T, index: number) => unknown; |
+| Import          | `import {repeat} from 'lit/directives/repeat.js';` |
+| Signature       | `repeat(items: Iterable<T>, keyfn: KeyFn<T>, template: ItemTemplate<T>)` |
+| Signature       | `repeat(items: Iterable<T>, template: ItemTemplate<T>)` |
+| Signature       | `type KeyFn<T> = (item: T, index: number) => unknown;` |
+| Signature       | `type ItemTemplate<T> = (item: T, index: number) => unknown;` |
 | Usable location | Child expression |
 
 Repite una serie de valores (generalmente `TemplateResults`) generados a partir de un iterable y actualiza esos elementos de manera eficiente cuando cambia el iterable. Cuando se proporciona `keyFn`, la asociación de clave a DOM se mantiene entre las actualizaciones al mover el DOM generado cuando sea necesario y, en general, es la forma más eficiente de usar `repeat`, ya que realiza un trabajo innecesario mínimo para las inserciones y eliminaciones.
@@ -269,9 +255,9 @@ Devuelve un iterable que contiene los valores de los `items` intercalados con el
 
 | key | value |
 | --- | --- |
-| Import          | import {join} from 'lit/directives/join.js'; |
-| Signature       | join<I, J>( items: Iterable<I> | undefined, joiner: J ): Iterable<I | J>; |
-|                 | join<I, J>( items: Iterable<I> | undefined, joiner: (index: number) => J ): Iterable<I | J>; |
+| Import          | `import {join} from 'lit/directives/join.js';` |
+| Signature       | `join<I, J>( items: Iterable<I> or undefined, joiner: J ): Iterable<I or J>;` | 
+| Signature       | `join<I, J>( items: Iterable<I> or undefined, joiner: (index: number) => J ): Iterable<I or J>;` |
 | Usable location | Any |
 
 ```jsx
@@ -294,14 +280,9 @@ Devuelve un iterable de enteros de `start` a `end` (exclusivo) incrementando por
 
 | key | value |
 | --- | --- |
-| Import | import {range} from 'lit/directives/range.js'; |
-| Signature | range(end: number): Iterable<number>;
-
-range(
-  start: number,
-  end: number,
-  step?: number
-): Iterable<number>; |
+| Import          | `import {range} from 'lit/directives/range.js';` |
+| Signature       | `range(end: number): Iterable<number>;` |
+| Signature       | ` range( start: number, end: number, step?: number ): Iterable<number>;` |
 | Usable location | Any |
 
 ```jsx
@@ -321,8 +302,8 @@ Establece un atributo si el valor está definido y elimina el atributo si no est
 
 | key | value |
 | --- | --- |
-| Import | import {ifDefined} from 'lit/directives/if-defined.js'; |
-| Signature | ifDefined(value: unknown) |
+| Import          | `import {ifDefined} from 'lit/directives/if-defined.js';` |
+| Signature       | `ifDefined(value: unknown)` |
 | Usable location | Attribute expression |
 
 Para AttributeParts, establece el atributo si el valor está definido y elimina el atributo si el valor no está definido (`undefined` o `null`). Para otros tipos de piezas, esta directiva no funciona.
@@ -358,8 +339,8 @@ Los cachés representan el DOM al cambiar las plantillas en lugar de descartar e
 
 | key | value |
 | --- | --- |
-| Import | import {cache} from 'lit/directives/cache.js'; |
-| Signature | cache(value: TemplateResult|unknown) |
+| Import          | `import {cache} from 'lit/directives/cache.js';` |
+| Signature       | `cache(value: TemplateResult|unknown)` |
 | Usable location | Child expression |
 
 Cuando el valor pasado a la `cache` cambia entre uno o más `TemplateResults`, los nodos DOM representados para una plantilla determinada se almacenan en caché cuando no están en uso. Cuando la plantilla cambia, la directiva almacena en caché los nodos DOM actuales antes de cambiar al nuevo valor y los restaura desde el caché cuando se vuelve a cambiar a un valor renderizado anteriormente, en lugar de crear los nodos DOM de nuevo.
@@ -398,8 +379,8 @@ Asocia un valor representable con una clave única. Cuando la clave cambia, el D
 
 | key | value |
 | --- | --- |
-| Import | import {keyed} from 'lit/directives/keyed.js'; |
-| Signature | keyed(key: unknown, value: unknown) |
+| Import          | `import {keyed} from 'lit/directives/keyed.js';` |
+| Signature       | `keyed(key: unknown, value: unknown)` |
 | Usable location | Any expression |
 
 `keyed` es útil cuando está procesando elementos con estado y necesita asegurarse de que todo el estado del elemento se borre cuando cambien algunos datos críticos. Básicamente, opta por no participar en la estrategia de reutilización DOM predeterminada de Lit.
@@ -433,8 +414,8 @@ Solo vuelve a evaluar la plantilla cuando cambia una de sus dependencias, para o
 
 | key | value |
 | --- | --- |
-| Import | import {guard} from 'lit/directives/guard.js'; |
-| Signature | guard(dependencies: unknown[], valueFn: () => unknown) |
+| Import          | `import {guard} from 'lit/directives/guard.js';` |
+| Signature       | `guard(dependencies: unknown[], valueFn: () => unknown)` |
 | Usable location | Any expression |
 
 Representa el valor devuelto por valueFn y solo vuelve a evaluar valueFn cuando una de las dependencias cambia de identidad.
@@ -475,8 +456,8 @@ Establece un atributo o propiedad si difiere del valor DOM en vivo en lugar del 
 
 | key | value |
 | --- | --- |
-| Import | import {live} from 'lit/directives/live.js'; |
-| Signature | live(value: unknown) |
+| Import          | `import {live} from 'lit/directives/live.js';` |
+| Signature       | `live(value: unknown)` |
 | Usable location | Attribute or property expression |
 
 Al determinar si actualizar el valor, verifica el valor de la expresión con el valor DOM en vivo, en lugar del comportamiento predeterminado de Lit de verificar con el último valor establecido.
@@ -513,8 +494,8 @@ Muestra el contenido de un elemento `<template>`.
 
 | key | value |
 | --- | --- |
-| Import | import {templateContent} from 'lit/directives/template-content.js'; |
-| Signature | templateContent(templateElement: HTMLTemplateElement) |
+| Import          | `import {templateContent} from 'lit/directives/template-content.js';` |
+| Signature       | `templateContent(templateElement: HTMLTemplateElement)` |
 | Usable location | Child expression |
 
 Las plantillas Lit están codificadas en Javascript, por lo que pueden incorporar expresiones Javascript que las hacen dinámicas. Si tiene una `<template>` HTML estática que necesita incluir en su plantilla de Lit, puede usar la directiva `templateContent` para clonar el contenido de la plantilla e incluirlo en su plantilla de Lit. Siempre que la referencia del elemento de la plantilla no cambie entre renderizaciones, las renderizaciones subsiguientes no funcionarán.
@@ -542,8 +523,8 @@ Representa una cadena como HTML en lugar de texto.
 
 | key | value |
 | --- | --- |
-| Import | import {unsafeHTML} from 'lit/directives/unsafe-html.js'; |
-| Signature | unsafeHTML(value: string | typeof nothing | typeof noChange) |
+| Import          | `import {unsafeHTML} from 'lit/directives/unsafe-html.js';` |
+| Signature       | `unsafeHTML(value: string | typeof nothing | typeof noChange)` |
 | Usable location | Child expression |
 
 Una característica clave de la sintaxis de plantillas de Lit es que solo las cadenas que se originan en los literales de plantilla se analizan como HTML. Debido a que los literales de plantilla solo se pueden crear en archivos de secuencias de comandos confiables, esto actúa como una protección natural contra los ataques XSS que inyectan HTML no confiable. Sin embargo, puede haber casos en los que el HTML que no se origina en archivos de secuencias de comandos deba representarse en una plantilla de Lit, por ejemplo, contenido HTML de confianza extraído de una base de datos. La directiva `unsafeHTML` analizará una cadena como HTML y la representará en una plantilla Lit.
@@ -572,8 +553,8 @@ Representa una cadena como SVG en lugar de texto.
 
 | key | value |
 | --- | --- |
-| Import | import {unsafeSVG} from 'lit/directives/unsafe-svg.js'; |
-| Signature | unsafeSVG(value: string | typeof nothing | typeof noChange) |
+| Import          | `import {unsafeSVG} from 'lit/directives/unsafe-svg.js';` |
+| Signature       | `unsafeSVG(value: string | typeof nothing | typeof noChange)` |
 | Usable location | Child expression |
 
 Al igual que con `unsafeHTML`, puede haber casos en los que el contenido SVG que no se origina en archivos de secuencias de comandos deba representarse en una plantilla de Lit, por ejemplo, contenido SVG de confianza extraído de una base de datos. La directiva unsafeSVG analizará una cadena como SVG y la representará en una plantilla Lit.
@@ -606,8 +587,8 @@ Recupera una referencia a un elemento representado en el DOM.
 
 | key | value |
 | --- | --- |
-| Import | import {ref} from 'lit/directives/ref.js'; |
-| Signature | ref(refOrCallback: RefOrCallback) |
+| Import          | `import {ref} from 'lit/directives/ref.js';` |
+| Signature       | `ref(refOrCallback: RefOrCallback)` |
 | Usable location | Element expression |
 
 Aunque la mayor parte de la manipulación del DOM en Lit se puede lograr de manera declarativa usando plantillas, las situaciones avanzadas pueden requerir obtener una referencia a un elemento representado en la plantilla y manipularlo de manera imperativa. Los ejemplos comunes de cuándo esto puede ser útil incluyen enfocar un control de formulario o llamar a una biblioteca de manipulación DOM imperativa en un elemento contenedor.
@@ -659,8 +640,8 @@ Representa contenido de marcador de posición hasta que se resuelven una o más 
 
 | key | value |
 | --- | --- |
-| Import | import {until} from 'lit/directives/until.js'; |
-| Signature | until(...values: unknown[]) |
+| Import          | `import {until} from 'lit/directives/until.js';` |
+| Signature       | `until(...values: unknown[])` |
 | Usable location | Any expression |
 
 Toma una serie de valores, incluyendo Promesas. Los valores se representan en orden de prioridad, con el primer argumento que tiene la prioridad más alta y el último argumento que tiene la prioridad más baja. Si un valor es una Promesa, se representará un valor de menor prioridad hasta que se resuelva.
@@ -691,8 +672,8 @@ Agrega valores de `AsyncIterable` al DOM a medida que se generan.
 
 | key | value |
 | --- | --- |
-| Import | import {asyncAppend} from 'lit/directives/async-append.js'; |
-| Signature | asyncAppend(iterable: AsyncIterable) |
+| Import          | `import {asyncAppend} from 'lit/directives/async-append.js';` |
+| Signature       | `asyncAppend(iterable: AsyncIterable)` |
 | Usable location | Child expression |
 
 `asyncAppend` hace que los valores de un async sean iterables, agregando cada nuevo valor después del anterior. Tenga en cuenta que los generadores asíncronos también implementan el protocolo iterable asíncrono y, por lo tanto, pueden ser consumidos por `asyncAppend`.
@@ -729,8 +710,8 @@ Representa el valor más reciente de un `AsyncIterable` en el DOM a medida que s
 
 | key | value |
 | --- | --- |
-| import | import {asyncReplace} from 'lit/directives/async-replace.js'; |
-| Signature | asyncReplace(iterable: AsyncIterable) |
+| import          | `import {asyncReplace} from 'lit/directives/async-replace.js';` |
+| Signature       | `asyncReplace(iterable: AsyncIterable)` |
 | Usable location | Child expression |
 
 Similar a `asyncAppend`, `asyncReplace` hace que los valores de un async sean iterables, reemplazando el valor anterior con cada valor nuevo.
