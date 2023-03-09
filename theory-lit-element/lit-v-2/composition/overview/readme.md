@@ -24,9 +24,9 @@ Los controladores y los mixins de clase son muy similares en algunos aspectos. A
 
 La principal diferencia entre los controladores y los mixins es su relación con el componente. Un componente tiene una relación "tiene un" con un controlador reactivo, ya que posee el controlador. Un componente tiene una relación "es-a" con un mixin, ya que el componente es una instancia de la clase mixin.
 
-Un controlador reactivo es un objeto separado propiedad de un componente. El controlador puede acceder a métodos y campos en el componente, y el componente puede acceder a métodos y campos en el controlador. Pero alguien que use el componente no puede (fácilmente) acceder al controlador, a menos que el componente le exponga una API pública. Los métodos de ciclo de vida del controlador se llaman antes que el método de ciclo de vida correspondiente en el componente.
+Un **controlador reactivo** es un objeto separado propiedad de un componente. El controlador puede acceder a métodos y campos en el componente, y el componente puede acceder a métodos y campos en el controlador. Pero alguien que use el componente no puede (fácilmente) acceder al controlador, a menos que el componente le exponga una API pública. Los métodos de ciclo de vida del controlador se llaman antes que el método de ciclo de vida correspondiente en el componente.
 
-Un mixin, por otro lado, se convierte en parte de la cadena de prototipos del componente. Cualquier campo o método público definido por el mixin es parte de la API del componente. Y debido a que un mixin es parte de la cadena de prototipos, su componente tiene cierto control de cuándo se llaman las devoluciones de llamada del ciclo de vida del mixin.
+Un **mixin**, por otro lado, se convierte en parte de la cadena de prototipos del componente. Cualquier campo o método público definido por el mixin es parte de la API del componente. Y debido a que un mixin es parte de la cadena de prototipos, su componente tiene cierto control de cuándo se llaman las devoluciones de llamada del ciclo de vida del mixin.
 
 En general, si está tratando de decidir si empaquetar una característica como un controlador o una mezcla, debe elegir un controlador a menos que la característica requiera uno de los siguientes:
 
