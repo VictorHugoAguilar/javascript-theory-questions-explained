@@ -54,11 +54,11 @@ Indice
 - [Custom directives](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/templates/custom-directives/readme.md)
 
 ## Composition
-Overview
-Component composition
-Mixins
-Controllers
+- [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/overview/readme.md)
+- [Component composition](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/component-composition/readme.md))
+- [Mixins](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/mixins/readme.md)
+- [Controllers](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/controllers/readme.md)
+
 
 ---
-
 [⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/readme.md)
