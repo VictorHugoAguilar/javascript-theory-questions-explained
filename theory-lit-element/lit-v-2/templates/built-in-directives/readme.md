@@ -25,7 +25,7 @@ Las directivas son funciones que pueden extender Lit al personalizar la forma en
 | Referencing rendered DOM |  |
 | ref | Obtiene una referencia a un elemento representado en la plantilla. |
 | Rendering special values |  |
-| templateContent | Representa el contenido de un elemento <template> . |
+| templateContent | Representa el contenido de un elemento `<template>` . |
 | unsafeHTML | Representa una cadena como HTML en lugar de texto. |
 | unsafeSVG | Representa una cadena como SVG en lugar de texto. |
 | Asynchronous rendering |  |
