@@ -55,7 +55,7 @@ Indice
 
 ## Composition
 - [Overview](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/overview/readme.md)
-- [Component composition](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/component-composition/readme.md))
+- [Component composition](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/component-composition/readme.md)
 - [Mixins](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/mixins/readme.md)
 - [Controllers](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/controllers/readme.md)
 
