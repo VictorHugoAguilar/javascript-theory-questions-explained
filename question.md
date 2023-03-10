@@ -130,49 +130,51 @@ for (var i = 0; i<4; i++){
 > Por lo tanto, la salida de este código será: 
 > 
 > ````javascript
-4 
-4 
-4 
-4
-````
+> 4 
+> 4 
+> 4 
+> 4
+> ````
+>
+> Dos posibles soluciones son declarar la variable del `for` con el scope de la función es decir un `let`
+> 
+> ````javascript
+> for (let i = 0; i<4; i++){ 
+> 	setTimeout(function(){console.log(i), 0)};
+> }
+> ````
+> 
+> El resultado sería
+> 
+> ````javascript
+> 0
+> 1
+> 2
+> 3
+> ````
+> 
+> O bien otra solución es declarla una funcion **IIFE** (Expresión de función invocada inmediatamente) para crear un nuevo alcance para cada iteración del bucle:
+> 
+> ````javascript
+> for (var i = 0; i < 4; i++) {
+>   (function(j) {
+>     setTimeout(function() {
+>       console.log(j);
+>     }, 0);
+>   })(i);
+> }
+> ````
+> 
+> En este código, pasamos el valor actual de `i` como argumento a un **IIFE**, > que crea un nuevo alcance y captura ese valor en una nueva variable `j`. La función `setTimeout` ahora usa `j` en lugar de `i`, lo que significa que > cada función `setTimeout` registra un valor diferente. La salida de este código será:
+> 
+> ````javascript
+> 0
+> 1
+> 2
+> 3
+> ````
+>
 
-Dos posibles soluciones son declarar la variable del for con el scope de la función es decir un `let`
-
-````javascript
-for (let i = 0; i<4; i++){ 
-	setTimeout(function(){console.log(i), 0)};
-}
-````
-
-El resultado sería
-
-````javascript
-0
-1
-2
-3
-````
-
-O bien otra solución es declarla una funcion IIFE (Expresión de función invocada inmediatamente) para crear un nuevo alcance para cada iteración del bucle:
-
-````javascript
-for (var i = 0; i < 4; i++) {
-  (function(j) {
-    setTimeout(function() {
-      console.log(j);
-    }, 0);
-  })(i);
-}
-````
-
-En este código, pasamos el valor actual de i como argumento a un IIFE, que crea un nuevo alcance y captura ese valor en una nueva variable j. La función setTimeout ahora usa j en lugar de i, lo que significa que cada función setTimeout registra un valor diferente. La salida de este código será:
-
-````javascript
-0
-1
-2
-3
-````
 
 ## G. Bucles for y setTimeout, ¿Qué resultado da el siguiente código?
 
