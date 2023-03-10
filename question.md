@@ -1,5 +1,4 @@
 # Javascript Interview Question Explained
----
 
 ## A. Boolean, ¿cuál es el resultado del código?
 
