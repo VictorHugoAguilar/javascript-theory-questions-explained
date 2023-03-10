@@ -2,7 +2,7 @@
 
 ---
 
-> [!IMPORTANT]
+> [!CAUTION]
 > Gola
 >This is GOLA
 
