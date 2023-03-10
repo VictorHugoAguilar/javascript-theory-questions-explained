@@ -114,8 +114,59 @@ for (var i = 0; i<4; i++){
 
 ### Respuesta
 
-La razón de esto es que las declaraciones de var tienen un ámbito de función en JavaScript, lo que significa que el valor de la variable i es accesible a lo largo de toda la función que contiene el bucle for, incluso dentro de la función de devolución de llamada pasada a setTimeout.
-En el momento en que se ejecutan las funciones de devolución de llamada de setTimeout, el bucle for ya se ha completado y el valor de i es igual a 4. Por lo tanto, todas las devoluciones de llamada de setTimeout registrarán 4 en la consola.
+El código anterior crea un bucle que se ejecuta 4 veces y programa una función setTimeout para que se ejecute después de 0 milisegundos. La función setTimeout registra el valor de la variable i en la consola.
+
+Sin embargo, debido a que setTimeout es una función asíncrona, no se ejecuta inmediatamente. En cambio, se agrega a la cola de eventos y solo se ejecutará una vez que la pila de llamadas esté vacía. Esto significa que las 4 funciones setTimeout se agregarán a la cola de eventos y se ejecutarán después de que se complete el bucle.
+
+Cuando las funciones setTimeout se ejecutan, todas registrarán el mismo valor de i, que será el valor final de i después de que se complete el bucle. Esto se debe a que JavaScript usa el alcance de la función, no el alcance del bloque, por lo que la variable i es compartida por las 4 funciones setTimeout.
+
+Por lo tanto, la salida de este código será: 
+
+````javascript
+4 
+4 
+4 
+4
+````
+
+Dos posibles soluciones son declarar la variable del for con el scope de la función es decir un `let`
+
+````javascript
+for (let i = 0; i<4; i++){ 
+	setTimeout(function(){console.log(i), 0)};
+}
+````
+
+El resultado sería
+
+````javascript
+0
+1
+2
+3
+````
+
+O bien otra solución es declarla una funcion IIFE (Expresión de función invocada inmediatamente) para crear un nuevo alcance para cada iteración del bucle:
+
+````javascript
+for (var i = 0; i < 4; i++) {
+  (function(j) {
+    setTimeout(function() {
+      console.log(j);
+    }, 0);
+  })(i);
+}
+````
+
+En este código, pasamos el valor actual de i como argumento a un IIFE, que crea un nuevo alcance y captura ese valor en una nueva variable j. La función setTimeout ahora usa j en lugar de i, lo que significa que cada función setTimeout registra un valor diferente. La salida de este código será:
+
+````javascript
+0
+1
+2
+3
+````
+
 
 ## G. Bucles for y setTimeout, ¿Qué resultado da el siguiente código?
 
