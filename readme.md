@@ -14,7 +14,7 @@
 
 * [Ejercicios](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/exercises.md)
 
-* [Post-it]()
+* [Post-it](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/readme.md)
 
 ---
 
