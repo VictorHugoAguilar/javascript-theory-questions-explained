@@ -206,15 +206,15 @@ console.log(addTwo(1));
 
 ### Respuesta
 
-La variable addTo tiene una función anónima que recibe 2 parámetros separados. Declaramos una variable donde le pasamos el primer argumento (passed), cuando hacemos el console.log pasamos el segundo argumento. Si solamente se pasara un argumento, devolvería undefined.
+La variable `addTo` tiene una función anónima que recibe 2 parámetros separados. Declaramos una variable donde le pasamos el primer argumento (passed), cuando hacemos el console.log pasamos el segundo argumento. Si solamente se pasara un argumento, devolvería `undefined`.
 
->La función addTo toma un parámetro passed, que es igual a 2 cuando se crea la instancia de addTwo. Dentro de la función addTo, se define una función interna llamada add que toma un parámetro inner. La función add simplemente retorna la suma de passed y inner.
+>La función `addTo` toma un parámetro `passed`, que es igual a 2 cuando se crea la instancia de `addTwo`. Dentro de la función `addTo`, se define una función interna llamada `add` que toma un parámetro `inner`. La función `add` simplemente retorna la **suma** de `passed` y `inner`.
 >
->Luego, se crea una nueva instancia de la función addTo con el argumento 2 y se asigna a la variable addTwo. Esto significa que addTwo ahora hace referencia a la función interna add que tiene una referencia a passed con un valor de 2.
+>Luego, se crea una nueva instancia de la función `addTo` con el argumento 2 y se asigna a la variable `addTwo`. Esto significa que `addTwo` ahora hace referencia a la función interna `add` que tiene una referencia a `passed` con un valor de 2.
 >
->Finalmente, se llama a addTwo(1), lo que significa que se llama a la función interna add con el argumento 1. La función add suma passed (que es 2, ya que se pasó como argumento al crear la instancia de addTo) y inner (que es 1, ya que se pasó como argumento a addTwo). La suma de 2 y 1 es 3, por lo que addTwo(1) devuelve 3.
+>Finalmente, se llama a `addTwo(1)`, lo que significa que se llama a la función interna `add` con el argumento 1. La función `add` suma passed (que es 2, ya que se pasó como argumento al crear la instancia de `addTo`) y inner (que es 1, ya que se pasó como argumento a `addTwo`). La suma de 2 y 1 es 3, por lo que `addTwo(1)` devuelve 3.
 >
->Por lo tanto, el resultado final que se imprimirá en la consola será 3.
+>Por lo tanto, el resultado final que se imprimirá en la consola será **3**.
 >
 
 ## I. Asignaciones, ¿Qué resultado da el siguiente código?
