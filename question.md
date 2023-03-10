@@ -348,7 +348,8 @@ var a = b = 3;
 >console.log(boundAdd()); // outputs 3
 >```
 >
-> **En resumen,** `apply()` y `call()` le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que `bind()` crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
+> **En resumen,** 
+> `apply()` y `call()` le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que `bind()` crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
 
 ## L. This, ¿Qué es en javascript?
 
