@@ -587,7 +587,7 @@ JSON.parse(JSON.stringify(obj))
 
 ### Respuesta
 
-Stringify convierte un objeto en JSON string. Parse parsea el string y devuelve un objecto. No copia funciones.
+> Stringify convierte un objeto en JSON string. Parse parsea el string y devuelve un objecto. No copia funciones.
 
 ## W. Funciones de los arrays
 
@@ -678,7 +678,7 @@ function Vehicle(model, color, year, country) {
 
 ### Respuesta
 
-Las declaraciones de función se izan de forma similar a cualquier variable. Entonces, la ubicación de la declaración de la función Vehicle no hace ninguna diferencia. 
+> Las declaraciones de función se izan de forma similar a cualquier variable. Entonces, la ubicación de la declaración de la función Vehicle no hace ninguna diferencia. 
 
 ## 2. Funciones, que resultado da
 
@@ -699,15 +699,15 @@ console.log(foo(), typeof x, typeof y);
 
 ### Respuesta
 
-Por supuesto, el valor de retorno de foo() es 1 debido al operador de incremento. Pero la sentencia let x = y = 0 declara una variable local x. Mientras que y se declaró accidentalmente como una variable global. Esta afirmación es equivalente a,
-
-```jsx
-let x;
-window.y = 0;
-x = window.y;
-```
-
-Dado que la variable de ámbito de bloque x no está definida fuera de la función, el tipo tampoco estará definido. Mientras que la variable global y está disponible fuera de la función, el valor es 0 y el tipo es número.
+> Por supuesto, el valor de retorno de `foo()` es 1 debido al operador de incremento. Pero la sentencia `let x = y = 0` declara una variable local `x`. Mientras que y se declaró accidentalmente como una variable global. Esta afirmación es equivalente a,
+>
+> ```jsx
+> let x;
+> window.y = 0;
+> x = window.y;
+> ```
+>
+> Dado que la variable de ámbito de bloque x no está definida fuera de la función, el tipo tampoco estará definido. Mientras que la variable global y está disponible fuera de la función, el valor es 0 y el tipo es número.
 
 ## 3. Funciones, sync, que resultado da
 
