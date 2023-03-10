@@ -13,7 +13,8 @@ console.log(2 + true)
 
 ### Respuesta
 
-En Js el valor boolean es implícitamente cambiado a un número, True equivale a 1, false a 0, por lo tanto 2 + true = 3
+> En Js el valor `boolean` es implícitamente cambiado a un número, `true` equivale a `1`, `false` a `0`, por lo tanto 2 + true = 3
+> 
 
 ## B. Bucles, ¿Qué diferencia hay entre foreach() y map()?
 
@@ -39,7 +40,9 @@ console.log(squaredArray);
 
 ### Respuesta
 
-Ambos métodos recorren un Array y ejecutan una función por cada elemento, la diferencia es que map() crea un Array nuevo, y el foreach() no devuelve un array nuevo.
+> Ambos métodos recorren un Array y ejecutan una función por cada elemento, la diferencia es que map() crea un Array nuevo, y el foreach() no devuelve un array nuevo.
+> [Explicación extendida](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/differences-between-foreach-and-map.md)
+> 
 
 ## C. Equals object, ¿Cuál es el resultado?
 
@@ -56,9 +59,10 @@ console.log(a === b)
 
 ### Respuesta
 
-Aunque los dos aparentemente son iguales, apuntan a referencias diferentes, por lo cual los considera diferentes.
-
-Cuando compara dos objetos con ===, verifica si se refieren al mismo objeto en la memoria, no si tienen las mismas propiedades o valores.
+> Aunque los dos aparentemente son iguales, apuntan a referencias diferentes, por lo cual los considera diferentes.
+> 
+> **NOTA:** Cuando compara dos objetos con `===`, verifica si se refieren al mismo objeto en la memoria, no si tienen las mismas propiedades o valores.
+> 
 
 ## D. Sumas y restas, ¿Cuál es el valor que devuelve?
 
@@ -72,8 +76,10 @@ console.log(2 - '2');
 
 ### Respuesta
 
-El operador + es para números y concatenación de strings, por lo que simplemente lo junta.
-El operador – es solmanete para los números, por lo que ambos argumentos se convierten a numéricos y hace la resta directamente.
+> El operador `+` es para números y concatenación de strings, por lo que simplemente lo junta.
+> 
+> El operador `–` es solmanete para los números, por lo que ambos argumentos se convierten a numéricos y hace la resta directamente.
+> 
 
 ## E. Funciones ¿Qué resultado da?
 
@@ -95,7 +101,11 @@ console.log(x());
 
 ### Respuesta
 
-La función x devuelve indefinido debido al salto de línea después de la declaración de devolución. La declaración de retorno hace que la función salga y devuelva el valor que le sigue. En este caso, el salto de línea separa la declaración de retorno de su valor de retorno, por lo que devuelve undefined. Si desea devolver el objeto {mensaje: 'hola'}, deberá eliminar el salto de línea.
+> La función x devuelve `undefined` debido al salto de línea después de la declaración de devolución. La declaración de retorno hace que la función salga y devuelva el valor que le sigue. 
+> En este caso, el salto de línea separa la declaración de retorno de su valor de retorno, por lo que devuelve `undefined`. 
+> 
+> Si desea devolver el objeto {mensaje: 'hola'}, deberá eliminar el salto de línea.
+> 
 
 ## F.  Bucles for y setTimeout, ¿Qué resultado devuelve el siguiente código?
 
@@ -112,15 +122,14 @@ for (var i = 0; i<4; i++){
 
 ### Respuesta
 
-El código anterior crea un bucle que se ejecuta 4 veces y programa una función setTimeout para que se ejecute después de 0 milisegundos. La función setTimeout registra el valor de la variable i en la consola.
-
-Sin embargo, debido a que setTimeout es una función asíncrona, no se ejecuta inmediatamente. En cambio, se agrega a la cola de eventos y solo se ejecutará una vez que la pila de llamadas esté vacía. Esto significa que las 4 funciones setTimeout se agregarán a la cola de eventos y se ejecutarán después de que se complete el bucle.
-
-Cuando las funciones setTimeout se ejecutan, todas registrarán el mismo valor de i, que será el valor final de i después de que se complete el bucle. Esto se debe a que JavaScript usa el alcance de la función, no el alcance del bloque, por lo que la variable i es compartida por las 4 funciones setTimeout.
-
-Por lo tanto, la salida de este código será: 
-
-````javascript
+> El código anterior crea un bucle que se ejecuta 4 veces y programa una función `setTimeout` para que se ejecute después de 0 milisegundos. La función `setTimeout` registra el valor de la variable `i` en la consola.
+> 
+> Sin embargo, debido a que `setTimeout` es una `función asíncrona`, no se ejecuta inmediatamente. En cambio, se agrega a la cola de eventos y solo se ejecutará una vez que la **pila** de llamadas esté vacía. Esto significa que las 4 funciones `setTimeout` se agregarán a la cola de eventos y se ejecutarán después de que se complete el bucle.
+> Cuando las funciones `setTimeout` se ejecutan, todas registrarán el mismo valor de i, que será el valor final de i después de que se complete el bucle. Esto se debe a que JavaScript usa el alcance de la función, no el alcance del bloque, por lo que la variable i es compartida por las 4 funciones setTimeout.
+> 
+> Por lo tanto, la salida de este código será: 
+> 
+> ````javascript
 4 
 4 
 4 
