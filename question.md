@@ -275,15 +275,15 @@ var a = b = 3;
     }
 </style>
 <body>
-	<h1>
-		<span>
-	    <p>
-	      <span class="text">
-	        <span>Texto</span>
-        </span>
-			</p>
-		</span>
-	</h1>
+<h1>
+  <span>
+    <p>
+      <span class="text">
+        <span>Texto</span>
+      </span>
+    </p>
+  </span>
+</h1>
 </body>
 ```
 
