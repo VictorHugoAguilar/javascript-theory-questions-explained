@@ -2,6 +2,10 @@
 
 ---
 
+> [!IMPORTANT]
+> Gola
+>This is GOLA
+
 ## A. Boolean, ¿cuál es el resultado del código?
 
 ```jsx
@@ -166,7 +170,6 @@ En este código, pasamos el valor actual de i como argumento a un IIFE, que crea
 2
 3
 ````
-
 
 ## G. Bucles for y setTimeout, ¿Qué resultado da el siguiente código?
 
