@@ -125,7 +125,7 @@ for (var i = 0; i<4; i++){
 > El código anterior crea un bucle que se ejecuta 4 veces y programa una función `setTimeout` para que se ejecute después de 0 milisegundos. La función `setTimeout` registra el valor de la variable `i` en la consola.
 > 
 > Sin embargo, debido a que `setTimeout` es una `función asíncrona`, no se ejecuta inmediatamente. En cambio, se agrega a la cola de eventos y solo se ejecutará una vez que la **pila** de llamadas esté vacía. Esto significa que las 4 funciones `setTimeout` se agregarán a la cola de eventos y se ejecutarán después de que se complete el bucle.
-> Cuando las funciones `setTimeout` se ejecutan, todas registrarán el mismo valor de i, que será el valor final de i después de que se complete el bucle. Esto se debe a que JavaScript usa el alcance de la función, no el alcance del bloque, por lo que la variable i es compartida por las 4 funciones setTimeout.
+> Cuando las funciones `setTimeout` se ejecutan, todas registrarán el mismo valor de i, que será el valor final de i después de que se complete el bucle. Esto se debe a que JavaScript usa el alcance de la función, no el alcance del bloque, por lo que la variable i es compartida por las 4 funciones `setTimeout`.
 > 
 > Por lo tanto, la salida de este código será: 
 > 
@@ -189,9 +189,9 @@ for (var i = 0; i < 4; i++) {
 
 ### Respuesta
 
-Respuesta en el console.log(4) pero los botones sí que se pintan correctamente. [button 0] [button 1] [button 2] [button 3], esto es por un Modificando var por let => el click se convierte en 0,1,2,3.
-
-Es decir que cuando ejecute este código y haga clic en cada botón, notará que todos los botones registran el mismo mensaje, "botón 4", en la consola. Esto se debe a que la palabra clave var tiene un ámbito de función en JavaScript, por lo que todas las instancias del cierre creado por el detector de eventos comparten la misma variable i, y su valor se actualiza a 4 cuando se invoca el detector de eventos.
+> Respuesta en la ejecución del boton en consola nos devuelve un 4, pero los botones sí que se pintan correctamente. [button 0] [button 1] [button 2] [button 3], esto es porque el bucle crea los botones ni bien el bucle avanza, pero en el momento de la ejecución del evento la variable i dentro del bucle equivale al último recorrido del mismo es decir a 4, ¿Porque 4 y no 3?, porque el bucle suma 1 a i y luego verifica la condición para seguir ejecutando el siguiente loop. 
+>
+> Es decir que cuando ejecute este código y haga clic en cada botón, notará que todos los botones registran el mismo mensaje, "botón 4", en la consola. Esto se debe a que la palabra clave var tiene un ámbito de función en JavaScript, por lo que todas las instancias del cierre creado por el detector de eventos comparten la misma variable i, y su valor se actualiza a 4 cuando se invoca el detector de eventos.
 
 ## H. Funciones de cierre, clousers, ¿Qué resultado da el siguiente código?
 
@@ -242,20 +242,20 @@ var a = b = 3;
 
 ### Respuesta
 
-El código **var** a = b = 3 declara dos variables b y a, y les asigna el valor 3 a ambas.
-
-Sin embargo, la diferencia entre los dos es que b se declara sin la palabra clave var y, por lo tanto, es una variable global a la que se puede acceder desde cualquier parte de su código, mientras que a se declara con la palabra clave var y, por lo tanto, es una variable local a la que solo se puede acceder dentro del ámbito donde fue declarada.
-
-En este código, la palabra clave var se usa solo para la declaración de a, y la asignación b = 3 se trata como una declaración independiente que declara una variable global b si aún no existe, y le asigna el valor 3. Luego, var a = b = 3 declara una variable local a y le asigna el valor de la variable global b (a la que se le acaba de asignar el valor 3).
-
-Así es como se vería el código si declara explícitamente b como una variable global:
-
-```jsx
-var b = 3;
-var a = b;
-```
-
-En este caso, tanto b como a serían declarados y se les asignaría el valor 3, pero b sería una variable global y a sería una variable local.
+> El código **var** a = b = 3 declara dos variables b y a, y les asigna el valor 3 a ambas.
+>
+> Sin embargo, la diferencia entre los dos es que b se declara sin la palabra clave var y, por lo tanto, es una variable global a la que se puede acceder desde cualquier parte de su código, mientras que a se declara con la palabra clave var y, por lo tanto, es una variable local a la que solo se puede acceder dentro del ámbito donde fue declarada.
+> 
+> En este código, la palabra clave var se usa solo para la declaración de a, y la asignación b = 3 se trata como una declaración independiente que declara una variable global b si aún no existe, y le asigna el valor 3. Luego, var a = b = 3 declara una variable local a y le asigna el valor de la variable global b (a la que se le acaba de asignar el valor 3).
+>
+> Así es como se vería el código si declara explícitamente b como una variable global:
+>
+> ```jsx
+> var b = 3;
+> var a = b;
+> ```
+>
+> En este caso, tanto b como a serían declarados y se les asignaría el valor 3, pero b sería una variable global y a sería una variable local.
 
 ## J. Styles, ¿Cuál es el color de la palabra texto?
 
@@ -294,85 +294,90 @@ En este caso, tanto b como a serían declarados y se les asignaría el valor 3, 
 
 ### Respuesta
 
-Los estilos CSS se aplican a los elementos HTML en función de la especificidad de los selectores. El selector .text span tiene una especificidad mayor que el selector span, por lo que tendrá prioridad y hará que el texto se muestre en amarillo.
-El selector span .text no coincide con ningún elemento en el HTML, ya que está buscando una clase .text que sea un hijo directo de un elemento span, pero en este caso, la clase .text es un hermano del elemento span.
+> Los estilos **CSS** se aplican a los elementos **HTML** en función de la especificidad de los selectores. El selector `.text span` tiene una especificidad mayor que el selector `span`, por lo que tendrá prioridad y hará que el texto se muestre en **amarillo**.
+> El selector `span .text` no coincide con ningún elemento en el **HTML**, ya que está buscando una clase `.text` que sea un hijo directo de un elemento `span`, pero en este caso, la clase `.text` es un hermano del elemento span.
 
 ## K. ¿Qué diferencias hay entre apply(), call(), bind()?
 
 ### Respuesta
 
-Con estos 3 métodos varios objetos pueden compartir un mismo método.
-Los tres parecen hacer lo mismo pero hay diferencias, call() y apply() enlazan el método al objeto de forma temporal, lo ejecutan y nos devuelven el resultado, la diferencia es que call() espera valores como argumentos, mientras apply() espera un array de valores.
-Por su lado bind() también enlaza el método al objeto, lo ejecuta pero en vez de devolvernos el resultado nos devuelve una función que si la ejecutamos obtenemos el resultado.
-
-En JavaScript, **apply(), call() y bind()** son métodos que le permiten establecer el valor **this** y llamar a una función con un valor y argumentos especificados. Sin embargo, difieren en cómo pasan los argumentos a la función.
-
-Estas son las diferencias entre los tres métodos:
-
-- **apply()**: El método apply() toma dos argumentos: el valor this y una matriz de argumentos para pasar a la función. Le permite llamar a una función y establecer el valor **this**, y pasar los argumentos a la función como una matriz.
-
-```jsx
-function add(a, b) {
-  return a + b;
-}
-
-var object = {};
-console.log(add.apply(object, [1, 2])); // outputs 3
-```
-
-- **call()**: El método call() es similar a apply(), pero en lugar de tomar una matriz de argumentos, toma los argumentos como valores separados.
-
-```jsx
-function add(a, b) {
-  return a + b;
-}
-
-var object = {};
-console.log(add.call(object, 1, 2)); // outputs 3
-```
-
-- **bind():** El método bind() crea una nueva función con el valor y los argumentos especificados, y devuelve la nueva función. Luego puede llamar a la nueva función más tarde, y siempre tendrá el valor y los argumentos especificados.
-
-```jsx
-function add(a, b) {
-  return a + b;
-}
-
-var object = {};
-var boundAdd = add.bind(object, 1, 2);
-console.log(boundAdd()); // outputs 3
-```
-
-**En resumen,** apply() y call() le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que bind() crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
+> Con estos 3 métodos varios objetos pueden compartir un mismo método.
+>
+> Los tres parecen hacer lo mismo pero hay diferencias, `call()` y `apply()` enlazan el método al objeto de forma temporal, lo ejecutan y nos devuelven el resultado, la diferencia es que `call()` espera valores como argumentos, mientras `apply()` espera un array de valores.
+>
+> Por su lado `bind()` también enlaza el método al objeto, lo ejecuta pero en vez de devolvernos el resultado nos devuelve una función que si la ejecutamos obtenemos el resultado.
+>
+> En JavaScript, `apply()`, `call()` y `bind()` son métodos que le permiten establecer el valor **this** y llamar a una función con un valor y argumentos especificados. Sin embargo, difieren en cómo pasan los argumentos a la función.
+>
+>Estas son las diferencias entre los tres métodos:
+>
+> #### Método apply()
+> El método `apply()` toma dos argumentos: el valor `this` y una matriz de argumentos para pasar a la función. Le permite llamar a una función y establecer el valor **this**, y pasar los argumentos a la función como una matriz.
+>
+>```jsx
+>function add(a, b) {
+>  return a + b;
+>}
+>
+>var object = {};
+>console.log(add.apply(object, [1, 2])); // outputs 3
+>```
+>
+> #### Método call() 
+> El método `call()` es similar a `apply()`, pero en lugar de tomar una matriz de argumentos, toma los argumentos como valores separados.
+>
+>```jsx
+>function add(a, b) {
+>  return a + b;
+>}
+>
+>var object = {};
+>console.log(add.call(object, 1, 2)); // outputs 3
+>```
+>
+> #### Método bind()
+> El método `bind()` crea una nueva función con el valor y los argumentos especificados, y devuelve la nueva función. Luego puede llamar a la nueva función más tarde, y siempre tendrá el valor y los argumentos especificados.
+>
+>```jsx
+>function add(a, b) {
+>  return a + b;
+>}
+>
+>var object = {};
+>var boundAdd = add.bind(object, 1, 2);
+>console.log(boundAdd()); // outputs 3
+>```
+>
+> **En resumen,** `apply()` y `call()` le permiten llamar inmediatamente a una función con un valor y argumentos especificados, mientras que `bind()` crea una nueva función con un valor y argumentos especificados que puede llamar más tarde.
 
 ## L. This, ¿Qué es en javascript?
 
 ### Respuesta
 
-En javascript this hace referencia al contexto en el cual se esté ejecutando el código actual. 
+> En javascript this hace referencia al contexto en el cual se esté ejecutando el código actual. 
 
 ## M. ¿Qué es el hosting?
 
 ### Respuesta
 
-El concepto de *hoisting*  de JavaScript determina que el valor de una variable declarada con *var* **puede subir al principio del *scope* de la función dentro de la que está declarada.** Pueden izarse las funciones declaradas o las variables var pero como undefined.
-
-```jsx
-// EN FUNCIONES
-console.log(l()); // Hola John!
-// SE LLAMA ANTES DE LA DECLARACIÓN DE LA MISMA
-function l(){
-	console.log('Hola John!');
-}
-
-// EN VARIABLES VAR
-console.log(nombre); // undefined
-var nombre = 'Victor';
-
-// EN VARIABLES LET O CONST
-console.log(nombre); // ReferenceError: nombre is not defined
-let nombre = 'Victor';
-```
+> El concepto de *hoisting*  de JavaScript determina que el valor de una variable declarada con *var* **puede subir al principio del *scope* de la función dentro de la que está declarada.** Pueden izarse las funciones declaradas o las variables var pero como undefined.
+>
+> ```jsx
+> // EN FUNCIONES
+> console.log(l()); // Hola John!
+> // SE LLAMA ANTES DE LA DECLARACIÓN DE LA MISMA
+> function l(){
+> 	console.log('Hola John!');
+> }
+> 
+> // EN VARIABLES VAR
+> console.log(nombre); // undefined
+> var nombre = 'Victor';
+> 
+> // EN VARIABLES LET O CONST
+> console.log(nombre); // ReferenceError: nombre is not defined
+> let nombre = 'Victor';
+> ```
 
 ## N. ¿Qué resultado da en cada caso?
 
@@ -405,18 +410,18 @@ function greet(nombre){
 
 ### Respuesta
 
-- 1º Caso:
-    
-    Cuando se llama a la función foo(), a pesar que la variable x esta inicializa y asignada, el scope de la función no esta, lo que en el primer caso es **undefined**, luego se asigna el valor de x, y el segundo caso es **local value**, una vez que sale de la función el valor que devuelve es **global value.**
-    
-- 2º Caso:
-    
-    El valor es **undefined,** ya que no se iza la función al estar en el ámbito de la variable const. 
-    
-- 3º Caso:
-    
-    El valor es **********************Hola Juan,********************** ya que se iza la función.
-    
+> - 1º Caso:
+>
+>   Cuando se llama a la función foo(), a pesar que la variable x esta inicializa y asignada, el scope de la función no esta, lo que en el primer caso es **undefined**, luego se asigna el valor de x, y el segundo caso es **local value**, una vez que sale de la función el valor que devuelve es **global value.**
+>   
+> - 2º Caso:
+>    
+>   El valor es **undefined,** ya que no se iza la función al estar en el ámbito de la variable const. 
+>   
+> - 3º Caso:
+>    
+>   El valor es **Hola Juan,** ya que se iza la función.
+>   
 
 ## Ñ. Dado el array siguiente, ¿cómo harías para eliminar los últimos 3 elementos?
 
@@ -426,36 +431,34 @@ var nums = [1, 2, 3, 4, 5, 6, 7, 8];
 
 ### Respuesta
 
-```jsx
-var resultado = nums.splice(5, 3);
-```
-
-`El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por *inicio* hasta *fin* (*fin* no incluido). El array original no se modificará.
-
-- **Sintaxis**
-
-`arr.slice([inicio [, fin]])`
-
-- **Parámetros**
-
-`inicio`
-
-Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
-Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
-Si `inicio` es omitido el valor por defecto es `0`.
-Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
-
-`fin`
-
-Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
-`slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).
-Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
-Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
-Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
-
-- Retorno
-
-Un nuevo array con los valores extraídos.
+> ```jsx
+> var resultado = nums.splice(5, 3);
+> ```
+>
+> `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por *inicio* hasta *fin* (*fin* no incluido). El array original no se modificará.
+>
+> - **Sintaxis**
+> 
+>   `arr.slice([inicio [, fin]])`
+> 
+> - **Parámetros**
+> 
+>   `inicio`
+>
+>   Índice donde empieza la extracción. El primer elemento corresponde con el índice 0. Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
+>   * Si `inicio` es omitido el valor por defecto es `0`.
+>   * Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
+> 
+>   `fin`
+> 
+>   Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.`slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).
+>   * Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
+>   * Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
+>   * Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
+> 
+> - Retorno
+> 
+>   Un nuevo array con los valores extraídos.
 
 ## O.  Explica que hace shift()
 
@@ -463,9 +466,9 @@ El método **`shift()`** elimina el **primer** elemento del array y lo retor
 
 ### Respuesta
 
-El método `shift` elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad `[length](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length)` es 0, devuelve `[undefined](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined)`.
-
-`shift` es genérico; este método puede utilizarse con [call](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call) o [apply](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) a objetos simliares a arrays. Los objetos que no tengan una propiedad `length` que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.
+> El método `shift` elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad [length](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length) es 0, devuelve [undefined](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+> 
+> `shift` es genérico; este método puede utilizarse con [call](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call) o [apply](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) a objetos simliares a arrays. Los objetos que no tengan una propiedad `length` que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.
 
 ## P.  ¿Cómo clonarias un objeto?
 
@@ -475,9 +478,9 @@ const fuente = {a: 1, b: 2, c: 3};
 
 ### Respuesta
 
-```jsx
-const copia = Object.assign({}, fuente);
-```
+> ```jsx
+> const copia = Object.assign({}, fuente);
+> ```
 
 ## Q. ¿Cómo añadir un elemento a un array sin utilizar push?
 
@@ -502,7 +505,7 @@ console.log(2 + 3 + '7');
 
 ### Respuesta
 
-El operario “+” sirve para números y concatenación de strings, por lo que 2+3 = 5. 5 + ‘7’ = 57.
+> El operario “+” sirve para números y concatenación de strings, por lo que 2+3 = 5. 5 + ‘7’ = 57.
 
 ## S.  ¿Qué resultado da el siguiente código?
 
