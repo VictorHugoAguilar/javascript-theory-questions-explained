@@ -1,10 +1,5 @@
 # Javascript Interview Question Explained
-
 ---
-
-> [!CAUTION]
-> Gola
->This is GOLA
 
 ## A. Boolean, ¿cuál es el resultado del código?
 
