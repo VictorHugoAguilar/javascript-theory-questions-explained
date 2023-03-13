@@ -1,7 +1,5 @@
 # LIT-element v.1
 
-Indice
-
 ## Components
 
 - [Template](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/template/readme.md)
