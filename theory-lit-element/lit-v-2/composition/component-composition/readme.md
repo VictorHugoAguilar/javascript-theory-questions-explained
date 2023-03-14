@@ -4,7 +4,7 @@
 
 La forma más común de manejar la complejidad y factorizar el código Lit en unidades separadas es la composición de componentes: es decir, el proceso de construir un componente grande y complejo a partir de componentes más pequeños y simples. Imagine que se le ha encomendado la tarea de implementar una pantalla de interfaz de usuario:
 
-![Untitled](Component%20composition%2027c9e6404d6e4c53b9d604cf4abc660c/Untitled.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/component-composition/img/image_lit_v2_component_composition_01.png?raw=true)
 
 Probablemente pueda identificar las áreas que implicarán cierta complejidad para implementar. Lo más probable es que esos podrían ser componentes.
 
@@ -51,7 +51,7 @@ Algunas implicaciones de este modelo:
 
 Considere un componente de menú que incluye un conjunto de elementos de menú y expone `items` y propiedades de `selectedItem` como parte de su API pública. Su estructura DOM podría verse así:
 
-![Untitled](Component%20composition%2027c9e6404d6e4c53b9d604cf4abc660c/Untitled%201.png)
+![Untitled](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/theory-lit-element/lit-v-2/composition/component-composition/img/image_lit_v2_component_composition_02.png?raw=true)
 
 Cuando el usuario selecciona un elemento, el elemento `my-menu` debería actualizar su propiedad selectedItem. También debe activar un evento para notificar a cualquier componente propietario que la selección ha cambiado. La secuencia completa sería algo así:
 
