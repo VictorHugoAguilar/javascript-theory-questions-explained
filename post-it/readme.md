@@ -9,6 +9,7 @@
 - Diferencias entre [forEach y map](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/differences-between-foreach-and-map.md)
 - Utilización de [Spread operators](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/operator-spread-javascript.md)
 - Tips para cleanCode [desestructuración en ES6](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/destructuring-es6-javascript.md)
+- Tips para [mejorar la perfomance de js](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/tips-to-improve-js-performance.md)
 
 
 ## Vue
