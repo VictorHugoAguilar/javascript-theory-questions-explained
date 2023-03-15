@@ -1,4 +1,4 @@
-# Tips para mejorar la performance de JS
+# Consejos para mejorar la performance de JS
 
 # Introducción
 
