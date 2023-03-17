@@ -776,11 +776,11 @@ Si el usuario de un componente tiene un tema de aplicación existente, puede con
   </body>
 </html>
 ```
-
+  
 ## Ejemplo simple theme
-
+  
 _index.html_
-
+  
 ```jsx
 <html>
   <head>
