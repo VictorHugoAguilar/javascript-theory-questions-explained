@@ -149,7 +149,7 @@ html`<ul>
 > ℹ️ Repetir directiva. En la mayoría de los casos, `Array.map` es la forma más eficaz de crear una plantilla repetitiva. En algunos casos, es posible que desee considerar la directiva de `repeat` de lit-html. En particular, si los elementos repetidos tienen estado o son muy costosos de regenerar.
 > 
 
-### **********Condicionales**********
+### Condicionales
 
 Renderizado basado en una condición booleana:
 
@@ -161,7 +161,7 @@ html`
 `;
 ```
 
-### ****************Ejemplo:****************
+### Ejemplo:
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -210,7 +210,7 @@ Las expresiones de JavaScript pueden incluir las propiedades de su elemento. Lit
 
 Los enlaces de datos son siempre unidireccionales (de padre a hijo). Para compartir datos de un elemento secundario con su elemento principal, active un evento y capture los datos relevantes en la propiedad de `detail`.
 
-### ******************************Bindeo a contenido texto******************************
+### Bindeo a contenido texto
 
 Bindeo `prop1` a contenido de texto
 
@@ -218,7 +218,7 @@ Bindeo `prop1` a contenido de texto
 html`<div>${this.prop1}</div>`
 ```
 
-### **Bindeo a atributo**
+### Bindeo a atributo
 
 Bindeo `prop2` a un atributo
 
@@ -228,7 +228,7 @@ html`<div id="${this.prop2}"></div>`
 
 Los valores de atributo son siempre cadenas, por lo que un enlace de atributo debe devolver un valor que se pueda convertir en una cadena.
 
-### **********************************************************Bindeo a un atributo booleano**********************************************************
+### Bindeo a un atributo booleano
 
 Bindeo `prop3` a un atributo booleano
 
@@ -238,7 +238,7 @@ html`<input type="text" ?disabled="${this.prop3}">`
 
 Los atributos booleanos se agregan si la expresión se evalúa como un valor verdadero y se eliminan si se evalúa como un valor falso.
 
-### **Bindeo a una propiedad**
+### Bindeo a una propiedad
 
 Bindeo `prop4` a una propiedad
 
@@ -246,7 +246,7 @@ Bindeo `prop4` a una propiedad
 html`<input type="checkbox" .value="${this.prop4}"/>`
 ```
 
-### **************************************************************Bindeo a un manejador de evento**************************************************************
+### Bindeo a un manejador de evento
 
 Bindeo `clickHandler` a un evento de `click`
 
@@ -315,7 +315,7 @@ customElements.define('my-element', MyElement);
 
 ## Renderiza un hijo con un elemento slot
 
-Tu componente podría aceptar un hijo (como un elemento `<ul>` puede contener ****`<li>` hijos)
+Tu componente podría aceptar un hijo (como un elemento `<ul>` puede contener `<li>` hijos)
 
 ```jsx
 <my-element>
@@ -325,11 +325,11 @@ Tu componente podría aceptar un hijo (como un elemento `<ul>` puede contener **
 
 De forma predeterminada, si un elemtno tiene un árbol de sombras, sus elementos secundarios no se representan en absoluto.
 
-Para representar elemento secundarios, su plantilla deb incluir uno o más elementos ****`<slot>` ****que actúan como marcadores de posición para los nodos secundarios.
+Para representar elemento secundarios, su plantilla deb incluir uno o más elementos `<slot>` que actúan como marcadores de posición para los nodos secundarios.
 
-### ******************************************Usar un elemento slot******************************************
+### Usar un elemento slot
 
-Para renderizar los elementos secundarios de un elemento, cree un `<slot>` ****para ellos en la plantilla del elemento. Por ejemplo:
+Para renderizar los elementos secundarios de un elemento, cree un `<slot>` para ellos en la plantilla del elemento. Por ejemplo:
 
 ```jsx
 render(){
@@ -361,9 +361,9 @@ De manera arbitraria, muchos niños pueden llenar un solo espacio:
 </my-element>
 ```
 
-### ********************Usando nombres slots********************
+### Usando nombres slots
 
-Para asignar un hijo a un espacio específico, asegúrese de que el atributo de ****`slot` del hijo coincida con el atributo de `nombre` del slot:
+Para asignar un hijo a un espacio específico, asegúrese de que el atributo de `slot` del hijo coincida con el atributo de `nombre` del slot:
 
 ```jsx
 render(){
@@ -448,7 +448,7 @@ customElements.define('my-element', MyElement);
 </html>
 ```
 
-### ******************Use `name`, no `id` para seleccionar el slots**
+### Use `name`, no `id` para seleccionar el slots
 
 ¡Tenga en cuenta que el atributo id de un slot no tiene ningún efecto!
 
@@ -475,7 +475,7 @@ render(){
 
 # Componer una plantilla a partir de otras plantillas
 
-Puede componer plantillas de LitElement a partir de otras plantillas de LitElement. En el siguiente ejemplo, creamos una plantilla para un elemento llamado `<mi-página>` ****a partir de plantillas más pequeñas para el encabezado, el pie de página y el contenido principal de la página:
+Puede componer plantillas de LitElement a partir de otras plantillas de LitElement. En el siguiente ejemplo, creamos una plantilla para un elemento llamado `<mi-página>` a partir de plantillas más pequeñas para el encabezado, el pie de página y el contenido principal de la página:
 
 ```jsx
 function headerTemplate(title) {
@@ -531,7 +531,7 @@ De forma predeterminada, LitElement crea un `shadowRoot` abierto y renderiza den
     <p>child 2</p>
 ```
 
-Para personalizar render root de un componente, implemente ****`createRenderRoot` ****y devuelva el nodo en el que desea que se represente la plantilla.
+Para personalizar render root de un componente, implemente `createRenderRoot` y devuelva el nodo en el que desea que se represente la plantilla.
 
 Por ejemplo, para representar la plantilla en el árbol DOM principal como elementos secundarios de su elemento:
 
@@ -562,13 +562,13 @@ class LightDom extends LitElement {
 
 # Sintaxis template cheat sheet
 
-### ************Render************
+### Render
 
 ```jsx
 render() { return html`<p>template</p>`; }
 ```
 
-### ****************************Properties, loops, conditionals****************************
+### Properties, loops, conditionals
 
 ```jsx
 // Property
@@ -581,7 +581,7 @@ html`${this.myArray.map(i => html`<li>${i}</li>`)}`;
 html`${this.myBool?html`<p>foo</p>`:html`<p>bar</p>`}`;
 ```
 
-### ************************Data binding************************
+### Data binding
 
 ```jsx
 // Attribute
@@ -597,7 +597,7 @@ html`<input .value="${...}">`;
 html`<button @click="${this.doStuff}"></button>`;
 ```
 
-### **********************Composition**********************
+### Composition
 
 ```jsx
 // From multiple templates on same class
@@ -627,7 +627,7 @@ class MyPage extends LitElement{
 }
 ```
 
-### ********Slot********
+### Slot
 
 ```jsx
 render() { return html`<slot name="thing"></slot>`; }
@@ -650,7 +650,7 @@ npm i lit-element@^2.0.0
 npm i lit-html@^1.0.0
 ```
 
-## ****Import and use a lit-html directive****
+## Import and use a lit-html directive
 
 ```jsx
 import { LitElement, html } from 'lit-element';
