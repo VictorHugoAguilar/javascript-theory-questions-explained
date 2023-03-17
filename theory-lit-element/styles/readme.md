@@ -4,7 +4,7 @@ Esta página describe cómo agregar estilos a su componente.
 
 La plantilla de su componente se representa en su árbol DOM de sombra. Los estilos que agrega a su componente se ajustan automáticamente al árbol de sombras, por lo que no se filtran ni afectan a otros elementos.
 
-## Agregue estilos a su componente
+# Agregue estilos a su componente
 
 Para un rendimiento óptimo, defina estilos con ámbito en una propiedad de `estilos` estáticos.
 
@@ -49,7 +49,7 @@ static get styles() {
 
 La propiedad de `estilos` estáticos suele ser la mejor manera de agregar estilos a su componente, pero hay algunos casos de uso que no puede manejar de esta manera, por ejemplo, vincular a una hoja de estilo externa. Para conocer formas alternativas de agregar estilos, consulte Definir estilos con ámbito en la plantilla.
 
-### Expresiones en estilos estáticos
+## Expresiones en estilos estáticos
 
 Enlace permanente a "Expresiones en estilos estáticos"
 Los estilos estáticos se aplican a todas las instancias de un componente. Cualquier expresión en CSS se evalúa una vez y luego se reutiliza para todas las instancias.
@@ -106,7 +106,7 @@ customElements.define("my-element", MyElement);
 
 > ⚠️ Solo use la etiqueta unsafeCSS con entrada confiable. Inyectar CSS sin desinfectar es un riesgo de seguridad. Por ejemplo, el CSS malicioso puede "llamar a casa" agregando una URL de imagen que apunta a un servidor de terceros.
 
-### Herencia de styles
+## Herencia de styles
 
 Usando una matriz de literales de plantilla etiquetados, un componente puede heredar los estilos de una superclase LitElement y agregar sus propios estilos:
 
@@ -118,7 +118,7 @@ class MyElement extends SuperElement {
 }
 ```
 
-### **Sharing styles**
+## Sharing styles
 
 Puede compartir estilos entre componentes creando un módulo que exporte estilos etiquetados:
 
@@ -157,7 +157,7 @@ class MyElement extends LitElement {
 
 También puede importar una hoja de estilo externa agregando un elemento `<link>` a su plantilla, pero esto tiene varias limitaciones. Para obtener más información, consulte Importar una hoja de estilo externa.
 
-## Descripción general del estilo Shadow DOM
+# Descripción general del estilo Shadow DOM
 
 Esta sección ofrece una breve descripción general del estilo shadow DOM.
 
@@ -167,7 +167,7 @@ Los estilos que agregue a un componente pueden afectar:
 - El componente en sí.
 - Los hijos del componente.
 
-### Dale estilo al árbol de la sombra
+## Dale estilo al árbol de la sombra
 
 Las plantillas de LitElement se representan en un árbol de sombra de forma predeterminada. Los estilos en el ámbito del árbol de sombras de un elemento no afectan al documento principal ni a otros árboles de sombras. De manera similar, con la excepción de las propiedades CSS heredadas, los estilos de nivel de documento no afectan el contenido de un árbol de sombra.
 
@@ -206,7 +206,7 @@ class MyElement extends LitElement {
 }
 ```
 
-### Dale estilo al componente en sí
+## Dale estilo al componente en sí
 
 Puede diseñar el componente en sí usando selectores de `:host` especiales. (El elemento que posee o "aloja" un árbol de sombra se denomina elemento anfitrión).
 
@@ -239,7 +239,7 @@ my-element {
 }
 ```
 
-### Aplicar estilo a los elementos secundarios del componente
+## Aplicar estilo a los elementos secundarios del componente
 
 Su componente puede aceptar hijos (como un elemento `<ul>` puede tener hijos `<li>`). Para renderizar elementos secundarios, su plantilla debe incluir uno o más elementos `<slot>`, como se describe en Renderizar elementos secundarios con el elemento slot.
 
@@ -320,7 +320,7 @@ my-element div {
 
 > ⚠️ ¡Cuidado con las limitaciones en el relleno polifónico Shady CSS alrededor del contenido ranurado! Consulte las limitaciones de Shady CSS para obtener detalles sobre cómo usar la sintaxis `::slotted()` de una manera compatible con polyfill.
 
-### Estilos configurables con propiedades personalizadas
+## Estilos configurables con propiedades personalizadas
 
 Los estilos estáticos se evalúan una vez por clase. Use variables CSS y propiedades personalizadas para crear estilos que se puedan configurar en tiempo de ejecución:
 
@@ -341,7 +341,7 @@ static get styles() {
 <my-element></my-element>
 ```
 
-## Definir estilos de alcance en la plantilla
+# Definir estilos de alcance en la plantilla
 
 Recomendamos usar estilos estáticos para un rendimiento óptimo. Sin embargo, a veces es posible que desee definir estilos en la plantilla LitElement. Hay dos formas de agregar estilos con ámbito en la plantilla:
 
@@ -350,7 +350,7 @@ Recomendamos usar estilos estáticos para un rendimiento óptimo. Sin embargo, a
 
 Cada una de estas técnicas tiene su propio conjunto de ventajas y desventajas.
 
-### En un elemento de estilo
+## En un elemento de estilo
 
 Recomendamos usar estilos estáticos para un rendimiento óptimo. Sin embargo, los estilos estáticos se evalúan una vez por clase. A veces, es posible que deba evaluar los estilos por instancia.
 
@@ -395,7 +395,7 @@ Si necesita evaluar expresiones dentro de un elemento `<style>`, use la siguient
 - Separe los estilos que requieren una evaluación por instancia de los que no.
 - Evalúe las propiedades CSS por instancia creando una expresión que capture esa propiedad dentro de un bloque `<style>` completo. Inclúyelo en tu plantilla.
 
-Ejemplo:
+### Ejemplo:
 
 ```jsx
 import { LitElement, html } from "lit-element";
@@ -442,7 +442,7 @@ class MyElement extends LitElement {
 customElements.define("my-element", MyElement);
 ```
 
-### Importar una hoja de estilo externa
+## Importar una hoja de estilo externa
 
 Recomendamos colocar sus estilos en una propiedad de estilos estáticos para un rendimiento óptimo. Sin embargo, puede incluir una hoja de estilo externa en su plantilla con un `<enlace>`:
 
@@ -468,7 +468,7 @@ Sin embargo, hay algunas advertencias importantes:
 - Los estilos externos pueden causar un destello de contenido sin estilo (FOUC) mientras se cargan.
 - La URL en el atributo `href` es relativa al documento principal. Esto está bien si está creando una aplicación y las URL de sus activos son bien conocidas, pero evite usar hojas de estilo externas cuando cree un elemento reutilizable.
 
-## Clases y estilos dinámicos
+# Clases y estilos dinámicos
 
 Una forma de hacer que los estilos sean dinámicos es agregar enlaces a la `class` o atributos de `style` en su plantilla.
 
@@ -502,7 +502,7 @@ render() {
 }
 ```
 
-### classMap sintaxis
+## classMap sintaxis
 
 `classMap` applies a set of classes to an HTML element:
 
@@ -511,7 +511,7 @@ render() {
 <!-- Equivalent: <div class="alert info">Content.</div> -->
 ```
 
-### styleMap sintaxis
+## styleMap sintaxis
 
 `styleMap` aplica un conjunto de reglas CSS a un elemento HTML:
 
@@ -541,7 +541,7 @@ Para hacer referencia a propiedades CSS personalizadas como `--custom-color`, co
 | --otherCustomColor: #FFFABC;            | '--otherCustomColor': '#FFFABC;'                                                    |
 | color: var(--customprop, blue);         | color: 'var(--customprop, blue)'                                                    |
 
-Ejemplo:
+### Ejemplo:
 
 Inline style syntax:
 
@@ -581,7 +581,7 @@ html`
 `;
 ```
 
-## Theming
+# Theming
 
 - Utilice la herencia de CSS para propagar la información de estilo a los componentes de LitElement y sus plantillas representadas.
 
@@ -777,7 +777,7 @@ Si el usuario de un componente tiene un tema de aplicación existente, puede con
 </html>
 ```
 
-Ejemplo simple theme
+## Ejemplo simple theme
 
 _index.html_
 
