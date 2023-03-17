@@ -26,7 +26,7 @@ class MyElement extends LitElement {
 }
 ```
 
-- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes ****`(``)`.
+- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes **`(``)`**.
 - Etiquete su literal de plantilla con la función de etiqueta `html`.
 - El método de `render` del componente puede devolver cualquier cosa que lit-html pueda renderizar. Por lo general, devuelve un solo objeto `TemplateResult` (el mismo tipo devuelto por la función de etiqueta `html`).
 
