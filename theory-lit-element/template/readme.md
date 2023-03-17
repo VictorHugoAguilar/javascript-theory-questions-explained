@@ -804,5 +804,4 @@ get headerNodes() {
 Para TypeScript, la escritura de una propiedad `queryAssignedNodes` es `NodeListOf<HTMLElement>`.
 
 ---
-
-[Lit](https://www.notion.so/Lit-13144b9059a343a78a06bf01f232b449)
+[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
