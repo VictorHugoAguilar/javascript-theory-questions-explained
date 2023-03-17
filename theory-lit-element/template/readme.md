@@ -1,5 +1,7 @@
 # Templates
 
+# Introducción
+
 Agregue una plantilla a su componente para definir DOM interno para implementar su componente.
 
 Para encapsular el DOM con plantilla, LitElement usa shadow DOM. Shadow DOM proporciona tres beneficios:
@@ -10,9 +12,9 @@ Para encapsular el DOM con plantilla, LitElement usa shadow DOM. Shadow DOM prop
 
 Donde el shadow DOM nativo no está disponible, LitElement usa el polyfill Shady CSS.
 
-## Definir y renderizar una plantilla
+# Definir y renderizar una plantilla
 
-Para definir una plantilla para un componente LitElement, escriba una función de **render** para su clase de elemento:
+Para definir una plantilla para un componente LitElement, escriba una función de `render` para su clase de elemento:
 
 ```jsx
 import { LitElement, html } from 'lit-element';
@@ -24,7 +26,7 @@ class MyElement extends LitElement {
 }
 ```
 
-- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes **`(``)`**.
+- Escriba su plantilla en HTML dentro de un literal de plantilla de JavaScript encerrando el HTML sin procesar entre tildes ****`(``)`.
 - Etiquete su literal de plantilla con la función de etiqueta `html`.
 - El método de `render` del componente puede devolver cualquier cosa que lit-html pueda renderizar. Por lo general, devuelve un solo objeto `TemplateResult` (el mismo tipo devuelto por la función de etiqueta `html`).
 
@@ -53,7 +55,7 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-### Diseñe una plantilla eficaz
+## Diseñe una plantilla eficaz
 
 LitElement representa y vuelve a representar de forma asincrónica, actualizándose en respuesta a los cambios de propiedad por lotes (consulte Ciclo de vida de actualización de elementos para obtener más información).
 
@@ -113,7 +115,7 @@ render() {
 }
 ```
 
-### Usar propiedades, bucles y condicionales en una plantilla
+## Usar propiedades, bucles y condicionales en una plantilla
 
 Enlace permanente a "Usar propiedades, bucles y condicionales en una plantilla"
 Al definir la plantilla de su elemento, puede vincular las propiedades del elemento a la plantilla; la plantilla se vuelve a representar cada vez que cambian las propiedades.
@@ -311,7 +313,7 @@ class MyElement extends LitElement {
 customElements.define('my-element', MyElement);
 ```
 
-### Renderiza un hijo con un elemento slot
+## Renderiza un hijo con un elemento slot
 
 Tu componente podría aceptar un hijo (como un elemento `<ul>` puede contener ****`<li>` hijos)
 
@@ -446,7 +448,7 @@ customElements.define('my-element', MyElement);
 </html>
 ```
 
-### ******************Use name, no id para seleccionar el slots******************
+### ******************Use `name`, no `id` para seleccionar el slots**
 
 ¡Tenga en cuenta que el atributo id de un slot no tiene ningún efecto!
 
@@ -471,7 +473,7 @@ render(){
 </my-element>
 ```
 
-## Componer una plantilla a partir de otras plantillas
+# Componer una plantilla a partir de otras plantillas
 
 Puede componer plantillas de LitElement a partir de otras plantillas de LitElement. En el siguiente ejemplo, creamos una plantilla para un elemento llamado `<mi-página>` ****a partir de plantillas más pequeñas para el encabezado, el pie de página y el contenido principal de la página:
 
@@ -516,7 +518,7 @@ class MyPage extends LitElement {
 }
 ```
 
-## Especificar la raíz de renderizado
+# Especificar la raíz de renderizado
 
 El nodo en el que se representará la plantilla de su componente se denomina render root.
 
@@ -558,7 +560,7 @@ class LightDom extends LitElement {
 }
 ```
 
-## Sintaxis template cheat sheet
+# Sintaxis template cheat sheet
 
 ### ************Render************
 
@@ -637,7 +639,29 @@ render() { return html`<slot name="thing"></slot>`; }
 </my-element>
 ```
 
-## Accediendo a nodos en el shadow DOM
+# Usando otras caracteristicas de lit-html
+
+Dado que litelement utiliza la función de etiqueta HTML Lit-HTML para definir plantillas, puede aprovechar toda la función de lit-HTML establecida para escribir sus plantillas. Esto incluye directivas lit-html, funciones especiales que personalizan la forma en que Lit-HTML hace que sea vinculante.
+
+Para importar funciones directamente de Lit-HTML, su proyecto debe agregar Lit-HTML como una dependencia directa. Recomendamos utilizar el rango de versión práctico más amplio para LIT-HTML, para minimizar la posibilidad de que NPM instale dos versiones diferentes de Lit-HTML:
+
+```jsx
+npm i lit-element@^2.0.0
+npm i lit-html@^1.0.0
+```
+
+## ****Import and use a lit-html directive****
+
+```jsx
+import { LitElement, html } from 'lit-element';
+import { until } from 'lit-html/directives/until.js';
+
+const content = fetch('./content.txt').then(r => r.text());
+
+html`${until(content, html`<span>Loading...</span>`)}`
+```
+
+# Accediendo a nodos en el shadow DOM
 
 El resultado del método `render()` generalmente se representa en shadow DOM, por lo que los nodos no son hijos directos del componente. Use t`his.shadowRoot.querySelector()` o `this.shadowRoot.querySelectorAll()` para buscar nodos en el DOM oculto.
 
@@ -651,7 +675,7 @@ get _closeButton() {
 
 LitElement proporciona un conjunto de decoradores que proporcionan una forma abreviada de definir captadores como este.
 
-### @query, @queryAll, and @queryAsync decoratos
+## @query, @queryAll, and @queryAsync decoratos
 
 Los decoradores `@query`, `@queryAll` y `@queryAsync` proporcionan una manera conveniente de acceder a los nodos en la raíz oculta del componente.
 
@@ -720,7 +744,7 @@ Finalmente, `@queryAsync` funciona como `@query`, excepto que en lugar de devolv
 
 Esto es útil, por ejemplo, si el nodo devuelto por `@queryAsync` puede cambiar como resultado de otro cambio de propiedad.
 
-## Accediendo a slotted hijos
+# Accediendo a slotted hijos
 
 Para acceder a los elementos secundarios asignados a las ranuras(slot) en su shadow root, puede usar el método estándar `slot.assignedNodes` y el evento `slotchange`.
 
@@ -750,7 +774,7 @@ render() {
 }
 ```
 
-### @queryAssignedNodes decorator
+## @queryAssignedNodes decorator
 
 El decorador `@queryAssignedNodes` convierte una propiedad de clase en un captador que devuelve todos los nodos asignados para un espacio determinado en el árbol de sombra del componente. El segundo argumento booleano opcional cuando es verdadero aplana los nodos asignados, lo que significa que los nodos asignados que son elementos de ranura se reemplazan con sus nodos asignados. El tercer argumento opcional es un selector css que filtra los resultados a los elementos coincidentes.
 
@@ -778,6 +802,7 @@ get headerNodes() {
 ```
 
 Para TypeScript, la escritura de una propiedad `queryAssignedNodes` es `NodeListOf<HTMLElement>`.
-  
+
 ---
-[⬅️ volver](https://github.com/VictorHugoAguilar/javascript-interview-questions-explained/blob/main/theory-lit-element/readme.md)
+
+[Lit](https://www.notion.so/Lit-13144b9059a343a78a06bf01f232b449)
