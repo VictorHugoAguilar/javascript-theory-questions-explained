@@ -45,7 +45,7 @@ constructor() {
 
 `connectCallback` es una callback de ciclo de vida en la API de elementos personalizados. `connectedCallback` se activa cada vez que se agrega un elemento personalizado a un elemento conectado a un documento. Consulte la documentación de MDN sobre el uso de devoluciones de llamada del ciclo de vida de elementos personalizados para obtener más información.
 
-Si su componente agrega un event listeners a cualquier cosa excepto a sí mismo o a sus elementos secundarios, por ejemplo, a Window, Document o algún elemento en el DOM principal, debe agregar el detector en `connectedCallback` y eliminarlo en `disconnectedCallback`.
+Si su componente agrega un event listeners a cualquier cosa excepto a sí mismo o a sus elementos secundarios, por ejemplo, a `Window`, `Document` o algún elemento en el `DOM principal, debe agregar el detector en `connectedCallback` y eliminarlo en `disconnectedCallback`.
 
 - Quitar el event listeners en `disconnectedCallback` garantiza que cualquier memoria asignada por su componente se limpiará cuando su componente se destruya o se desconecte de la página.
 - Agregar el event listeners en `connectedCallback` (en lugar de, por ejemplo, el constructor o `firstUpdated`) garantiza que su componente volverá a crear su detector de eventos si se desconecta y luego se vuelve a conectar a DOM.
