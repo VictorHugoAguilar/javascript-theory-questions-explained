@@ -1,7 +1,6 @@
 # Post-it 
 
 ## DEV.to [https://dev.to](https://dev.to/victorhugoaguilar)
-    ## Medium
  
 ## Javascript 
 - Maneras de [clonar un objecto](https://github.com/VictorHugoAguilar/javascript-theory-questions-explained/blob/main/post-it/clone-objects-javascript.md)
